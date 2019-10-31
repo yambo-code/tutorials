@@ -1,0 +1,85 @@
+#                                                           
+#                                                           
+# Y88b    /   e           e    e      888~~\    ,88~-_      
+#  Y88b  /   d8b         d8b  d8b     888   |  d888   \     
+#   Y88b/   /Y88b       d888bdY88b    888 _/  88888    |    
+#    Y8Y   /  Y88b     / Y88Y Y888b   888  \  88888    |    
+#     Y   /____Y88b   /   YY   Y888b  888   |  Y888   /     
+#    /   /      Y88b /          Y888b 888__/    `88_-~      
+#                                                           
+#                                                           
+#             GPL Version 4.1.2 Revision 120                
+#                    MPI+OpenMP Build                       
+#               http://www.yambo-code.org                   
+#
+ppa                          # [R Xp] Plasmon Pole Approximation
+gw0                          # [R GW] GoWo Quasiparticle energy levels
+rim_cut                      # [R RIM CUT] Coulomb potential
+HF_and_locXC                 # [R XX] Hartree-Fock Self-energy and Vxc
+em1d                         # [R Xd] Dynamical Inverse Dielectric Matrix
+X_Threads= 1                 # [OPENMP/X] Number of threads for response functions
+DIP_Threads= 1               # [OPENMP/X] Number of threads for dipoles
+SE_Threads= 1                # [OPENMP/GW] Number of threads for self-energy
+RandQpts= 1000000            # [RIM] Number of random q-points in the BZ
+RandGvec= 111          RL    # [RIM] Coulomb interaction RS components
+CUTGeo= "none"              # [CUT] Coulomb Cutoff geometry: box/cylinder/sphere X/Y/Z/XY..
+% CUTBox
+  0.00000 |  0.00000 | 32.00000 |        # [CUT] [au] Box sides
+%
+CUTRadius= 0.000000          # [CUT] [au] Sphere/Cylinder radius
+CUTCylLen= 0.000000          # [CUT] [au] Cylinder length
+EXXRLvcs= 40 Ry    # [XX] Exchange RL components
+Chimod= "Hartree"            # [X] IP/Hartree/ALDA/LRC/BSfxc
+XfnQPdb= "none"              # [EXTQP Xd] Database
+XfnQP_N= 1                   # [EXTQP Xd] Interpolation neighbours
+% XfnQP_E
+ 0.000000 | 1.000000 | 1.000000 |        # [EXTQP Xd] E parameters  (c/v) eV|adim|adim
+%
+XfnQP_Z= ( 1.000000 , 0.000000 )       # [EXTQP Xd] Z factor  (c/v)
+XfnQP_Wv_E= 0.000000   eV    # [EXTQP Xd] W Energy reference  (valence)
+% XfnQP_Wv
+ 0.00     | 0.00     | 0.00     |        # [EXTQP Xd] W parameters  (valence) eV| eV|eV^-1
+%
+XfnQP_Wc_E= 0.000000   eV    # [EXTQP Xd] W Energy reference  (conduction)
+% XfnQP_Wc
+ 0.00     | 0.00     | 0.00     |        # [EXTQP Xd] W parameters  (conduction) eV| eV|eV^-1
+%
+% BndsRnXp
+   1 |  60 |                 # [Xp] Polarization function bands
+%
+NGsBlkXp= 4 Ry  # [Xp] Response block size
+% LongDrXp
+ 1.000000 | 0.000000 | 0.000000 |        # [Xp] [cc] Electric Field
+%
+PPAPntXp= 27.21138     eV    # [Xp] PPA imaginary energy
+GfnQPdb= "none"              # [EXTQP G] Database
+GfnQP_N= 1                   # [EXTQP G] Interpolation neighbours
+% GfnQP_E
+ 0.000000 | 1.000000 | 1.000000 |        # [EXTQP G] E parameters  (c/v) eV|adim|adim
+%
+GfnQP_Z= ( 1.000000 , 0.000000 )       # [EXTQP G] Z factor  (c/v)
+GfnQP_Wv_E= 0.000000   eV    # [EXTQP G] W Energy reference  (valence)
+% GfnQP_Wv
+ 0.00     | 0.00     | 0.00     |        # [EXTQP G] W parameters  (valence) eV| eV|eV^-1
+%
+GfnQP_Wc_E= 0.000000   eV    # [EXTQP G] W Energy reference  (conduction)
+% GfnQP_Wc
+ 0.00     | 0.00     | 0.00     |        # [EXTQP G] W parameters  (conduction) eV| eV|eV^-1
+%
+% GbndRnge
+   1 |  60 |                 # [GW] G[W] bands range
+%
+GDamping=  0.10000     eV    # [GW] G[W] damping
+dScStep=  0.10000      eV    # [GW] Energy step to evaluate Z factors
+GTermKind= "none"            # [GW] GW terminator ("none","BG" Bruneval-Gonze)
+GTermEn= 40.81708      eV    # [GW] GW terminator energy (only for kind="BG")
+DysSolver= "n"               # [GW] Dyson Equation solver ("n","s","g")
+#NewtDchk                    # [GW] Test dSc/dw convergence
+#ExtendOut                   # [GW] Print all variables in the output file
+#OnMassShell                 # [F GW] On mass shell approximation
+%QPkrange                    # [GW] QP generalized Kpoint/Band indices
+  7|  7|   4| 5|
+%
+%QPerange                    # [GW] QP generalized Kpoint/Energy indices
+  1|  7| 0.0|-1.0|
+%

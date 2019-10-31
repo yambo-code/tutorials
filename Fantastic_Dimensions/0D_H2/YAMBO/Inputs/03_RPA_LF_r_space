@@ -1,0 +1,49 @@
+#                                                           
+#  /$$     /$$ /$$$$$$  /$$      /$$ /$$$$$$$   /$$$$$$     
+# |  $$   /$$//$$__  $$| $$$    /$$$| $$__  $$ /$$__  $$    
+#  \  $$ /$$/| $$  \ $$| $$$$  /$$$$| $$  \ $$| $$  \ $$    
+#   \  $$$$/ | $$$$$$$$| $$ $$/$$ $$| $$$$$$$ | $$  | $$    
+#    \  $$/  | $$__  $$| $$  $$$| $$| $$__  $$| $$  | $$    
+#     | $$   | $$  | $$| $$\  $ | $$| $$  \ $$| $$  | $$    
+#     | $$   | $$  | $$| $$ \/  | $$| $$$$$$$/|  $$$$$$/    
+#     |__/   |__/  |__/|__/     |__/|_______/  \______/     
+#                                                           
+#              Version 3.3.1 Revision 2093                  
+#               http://www.yambo-code.org                   
+#
+optics                       # [R OPT] Optics
+bse                          # [R BSE] Bethe Salpeter Equation.
+bsk                          # [R BSK] Bethe Salpeter Equation kernel
+bss                          # [R BSS] Bethe Salpeter Equation solver
+NonPDirs= "XYZ"              # [X/BSS] Non periodic chartesian directions (X,Y,Z,XY...)
+BSEmod= "causal"             # [BSE] resonant/causal/coupling
+BSKmod= "Hartree"            # [BSE] IP/Hartree/HF/ALDA/SEX/BSfxc
+BSSmod= "d"                  # [BSS] (h)aydock/(d)iagonalization/(i)nversion/(t)ddft`
+BSENGexx= 123          RL    # [BSK] Exchange components
+#ALLGexx                     # [BSS] Force the use use all RL vectors for the exchange part
+ShiftedPath= "none"          # [Xd] Shifted grids path
+DrudeWBS= ( 0.00     , 0.00     )  eV  # [BSE] Drude plasmon
+% BEnRange
+  0.00000 | 15.00000 | eV    # [BSS] Energy range
+%
+% BDmRange
+  0.10000 |  0.10000 | eV    # [BSS] Damping range
+%
+BDmERef= 0.000000      eV    # [BSS] Damping energy reference
+BEnSteps= 200                # [BSS] Energy steps
+% BLongDir
+ 1.000000 | 0.000000 | 0.000000 |        # [BSS] [cc] Electric Field
+%
+% BSEQptR
+ 1 | 1 |                     # [BSK] Transferred momenta range
+%
+% BSEBands
+   1 |  70 |                 # [BSK] Bands range
+%
+% BSEEhEny
+-1.000000 |-1.000000 | eV    # [BSK] Electron-hole energy range
+%
+% BSehWind
+ 100.0000 | 100.0000 |       # [BSK] [o/o] E/h coupling pairs energy window
+%
+#WRbsWF                      # [BSS] Write to disk excitonic the FWs

@@ -1,0 +1,79 @@
+#   __   __     _        __  __       ____      U  ___  u   
+#   \ \ / / U  /"\  U u |" \/ "| u U | __") u    \/"_ \/    
+#    \ V /   \/ _ \/   \| |\/| |/   \|  _ \/     | | | |    
+#   U_|"|_u  / ___ \    | |  | |     | |_) | .-,_| |_| |    
+#     |_|   /_/   \_\   |_|  |_|     |____/   \_)-\___/     
+# .-,//|(_   \\    >>  <<,-,,-.     _|| \\_        \\       
+#  \_) (__) (__)  (__)  (./  \.)   (__) (__)      (__)      
+#                                                           
+#             GPL Version 4.0.0 Revision 4245               
+#                      Serial Build                         
+#                http://www.yambo-code.org                  
+#
+# GW [Newton Solver]
+#
+#  PPA imaginary pt   [ev]: 20.00000
+#  GW SC iterations       :0
+#  dS/dw steps            : 2
+#  dS/dw step         [ev]:  0.10000
+#  X G`s            [used]: 15
+#  X G`s            [disk]: 15
+#  X bands                :   1   80
+#  X poles           [o/o]: 100.0000
+#  X e/h E range      [ev]:-1.000000 -1.000000
+#  X xc-Kernel            :none
+#  X BZ energy RIM        : no
+#  X BZ RIM points        :0
+#  Sc/G bands             :   1   80
+#  Sc/G damping       [ev]:  0.10000
+#  Sc bands terminator    : no
+#  Sx RL components       : 229
+#  QP @ K 029 - 029 : b 005 - 012
+#
+#  K-point    Band       Eo         E-Eo       Sc(Eo)
+#
+  29.00000    5.00000    0.00000    0.23836    0.92133
+  29.00000    6.00000    0.00000    0.22127    0.95221
+  29.00000    7.00000    0.00000    0.22262    0.94628
+  29.00000    8.00000    0.00000    0.21759    0.95843
+  29.00000    9.00000    0.06025    0.65361   -2.36544
+  29.00000   10.00000    0.06025    0.65365   -2.36544
+  29.00000   11.00000    2.41306    0.49758   -3.20138
+  29.00000   12.00000    2.41306    0.49755   -3.20144
+# 
+# 04/07/2015 at 11:42 YAMBO @ apollo [start]
+# 04/07/2015 at 11:50                [end]
+#  
+# Timing   [Min/Max/Average]: 07m-34s/07m-34s/07m-34s
+#
+# .-Input file : 05_GW.in
+# | em1d                         # [R Xd] Dynamical Inverse Dielectric Matrix
+# | ppa                          # [R Xp] Plasmon Pole Approximation
+# | HF_and_locXC                 # [R XX] Hartree-Fock Self-energy and Vxc
+# | gw0                          # [R GW] GoWo Quasiparticle energy levels
+# | BoseTemp= 0.000000     eV    # Bosonic Temperature
+# | FFTGvecs= 10           Ry    # [FFT] Plane-waves
+# | EXXRLvcs= 10           Ry    # [XX] Exchange RL components
+# | Chimod= "Hartree"            # [X] IP/Hartree/ALDA/LRC/BSfxc
+# | % BndsRnXp
+# |    1 |  80 |                 # [Xp] Polarization function bands
+# | %
+# | NGsBlkXp= 1            Ry    # [Xp] Response block size
+# | % LongDrXp
+# | 0.5774E-5 |0.5774E-5 |0.5774E-5 |        # [Xp] [cc] Electric Field
+# | %
+# | PPAPntXp= 20.00000     eV    # [Xp] PPA imaginary energy
+# | % GbndRnge
+# |    1 |  80 |                 # [GW] G[W] bands range
+# | %
+# | GDamping=  0.10000     eV    # [GW] G[W] damping
+# | dScStep=  0.10000      eV    # [GW] Energy step to evalute Z factors
+# | GTermKind= "none"            # [GW] GW terminator ("none","BG" Bruneval-Gonze,"BRS" Berger-Reining-Sottile)
+# | GTermEn= 40.81708      eV    # [GW] GW terminator energy (only for kind="BG")
+# | DysSolver= "n"               # [GW] Dyson Equation solver (`n`,`s`,`g`)
+# | %QPkrange                    # [GW] QP generalized Kpoint/Band indices
+# |  29| 29|  5| 12|
+# | %
+# | %QPerange                    # [GW] QP generalized Kpoint/Energy indices
+# |   1| 29| 0.0|-1.0|
+# | %

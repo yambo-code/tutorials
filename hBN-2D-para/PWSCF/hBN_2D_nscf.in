@@ -1,0 +1,33 @@
+&control
+    calculation='nscf',
+    prefix='hBN_2D',
+    pseudo_dir = './Pseudo'
+    wf_collect=.true.
+    verbosity = 'high'
+/
+&system
+    ibrav = 4,
+    celldm(1) = 4.716
+    celldm(3) = 7.
+    nat= 2,
+    ntyp= 2,
+    force_symmorphic=.true.
+    ecutwfc = 40,nbnd = 400
+/
+&electrons
+   diago_thr_init=5.0e-6,
+   diago_full_acc=.true.
+   electron_maxstep = 100,
+   diagonalization='cg'
+   mixing_mode = 'plain'
+   mixing_beta = 0.6
+   conv_thr =  1.0d-8,
+/
+ATOMIC_SPECIES
+ B 10 B.pz-vbc.UPF
+ N 14 N.pz-vbc.UPF
+ATOMIC_POSITIONS {crystal}
+B  0.6666667  0.3333333  0.0000000
+N -0.6666667 -0.3333333  0.0000000
+K_POINTS (automatic)
+12 12 1 0 0 0

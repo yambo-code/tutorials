@@ -1,0 +1,40 @@
+#                                                           
+# Y88b    /   e           e    e      888~~\    ,88~-_      
+#  Y88b  /   d8b         d8b  d8b     888   |  d888   \     
+#   Y88b/   /Y88b       d888bdY88b    888 _/  88888    |    
+#    Y8Y   /  Y88b     / Y88Y Y888b   888  \  88888    |    
+#     Y   /____Y88b   /   YY   Y888b  888   |  Y888   /     
+#    /   /      Y88b /          Y888b 888__/    `88_-~      
+#                                                           
+#              Version 3.3.1 Revision 2093                  
+#               http://www.yambo-code.org                   
+#
+optics                       # [R OPT] Optics
+bse                          # [R BSE] Bethe Salpeter Equation.
+tddft                        # [R   K] Use TDDFT kernel
+bsk                          # [R BSK] Bethe Salpeter Equation kernel
+bss                          # [R BSS] Bethe Salpeter Equation solver
+NonPDirs= "XYZ"              # [X/BSS] Non periodic chartesian directions (X,Y,Z,XY...)
+BSEmod= "causal"             # [BSE] resonant/causal/coupling
+BSKmod= "ALDA"               # [BSE] IP/Hartree/HF/ALDA/SEX/BSfxc
+BSSmod= "d"                  # [BSS] (h)aydock/(d)iagonalization/(i)nversion/(t)ddft`
+BSENGexx=  9045        RL    # [BSK] Exchange components
+#ALLGexx                     # [BSS] Force the use use all RL vectors for the exchange part
+% BEnRange
+  0.00000 | 15.00000 | eV    # [BSS] Energy range
+%
+% BDmRange
+  0.10000 |  0.10000 | eV    # [BSS] Damping range
+%
+BDmERef= 0.000000      eV    # [BSS] Damping energy reference
+BEnSteps= 1000               # [BSS] Energy steps
+% BLongDir
+ 1.000000 | 0.000000 | 0.000000 |        # [BSS] [cc] Electric Field
+%
+% BSEQptR
+ 1 | 1 |                     # [BSK] Transferred momenta range
+%
+% BSEBands
+   1 | 200 |                 # [BSK] Bands range
+%
+#WRbsWF                      # [BSS] Write to disk excitonic the FWs

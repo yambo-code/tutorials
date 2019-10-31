@@ -1,0 +1,3 @@
+To run abinit in order to generate the YAMBO databases type
+
+> abinis < 3D_LiF.files > log

@@ -1,0 +1,20 @@
+#                                                           
+# :::   :::   :::     ::::    ::::  :::::::::   ::::::::    
+# :+:   :+: :+: :+:   +:+:+: :+:+:+ :+:    :+: :+:    :+:   
+#  +:+ +:+ +:+   +:+  +:+ +:+:+ +:+ +:+    +:+ +:+    +:+   
+#   +#++: +#++:++#++: +#+  +:+  +#+ +#++:++#+  +#+    +:+   
+#    +#+  +#+     +#+ +#+       +#+ +#+    +#+ +#+    +#+   
+#    #+#  #+#     #+# #+#       #+# #+#    #+# #+#    #+#   
+#    ###  ###     ### ###       ### #########   ########    
+#                                                           
+#                                                           
+#             GPL Version 4.1.2 Revision 120                
+#                    MPI+OpenMP Build                       
+#                http://www.yambo-code.org                  
+#
+HF_and_locXC                 # [R XX] Hartree-Fock Self-energy and Vxc
+SE_Threads= 1                # [OPENMP/GW] Number of threads for self-energy
+EXXRLvcs= 1009         RL    # [XX] Exchange RL components
+%QPkrange                    # [GW] QP generalized Kpoint/Band indices
+  1| 14|  1|100|
+%

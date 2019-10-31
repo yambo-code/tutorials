@@ -1,0 +1,32 @@
+&control 
+    calculation='scf',
+    prefix='hBN',
+    restart_mode='from_scratch'
+    pseudo_dir = './Pseudos'
+    wf_collect=.true.
+    nstep = 200 
+    verbosity = 'high' 
+/
+&system
+    ibrav = 4,
+    celldm(1) = 4.716
+    celldm(3) = 2.582
+    nat= 4,
+    ntyp= 2,
+    force_symmorphic=.true.
+    ecutwfc = 40,
+/
+&electrons
+ electron_maxstep = 100
+ conv_thr =  1.0e-8
+/
+ATOMIC_SPECIES
+ B 10 B.pz-vbc.UPF
+ N 14 N.pz-vbc.UPF 
+ATOMIC_POSITIONS {crystal}
+B  0.6666667  0.3333333  0.0000000  
+N -0.6666667 -0.3333333  0.0000000 
+B -0.6666667 -0.3333333  0.5000000 
+N  0.6666667  0.3333333  0.5000000  
+K_POINTS {automatic}
+6 6 2 1 1 1 

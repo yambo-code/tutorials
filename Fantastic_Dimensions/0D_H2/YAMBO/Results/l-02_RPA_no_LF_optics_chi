@@ -1,0 +1,32 @@
+
+ __    __ ______           ____     _____
+/\ \  /\ \\  _  \  /"\_/`\/\  _`\ /\  __`\
+\ `\`\\/"/ \ \L\ \/\      \ \ \L\ \ \ \/\ \
+ `\ `\ /" \ \  __ \ \ \__\ \ \  _ <" \ \ \ \
+   `\ \ \  \ \ \/\ \ \ \_/\ \ \ \L\ \ \ \_\ \
+     \ \_\  \ \_\ \_\ \_\\ \_\ \____/\ \_____\
+      \/_/   \/_/\/_/\/_/ \/_/\/___/  \/_____/
+
+ <---> [01] Job Setup
+ <---> [02] Input variables setup
+ <---> [02.01] K-grid lattice
+ <---> [02.02] RL shells
+ <---> [02.03] Input (E)nergies[ev] & Occupations
+ <---> [03] Transferred momenta grid
+ <---> [04] Optics
+ <---> [WF loader] Wfs (re)loading |                    | [000%] --(E) --(X)
+ <---> [WF loader] Wfs (re)loading |####################| [100%] --(E) --(X)
+ <---> Dipole (T): |                    | [000%] --(E) --(X)
+ <---> Dipole (T): |####################| [100%] --(E) --(X)
+ <01s> [M 0.012 Gb] Alloc WF (0.011)
+ <01s> [FFT-X] Mesh size: 27  27  27
+ <01s> [WF loader] Wfs (re)loading |                    | [000%] --(E) --(X)
+ <01s> [WF loader] Wfs (re)loading |####################| [100%] --(E) --(X)
+ <01s> [X-CG] R(p) Tot o/o(of R)  :  52   69  100
+ <01s> [X] Upper matrix triangle filled
+ <01s> Xo@q[1] 1-200 |                    | [000%] --(E) --(X)
+ <02s> Xo@q[1] 1-200 |####################| [100%] --(E) --(X)
+ <02s> X @q[1] 1-200 |                    | [000%] --(E) --(X)
+ <02s> X @q[1] 1-200 |####################| [100%] --(E) --(X)
+ <02s> [M 0.001 Gb] Free WF (0.011)
+ <02s> [05] Game Over & Game summary

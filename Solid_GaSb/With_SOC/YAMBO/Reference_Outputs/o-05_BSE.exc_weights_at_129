@@ -1,0 +1,84 @@
+#                                                           
+# ooooo   oooo ..     ooo        ooo ooooooooo.    .oooo.   
+#  `88.   .8" .88.    `88.       .88 `88"   `Y8b  dP"  `Yb  
+#   `88. .8" .8"88.    888b     d"88  88     888 88      88 
+#    `88.8" .8" `88.   8 Y88. .P  88  88oooo888" 88      88 
+#     `88" .88ooo888.  8  `888"   88  88    `88b 88      88 
+#      88 .8"     `88. 8    Y     88  88    .88P `8b    d8" 
+#     o88o88o      888o8          88 o88bood8P"   `Ybod8P"  
+#                                                           
+#              GPL Version 4.0.0 Revision 4245              
+#                       Serial Build                        
+#                 http://www.yambo-code.org                 
+#
+# BSK|Identifier              :7074
+#    |Dimension               :6912
+#    |Bands                   :5 - 10
+#    |Exchange           [res]: yes
+#    |Correlation        [res]: yes
+#    |Kernel`s coupling       : no
+#    |Exchange           [cpl]: no
+#    |W interaction is bare   : no
+#    |Correlation        [cpl]: no
+#    |ALDA kernel in R-space  : no
+#    |RL vectors    [exchange]:229
+#    |RL vectors [correlation]:15
+#    |E/h energy range    [ev]:-1.000000 - -1.000000
+#    |Coupling range     [o/o]: 100.0000 -  100.0000
+#  W |Interaction is diagonal : no
+#    |Matrix size             :15
+#    |Bands                   :1 - 40
+#    |e/h energy range    [ev]:-1.000000 - -1.000000
+#    |Poles              [o/o]: 100.0000
+#    |Rl vectors in the sum   :229
+#    |[r,Vnl] included        : yes
+#    |Field direction         :0.5774E-5 0.5774E-5 0.5774E-5
+#    |Coulomb Cutoff          :none
+#    |xc-Kernel               :none
+# RIM|RL components      [col]:0
+#    |Random points      [col]:0
+#
+# Electron-Hole pairs that contributes to Excitonic State 129 more than 5%
+#
+#             K-point [iku]         Weight
+#   -0.12500    0.12500   -0.04167    1.00000
+#  
+#  Band_V     Band_C     K  ibz     Symm.      Weight     Energy
+#  
+   8.00000    9.00000    2.00000   33.00000    0.24880    1.80671
+   8.00000    9.00000    2.00000   35.00000    0.24847    1.80671
+   8.00000    9.00000    2.00000   34.00000    0.24754    1.80671
+   8.00000    9.00000    2.00000   36.00000    0.24751    1.80671
+   8.00000    9.00000    2.00000   10.00000    0.24028    1.80671
+   8.00000    9.00000    2.00000   12.00000    0.24015    1.80671
+  8.000000   9.000000   2.000000   9.000000   0.239132   1.806710
+   8.00000    9.00000    2.00000   11.00000    0.23911    1.80671
+  8.000000   9.000000   2.000000   6.000000   0.161547   1.806710
+  8.000000   9.000000   2.000000   5.000000   0.161495   1.806710
+  8.000000   9.000000   2.000000   8.000000   0.161400   1.806710
+  8.000000   9.000000   2.000000   7.000000   0.161323   1.806710
+   8.00000    9.00000    2.00000   30.00000    0.15626    1.80671
+   8.00000    9.00000    2.00000   29.00000    0.15622    1.80671
+   8.00000    9.00000    2.00000   31.00000    0.15605    1.80671
+   8.00000    9.00000    2.00000   32.00000    0.15596    1.80671
+   8.00000    9.00000    2.00000    2.00000    0.08584    1.80671
+   8.00000    9.00000    2.00000    4.00000    0.08536    1.80671
+   8.00000    9.00000    2.00000    3.00000    0.08474    1.80671
+   8.00000    9.00000    2.00000    1.00000    0.08424    1.80671
+   8.00000    9.00000    2.00000   25.00000    0.08384    1.80671
+   8.00000    9.00000    2.00000   27.00000    0.08345    1.80671
+   8.00000    9.00000    2.00000   28.00000    0.08283    1.80671
+   8.00000    9.00000    2.00000   26.00000    0.08226    1.80671
+# 
+# 04/08/2015 at 08:26 YPP @ apollo [start]
+# 04/08/2015 at 08:26              [end]
+#  
+# Timing   [Min/Max/Average]: 02s/02s/02s
+#
+# .-Input file : ypp.in.a
+# | excitons                     # [R] Excitons
+# | amplitude                    # [R] Amplitude
+# | BoseTemp= 0.000000     eV    # Bosonic Temperature
+# | States= "125 - 135"          # Index of the BS state(s)
+# | #DipWeight                   #  Weight the contribution to the exciton WFs with the dipoles
+# | Degen_Step=0.1000E-2   eV    # Maximum energy separation of two degenerate states

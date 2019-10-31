@@ -1,0 +1,17 @@
+#  __  __   ________   ___ __ __    _______   ______        
+# /_/\/_/\ /_______/\ /__//_//_/\ /_______/\ /_____/\       
+# \ \ \ \ \\::: _  \ \\::\| \| \ \\::: _  \ \\:::_ \ \      
+#  \:\_\ \ \\::(_)  \ \\:.      \ \\::(_)  \/_\:\ \ \ \     
+#   \::::_\/ \:: __  \ \\:.\-/\  \ \\::  _  \ \\:\ \ \ \    
+#     \::\ \  \:.\ \  \ \\. \  \  \ \\::(_)  \ \\:\_\ \ \   
+#      \__\/   \__\/\__\/ \__\/ \__\/ \_______\/ \_____\/   
+#                                                           
+#             GPL Version 4.0.0 Revision 4245               
+#                      Serial Build                         
+#                http://www.yambo-code.org                  
+#
+amplitude                    # [R] Amplitude
+excitons                     # [R] Excitons
+States= "17 - 17"              # Index of the BS state(s)
+#DipWeight                   #  Weight the contribution to the exciton WFs with the dipoles
+Degen_Step=   0.0100   eV    # Maximum energy separation of two degenerate states

@@ -1,0 +1,72 @@
+iprcel 45
+ndtset 2
+kptopt1 1 
+ngkpt1 4 4 1
+shiftk1 0.5 0.5 1
+kptopt2 0
+nkpt2 13
+kpt2          1.25000000E-01  1.25000000E-01  0.00000000E+00
+              3.75000000E-01  1.25000000E-01  0.00000000E+00
+              1.25000000E-01  3.75000000E-01  0.00000000E+00
+              3.75000000E-01  3.75000000E-01  0.00000000E+00
+              0.00000000E+00  0.00000000E+00  0.00000000E+00
+              2.50000000E-01  0.00000000E+00  0.00000000E+00
+              5.00000000E-01  0.00000000E+00  0.00000000E+00
+              0.00000000E+00  2.50000000E-01  0.00000000E+00
+              2.50000000E-01  2.50000000E-01  0.00000000E+00
+              5.00000000E-01  2.50000000E-01  0.00000000E+00
+              0.00000000E+00  5.00000000E-01  0.00000000E+00
+              2.50000000E-01  5.00000000E-01  0.00000000E+00
+              5.00000000E-01  5.00000000E-01  0.00000000E+00
+acell  12.467903  7.1983  30.
+rprim  1.   0.   0.  
+       0.   1.   0.     
+       0.   0.   1.  
+ntypat 2           # There are 4 types of atom
+znucl  1 14    # The keyword "zatnum" refers to the atomic number of the
+             # possible type(s) of atom. The pseudopotential(s)
+                  # mentioned in the "files" file must correspond
+                  # to the type(s) of atom. Here, the only type is Silicon.
+natom  14
+typat   2*1 12*2
+xcart  5.63153281207509E+00 -3.59915000000000E+00 -6.51556659141272E-01
+  5.94978424629170E-01  3.99585919907963E-16 -4.03050523190062E-01
+  6.08969181251996E+00 -3.59915000000000E+00  2.15014461258978E+00
+  1.30822391984638E-01  3.99585919907963E-16  2.40042103807968E+00
+  2.09017759849385E+00 -3.59915000000000E+00  4.03001654213921E+00
+ -4.16312784010154E+00  3.99585919907963E-16  3.31388779850620E+00
+  2.08937918542687E+00 -3.59915000000000E+00  8.47747342177409E+00
+ -4.14872787258864E+00  3.99585919907963E-16  7.66996576372150E+00
+ -2.26223250633845E+00 -3.59915000000000E+00  9.38816468640326E+00
+  4.36177504392197E+00  3.99585919907963E-16  9.67172605366154E+00
+ -2.92762191101085E-02 -3.59915000000000E+00  1.60166759685954E+01
+  2.06568224183842E+00  3.99585919907963E-16  1.50655779346659E+01
+ -3.72624715164578E+00 -3.59915000000000E+00  1.35923712310877E+01
+  6.19304955132109E+00  3.99585919907963E-16  1.37734236641877E+01
+ ecut 6.0         # Maximal kinetic energy cut-off, in Hartree
+ enunit 2
+ ixc 2
+ prtden1 1
+ nstep1 50 
+ toldfe1 1.0d-6     # Will stop when, twice in a row, the difference
+                  # between two consecutive evaluations of total energy
+                  # differ by less than toldfe (in Hartree)
+ diemac 5.0        # Although this is not mandatory, it is worth to
+                   # precondition the SCF cycle. The model dielectric
+                  # function used as the standard preconditioner
+                  # is described in the "dielng" input variable section.
+                  # Here, we follow the prescription for bulk diamond.
+ diemix 0.5                                                                                                                                       
+iscf2   -2 # non self-consistency, read previous density file
+mkmem 0
+mffmem 0
+nband2 100
+getden2 -1
+prtvol  2
+tolwfr2  1.0d-9  # it is not important as later there is a diago
+nbdbuf2 10
+nstep2 100
+npwkss2 0
+nbandkss2 100
+kssform2 3
+istwfk2 20*1

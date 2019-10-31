@@ -1,0 +1,100 @@
+#                                                           
+# :::   :::   :::     ::::    ::::  :::::::::   ::::::::    
+# :+:   :+: :+: :+:   +:+:+: :+:+:+ :+:    :+: :+:    :+:   
+#  +:+ +:+ +:+   +:+  +:+ +:+:+ +:+ +:+    +:+ +:+    +:+   
+#   +#++: +#++:++#++: +#+  +:+  +#+ +#++:++#+  +#+    +:+   
+#    +#+  +#+     +#+ +#+       +#+ +#+    +#+ +#+    +#+   
+#    #+#  #+#     #+# #+#       #+# #+#    #+# #+#    #+#   
+#    ###  ###     ### ###       ### #########   ########    
+#                                                           
+#             GPL Version 4.0.0 Revision 4325               
+#                    MPI+OpenMP Build                       
+#                http://www.yambo-code.org                  
+#
+# GW [Newton Solver]
+#
+#  == COHSEX GW ==
+#  GW SC iterations       :0
+#  X G`s            [used]: 1
+#  X G`s            [disk]: 1
+#  X bands                :  1  10
+#  X poles           [o/o]: 100.0000
+#  X e/h E range      [ev]:-1.000000 -1.000000
+#  X xc-Kernel            : none
+#  X BZ energy RIM        : no
+#  X BZ RIM points        :0
+#  Sc bands terminator    : no
+#  Sx RL components       :  89
+#  QP @ K 001 - 003 : b 001 - 010
+#
+#  K-point    Band       Eo         E-Eo       Sc(Eo)
+#
+   1.00000    1.00000  -12.07289   -2.31112    3.57003
+  1.000000   2.000000   0.000000   0.480388   2.581490
+  1.000000   3.000000   0.000000   0.480387   2.581489
+  1.000000   4.000000   0.000000   0.480392   2.581490
+  1.000000   5.000000   2.576077   2.046237  -3.069623
+  1.000000   6.000000   2.576077   2.046238  -3.069622
+  1.000000   7.000000   2.576077   2.046237  -3.069622
+  1.000000   8.000000   3.532436   2.631025  -3.304516
+  1.000000   9.000000   7.790952   2.003934  -3.560086
+   1.00000   10.00000    7.91753    2.68469   -3.29600
+  2.000000   1.000000  -9.683749  -1.672777   3.318942
+  2.000000   2.000000  -7.093059  -0.558172   2.890558
+  2.000000   3.000000  -1.231905   0.378661   2.599604
+  2.000000   4.000000  -1.231905   0.378659   2.599604
+  2.000000   5.000000   1.608910   1.904568  -3.164049
+  2.000000   6.000000   3.353555   2.096415  -3.151450
+  2.000000   7.000000   3.353555   2.096415  -3.151450
+  2.000000   8.000000   7.598269   2.243343  -3.527239
+   2.00000    9.00000   10.79392    3.06719   -3.42314
+   2.00000   10.00000   10.79392    3.06719   -3.42314
+  3.000000   1.000000  -7.848431  -1.064664   3.091665
+  3.000000   2.000000  -7.848420  -1.064655   3.091665
+  3.000000   3.000000  -2.933380   0.194399   2.642165
+  3.000000   4.000000  -2.933380   0.194400   2.642165
+  3.000000   5.000000   0.636567   1.642915  -3.152007
+  3.000000   6.000000   0.636571   1.642914  -3.152007
+   3.00000    7.00000   10.22489    3.43089   -3.39479
+   3.00000    8.00000   10.22489    3.43089   -3.39479
+   3.00000    9.00000   11.22855    2.93184   -3.39711
+   3.00000   10.00000   11.22855    2.93184   -3.39711
+# 
+# 04/08/2015 at 18:38 YAMBO @ anomaly [start]
+# 04/08/2015 at 18:38                 [end]
+#  
+# Timing   [Min/Max/Average]: 03s/03s/03s
+#
+# .-Input file : INPUTS/02Cohsex
+# | em1s                         # [R Xs] Static Inverse Dielectric Matrix
+# | HF_and_locXC                 # [R XX] Hartree-Fock Self-energy and Vxc
+# | gw0                          # [R GW] GoWo Quasiparticle energy levels
+# | cohsex                       # [R Xp] COlumb Hole Screened EXchange
+# | BoseTemp= 0.000000     eV    # Bosonic Temperature
+# | FFTGvecs=  387         RL    # [FFT] Plane-waves
+# | X_all_q_CPU= ""              # [PARALLEL] CPUs for each role
+# | X_all_q_ROLEs= ""            # [PARALLEL] CPUs roles (q,k,c,v)
+# | X_all_q_nCPU_invert= 1       # [PARALLEL] CPUs for matrix inversion
+# | X_Threads=  8                # [OPENMP/X] Number of threads for response functions
+# | DIP_Threads=  8              # [OPENMP/X] Number of threads for dipoles
+# | SE_CPU= ""                   # [PARALLEL] CPUs for each role
+# | SE_ROLEs= ""                 # [PARALLEL] CPUs roles (q,qp,b)
+# | SE_Threads=  8               # [OPENMP/GW] Number of threads for self-energy
+# | EXXRLvcs=  7           Ry    # [XX] Exchange RL components
+# | Chimod= "Hartree"            # [X] IP/Hartree/ALDA/LRC/BSfxc
+# | % BndsRnXs
+# |   1 | 10 |                   # [Xs] Polarization function bands
+# | %
+# | NGsBlkXs= 1            RL    # [Xs] Response block size
+# | % LongDrXs
+# | 0.1000E-4 | 0.000    | 0.000    |        # [Xs] [cc] Electric Field
+# | %
+# | % GbndRnge
+# |   1 | 10 |                   # [GW] G[W] bands range
+# | %
+# | %QPkrange                    # [GW] QP generalized Kpoint/Band indices
+# |   1|  3|  1| 10|
+# | %
+# | %QPerange                    # [GW] QP generalized Kpoint/Energy indices
+# |   1|  3| 0.0|-1.0|
+# | %

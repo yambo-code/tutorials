@@ -1,0 +1,69 @@
+#with this input I will produce the KSS file
+#this file is needed as an input in self.
+ndtset 2
+#kpoints: I will generate k points only along the wire-axis direction
+#kpoints
+ngkpt   4 1 1
+kptopt  1
+shiftk  0.5 0.0 0.0
+#definition of the unit cell
+acell  17.63  25. 25.
+rprim  1.00000  0.00000  0.00000
+       0.00000  1.00000  0.00000
+       0.00000 -0.50000  0.86602
+ntypat 2
+znucl  14 1
+natom  32
+typat  14*1 18*2
+xangst  -5.8246254921    -0.0000001883     0.0000000000
+  -3.5049149990     0.0000002023     0.0000000000
+  -2.7036347389     1.0788085461     1.8685514927
+  -2.7036342621    -2.1576166153     0.0000000000
+  -2.7036347389     1.0788085461    -1.8685514927
+   2.7036998272    -1.0788145065     1.8685618639
+   2.7036993504     2.1576285362     0.0000000000
+   2.7036998272    -1.0788145065    -1.8685618639
+  -0.3978391290     1.0801640749     1.8708995581
+  -0.3978386521    -2.1603274345     0.0000000000
+  -0.3978391290     1.0801640749    -1.8708995581
+   0.3978929818     2.1603274345     0.0000000000
+   0.3978934288    -1.0801640749    -1.8708995581
+   0.3978934288    -1.0801640749     1.8708995581
+  -3.2088444233    -2.8671338558    -1.1920773983
+  -3.2088453770     0.4011968970     3.0790491104
+  -3.2088453770     0.4011968970    -3.0790491104
+  -3.2088446617     2.4659364223    -1.8869723082
+  -3.2088446617     2.4659364223     1.8869723082
+  -3.2088444233    -2.8671338558     1.1920773983
+   3.2089235783    -0.4011893272     3.0790512562
+   3.2089228630    -2.4659421444     1.8869669437
+   3.2089226246     2.8671319485     1.1920850277
+   3.2089228630    -2.4659421444    -1.8869669437
+   3.2089226246     2.8671319485    -1.1920850277
+   3.2089235783    -0.4011893272    -3.0790512562
+  -0.1007572413    -1.7774717808    -3.0786690712
+  -0.1007565335     3.5549409389     0.0000000000
+  -0.1007572413    -1.7774717808     3.0786690712
+   0.1007920429     1.7774748802     3.0786743164
+   0.1007913426    -3.5549471378     0.0000000000
+   0.1007920429     1.7774748802    -3.0786743164
+ecut 8.0  #maximal kinetic energy cut-off, in Hartree
+enunit 2
+diemac 6.0
+diemix 0.5
+# Dataset1: definition of the SCF procedure
+nstep1  50        # Maximal number of SCF cycles
+toldfe1  1.0d-6    # Will stop when this tolerance is achieved on total energy
+prtden1  1         # Print out density
+# Dataset2: calculation of kss file
+nstep2  100
+iscf2   -2            # Non self-consistent calculation
+getden2  1            # Read previous density file
+tolwfr2 1.0d-08       # It's not important, as later there is a diago
+kssform 3
+istwfk 20*1
+# Definiton of parameters for the calculation of the kss file
+nband2 100
+nbandkss2 100     # Number of bands to store in KSS file
+nbdbuf2 10
+npwkss2 0         # Number of plane waves to store in KSS file

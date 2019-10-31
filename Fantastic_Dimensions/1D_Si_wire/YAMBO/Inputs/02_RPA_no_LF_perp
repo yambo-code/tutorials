@@ -1,0 +1,32 @@
+#                                                           
+# ooooo   oooo ..     ooo        ooo ooooooooo.    .oooo.   
+#  `88.   .8" .88.    `88.       .88 `88"   `Y8b  dP"  `Yb  
+#   `88. .8" .8"88.    888b     d"88  88     888 88      88 
+#    `88.8" .8" `88.   8 Y88. .P  88  88oooo888" 88      88 
+#     `88" .88ooo888.  8  `888"   88  88    `88b 88      88 
+#      88 .8"     `88. 8    Y     88  88    .88P `8b    d8" 
+#     o88o88o      888o8          88 o88bood8P"   `Ybod8P"  
+#                                                           
+#                Version 3.3.1 Revision 2126                
+#                 http://www.yambo-code.org                 
+#
+optics                       # [R OPT] Optics
+chi                          # [R CHI] Dyson equation for Chi.
+NonPDirs= "YZ"               # [X/BSS] Non periodic chartesian directions (X,Y,Z,XY...)
+Chimod= "IP"                 # [X] IP/Hartree/ALDA/LRC/BSfxc
+% QpntsRXd
+ 1 | 1 |                     # [Xd] Transferred momenta
+%
+% BndsRnXd
+   1 | 100 |                 # [Xd] Polarization function bands
+%
+% EnRngeXd
+  0.00000 | 10.00000 | eV    # [Xd] Energy range
+%
+% DmRngeXd
+  0.10000 |  0.10000 | eV    # [Xd] Damping range
+%
+ETStpsXd= 200                # [Xd] Total Energy steps
+% LongDrXd
+ 0.000000 | 1.000000 | 1.000000 |        # [Xd] [cc] Electric Field
+%

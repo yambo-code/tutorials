@@ -1,0 +1,34 @@
+#  ____  ____     _       ____    ____  ______      ___     
+# |_  _||_  _|   / \     |_   \  /   _||_   _ \   ."   `.   
+#   \ \  / /    / _ \      |   \/   |    | |_) | /  .-.  \  
+#    \ \/ /    / ___ \     | |\  /| |    |  __". | |   | |  
+#    _|  |_  _/ /   \ \_  _| |_\/_| |_  _| |__) |\  `-"  /  
+#   |______||____| |____||_____||_____||_______/  `.___."   
+#                                                           
+#               Version 3.2.5 Revision 1034                 
+#                http://www.yambo-code.org                  
+#
+gw0                          # [R GW] GoWo Quasiparticle energy levels
+cohsex                       # [R Xp] COlumb Hole Screened EXchange
+HF_and_locXC                 # [R XX] Hartree-Fock Self-energy and Vxc
+em1s                         # [R Xs] Static Inverse Dielectric Matrix
+EXXRLvcs= 7            Ry    # [XX] Exchange RL components
+% QpntsRXs
+  1 | 16 |                   # [Xs] Transferred momenta
+%
+% BndsRnXs
+   1 |  10 |                 # [Xs] Polarization function bands
+%
+NGsBlkXs= 1            RL    # [Xs] Response block size
+% LongDrXs
+ 1.000000 | 0.000000 | 0.000000 |        # [Xs] [cc] Electric Field
+%
+% GbndRnge
+   1 |  10 |                 # [GW] G[W] bands range
+%
+%QPkrange                    # [GW] QP generalized Kpoint/Band indices
+  1| 16|  1| 10|
+%
+%QPerange                    # [GW] QP generalized Kpoint/Energy indices
+  1| 16| 0.0|-1.0|
+%

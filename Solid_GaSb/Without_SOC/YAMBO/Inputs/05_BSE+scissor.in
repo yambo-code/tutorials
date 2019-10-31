@@ -1,0 +1,106 @@
+#   __   __     _        __  __       ____      U  ___  u   
+#   \ \ / / U  /"\  U u |" \/ "| u U | __") u    \/"_ \/    
+#    \ V /   \/ _ \/   \| |\/| |/   \|  _ \/     | | | |    
+#   U_|"|_u  / ___ \    | |  | |     | |_) | .-,_| |_| |    
+#     |_|   /_/   \_\   |_|  |_|     |____/   \_)-\___/     
+# .-,//|(_   \\    >>  <<,-,,-.     _|| \\_        \\       
+#  \_) (__) (__)  (__)  (./  \.)   (__) (__)      (__)      
+#                                                           
+#             GPL Version 4.0.0 Revision 4245               
+#                      Serial Build                         
+#                http://www.yambo-code.org                  
+#
+bss                          # [R BSS] Bethe Salpeter Equation solver
+em1s                         # [R Xs] Static Inverse Dielectric Matrix
+optics                       # [R OPT] Optics
+bse                          # [R BSE] Bethe Salpeter Equation.
+bsk                          # [R BSK] Bethe Salpeter Equation kernel
+StdoHash=  40                # [IO] Live-timing Hashes
+Nelectro= 8.000000           # Electrons number
+ElecTemp= 0.000000     eV    # Electronic Temperature
+BoseTemp= 0.000000     eV    # Bosonic Temperature
+OccTresh=0.1000E-4           # Occupation treshold (metallic bands)
+FFTGvecs=  10        Ry    # [FFT] Plane-waves
+#WFbuffIO                    # [IO] Wave-functions buffered I/O
+#X_all_q_CPU= "2 2 2 2"              # [PARALLEL] CPUs for each role
+#X_all_q_ROLEs= "q k c v"            # [PARALLEL] CPUs roles (q,k,c,v)
+#X_all_q_nCPU_invert=0        # [PARALLEL] CPUs for matrix inversion
+#X_Threads= 8                # [OPENMP/X] Number of threads for response functions
+#DIP_Threads= 8              # [OPENMP/X] Number of threads for dipoles
+#BS_CPU= "4 2 2"                   # [PARALLEL] CPUs for each role
+#BS_ROLEs= "k eh t"                 # [PARALLEL] CPUs roles (k,eh,t)
+#BS_nCPU_invert=0             # [PARALLEL] CPUs for matrix inversion
+#BS_nCPU_diago=0              # [PARALLEL] CPUs for matrix diagonalization
+NonPDirs= "none"             # [X/BSS] Non periodic chartesian directions (X,Y,Z,XY...)
+Chimod= "hartree"            # [X] IP/Hartree/ALDA/LRC/BSfxc
+BSEmod= "causal"             # [BSE] resonant/causal/x_coupling/xc_coupling
+BSKmod= "SEX"                # [BSE] IP/Hartree/HF/ALDA/SEX
+BSSmod= "h"                  # [BSS] (h)aydock/(d)iagonalization/(i)nversion/(t)ddft`
+BSENGexx= 10        Ry    # [BSK] Exchange components
+#ALLGexx                     # [BSS] Force the use use all RL vectors for the exchange part
+BSENGBlk= 1          Ry    # [BSK] Screened interaction block size
+#WehDiag                     # [BSK] diagonal (G-space) the eh interaction
+KfnQPdb= "none"              # [EXTQP BSK BSS] Database
+KfnQP_N= 1                   # [EXTQP BSK BSS] Interpolation neighbours
+% KfnQP_E
+ 0.5300000 | 1.000000 | 1.000000 |        # [EXTQP BSK BSS] E parameters  (c/v) eV|adim|adim
+%
+KfnQP_Z= ( 1.000000 , 0.000000 )       # [EXTQP BSK BSS] Z factor  (c/v)
+KfnQP_Wv_E= 0.000000   eV    # [EXTQP BSK BSS] W Energy reference  (valence)
+% KfnQP_Wv
+ 0.00     | 0.00     | 0.00     |        # [EXTQP BSK BSS] W parameters  (valence) eV|adim|eV^-1
+%
+KfnQP_Wc_E= 0.000000   eV    # [EXTQP BSK BSS] W Energy reference  (conduction)
+% KfnQP_Wc
+ 0.00     | 0.00     | 0.00     |        # [EXTQP BSK BSS] W parameters  (conduction) eV|adim|eV^-1
+%
+DrudeWBS= ( 0.00     , 0.00     )  eV  # [BSE] Drude plasmon
+#Reflectivity                # [BSS] Compute reflectivity at normal incidence
+BoseCut=  0.10000            # [BOSE] Finite T Bose function cutoff
+% BEnRange
+  0.00000 | 6.00000 | eV    # [BSS] Energy range
+%
+% BDmRange
+  0.10000 |  0.10000 | eV    # [BSS] Damping range
+%
+BEnSteps= 200                # [BSS] Energy steps
+% BLongDir
+ 1.000000 | 1.000000 | 1.000000 |        # [BSS] [cc] Electric Field
+%
+% BSEBands
+   3 | 6 |                 # [BSK] Bands range
+%
+% BSEEhEny
+-1.000000 |-1.000000 | eV    # [BSK] Electron-hole energy range
+%
+WRbsWF                      # [BSS] Write to disk excitonic the FWs
+XfnQPdb= "none"              # [EXTQP Xd] Database
+XfnQP_N= 1                   # [EXTQP Xd] Interpolation neighbours
+% XfnQP_E
+ 0.000000 | 1.000000 | 1.000000 |        # [EXTQP Xd] E parameters  (c/v) eV|adim|adim
+%
+XfnQP_Z= ( 1.000000 , 0.000000 )       # [EXTQP Xd] Z factor  (c/v)
+XfnQP_Wv_E= 0.000000   eV    # [EXTQP Xd] W Energy reference  (valence)
+% XfnQP_Wv
+ 0.00     | 0.00     | 0.00     |        # [EXTQP Xd] W parameters  (valence) eV|adim|eV^-1
+%
+XfnQP_Wc_E= 0.000000   eV    # [EXTQP Xd] W Energy reference  (conduction)
+% XfnQP_Wc
+ 0.00     | 0.00     | 0.00     |        # [EXTQP Xd] W parameters  (conduction) eV|adim|eV^-1
+%
+% QpntsRXs
+   1 |  44 |                 # [Xs] Transferred momenta
+%
+% BndsRnXs
+   1 |  20 |                 # [Xs] Polarization function bands
+%
+NGsBlkXs= 1           Ry    # [Xs] Response block size
+CGrdSpXs= 100.0000           # [Xs] [o/o] Coarse grid controller
+% EhEngyXs
+-1.000000 |-1.000000 | eV    # [Xs] Electron-hole energy range
+%
+% LongDrXs
+0.5774E-5 |0.5774E-5 |0.5774E-5 |        # [Xs] [cc] Electric Field
+%
+DrudeWXs= ( 0.00     , 0.00     )  eV  # [Xs] Drude plasmon
+#XTerm                       # [X] Use a terminator for the response

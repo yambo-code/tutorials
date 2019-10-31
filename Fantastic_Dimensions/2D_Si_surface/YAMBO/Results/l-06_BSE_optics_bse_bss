@@ -1,0 +1,48 @@
+
+____    ____    ___      .___  ___.  .______     ______
+\   \  /   /   /   \     |   \/   |  |   _  \   /  __  \
+ \   \/   /   /  ^  \    |  \  /  |  |  |_)  | |  |  |  |
+  \_    _/   /  /_\  \   |  |\/|  |  |   _  <  |  |  |  |
+    |  |    /  _____  \  |  |  |  |  |  |_)  | |  `--"  |
+    |__|   /__/     \__\ |__|  |__|  |______/   \______/
+
+ <---> [01] CPU structure, Files & I/O Directories
+ <---> [02] CORE Variables Setup
+ <---> [02.01] Unit cells
+ <---> [02.02] Symmetries
+ <---> [02.03] RL shells
+ <---> [02.04] K-grid lattice
+ <---> [02.05] Non periodic geometry
+ <---> [02.06] Energies [ev] & Occupations
+ <---> [03] Transferred momenta grid
+ <---> [04] Response Functions in Transition space
+ <---> [05] External QP corrections (K)
+ <---> [05.01] Transition Groups build-up
+ <---> [05.02] CPU-dependent Block structure
+ <---> [BSK] Size   (total)  96
+ <---> [05.03] Independent Particles absorption
+ <---> [05.04] Bethe-Salpeter Kernel ( Res. COR Res. EXX)
+ <---> [05.04.01] Screened interaction header I/O
+ <---> [WF] Performing Wave-Functions I/O
+ <---> [FFT-BSK] Mesh size: 12   7  27
+ <---> [05.04.02] Wave-Function Phases
+ <---> [05.04.03] Kernel loop
+ <---> Kernel |                                        | [000%] --(E) --(X)
+ <---> Kernel |########################################| [100%] --(E) --(X)
+ <---> [06] BSE solver(s)
+ <---> [06.01] Haydock solver
+ <---> [Haydock] Iteration 1
+ <---> [Haydock] Iteration 2
+ <01s> [Haydock] Iteration 3 Accuracy : 1.646036|   0.0100
+ <01s> [Haydock] Iteration 4 Accuracy : 0.232760|   0.0100
+ <01s> [Haydock] Iteration 5 Accuracy : 0.170109|   0.0100
+ <01s> [Haydock] Iteration 6 Accuracy : 0.220683|   0.0100
+ <01s> [Haydock] Iteration 7 Accuracy : 0.158331|   0.0100
+ <01s> [Haydock] Iteration 8 Accuracy :  0.09600|   0.0100
+ <02s> [Haydock] Iteration 9 Accuracy :  0.08940|   0.0100
+ <02s> [Haydock] Iteration 10 Accuracy :  0.09116|   0.0100
+ <02s> [Haydock] Iteration 11 Accuracy :  0.03180|   0.0100
+ <02s> [Haydock] Iteration 12 Accuracy :  0.01248|   0.0100
+ <02s> [Haydock] Iteration 13 Accuracy :   0.0024|   0.0100
+ <02s> [07] Timing Overview
+ <02s> [08] Game Over & Game summary

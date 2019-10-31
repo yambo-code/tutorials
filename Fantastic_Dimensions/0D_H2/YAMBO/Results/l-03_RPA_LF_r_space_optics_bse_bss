@@ -1,0 +1,44 @@
+
+ ___ __  _____  __ __  _____   _____
+|   Y  ||  _  ||  Y  ||  _  \ |  _  |
+|   |  ||. |  ||.    ||. |  / |. |  |
+ \_  _/ |. _  ||.\_/ ||. _  \ |. |  |
+  |: |  |: |  ||: |  ||: |   \|: |  |
+  |::|  |:.|:.||:.|:.||::.   /|::.  |
+  `--"  `-- --"`-- --"`-----" `-----"
+
+ <---> [01] Job Setup
+ <---> [02] Input variables setup
+ <---> [02.01] K-grid lattice
+ <---> [02.02] RL shells
+ <---> [02.03] Input (E)nergies[ev] & Occupations
+ <---> [03] Transferred momenta grid
+ <---> X indexes |                    | [000%] --(E) --(X)
+ <---> X indexes |####################| [100%] --(E) --(X)
+ <---> SE indexes |                    | [000%] --(E) --(X)
+ <---> SE indexes |####################| [100%] --(E) --(X)
+ <---> [04] Bethe-Salpeter Kernel
+ <---> [BSE] Kernel dimension    :  69
+ <---> Filling Estimation |                    | [000%] --(E) --(X)
+ <---> Filling Estimation |####################| [100%] --(E) --(X)
+ <---> [P 01] Kernel filling [o/o] 100.0000
+ <---> [M 0.012 Gb] Alloc WF (0.011)
+ <---> [FFT-BSK] Mesh size: 27  27  27
+ <---> [WF loader] Wfs (re)loading |                    | [000%] --(E) --(X)
+ <01s> [WF loader] Wfs (re)loading |####################| [100%] --(E) --(X)
+ <01s> [05] Main loop
+ <01s> BSK |                    | [000%] --(E) --(X)
+ <01s> [M 0.002 Gb] Free WF (0.011)
+ <01s> [06] BSE solver(s)
+ <01s> [WF loader] Wfs (re)loading |                    | [000%] --(E) --(X)
+ <02s> [WF loader] Wfs (re)loading |####################| [100%] --(E) --(X)
+ <02s> Dipole (T): |                    | [000%] --(E) --(X)
+ <02s> Dipole (T): |####################| [100%] --(E) --(X)
+ <02s> [06.01] Diagonalization solver
+ <02s> BSK diagonalize |                    | [000%] --(E) --(X)
+ <02s> BSK diagonalize |####################| [100%] --(E) --(X)
+ <02s> BSK   residuals |                    | [000%] --(E) --(X)
+ <02s> BSK   residuals |####################| [100%] --(E) --(X)
+ <02s> BSK res epsilon |                    | [000%] --(E) --(X)
+ <02s> BSK res epsilon |####################| [100%] --(E) --(X)
+ <02s> [07] Game Over & Game summary

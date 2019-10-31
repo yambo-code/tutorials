@@ -1,0 +1,27 @@
+#                                                           
+# :::   :::   :::     ::::    ::::  :::::::::   ::::::::    
+# :+:   :+: :+: :+:   +:+:+: :+:+:+ :+:    :+: :+:    :+:   
+#  +:+ +:+ +:+   +:+  +:+ +:+:+ +:+ +:+    +:+ +:+    +:+   
+#   +#++: +#++:++#++: +#+  +:+  +#+ +#++:++#+  +#+    +:+   
+#    +#+  +#+     +#+ +#+       +#+ +#+    +#+ +#+    +#+   
+#    #+#  #+#     #+# #+#       #+# #+#    #+# #+#    #+#   
+#    ###  ###     ### ###       ### #########   ########    
+#                                                           
+#                                                           
+#             GPL Version 4.1.2 Revision 120                
+#                    MPI+OpenMP Build                       
+#                http://www.yambo-code.org                  
+#
+excitons                     # [R] Excitons
+wavefunction                 # [R] Wavefunction
+Format= "x"                  # Output format [(c)ube/(g)nuplot/(x)crysden]
+Direction= "12"               # [rlu] [1/2/3] for 1d or [12/13/23] for 2d [123] for 3D
+FFTGvecs=  3951        RL    # [FFT] Plane-waves
+States= "1 - 1"              # Index of the BS state(s)
+Degen_Step=   0.0100   eV    # Maximum energy separation of two degenerate states
+% Cells
+  5 |  5 |  1 |                          # Number of cell repetitions in each direction (odd or 1)
+%
+% Hole
+ 2.400000 | 1.400000 | 0.000000 |        # [cc] Hole position in unit cell
+%

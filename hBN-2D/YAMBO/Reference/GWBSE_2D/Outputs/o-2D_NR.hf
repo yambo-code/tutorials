@@ -1,0 +1,47 @@
+#                                                           
+#  __  __   ________   ___ __ __    _______   ______        
+# /_/\/_/\ /_______/\ /__//_//_/\ /_______/\ /_____/\       
+# \ \ \ \ \\::: _  \ \\::\| \| \ \\::: _  \ \\:::_ \ \      
+#  \:\_\ \ \\::(_)  \ \\:.      \ \\::(_)  \/_\:\ \ \ \     
+#   \::::_\/ \:: __  \ \\:.\-/\  \ \\::  _  \ \\:\ \ \ \    
+#     \::\ \  \:.\ \  \ \\. \  \  \ \\::(_)  \ \\:\_\ \ \   
+#      \__\/   \__\/\__\/ \__\/ \__\/ \_______\/ \_____\/   
+#                                                           
+#                                                           
+#             GPL Version 4.1.2 Revision 120                
+#                    MPI+OpenMP Build                       
+#                http://www.yambo-code.org                  
+#
+# Hartree-Fock Components and Corrections
+#
+#
+#  K-point    Band       Eo         Ehf        DFT        HF
+#
+   7.00000    4.00000    0.00000   -2.94115  -16.21949  -19.16063
+   7.00000    5.00000    4.40109    9.75327  -11.10752   -5.75534
+# 
+# 04/07/2017 at 20:12 YAMBO @ node001 [start]
+# 04/07/2017 at 20:12                 [end]
+#  
+# Timing   [Min/Max/Average]: 02s/02s/02s
+#
+# .-Input file : yambo_HF_NR.in
+# | HF_and_locXC                 # [R XX] Hartree-Fock Self-energy and Vxc
+# | rim_cut                      # [R RIM CUT] Coulomb potential
+# | BoseTemp= 0.000000     eV    # Bosonic Temperature
+# | FFTGvecs=  3951        RL    # [FFT] Plane-waves
+# | SE_CPU= "4.1"                # [PARALLEL] CPUs for each role
+# | SE_ROLEs= "b.qp"             # [PARALLEL] CPUs roles (q,qp,b)
+# | SE_Threads= 1                # [OPENMP/GW] Number of threads for self-energy
+# | RandQpts=0                   # [RIM] Number of random q-points in the BZ
+# | RandGvec= 1            RL    # [RIM] Coulomb interaction RS components
+# | CUTGeo= "none"               # [CUT] Coulomb Cutoff geometry: box/cylinder/sphere X/Y/Z/XY..
+# | % CUTBox
+# |  0.00     | 0.00     | 0.00     |        # [CUT] [au] Box sides
+# | %
+# | CUTRadius= 0.000000          # [CUT] [au] Sphere/Cylinder radius
+# | CUTCylLen= 0.000000          # [CUT] [au] Cylinder length
+# | EXXRLvcs= 21817        RL    # [XX] Exchange RL components
+# | %QPkrange                    # [GW] QP generalized Kpoint/Band indices
+# |   7|  7|  4|  5|
+# | %

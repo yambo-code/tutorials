@@ -1,0 +1,5 @@
+&bands
+    prefix  = 'hBN'
+    outdir = './tmp_b'
+    filband = 'hBN_bands.dat.KGMKHAL40ry'
+/

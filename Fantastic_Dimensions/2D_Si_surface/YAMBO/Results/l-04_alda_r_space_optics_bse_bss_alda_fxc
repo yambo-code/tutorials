@@ -1,0 +1,57 @@
+
+____    ____    ___      .___  ___.  .______     ______
+\   \  /   /   /   \     |   \/   |  |   _  \   /  __  \
+ \   \/   /   /  ^  \    |  \  /  |  |  |_)  | |  |  |  |
+  \_    _/   /  /_\  \   |  |\/|  |  |   _  <  |  |  |  |
+    |  |    /  _____  \  |  |  |  |  |  |_)  | |  `--"  |
+    |__|   /__/     \__\ |__|  |__|  |______/   \______/
+
+ <---> [01] Job Setup
+ <---> [02] Input variables setup
+ <---> [02.01] K-grid lattice
+ <---> [02.02] RL shells
+ <---> [02.03] Input (E)nergies[ev] & Occupations
+ <---> [03] Transferred momenta grid
+ <---> X indexes |                    | [000%] --(E) --(X)
+ <---> X indexes |####################| [100%] --(E) --(X)
+ <---> SE indexes |                    | [000%] --(E) --(X)
+ <---> SE indexes |####################| [100%] --(E) --(X)
+ <---> [04] Bethe-Salpeter Kernel
+ <---> [BSE] Kernel dimension    :  96
+ <---> Filling Estimation |                    | [000%] --(E) --(X)
+ <---> Filling Estimation |####################| [100%] --(E) --(X)
+ <---> [P 01] Kernel filling [o/o] 100.0000
+ <---> [FFT-BSK] Mesh size: 12   7  27
+ <---> [WF loader] Wfs (re)loading |                    | [000%] --(E) --(X)
+ <---> [WF loader] Wfs (re)loading |####################| [100%] --(E) --(X)
+ <---> [xc] Functional Perdew & Zunger (xc)
+ <---> [05] Main loop
+ <---> BSK |                    | [000%] --(E) --(X)
+ <---> [06] BSE solver(s)
+ <---> [WF loader] Wfs (re)loading |                    | [000%] --(E) --(X)
+ <01s> [WF loader] Wfs (re)loading |####################| [100%] --(E) --(X)
+ <01s> Dipole (T): |                    | [000%] --(E) --(X)
+ <01s> Dipole (T): |####################| [100%] --(E) --(X)
+ <01s> [06.01] Haydock solver
+ <01s> [Haydock] Iteration 1
+ <01s> [Haydock] Iteration 2
+ <01s> [Haydock] Iteration 3 Accuracy : 2.148666|   0.0100
+ <01s> [Haydock] Iteration 4 Accuracy : 0.584796|   0.0100
+ <01s> [Haydock] Iteration 5 Accuracy : 0.742814|   0.0100
+ <02s> [Haydock] Iteration 6 Accuracy : 0.535927|   0.0100
+ <02s> [Haydock] Iteration 7 Accuracy : 0.386155|   0.0100
+ <02s> [Haydock] Iteration 8 Accuracy : 0.320545|   0.0100
+ <02s> [Haydock] Iteration 9 Accuracy : 0.322116|   0.0100
+ <02s> [Haydock] Iteration 10 Accuracy : 0.278836|   0.0100
+ <02s> [Haydock] Iteration 11 Accuracy :  0.09717|   0.0100
+ <02s> [Haydock] Iteration 12 Accuracy :  0.04868|   0.0100
+ <02s> [Haydock] Iteration 13 Accuracy :  0.01665|   0.0100
+ <02s> [Haydock] Iteration 14 Accuracy :   0.0033|   0.0100
+ <02s> [06.02] Diagonalization solver
+ <02s> BSK diagonalize |                    | [000%] --(E) --(X)
+ <02s> BSK diagonalize |####################| [100%] --(E) --(X)
+ <02s> BSK   residuals |                    | [000%] --(E) --(X)
+ <02s> BSK   residuals |####################| [100%] --(E) --(X)
+ <02s> BSK res epsilon |                    | [000%] --(E) --(X)
+ <02s> BSK res epsilon |####################| [100%] --(E) --(X)
+ <02s> [07] Game Over & Game summary

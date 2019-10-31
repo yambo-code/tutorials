@@ -1,0 +1,33 @@
+#                                                           
+# Y88b    /   e           e    e      888~~\    ,88~-_      
+#  Y88b  /   d8b         d8b  d8b     888   |  d888   \     
+#   Y88b/   /Y88b       d888bdY88b    888 _/  88888    |    
+#    Y8Y   /  Y88b     / Y88Y Y888b   888  \  88888    |    
+#     Y   /____Y88b   /   YY   Y888b  888   |  Y888   /     
+#    /   /      Y88b /          Y888b 888__/    `88_-~      
+#                                                           
+#             GPL Version 3.1.2 Revision 297                
+#               http://www.yambo-code.org                   
+#
+optics                       # [R OPT] Optics
+chi                          # [R LR] Linear Response.
+% XfnQP_E
+ 5.190000 | 1.000000 | 1.000000 |      # [EXTQP Xd] E parameters (c/v)
+%
+% QpntsRXd
+ 1 | 1 |                     # [Xd] Transferred momenta
+%
+% BndsRnXd
+  1 | 10 |                   # [Xd] Polarization function bands
+%
+NGsBlkXd=  51            RL  # [Xd] Response block size
+% EnRngeXd
+  7.50000 | 25.00000 |   eV  # [Xd] Energy range
+%
+% DmRngeXd
+ 0.100000 | 0.300000 |   eV  # [Xd] Damping range
+%
+ETStpsXd= 300                # [Xd] Total Energy steps
+% LongDrXd
+ 1.000000 | 0.000000 | 0.000000 |      # [Xd] [cc] Electric Field
+%

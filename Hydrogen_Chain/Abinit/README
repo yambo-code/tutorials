@@ -1,0 +1,8 @@
+To run abinit in order to generate the YAMBO databases enter each
+directory, for example
+
+> cd 2.05
+
+and type
+
+> abinis < ../files > log

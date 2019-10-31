@@ -1,0 +1,1611 @@
+  ABINIT 
+  
+  Give name for formatted input file: 
+2D_Si_surface.in
+  Give name for formatted output file:
+2D_Si_surface.out
+  Give root name for generic input files:
+2D_Si_surface_i
+  Give root name for generic output files:
+2D_Si_surface_o
+  Give root name for generic temporary files:
+2D_Si_surface
+ leave_test : synchronization done...
+
+.Version 6.8.1  of ABINIT 
+.(MPI version, prepared for a x86_64_linux_intel11.1 computer) 
+
+.Copyright (C) 1998-2011 ABINIT group . 
+ ABINIT comes with ABSOLUTELY NO WARRANTY.
+ It is free software, and you are welcome to redistribute it
+ under certain conditions (GNU General Public License,
+ see ~abinit/COPYING or http://www.gnu.org/copyleft/gpl.txt).
+
+ ABINIT is a project of the Universite Catholique de Louvain,
+ Corning Inc. and other collaborators, see ~abinit/doc/developers/contributors.txt .
+ Please read ~abinit/doc/users/acknowledgments.html for suggested
+ acknowledgments of the ABINIT effort.
+ For more information, see http://www.abinit.org .
+
+.Starting date : Thu 29 Dec 2011.
+- ( at 15h43 )
+  
+ 
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+ === Build Information === 
+  Version       : 6.8.1
+  Build target  : x86_64_linux_intel11.1
+  Build date    : 20110712
+ 
+ === Compiler Suite === 
+  C compiler       : intel11.1
+  CFLAGS           : -axSSE2,SSE3,SSSE3,SSE4.1,SSE4.2 -O3 -m64 -ip -prec-div -static-intel -sox
+  C++ compiler     : gnu11.1
+  CXXFLAGS         : -axSSE2,SSE3,SSSE3,SSE4.1,SSE4.2 -O3 -m64 -ip -prec-div -static-intel -sox
+  Fortran compiler : intel11.1
+  FCFLAGS          : -axSSE2,SSE3,SSSE3,SSE4.1,SSE4.2 -O3 -m64 -ip -prec-div -static-intel -assume buffered_io -sox
+  FC_LDFLAGS       :    -static-intel -static-libgcc
+ 
+ === Optimizations === 
+  Debug level        : basic
+  Optimization level : standard
+  Architecture       : unknown_unknown
+ 
+ === MPI === 
+  Parallel build : yes
+  Parallel I/O   : yes
+  Time tracing   : no
+  GPU support    : no
+ 
+ === Connectors / Fallbacks === 
+  Connectors on : yes
+  Fallbacks on  : yes
+  DFT flavor    : libxc
+  FFT flavor    : none
+  LINALG flavor : custom
+  MATH flavor   : none
+  TIMER flavor  : abinit
+  TRIO flavor   : netcdf+etsf_io
+ 
+ === Experimental features === 
+  Bindings            : no
+  Exports             : no
+  GW double-precision : no
+ 
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Default optimizations:
+   --- None ---
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ CPP options activated during the build:
+
+                  CC_INTEL                   CXX_GNU                  FC_INTEL
+
+            HAVE_DFT_LIBXC HAVE_FC_ALLOCATABLE_DT...             HAVE_FC_ETIME
+
+              HAVE_FC_EXIT             HAVE_FC_FLUSH            HAVE_FC_GETENV
+
+            HAVE_FC_GETPID     HAVE_FC_ISO_C_BINDING        HAVE_FC_LONG_LINES
+
+              HAVE_FC_NULL         HAVE_FC_STREAM_IO               HAVE_LINALG
+
+           HAVE_LINALG_MPI     HAVE_LINALG_SCALAPACK        HAVE_LINALG_SERIAL
+
+                  HAVE_MPI                 HAVE_MPI2               HAVE_MPI_IO
+
+ HAVE_MPI_TYPE_CREATE_S...             HAVE_OS_LINUX              HAVE_STDIO_H
+
+                HAVE_TIMER         HAVE_TIMER_ABINIT            HAVE_TIMER_MPI
+
+         HAVE_TIMER_SERIAL         HAVE_TRIO_ETSF_IO          HAVE_TRIO_NETCDF
+
+              USE_MACROAVE
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+- input  file    -> 2D_Si_surface.in
+- output file    -> 2D_Si_surface.out
+- root for input  files -> 2D_Si_surface_i
+- root for output files -> 2D_Si_surface_o
+
+ instrng :    72 lines of input have been read
+
+ iofn2 : Please give name of formatted atomic psp file
+ iofn2 : for atom type   1 , psp file is ../../Pseudo_Potentials/H-mt.fhi
+
+ iofn2 : Please give name of formatted atomic psp file
+ iofn2 : for atom type   2 , psp file is ../../Pseudo_Potentials/Si-mt.fhi
+  read the values zionpsp=  1.0 , pspcod=   6 , lmax=   0
+  read the values zionpsp=  4.0 , pspcod=   6 , lmax=   2
+
+ inpspheads : deduce mpsang  =   3, n1xccc  =   0.
+ leave_test : synchronization done...
+
+ invars1m : enter jdtset=     1
+ invars1 : treat image number     1
+
+ symlatt : the Bravais lattice is oP (primitive orthorhombic)
+  xcart  is defined in input file
+ ingeo : takes atomic coordinates from input array xcart
+
+ symlatt : the Bravais lattice is oP (primitive orthorhombic)
+
+ symlatt : the Bravais lattice is oP (primitive orthorhombic)
+
+ symbrav : COMMENT -
+  The Bravais lattice determined only from the primitive
+  vectors, bravais(1)=  3, is more symmetric
+  than the real one, iholohedry=  2, obtained by taking into
+  account the atomic positions. Start deforming the primitive vector set.
+
+ symlatt : the Bravais lattice is mP (primitive monoclinic)
+ symspgr : the symmetry operation no.   1 is the identity
+ symplanes : the symmetry operation no.   2 is a mirror plane
+ symspgr : spgroup=   6  Pm   (=Cs^1)
+ getkgrid : length of smallest supercell vector (bohr)=    2.879320E+01
+       Simple Lattice Grid
+ symkpt : found identity, with number  1
+ mpi_enreg%sizecart(1),np_fft           1           1
+ mpi_enreg%sizecart(2),np_band           1           1
+ mpi_enreg%sizecart(3),np_kpt           1           1
+ in initmpi_grid : me_fft, me_band, me_kpt are           0           0
+           0
+ invars1: mkqmem undefined in the input file. Use default mkqmem = nkpt
+ invars1: With nkpt_me=    4 and mkqmem =     4, ground state wf handled in core.
+ invars1: mk1mem undefined in the input file. Use default mk1mem = nkpt
+ invars1: With nkpt_me=    4 and mk1mem =     4, ground state wf handled in core.
+
+ invars1m : enter jdtset=     2
+ invars1 : treat image number     1
+
+ symlatt : the Bravais lattice is oP (primitive orthorhombic)
+  xcart  is defined in input file
+ ingeo : takes atomic coordinates from input array xcart
+
+ symlatt : the Bravais lattice is oP (primitive orthorhombic)
+
+ symlatt : the Bravais lattice is oP (primitive orthorhombic)
+
+ symbrav : COMMENT -
+  The Bravais lattice determined only from the primitive
+  vectors, bravais(1)=  3, is more symmetric
+  than the real one, iholohedry=  2, obtained by taking into
+  account the atomic positions. Start deforming the primitive vector set.
+
+ symlatt : the Bravais lattice is mP (primitive monoclinic)
+ symspgr : the symmetry operation no.   1 is the identity
+ symplanes : the symmetry operation no.   2 is a mirror plane
+ symspgr : spgroup=   6  Pm   (=Cs^1)
+ mpi_enreg%sizecart(1),np_fft           1           1
+ mpi_enreg%sizecart(2),np_band           1           1
+ mpi_enreg%sizecart(3),np_kpt           1           1
+ in initmpi_grid : me_fft, me_band, me_kpt are           0           0
+           0
+ invars1: mkqmem undefined in the input file. Use default mkqmem = nkpt
+ invars1: With nkpt_me=   13 and mkqmem =    13, ground state wf handled in core.
+ invars1: mk1mem undefined in the input file. Use default mk1mem = nkpt
+ invars1: With nkpt_me=   13 and mk1mem =    13, ground state wf handled in core.
+
+ DATASET    1 : space group Pm (#  6); Bravais mP (primitive monocl.)
+ invars2: take the default value of fband=  1.25000000E-01
+ getkgrid : length of smallest supercell vector (bohr)=    2.879320E+01
+       Simple Lattice Grid
+ symkpt : found identity, with number  1
+ chkneu : initialized the occupation numbers for occopt=    1
+    spin-unpolarized case :
+  2.00  2.00  2.00  2.00  2.00  2.00  2.00  2.00  2.00  2.00  2.00  2.00
+  2.00  2.00  2.00  2.00  2.00  2.00  2.00  2.00  2.00  2.00  2.00  2.00
+  2.00  0.00  0.00
+ For input ecut=  6.000000E+00 best grid ngfft=      30      16      72
+       max ecut=  6.095226E+00
+
+ ==== FFT mesh ====
+  FFT mesh divisions ........................    30   16   72
+  Augmented FFT divisions ...................    31   17   72
+  FFT algorithm .............................   112
+  FFT cache size ............................    16
+ getmpw: optimal value of mpw=    1906
+ For input ecut=  2.545795E+00 best grid ngfft=      18      12      45
+       max ecut=  2.571390E+00
+
+ ==== FFT mesh ====
+  FFT mesh divisions ........................    18   12   45
+  Augmented FFT divisions ...................    19   13   45
+  FFT algorithm .............................   101
+  FFT cache size ............................    16
+ getmpw: optimal value of mpw=     425
+
+ getdim_nloc : deduce lmnmax  =   9, lnmax  =   3,
+                      lmnmaxso=   9, lnmaxso=   3.
+ setmqgrid : COMMENT -
+  The number of points "mqgrid" in reciprocal space used for the
+  description of the pseudopotentials has been set automatically
+  by abinit to :     3001.
+ memory : analysis of memory needs
+================================================================================
+ Values of the parameters that define the memory need for DATASET  1.
+   intxc =         0  ionmov =         0    iscf =         7 xclevel =         1
+  lmnmax =         3   lnmax =         3   mband =        27  mffmem =         0
+P  mgfft =        72   mkmem =         0 mpssoang=         3     mpw =      1906
+  mqgrid =      3001   natom =        14    nfft =     34560    nkpt =         4
+  nloalg =         4  nspden =         1 nspinor =         1  nsppol =         1
+    nsym =         2  n1xccc =         0  ntypat =         2  occopt =         1
+ For the susceptibility and dielectric matrices, or tddft :
+   mgfft =        45  nbnd_in_blk=     6    nfft =      9720     npw =       425
+================================================================================
+P This job should need less than                      14.465 Mbytes of memory.
+  Rough estimation (10% accuracy) of disk space for files :
+  WF disk file :      3.143 Mbytes ; DEN or POT disk file :      0.266 Mbytes.
+  mkmem==0 => use of 2 WF temporary disk files
+  mffmem==0, iscf==7 => use of 1 FFT temporary disk file,
+                       (2+2*npulayit) times bigger than a DEN file.
+================================================================================
+
+ Biggest array : f_fftgr(disk), with      4.2208 MBytes.
+ leave_test : synchronization done...
+ memana : allocated an array of      4.221 Mbytes, for testing purposes.
+ memana : allocated      14.465 Mbytes, for testing purposes.
+ The job will continue.
+
+ DATASET    2 : space group Pm (#  6); Bravais mP (primitive monocl.)
+ chkneu : initialized the occupation numbers for occopt=    1
+    spin-unpolarized case :
+  2.00  2.00  2.00  2.00  2.00  2.00  2.00  2.00  2.00  2.00  2.00  2.00
+  2.00  2.00  2.00  2.00  2.00  2.00  2.00  2.00  2.00  2.00  2.00  2.00
+  2.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00
+ For input ecut=  6.000000E+00 best grid ngfft=      30      16      72
+       max ecut=  6.095226E+00
+
+ ==== FFT mesh ====
+  FFT mesh divisions ........................    30   16   72
+  Augmented FFT divisions ...................    31   17   72
+  FFT algorithm .............................   112
+  FFT cache size ............................    16
+ getmpw: optimal value of mpw=    1916
+ For input ecut=  2.545795E+00 best grid ngfft=      18      12      45
+       max ecut=  2.571390E+00
+
+ ==== FFT mesh ====
+  FFT mesh divisions ........................    18   12   45
+  Augmented FFT divisions ...................    19   13   45
+  FFT algorithm .............................   101
+  FFT cache size ............................    16
+ getmpw: optimal value of mpw=     425
+
+ getdim_nloc : deduce lmnmax  =   9, lnmax  =   3,
+                      lmnmaxso=   9, lnmaxso=   3.
+ setmqgrid : COMMENT -
+  The number of points "mqgrid" in reciprocal space used for the
+  description of the pseudopotentials has been set automatically
+  by abinit to :     3001.
+ memory : analysis of memory needs
+================================================================================
+ Values of the parameters that define the memory need for DATASET  2.
+   intxc =         0  ionmov =         0    iscf =        -2 xclevel =         1
+  lmnmax =         3   lnmax =         3   mband =       100  mffmem =         0
+P  mgfft =        72   mkmem =         0 mpssoang=         3     mpw =      1916
+  mqgrid =      3001   natom =        14    nfft =     34560    nkpt =        13
+  nloalg =         4  nspden =         1 nspinor =         1  nsppol =         1
+    nsym =         2  n1xccc =         0  ntypat =         2  occopt =         1
+ For the susceptibility and dielectric matrices, or tddft :
+   mgfft =        45  nbnd_in_blk=    13    nfft =      9720     npw =       425
+================================================================================
+P This job should need less than                      11.198 Mbytes of memory.
+  Rough estimation (10% accuracy) of disk space for files :
+  WF disk file :     38.009 Mbytes ; DEN or POT disk file :      0.266 Mbytes.
+  mkmem==0 => use of 2 WF temporary disk files
+================================================================================
+
+ Biggest array : cg(disk), with      2.9256 MBytes.
+ leave_test : synchronization done...
+ memana : allocated an array of      2.926 Mbytes, for testing purposes.
+ memana : allocated      11.198 Mbytes, for testing purposes.
+ The job will continue.
+--------------------------------------------------------------------------------
+------------- Echo of variables that govern the present computation ------------
+--------------------------------------------------------------------------------
+-
+- outvars: echo of selected default values                                      
+-   accesswff0 =  0 , fftalg0 =112 , wfoptalg0 =  0
+-
+- outvars: echo of global parameters not present in the input file              
+-   nproc =    1
+-
+ -outvars: echo values of preprocessed input variables --------
+ 
+ These variables are accessible in NetCDF format (2D_Si_surface_o_OUT.nc)
+
+            acell      1.2467903000E+01  7.1983000000E+00  3.0000000000E+01 Bohr
+              amu      1.00794000E+00  2.80855000E+01
+           diemac      5.00000000E+00
+           diemix      5.00000000E-01
+             ecut      6.00000000E+00 Hartree
+           enunit           2
+           getden1          0
+           getden2         -1
+           iprcel          45
+             iscf1          7
+             iscf2         -2
+           istwfk2       0    0    0    0    1    0    1    0    0    0
+                         1    0    1
+              ixc           2
+           jdtset        1    2
+              kpt1     1.25000000E-01  1.25000000E-01  0.00000000E+00
+                       3.75000000E-01  1.25000000E-01  0.00000000E+00
+                       1.25000000E-01  3.75000000E-01  0.00000000E+00
+                       3.75000000E-01  3.75000000E-01  0.00000000E+00
+              kpt2     1.25000000E-01  1.25000000E-01  0.00000000E+00
+                       3.75000000E-01  1.25000000E-01  0.00000000E+00
+                       1.25000000E-01  3.75000000E-01  0.00000000E+00
+                       3.75000000E-01  3.75000000E-01  0.00000000E+00
+                       0.00000000E+00  0.00000000E+00  0.00000000E+00
+                       2.50000000E-01  0.00000000E+00  0.00000000E+00
+                       5.00000000E-01  0.00000000E+00  0.00000000E+00
+                       0.00000000E+00  2.50000000E-01  0.00000000E+00
+                       2.50000000E-01  2.50000000E-01  0.00000000E+00
+                       5.00000000E-01  2.50000000E-01  0.00000000E+00
+                       0.00000000E+00  5.00000000E-01  0.00000000E+00
+                       2.50000000E-01  5.00000000E-01  0.00000000E+00
+                       5.00000000E-01  5.00000000E-01  0.00000000E+00
+          kptrlen1     2.87932000E+01
+          kptrlen2     3.00000000E+01
+           kptopt1          1
+           kptopt2          0
+         kptrlatt      4  0  0   0  4  0   0  0  1
+          kssform1          1
+          kssform2          3
+           mffmem           0
+P           mkmem           0
+            natom          14
+            nband1      27
+            nband2     100
+           nbdbuf1          0
+           nbdbuf2         10
+           ndtset           2
+            ngfft          30      16      72
+             nkpt1          4
+             nkpt2         13
+            nstep1         50
+            nstep2        100
+             nsym           2
+           ntypat           2
+              occ      2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  0.000000  0.000000
+           prtvol           2
+           shiftk      5.00000000E-01  5.00000000E-01  0.00000000E+00
+          spgroup           6
+           symrel      1  0  0   0  1  0   0  0  1       1  0  0   0 -1  0   0  0  1
+           toldfe1     1.00000000E-06 Hartree
+           toldfe2     0.00000000E+00 Hartree
+           tolwfr1     0.00000000E+00
+           tolwfr2     1.00000000E-09
+            typat      1  1  2  2  2  2  2  2  2  2  2  2  2  2
+              wtk1       0.25000    0.25000    0.25000    0.25000
+              wtk2       1.00000    1.00000    1.00000    1.00000    1.00000    1.00000
+                         1.00000    1.00000    1.00000    1.00000    1.00000    1.00000
+                         1.00000
+           xangst      2.9800788136E+00 -1.9045881503E+00 -3.4478893412E-01
+                       3.1484902192E-01  2.1145176169E-16 -2.1328515078E-01
+                       3.2225261145E+00 -1.9045881503E+00  1.1378075242E+00
+                       6.9228228211E-02  2.1145176169E-16  1.2702481044E+00
+                       1.1060743470E+00 -1.9045881503E+00  2.1325929043E+00
+                      -2.2030323694E+00  2.1145176169E-16  1.7536338948E+00
+                       1.1056518450E+00 -1.9045881503E+00  4.4860857212E+00
+                      -2.1954122348E+00  2.1145176169E-16  4.0587710728E+00
+                      -1.1971218829E+00 -1.9045881503E+00  4.9680027825E+00
+                       2.3081519422E+00  2.1145176169E-16  5.1180569953E+00
+                      -1.5492307907E-02 -1.9045881503E+00  8.4756598800E+00
+                       1.0931119626E+00  2.1145176169E-16  7.9723604773E+00
+                      -1.9718450662E+00 -1.9045881503E+00  7.1927730662E+00
+                       3.2772206742E+00  2.1145176169E-16  7.2885818873E+00
+            xcart      5.6315328121E+00 -3.5991500000E+00 -6.5155665914E-01
+                       5.9497842463E-01  3.9958591991E-16 -4.0305052319E-01
+                       6.0896918125E+00 -3.5991500000E+00  2.1501446126E+00
+                       1.3082239198E-01  3.9958591991E-16  2.4004210381E+00
+                       2.0901775985E+00 -3.5991500000E+00  4.0300165421E+00
+                      -4.1631278401E+00  3.9958591991E-16  3.3138877985E+00
+                       2.0893791854E+00 -3.5991500000E+00  8.4774734218E+00
+                      -4.1487278726E+00  3.9958591991E-16  7.6699657637E+00
+                      -2.2622325063E+00 -3.5991500000E+00  9.3881646864E+00
+                       4.3617750439E+00  3.9958591991E-16  9.6717260537E+00
+                      -2.9276219110E-02 -3.5991500000E+00  1.6016675969E+01
+                       2.0656822418E+00  3.9958591991E-16  1.5065577935E+01
+                      -3.7262471516E+00 -3.5991500000E+00  1.3592371231E+01
+                       6.1930495513E+00  3.9958591991E-16  1.3773423664E+01
+             xred      4.5168243706E-01 -5.0000000000E-01 -2.1718555305E-02
+                       4.7720809556E-02  5.5511151231E-17 -1.3435017440E-02
+                       4.8842951477E-01 -5.0000000000E-01  7.1671487086E-02
+                       1.0492734182E-02  5.5511151231E-17  8.0014034603E-02
+                       1.6764467918E-01 -5.0000000000E-01  1.3433388474E-01
+                      -3.3390762184E-01  5.5511151231E-17  1.1046292662E-01
+                       1.6758064170E-01 -5.0000000000E-01  2.8258244739E-01
+                      -3.3275265877E-01  5.5511151231E-17  2.5566552546E-01
+                      -1.8144450645E-01 -5.0000000000E-01  3.1293882288E-01
+                       3.4984030947E-01  5.5511151231E-17  3.2239086846E-01
+                      -2.3481269553E-03 -5.0000000000E-01  5.3388919895E-01
+                       1.6568000584E-01  5.5511151231E-17  5.0218593116E-01
+                      -2.9886719135E-01 -5.0000000000E-01  4.5307904104E-01
+                       4.9671942036E-01  5.5511151231E-17  4.5911412214E-01
+            znucl        1.00000   14.00000
+
+================================================================================
+ leave_test : synchronization done...
+
+ chkinp: machine precision is   2.2204460492503131E-16
+
+ chkinp: Checking input parameters for consistency, jdtset=   1.
+dtsetcopy : copying area  algalch    the actual size (     2) of the index (     1)  differs from its standard size (     0)
+dtsetcopy : copying area  atvshift   the actual size (     0) of the index (     3)  differs from its standard size (    14)
+dtsetcopy : copying area  istwfk     the actual size (    13) of the index (     1)  differs from its standard size (     4)
+dtsetcopy : copying area  kberry     the actual size (    20) of the index (     2)  differs from its standard size (     1)
+dtsetcopy : copying area  nband      the actual size (    13) of the index (     1)  differs from its standard size (     1)
+dtsetcopy : copying area  kpt        the actual size (    13) of the index (     2)  differs from its standard size (     4)
+dtsetcopy : copying area  kptns      the actual size (    13) of the index (     2)  differs from its standard size (     4)
+dtsetcopy : copying area  mixalch    the actual size (     2) of the index (     1)  differs from its standard size (     0)
+dtsetcopy : copying area  mixalch    the actual size (     2) of the index (     2)  differs from its standard size (     0)
+dtsetcopy : copying area  occ_orig   the actual size (  1300) of the index (     1)  differs from its standard size (   108)
+dtsetcopy : copying area  shiftk     the actual size (     8) of the index (     2)  differs from its standard size (     1)
+dtsetcopy : copying area  wtk        the actual size (    13) of the index (     1)  differs from its standard size (     4)
+
+ chkinp: Checking input parameters for consistency, jdtset=   2.
+dtsetcopy : copying area  algalch    the actual size (     2) of the index (     1)  differs from its standard size (     0)
+dtsetcopy : copying area  atvshift   the actual size (     0) of the index (     3)  differs from its standard size (    14)
+dtsetcopy : copying area  kberry     the actual size (    20) of the index (     2)  differs from its standard size (     1)
+dtsetcopy : copying area  nband      the actual size (    13) of the index (     1)  differs from its standard size (     1)
+dtsetcopy : copying area  mixalch    the actual size (     2) of the index (     1)  differs from its standard size (     0)
+dtsetcopy : copying area  mixalch    the actual size (     2) of the index (     2)  differs from its standard size (     0)
+dtsetcopy : copying area  shiftk     the actual size (     8) of the index (     2)  differs from its standard size (     1)
+ Checking if input is consistent with KSS generation
+ DATA TYPE INFORMATION: 
+ REAL:      Data type name: REAL(DP) 
+            Kind value:      8
+            Precision:      15
+            Smallest nonnegligible quantity relative to 1: 0.22204460E-15
+            Smallest positive number:                      0.22250739-307
+            Largest representable number:                  0.17976931+309
+ INTEGER:   Data type name: INTEGER(default) 
+            Kind value: 4
+            Bit size:   32
+            Largest representable number: 2147483647
+ LOGICAL:   Data type name: LOGICAL 
+            Kind value: 4
+ CHARACTER: Data type name: CHARACTER             Kind value: 1
+
+================================================================================
+== DATASET  1 ==================================================================
+
+dtsetcopy : copying area  algalch    the actual size (     2) of the index (     1)  differs from its standard size (     0)
+dtsetcopy : copying area  atvshift   the actual size (     0) of the index (     3)  differs from its standard size (    14)
+dtsetcopy : copying area  istwfk     the actual size (    13) of the index (     1)  differs from its standard size (     4)
+dtsetcopy : copying area  kberry     the actual size (    20) of the index (     2)  differs from its standard size (     1)
+dtsetcopy : copying area  nband      the actual size (    13) of the index (     1)  differs from its standard size (     1)
+dtsetcopy : copying area  kpt        the actual size (    13) of the index (     2)  differs from its standard size (     4)
+dtsetcopy : copying area  kptns      the actual size (    13) of the index (     2)  differs from its standard size (     4)
+dtsetcopy : copying area  mixalch    the actual size (     2) of the index (     1)  differs from its standard size (     0)
+dtsetcopy : copying area  mixalch    the actual size (     2) of the index (     2)  differs from its standard size (     0)
+dtsetcopy : copying area  occ_orig   the actual size (  1300) of the index (     1)  differs from its standard size (   108)
+dtsetcopy : copying area  shiftk     the actual size (     8) of the index (     2)  differs from its standard size (     1)
+dtsetcopy : copying area  wtk        the actual size (    13) of the index (     1)  differs from its standard size (     4)
+ setmqgrid : COMMENT -
+  The number of points "mqgrid" in reciprocal space used for the
+  description of the pseudopotentials has been set automatically
+  by abinit to :     3308.
+
+ getdim_nloc : deduce lmnmax  =   9, lnmax  =   3,
+                      lmnmaxso=   9, lnmaxso=   3.
+ Exchange-correlation functional for the present dataset will be:
+  LDA: Perdew-Zunger-Ceperley-Alder - ixc=2
+ Citation for XC functional:
+  J.P.Perdew and A.Zunger, PRB 23, 5048 (1981)
+ 
+ Unit cell volume ucvol=  2.6924312E+03 bohr^3
+ Angles (23,13,12)=  9.00000000E+01  9.00000000E+01  9.00000000E+01 degrees
+
+ getcut: wavevector=  0.0000  0.0000  0.0000  ngfft=  30  16  72
+         ecut(hartree)=      6.000   => boxcut(ratio)=   2.01581
+ leave_test : synchronization done...
+kpgio: loop on k-points done in parallel
+- pspatm: opening atomic psp file    ../../Pseudo_Potentials/H-mt.fhi
+ H, fhi98PP : HAM-type, LDA CA, l=0 local
+-  1.00000   1.00000    981204                znucl, zion, pspdat
+    6    2    0    0       387   0.00000      pspcod,pspxc,lmax,lloc,mmax,r2well
+    0.00000000000000    0.00000000000000    0.00000000000000   rchrg,fchrg,qchrg
+  1.024700          amesh (Hamman grid)
+ Note: local psp for atom with Z=  1.0
+ pspatm: epsatm=   -0.00369851
+         --- l  ekb(1:nproj) -->
+ pspatm: atomic psp has been read  and splines computed
+
+- pspatm: opening atomic psp file    ../../Pseudo_Potentials/Si-mt.fhi
+ Silicon, fhi98PP : BHS-type, LDA  PZ, l=2 local
+- 14.00000   4.00000    140700                znucl, zion, pspdat
+    6    2    2    2       495   0.00000      pspcod,pspxc,lmax,lloc,mmax,r2well
+    0.00000000000000    0.00000000000000    0.00000000000000   rchrg,fchrg,qchrg
+  1.024700          amesh (Hamman grid)
+ pspatm: epsatm=    1.69291891
+         --- l  ekb(1:nproj) -->
+             0    2.604068
+             1    1.278183
+ pspatm: atomic psp has been read  and splines computed
+
+   1.01538150E+03                                ecore*ucvol(ha*bohr**3)
+ inwffil about to open unit  11 for file=2D_Si_surface_WF1_P-0000
+ wfconv:    27 bands initialized randomly with npw=  1867, for ikpt=     1
+ wfconv:    27 bands initialized randomly with npw=  1896, for ikpt=     2
+ wfconv:    27 bands initialized randomly with npw=  1906, for ikpt=     3
+ wfconv:    27 bands initialized randomly with npw=  1901, for ikpt=     4
+ leave_test : synchronization done...
+ newkpt: loop on k-points done in parallel
+ pareigocc : MPI_ALLREDUCE
+ inwffil: copy wf on disk file 2D_Si_surface_WF1_P-0000
+ 
+ gstate about to open unit  12 for file=2D_Si_surface_WF2_P-0000
+ setup2: Arith. and geom. avg. npw (full set) are    1892.500    1892.439
+ symatm: atom number    1 is reached starting at atom
+   1  1
+ symatm: atom number    2 is reached starting at atom
+   2  2
+ symatm: atom number    3 is reached starting at atom
+   3  3
+ symatm: atom number    4 is reached starting at atom
+   4  4
+ symatm: atom number    5 is reached starting at atom
+   5  5
+ symatm: atom number    6 is reached starting at atom
+   6  6
+ symatm: atom number    7 is reached starting at atom
+   7  7
+ symatm: atom number    8 is reached starting at atom
+   8  8
+ symatm: atom number    9 is reached starting at atom
+   9  9
+ symatm: atom number   10 is reached starting at atom
+  10 10
+ symatm: atom number   11 is reached starting at atom
+  11 11
+ symatm: atom number   12 is reached starting at atom
+  12 12
+ symatm: atom number   13 is reached starting at atom
+  13 13
+ symatm: atom number   14 is reached starting at atom
+  14 14
+ initro : for itypat=  1, take decay length=      0.6000,
+ initro : indeed, coreel=      0.0000, nval=  1 and densty=  0.0000E+00.
+ initro : for itypat=  2, take decay length=      1.1000,
+ initro : indeed, coreel=     10.0000, nval=  4 and densty=  0.0000E+00.
+
+================================================================================
+ call getng diel
+ For input ecut=  2.545795E+00 best grid ngfft=      18      12      45
+       max ecut=  2.571390E+00
+
+ ==== FFT mesh ====
+  FFT mesh divisions ........................    18   12   45
+  Augmented FFT divisions ...................    19   13   45
+  FFT algorithm .............................   100
+  FFT cache size ............................    16
+ getmpw: optimal value of mpw=     425
+ symatm: atom number    1 is reached starting at atom
+   1  1
+ symatm: atom number    2 is reached starting at atom
+   2  2
+ symatm: atom number    3 is reached starting at atom
+   3  3
+ symatm: atom number    4 is reached starting at atom
+   4  4
+ symatm: atom number    5 is reached starting at atom
+   5  5
+ symatm: atom number    6 is reached starting at atom
+   6  6
+ symatm: atom number    7 is reached starting at atom
+   7  7
+ symatm: atom number    8 is reached starting at atom
+   8  8
+ symatm: atom number    9 is reached starting at atom
+   9  9
+ symatm: atom number   10 is reached starting at atom
+  10 10
+ symatm: atom number   11 is reached starting at atom
+  11 11
+ symatm: atom number   12 is reached starting at atom
+  12 12
+ symatm: atom number   13 is reached starting at atom
+  13 13
+ symatm: atom number   14 is reached starting at atom
+  14 14
+
+ getcut: wavevector=  0.0000  0.0000  0.0000  ngfft=  30  16  72
+         ecut(hartree)=      6.000   => boxcut(ratio)=   2.01581
+  scfcv : before setvtr, energies%e_hartree=  0.000000000000000E+000
+
+ ewald : nr and ng are    4 and   30
+  mklocl_recipspace : will add potential with strength vprtrb(:)=
+  0.000000000000000E+000  0.000000000000000E+000
+  setvtr : istep,n1xccc,moved_rhor=           1           0           0
+  scfcv : after setvtr, energies%e_hartree=  0.000000000000000E+000
+
+ ITER STEP NUMBER     1
+ vtorho : nnsclo_now=  2, note that nnsclo,dbl_nnsclo,istep=  0 0  1
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.7559E-01  at reduced coord.    0.0333    0.0000    0.0000
+,     Minimum=    8.6941E-06  at reduced coord.    0.6000    0.5000    0.8056
+,  Integrated=    5.0000E+01
+ leave_test : synchronization done...
+  suscep_stat : loop on k-points and spins done in parallel
+ ETOT  1  -48.482266780349    -4.848E+01 5.782E-03 3.839E+02
+ scprqt: <Vxc>= -2.3474620E-01 hartree
+
+ dielmt : 15 largest eigenvalues of the hermitian RPA dielectric matrix
+  1-5  : 4.13388E+00 3.64441E+00 3.01938E+00 2.91917E+00 2.74929E+00
+  6-10 : 2.67135E+00 2.49685E+00 2.43707E+00 2.38422E+00 2.32667E+00
+  11-15: 2.26048E+00 2.23981E+00 2.15488E+00 2.13327E+00 2.11784E+00
+
+ dielmt : 5 smallest eigenvalues of the hermitian RPA dielectric matrix
+  1-5  : 1.00000E+00 1.00027E+00 1.00028E+00 1.00030E+00 1.00030E+00
+
+Simple mixing update:
+  residual square of the potential :   23.1927794926538
+
+ ITER STEP NUMBER     2
+ vtorho : nnsclo_now=  2, note that nnsclo,dbl_nnsclo,istep=  0 0  2
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.7816E-01  at reduced coord.    0.0333    0.0000    0.0000
+,     Minimum=    1.1511E-06  at reduced coord.    0.5667    0.0000    0.7778
+,  Integrated=    5.0000E+01
+ ETOT  2  -48.567138125622    -8.487E-02 5.861E-04 3.275E+01
+ scprqt: <Vxc>= -2.3586577E-01 hartree
+
+ Pulay update with  1 previous iterations:
+ mixing of old trial potential : alpha(m:m-4)=   1.47     -0.473
+
+ ITER STEP NUMBER     3
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0  3
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.7587E-01  at reduced coord.    0.0333    0.0000    0.0000
+,     Minimum=    1.6595E-06  at reduced coord.    0.5667    0.0000    0.7778
+,  Integrated=    5.0000E+01
+ ETOT  3  -48.579566946342    -1.243E-02 3.284E-04 1.531E+00
+ scprqt: <Vxc>= -2.3799971E-01 hartree
+
+ Pulay update with  2 previous iterations:
+ mixing of old trial potential : alpha(m:m-4)=   1.61     -0.840      0.229
+
+ ITER STEP NUMBER     4
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0  4
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.7445E-01  at reduced coord.    0.0333    0.0000    0.0000
+,     Minimum=    1.7493E-06  at reduced coord.    0.5667    0.0000    0.7778
+,  Integrated=    5.0000E+01
+ ETOT  4  -48.580981341220    -1.414E-03 3.426E-04 5.141E-02
+ scprqt: <Vxc>= -2.3852857E-01 hartree
+
+ Pulay update with  3 previous iterations:
+ mixing of old trial potential : alpha(m:m-4)=   1.07     -0.222E-01 -0.777E-01  0.265E-01
+
+ ITER STEP NUMBER     5
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0  5
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.7425E-01  at reduced coord.    0.0333    0.0000    0.0000
+,     Minimum=    1.7500E-06  at reduced coord.    0.5667    0.0000    0.7778
+,  Integrated=    5.0000E+01
+ leave_test : synchronization done...
+  suscep_stat : loop on k-points and spins done in parallel
+ ETOT  5  -48.581039868555    -5.853E-05 1.098E-04 9.996E-03
+ scprqt: <Vxc>= -2.3859728E-01 hartree
+
+ dielmt : 15 largest eigenvalues of the hermitian RPA dielectric matrix
+  1-5  : 5.01441E+00 4.17902E+00 3.38936E+00 3.18967E+00 2.99646E+00
+  6-10 : 2.83390E+00 2.63825E+00 2.60573E+00 2.54891E+00 2.45791E+00
+  11-15: 2.39309E+00 2.34421E+00 2.23843E+00 2.22403E+00 2.22235E+00
+
+ dielmt : 5 smallest eigenvalues of the hermitian RPA dielectric matrix
+  1-5  : 1.00000E+00 1.00022E+00 1.00024E+00 1.00025E+00 1.00028E+00
+
+ Pulay update with  4 previous iterations:
+ mixing of old trial potential : alpha(m:m-4)=   1.83     -0.834     -0.176E-01  0.307E-01 -0.425E-02
+
+ ITER STEP NUMBER     6
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0  6
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.7416E-01  at reduced coord.    0.0333    0.0000    0.0000
+,     Minimum=    1.7368E-06  at reduced coord.    0.5667    0.0000    0.7778
+,  Integrated=    5.0000E+01
+ ETOT  6  -48.581049751118    -9.883E-06 7.086E-05 1.406E-03
+ scprqt: <Vxc>= -2.3860864E-01 hartree
+
+ Pulay update with  5 previous iterations:
+ mixing of old trial potential : alpha(m:m-4)=   1.38     -0.554      0.169      0.166E-01 -0.645E-02
+
+ ITER STEP NUMBER     7
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0  7
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.7416E-01  at reduced coord.    0.0333    0.0000    0.0000
+,     Minimum=    1.7365E-06  at reduced coord.    0.5667    0.0000    0.7778
+,  Integrated=    5.0000E+01
+ ETOT  7  -48.581050233734    -4.826E-07 1.677E-05 2.687E-05
+ scprqt: <Vxc>= -2.3861167E-01 hartree
+
+ Pulay update with  6 previous iterations:
+ mixing of old trial potential : alpha(m:m-4)=   1.61     -0.673      0.309E-01  0.466E-01 -0.171E-01
+
+ ITER STEP NUMBER     8
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0  8
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.7415E-01  at reduced coord.    0.0333    0.0000    0.0000
+,     Minimum=    1.7364E-06  at reduced coord.    0.5667    0.0000    0.7778
+,  Integrated=    5.0000E+01
+ ETOT  8  -48.581050251655    -1.792E-08 1.002E-05 1.976E-05
+ scprqt: <Vxc>= -2.3861153E-01 hartree
+
+ At SCF step    8, etot is converged : 
+  for the second time, diff in etot=  1.792E-08 < toldfe=  1.000E-06
+  forstrnps : usepaw=           0
+forstrnps: loop on k-points and spins done in parallel
+ leave_test : synchronization done...
+ leave_test : synchronization done...
+  strhar : before mpi_comm, harstr=  3.249181153555112E-003
+  2.770442847686170E-003  0.160130539930893       8.131516293641283E-020
+  6.880340393734577E-005 -8.131516293641283E-020
+  strhar : after mpi_comm, harstr=  3.249181153555112E-003
+  2.770442847686170E-003  0.160130539930893       8.131516293641283E-020
+  6.880340393734577E-005 -8.131516293641283E-020
+  strhar : ehart,ucvol=   71.1976268221425        2692.43118494700     
+
+ Cartesian components of stress tensor (hartree/bohr^3)
+  sigma(1 1)=  1.30231754E-04  sigma(3 2)=  0.00000000E+00
+  sigma(2 2)=  1.22424558E-04  sigma(3 1)=  2.24456122E-07
+  sigma(3 3)=  7.90604407E-05  sigma(2 1)=  0.00000000E+00
+ 
+ ioarr: writing density data
+ ioarr: file name is 2D_Si_surface_o_DS1_DEN
+ ioarr: data written to disk file 2D_Si_surface_o_DS1_DEN
+ leave_test : synchronization done...
+================================================================================
+
+ ----iterations are completed or convergence reached----
+
+ outwf  : write wavefunction to file 2D_Si_surface_o_DS1_WFK
+ leave_test : synchronization done...
+
+ === Gap info ===
+  >>>> For spin  1
+   Minimum optical gap =   1.1082 [eV], located at k-point      :   0.3750  0.3750  0.0000
+   Fundamental gap     =   1.1082 [eV], Top of valence bands at :   0.3750  0.3750  0.0000
+                                        Bottom of conduction at :   0.3750  0.3750  0.0000
+
+ Cartesian components of stress tensor (hartree/bohr^3)
+  sigma(1 1)=  1.30231754E-04  sigma(3 2)=  0.00000000E+00
+  sigma(2 2)=  1.22424558E-04  sigma(3 1)=  2.24456122E-07
+  sigma(3 3)=  7.90604407E-05  sigma(2 1)=  0.00000000E+00
+
+-Cartesian components of stress tensor (GPa)         [Pressure= -3.2531E+00 GPa]
+- sigma(1 1)=  3.83154985E+00  sigma(3 2)=  0.00000000E+00
+- sigma(2 2)=  3.60185424E+00  sigma(3 1)=  6.60372599E-03
+- sigma(3 3)=  2.32603808E+00  sigma(2 1)=  0.00000000E+00
+
+================================================================================
+== DATASET  2 ==================================================================
+
+dtsetcopy : copying area  algalch    the actual size (     2) of the index (     1)  differs from its standard size (     0)
+dtsetcopy : copying area  atvshift   the actual size (     0) of the index (     3)  differs from its standard size (    14)
+dtsetcopy : copying area  kberry     the actual size (    20) of the index (     2)  differs from its standard size (     1)
+dtsetcopy : copying area  nband      the actual size (    13) of the index (     1)  differs from its standard size (     1)
+dtsetcopy : copying area  mixalch    the actual size (     2) of the index (     1)  differs from its standard size (     0)
+dtsetcopy : copying area  mixalch    the actual size (     2) of the index (     2)  differs from its standard size (     0)
+dtsetcopy : copying area  shiftk     the actual size (     8) of the index (     2)  differs from its standard size (     1)
+ mkfilename : getden/=0, take file _DEN from output of DATASET   1.
+
+ setmqgrid : COMMENT -
+  The number of points "mqgrid" in reciprocal space used for the
+  description of the pseudopotentials has been set automatically
+  by abinit to :     3308.
+
+ getdim_nloc : deduce lmnmax  =   9, lnmax  =   3,
+                      lmnmaxso=   9, lnmaxso=   3.
+ Exchange-correlation functional for the present dataset will be:
+  LDA: Perdew-Zunger-Ceperley-Alder - ixc=2
+ Citation for XC functional:
+  J.P.Perdew and A.Zunger, PRB 23, 5048 (1981)
+ 
+ Unit cell volume ucvol=  2.6924312E+03 bohr^3
+ Angles (23,13,12)=  9.00000000E+01  9.00000000E+01  9.00000000E+01 degrees
+
+ getcut: wavevector=  0.0000  0.0000  0.0000  ngfft=  30  16  72
+         ecut(hartree)=      6.000   => boxcut(ratio)=   2.01581
+ leave_test : synchronization done...
+kpgio: loop on k-points done in parallel
+ inwffil about to open unit  11 for file=2D_Si_surface_WF1_P-0000
+ wfconv:   100 bands initialized randomly with npw=  1867, for ikpt=     1
+ wfconv:   100 bands initialized randomly with npw=  1896, for ikpt=     2
+ wfconv:   100 bands initialized randomly with npw=  1906, for ikpt=     3
+ wfconv:   100 bands initialized randomly with npw=  1901, for ikpt=     4
+ wfconv:   100 bands initialized randomly with npw=  1851, for ikpt=     5
+ wfconv:   100 bands initialized randomly with npw=  1856, for ikpt=     6
+ wfconv:   100 bands initialized randomly with npw=  1866, for ikpt=     7
+ wfconv:   100 bands initialized randomly with npw=  1886, for ikpt=     8
+ wfconv:   100 bands initialized randomly with npw=  1889, for ikpt=     9
+ wfconv:   100 bands initialized randomly with npw=  1916, for ikpt=    10
+ wfconv:   100 bands initialized randomly with npw=  1912, for ikpt=    11
+ wfconv:   100 bands initialized randomly with npw=  1912, for ikpt=    12
+ wfconv:   100 bands initialized randomly with npw=  1884, for ikpt=    13
+ leave_test : synchronization done...
+ newkpt: loop on k-points done in parallel
+ pareigocc : MPI_ALLREDUCE
+ inwffil: copy wf on disk file 2D_Si_surface_WF1_P-0000
+ 
+ gstate about to open unit  12 for file=2D_Si_surface_WF2_P-0000
+ symatm: atom number    1 is reached starting at atom
+   1  1
+ symatm: atom number    2 is reached starting at atom
+   2  2
+ symatm: atom number    3 is reached starting at atom
+   3  3
+ symatm: atom number    4 is reached starting at atom
+   4  4
+ symatm: atom number    5 is reached starting at atom
+   5  5
+ symatm: atom number    6 is reached starting at atom
+   6  6
+ symatm: atom number    7 is reached starting at atom
+   7  7
+ symatm: atom number    8 is reached starting at atom
+   8  8
+ symatm: atom number    9 is reached starting at atom
+   9  9
+ symatm: atom number   10 is reached starting at atom
+  10 10
+ symatm: atom number   11 is reached starting at atom
+  11 11
+ symatm: atom number   12 is reached starting at atom
+  12 12
+ symatm: atom number   13 is reached starting at atom
+  13 13
+ symatm: atom number   14 is reached starting at atom
+  14 14
+ ioarr: reading density data
+ ioarr: file name is 2D_Si_surface_o_DS1_DEN
+
+================================================================================
+
+          - hdr_check: checking restart file header for consistency -
+
+
+        current calculation                         restart file
+        -------------------                         ------------
+
+  calculation expects a density         |  input file contains a density
+. ABINIT  code version 6.8.1            |  ABINIT  code version 6.8.1
+. date 20111229 bantot 1300 natom   14  |  date 20111229 bantot  108 natom   14
+  nkpt  13 nsym  2 ngfft  30,  16,  72  |  nkpt   4 nsym  2 ngfft  30,  16,  72
+  ntypat  2 ecut_eff   6.0000000        |  ntypat  2 ecut_eff   6.0000000
+  usepaw  0                             |  usepaw  0
+  usewvl  0                             |  usewvl  0
+  rprimd:                               |  rprimd:
+    12.4679030   0.0000000   0.0000000  |    12.4679030   0.0000000   0.0000000
+     0.0000000   7.1983000   0.0000000  |     0.0000000   7.1983000   0.0000000
+     0.0000000   0.0000000  30.0000000  |     0.0000000   0.0000000  30.0000000
+  symafm:                               |  symafm:
+    1  1                                |    1  1
+  symrel:                               |  symrel:
+    1  0  0  0  1  0  0  0  1           |    1  0  0  0  1  0  0  0  1
+    1  0  0  0 -1  0  0  0  1           |    1  0  0  0 -1  0  0  0  1
+  typat:                                |  typat:
+    1  1  2  2  2  2  2  2  2  2  2  2  |    1  1  2  2  2  2  2  2  2  2  2  2
+    2  2                                |    2  2
+  so_psp  :                             |  so_psp  :
+    1  1                                |    1  1
+  tnons:                                |  tnons:
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+   znucl:                               |   znucl:
+    1.00 14.00                          |    1.00 14.00
+  pseudopotential atom type  1:         |  pseudopotential atom type  1:
+  pspso   0 pspxc   2                   |  pspso   0 pspxc   2
+  pspdat 981204 pspcod    6 zion   1.0  |  pspdat 981204 pspcod    6 zion   1.0
+  pseudopotential atom type  2:         |  pseudopotential atom type  2:
+  pspso   0 pspxc   2                   |  pspso   0 pspxc   2
+  pspdat 140700 pspcod    6 zion   4.0  |  pspdat 140700 pspcod    6 zion   4.0
+  xred:                                 |  xred:
+     0.4516824  -0.5000000  -0.0217186  |     0.4516824  -0.5000000  -0.0217186
+     0.0477208   0.0000000  -0.0134350  |     0.0477208   0.0000000  -0.0134350
+     0.4884295  -0.5000000   0.0716715  |     0.4884295  -0.5000000   0.0716715
+     0.0104927   0.0000000   0.0800140  |     0.0104927   0.0000000   0.0800140
+     0.1676447  -0.5000000   0.1343339  |     0.1676447  -0.5000000   0.1343339
+    -0.3339076   0.0000000   0.1104629  |    -0.3339076   0.0000000   0.1104629
+     0.1675806  -0.5000000   0.2825824  |     0.1675806  -0.5000000   0.2825824
+    -0.3327527   0.0000000   0.2556655  |    -0.3327527   0.0000000   0.2556655
+    -0.1814445  -0.5000000   0.3129388  |    -0.1814445  -0.5000000   0.3129388
+     0.3498403   0.0000000   0.3223909  |     0.3498403   0.0000000   0.3223909
+    -0.0023481  -0.5000000   0.5338892  |    -0.0023481  -0.5000000   0.5338892
+     0.1656800   0.0000000   0.5021859  |     0.1656800   0.0000000   0.5021859
+    -0.2988672  -0.5000000   0.4530790  |    -0.2988672  -0.5000000   0.4530790
+     0.4967194   0.0000000   0.4591141  |     0.4967194   0.0000000   0.4591141
+ hdr_check:  Density/Potential file is OK for restart of calculation
+================================================================================
+ ioarr: data read from disk file 2D_Si_surface_o_DS1_DEN
+
+================================================================================
+
+ getcut: wavevector=  0.0000  0.0000  0.0000  ngfft=  30  16  72
+         ecut(hartree)=      6.000   => boxcut(ratio)=   2.01581
+  scfcv : before setvtr, energies%e_hartree=  0.000000000000000E+000
+
+ ewald : nr and ng are    4 and   30
+  mklocl_recipspace : will add potential with strength vprtrb(:)=
+  0.000000000000000E+000  0.000000000000000E+000
+  setvtr : istep,n1xccc,moved_rhor=           1           0           0
+  scfcv : after setvtr, energies%e_hartree=  0.000000000000000E+000
+ vtorho : nnsclo_now=100, note that nnsclo,dbl_nnsclo,istep=  0 0  1
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ ioarr: writing density data
+ ioarr: file name is 2D_Si_surface_o_DS2_DEN
+ ioarr: data written to disk file 2D_Si_surface_o_DS2_DEN
+
+======================================================================
+ Calculating and writing out Kohn-Sham electronic Structure file
+ Using conjugate gradient wavefunctions and energies (kssform=3)
+
+ Sorting g-vecs for an output of states on an unique "big" PW basis.
+ Since the number of g's to be written on file
+ was 0 or too large, it has been set to the max. value.,
+ computed from the union of the sets of G vectors for the different k-points.
+ Number of g-vectors written on file is:  2376
+ Number of bands written on file is:   100
+
+ Total amount of disk space required by _KSS file =    50.00 Mb.
+  Subdivided into : 
+  Header             =     0.03 Mb.
+  KB elements        =     2.83 Mb.
+  Wavefunctions (PW) =    47.14 Mb.
+  PAW projectors     =     0.00 Mb.
+
+
+ Opening file for KS structure output: 2D_Si_surface_o_DS2_KSS
+ number of Gamma centered plane waves   2376
+ number of Gamma centered shells   1375
+ number of bands    100
+ maximum angular momentum components      3
+ number of symmetry operations  2 (without inversion)
+dtsetcopy : copying area  algalch    the actual size (     2) of the index (     1)  differs from its standard size (     0)
+dtsetcopy : copying area  atvshift   the actual size (     0) of the index (     3)  differs from its standard size (    14)
+dtsetcopy : copying area  kberry     the actual size (    20) of the index (     2)  differs from its standard size (     1)
+dtsetcopy : copying area  nband      the actual size (    13) of the index (     1)  differs from its standard size (     1)
+dtsetcopy : copying area  mixalch    the actual size (     2) of the index (     1)  differs from its standard size (     0)
+dtsetcopy : copying area  mixalch    the actual size (     2) of the index (     2)  differs from its standard size (     0)
+dtsetcopy : copying area  shiftk     the actual size (     8) of the index (     2)  differs from its standard size (     1)
+
+ k-point   1
+ Eigenvalues in Hartree for ikpt=   1
+   1     -0.3723 -0.3440 -0.3072 -0.2950 -0.2714 -0.2514 -0.2205 -0.1912 -0.1697
+         -0.1616 -0.0954 -0.0882 -0.0746 -0.0637 -0.0504 -0.0403 -0.0265 -0.0208
+         -0.0102 -0.0036  0.0011  0.0096  0.0135  0.0334  0.0352  0.1109  0.1289
+          0.1416  0.1445  0.1520  0.1551  0.1583  0.1692  0.1775  0.1830  0.1870
+          0.1943  0.1986  0.2071  0.2097  0.2164  0.2207  0.2277  0.2379  0.2488
+          0.2671  0.2762  0.2903  0.2913  0.3090  0.3153  0.3193  0.3284  0.3365
+          0.3409  0.3500  0.3614  0.3694  0.3741  0.3805  0.3829  0.3947  0.4007
+          0.4065  0.4109  0.4166  0.4221  0.4282  0.4370  0.4423  0.4557  0.4626
+          0.4708  0.4782  0.4806  0.4869  0.4930  0.4987  0.4994  0.5053  0.5130
+          0.5197  0.5306  0.5359  0.5383  0.5401  0.5490  0.5565  0.5594  0.5674
+          0.5784  0.5849  0.5866  0.5960  0.6056  0.6100  0.6186  0.6231  0.6286
+          0.6325
+ Writing out eigenvalues/vectors for ikpt=  1
+ Occupation numbers for ikpt=  1
+   1      2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000
+          2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000
+          2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000
+
+ k-point   2
+ Eigenvalues in Hartree for ikpt=   2
+   2     -0.3605 -0.3345 -0.3261 -0.3067 -0.2919 -0.2672 -0.1882 -0.1720 -0.1494
+         -0.1205 -0.1083 -0.0947 -0.0738 -0.0656 -0.0553 -0.0459 -0.0392 -0.0331
+         -0.0232 -0.0154 -0.0047 -0.0028  0.0071  0.0162  0.0336  0.1073  0.1305
+          0.1424  0.1513  0.1620  0.1650  0.1743  0.1783  0.1816  0.1897  0.1953
+          0.1993  0.2032  0.2132  0.2191  0.2231  0.2337  0.2384  0.2492  0.2560
+          0.2584  0.2701  0.2762  0.2794  0.2876  0.2957  0.3025  0.3088  0.3187
+          0.3290  0.3472  0.3528  0.3602  0.3787  0.3829  0.3923  0.4019  0.4072
+          0.4148  0.4198  0.4262  0.4315  0.4336  0.4441  0.4481  0.4525  0.4618
+          0.4652  0.4762  0.4838  0.4868  0.4962  0.5038  0.5090  0.5135  0.5184
+          0.5232  0.5342  0.5381  0.5424  0.5483  0.5531  0.5583  0.5688  0.5783
+          0.5821  0.5872  0.5927  0.5971  0.6019  0.6058  0.6101  0.6160  0.6278
+          0.6335
+ Writing out eigenvalues/vectors for ikpt=  2
+ Occupation numbers for ikpt=  2
+   2      2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000
+          2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000
+          2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000
+
+ k-point   3
+ Eigenvalues in Hartree for ikpt=   3
+   3     -0.3335 -0.3064 -0.2741 -0.2686 -0.2602 -0.2346 -0.2204 -0.2001 -0.1840
+         -0.1728 -0.1445 -0.1231 -0.1097 -0.0961 -0.0899 -0.0824 -0.0649 -0.0569
+         -0.0465 -0.0413 -0.0354 -0.0196 -0.0119  0.0013  0.0383  0.0901  0.1211
+          0.1333  0.1487  0.1535  0.1607  0.1710  0.1844  0.1908  0.1967  0.2093
+          0.2158  0.2212  0.2383  0.2420  0.2508  0.2572  0.2654  0.2690  0.2755
+          0.2844  0.2936  0.2972  0.3102  0.3192  0.3224  0.3320  0.3357  0.3450
+          0.3478  0.3558  0.3579  0.3692  0.3745  0.3780  0.3858  0.3923  0.4000
+          0.4030  0.4102  0.4157  0.4241  0.4297  0.4351  0.4440  0.4482  0.4566
+          0.4630  0.4800  0.4882  0.5005  0.5053  0.5099  0.5184  0.5262  0.5308
+          0.5370  0.5454  0.5498  0.5586  0.5677  0.5696  0.5758  0.5826  0.5892
+          0.5945  0.5999  0.6022  0.6091  0.6116  0.6186  0.6207  0.6260  0.6315
+          0.6433
+ Writing out eigenvalues/vectors for ikpt=  3
+ Occupation numbers for ikpt=  3
+   3      2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000
+          2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000
+          2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000
+
+ k-point   4
+ Eigenvalues in Hartree for ikpt=   4
+   4     -0.3230 -0.2998 -0.2922 -0.2764 -0.2584 -0.2401 -0.2167 -0.1978 -0.1866
+         -0.1736 -0.1615 -0.1392 -0.0974 -0.0901 -0.0748 -0.0656 -0.0557 -0.0500
+         -0.0391 -0.0266 -0.0230 -0.0136 -0.0020  0.0029  0.0427  0.0834  0.1029
+          0.1106  0.1204  0.1305  0.1412  0.1455  0.1624  0.1735  0.1817  0.1872
+          0.1999  0.2127  0.2250  0.2385  0.2407  0.2550  0.2711  0.2877  0.2958
+          0.2993  0.3069  0.3168  0.3225  0.3303  0.3411  0.3448  0.3546  0.3557
+          0.3668  0.3690  0.3732  0.3771  0.3834  0.3886  0.3977  0.4022  0.4091
+          0.4131  0.4245  0.4275  0.4319  0.4369  0.4494  0.4581  0.4681  0.4716
+          0.4778  0.4828  0.4915  0.4966  0.4987  0.5062  0.5123  0.5177  0.5244
+          0.5277  0.5325  0.5447  0.5585  0.5634  0.5677  0.5733  0.5776  0.5845
+          0.5879  0.5938  0.5959  0.5993  0.6060  0.6103  0.6126  0.6214  0.6234
+          0.6259
+ Writing out eigenvalues/vectors for ikpt=  4
+ Occupation numbers for ikpt=  4
+   4      2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000
+          2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000
+          2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000
+
+ k-point   5
+ Eigenvalues in Hartree for ikpt=   5
+   5     -0.3788 -0.3503 -0.3132 -0.2890 -0.2654 -0.2628 -0.2258 -0.1898 -0.1814
+         -0.1699 -0.0963 -0.0858 -0.0647 -0.0443 -0.0341 -0.0219 -0.0122 -0.0059
+          0.0009  0.0215  0.0240  0.0324  0.0360  0.0422  0.0473  0.0873  0.1106
+          0.1147  0.1270  0.1369  0.1407  0.1462  0.1563  0.1575  0.1725  0.1795
+          0.1856  0.1893  0.1955  0.1985  0.2065  0.2089  0.2236  0.2320  0.2466
+          0.2846  0.2931  0.3038  0.3126  0.3179  0.3251  0.3255  0.3336  0.3414
+          0.3453  0.3582  0.3600  0.3692  0.3732  0.3761  0.3836  0.3871  0.3952
+          0.3983  0.4155  0.4172  0.4242  0.4344  0.4471  0.4554  0.4597  0.4671
+          0.4718  0.4746  0.4777  0.4879  0.4924  0.4933  0.4956  0.5012  0.5075
+          0.5086  0.5162  0.5190  0.5283  0.5305  0.5359  0.5427  0.5565  0.5648
+          0.5692  0.5820  0.5853  0.5902  0.5952  0.6049  0.6059  0.6098  0.6206
+          0.6216
+ Writing out eigenvalues/vectors for ikpt=  5
+ Occupation numbers for ikpt=  5
+   5      2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000
+          2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000
+          2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000
+
+ k-point   6
+ Eigenvalues in Hartree for ikpt=   6
+   6     -0.3726 -0.3443 -0.3177 -0.3077 -0.2909 -0.2600 -0.2043 -0.1818 -0.1630
+         -0.1399 -0.1019 -0.0895 -0.0715 -0.0388 -0.0365 -0.0267 -0.0167 -0.0115
+          0.0005  0.0041  0.0088  0.0126  0.0234  0.0242  0.0416  0.0914  0.1062
+          0.1212  0.1319  0.1415  0.1497  0.1559  0.1673  0.1737  0.1740  0.1818
+          0.1962  0.2003  0.2090  0.2170  0.2173  0.2263  0.2341  0.2377  0.2459
+          0.2752  0.2813  0.2887  0.2950  0.3059  0.3082  0.3143  0.3378  0.3379
+          0.3447  0.3508  0.3603  0.3664  0.3778  0.3789  0.3879  0.3972  0.3979
+          0.4025  0.4090  0.4097  0.4166  0.4207  0.4309  0.4352  0.4422  0.4526
+          0.4594  0.4613  0.4664  0.4727  0.4895  0.4941  0.5006  0.5053  0.5142
+          0.5299  0.5346  0.5459  0.5537  0.5565  0.5665  0.5739  0.5741  0.5819
+          0.5863  0.5898  0.5962  0.6006  0.6009  0.6103  0.6118  0.6242  0.6281
+          0.6289
+ Writing out eigenvalues/vectors for ikpt=  6
+ Occupation numbers for ikpt=  6
+   6      2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000
+          2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000
+          2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000
+
+ k-point   7
+ Eigenvalues in Hartree for ikpt=   7
+   7     -0.3597 -0.3440 -0.3265 -0.3209 -0.2919 -0.2795 -0.1799 -0.1682 -0.1345
+         -0.1215 -0.1011 -0.0870 -0.0787 -0.0567 -0.0512 -0.0413 -0.0275 -0.0149
+         -0.0088 -0.0041 -0.0005  0.0041  0.0218  0.0304  0.0320  0.0995  0.1020
+          0.1263  0.1317  0.1330  0.1371  0.1640  0.1658  0.1789  0.1966  0.1996
+          0.2054  0.2139  0.2190  0.2363  0.2421  0.2461  0.2539  0.2544  0.2622
+          0.2701  0.2738  0.2794  0.2853  0.2915  0.2942  0.3046  0.3096  0.3133
+          0.3296  0.3304  0.3416  0.3497  0.3593  0.3743  0.3792  0.3821  0.3909
+          0.3966  0.4034  0.4168  0.4270  0.4367  0.4470  0.4471  0.4488  0.4615
+          0.4747  0.4810  0.4832  0.4863  0.4921  0.5010  0.5129  0.5166  0.5222
+          0.5232  0.5275  0.5320  0.5492  0.5515  0.5590  0.5642  0.5671  0.5733
+          0.5819  0.5873  0.5915  0.5971  0.6058  0.6127  0.6159  0.6214  0.6294
+          0.6312
+ Writing out eigenvalues/vectors for ikpt=  7
+ Occupation numbers for ikpt=  7
+   7      2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000
+          2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000
+          2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000
+
+ k-point   8
+ Eigenvalues in Hartree for ikpt=   8
+   8     -0.3590 -0.3310 -0.2937 -0.2708 -0.2533 -0.2448 -0.2321 -0.1900 -0.1817
+         -0.1634 -0.1110 -0.0965 -0.0938 -0.0865 -0.0764 -0.0660 -0.0599 -0.0435
+         -0.0386 -0.0235 -0.0120 -0.0059 -0.0012  0.0072  0.0312  0.1104  0.1362
+          0.1402  0.1519  0.1589  0.1721  0.1825  0.1841  0.1905  0.1932  0.1989
+          0.2160  0.2176  0.2237  0.2327  0.2446  0.2482  0.2555  0.2592  0.2673
+          0.2706  0.2783  0.2795  0.2893  0.2932  0.3053  0.3196  0.3292  0.3334
+          0.3458  0.3514  0.3528  0.3572  0.3655  0.3663  0.3720  0.3819  0.3855
+          0.3935  0.4029  0.4078  0.4230  0.4295  0.4367  0.4449  0.4479  0.4621
+          0.4667  0.4686  0.4795  0.4972  0.5014  0.5120  0.5177  0.5209  0.5309
+          0.5353  0.5368  0.5431  0.5477  0.5600  0.5681  0.5737  0.5761  0.5806
+          0.5861  0.5948  0.5986  0.6059  0.6117  0.6191  0.6267  0.6295  0.6334
+          0.6471
+ Writing out eigenvalues/vectors for ikpt=  8
+ Occupation numbers for ikpt=  8
+   8      2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000
+          2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000
+          2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000
+
+ k-point   9
+ Eigenvalues in Hartree for ikpt=   9
+   9     -0.3528 -0.3251 -0.2999 -0.2882 -0.2746 -0.2422 -0.2136 -0.1863 -0.1643
+         -0.1508 -0.1179 -0.0997 -0.0942 -0.0842 -0.0747 -0.0699 -0.0642 -0.0472
+         -0.0402 -0.0203 -0.0126 -0.0093  0.0056  0.0161  0.0319  0.1018  0.1213
+          0.1307  0.1355  0.1538  0.1578  0.1720  0.1816  0.1968  0.2037  0.2108
+          0.2213  0.2248  0.2341  0.2371  0.2462  0.2505  0.2562  0.2601  0.2654
+          0.2689  0.2721  0.2778  0.2827  0.2956  0.2986  0.3086  0.3148  0.3205
+          0.3300  0.3379  0.3440  0.3533  0.3641  0.3767  0.3895  0.4036  0.4127
+          0.4195  0.4242  0.4324  0.4379  0.4418  0.4499  0.4553  0.4671  0.4700
+          0.4741  0.4812  0.4888  0.4917  0.4961  0.5066  0.5084  0.5184  0.5259
+          0.5299  0.5323  0.5405  0.5475  0.5502  0.5592  0.5644  0.5691  0.5742
+          0.5829  0.5868  0.5952  0.5972  0.6015  0.6089  0.6122  0.6251  0.6296
+          0.6363
+ Writing out eigenvalues/vectors for ikpt=  9
+ Occupation numbers for ikpt=  9
+   9      2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000
+          2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000
+          2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000
+
+ k-point  10
+ Eigenvalues in Hartree for ikpt=  10
+  10     -0.3405 -0.3253 -0.3080 -0.3027 -0.2737 -0.2612 -0.1910 -0.1768 -0.1536
+         -0.1446 -0.1229 -0.1123 -0.0909 -0.0877 -0.0704 -0.0674 -0.0477 -0.0427
+         -0.0375 -0.0295 -0.0222 -0.0177 -0.0025  0.0127  0.0352  0.0980  0.1238
+          0.1402  0.1445  0.1506  0.1625  0.1714  0.1751  0.1824  0.1907  0.2038
+          0.2050  0.2143  0.2257  0.2332  0.2400  0.2458  0.2519  0.2590  0.2660
+          0.2678  0.2711  0.2762  0.2853  0.2957  0.3044  0.3139  0.3180  0.3257
+          0.3327  0.3487  0.3580  0.3809  0.3890  0.3993  0.4006  0.4103  0.4158
+          0.4225  0.4236  0.4263  0.4331  0.4435  0.4459  0.4515  0.4611  0.4682
+          0.4701  0.4778  0.4869  0.4936  0.5023  0.5076  0.5122  0.5253  0.5271
+          0.5335  0.5380  0.5406  0.5514  0.5638  0.5644  0.5715  0.5742  0.5784
+          0.5843  0.5935  0.5959  0.5982  0.6060  0.6117  0.6165  0.6266  0.6278
+          0.6368
+ Writing out eigenvalues/vectors for ikpt= 10
+ Occupation numbers for ikpt= 10
+  10      2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000
+          2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000
+          2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000
+
+ k-point  11
+ Eigenvalues in Hartree for ikpt=  11
+  11     -0.3072 -0.2993 -0.2811 -0.2752 -0.2418 -0.2406 -0.2078 -0.2029 -0.1783
+         -0.1750 -0.1633 -0.1584 -0.0999 -0.0960 -0.0902 -0.0822 -0.0774 -0.0698
+         -0.0572 -0.0478 -0.0424 -0.0412 -0.0107 -0.0028  0.0538  0.0678  0.1250
+          0.1361  0.1476  0.1574  0.1691  0.1804  0.1916  0.2065  0.2170  0.2190
+          0.2248  0.2268  0.2304  0.2384  0.2457  0.2501  0.2595  0.2621  0.2653
+          0.2766  0.2875  0.2896  0.2950  0.3022  0.3162  0.3221  0.3254  0.3468
+          0.3542  0.3585  0.3636  0.3715  0.3968  0.4086  0.4095  0.4193  0.4267
+          0.4297  0.4339  0.4388  0.4439  0.4462  0.4527  0.4544  0.4597  0.4603
+          0.4777  0.4827  0.4906  0.4953  0.4987  0.5007  0.5089  0.5146  0.5159
+          0.5239  0.5252  0.5278  0.5347  0.5375  0.5412  0.5442  0.5565  0.5663
+          0.5792  0.5828  0.5925  0.6030  0.6061  0.6091  0.6202  0.6255  0.6384
+          0.6458
+ Writing out eigenvalues/vectors for ikpt= 11
+ Occupation numbers for ikpt= 11
+  11      2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000
+          2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000
+          2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000
+
+ k-point  12
+ Eigenvalues in Hartree for ikpt=  12
+  12     -0.3046 -0.2952 -0.2790 -0.2745 -0.2427 -0.2414 -0.2154 -0.2077 -0.1925
+         -0.1848 -0.1695 -0.1647 -0.0935 -0.0883 -0.0812 -0.0715 -0.0640 -0.0531
+         -0.0506 -0.0400 -0.0297 -0.0251 -0.0135 -0.0025  0.0532  0.0681  0.1158
+          0.1225  0.1357  0.1371  0.1452  0.1547  0.1722  0.1726  0.1847  0.1856
+          0.1908  0.2076  0.2177  0.2365  0.2518  0.2526  0.2696  0.2768  0.2993
+          0.3024  0.3086  0.3200  0.3308  0.3351  0.3405  0.3429  0.3575  0.3613
+          0.3682  0.3703  0.3806  0.3823  0.3914  0.4011  0.4060  0.4109  0.4181
+          0.4202  0.4342  0.4355  0.4471  0.4481  0.4587  0.4618  0.4722  0.4772
+          0.4821  0.4824  0.4919  0.4923  0.4979  0.4991  0.5066  0.5091  0.5131
+          0.5157  0.5241  0.5277  0.5314  0.5340  0.5452  0.5459  0.5609  0.5645
+          0.5796  0.5808  0.5869  0.5939  0.6079  0.6088  0.6184  0.6188  0.6288
+          0.6347
+ Writing out eigenvalues/vectors for ikpt= 12
+ Occupation numbers for ikpt= 12
+  12      2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000
+          2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000
+          2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000
+
+ k-point  13
+ Eigenvalues in Hartree for ikpt=  13
+  13     -0.3012 -0.2889 -0.2767 -0.2756 -0.2445 -0.2431 -0.2199 -0.2135 -0.1956
+         -0.1919 -0.1825 -0.1730 -0.0871 -0.0868 -0.0665 -0.0615 -0.0556 -0.0408
+         -0.0351 -0.0283 -0.0151 -0.0120 -0.0038 -0.0008  0.0527  0.0755  0.0920
+          0.0954  0.1010  0.1166  0.1194  0.1298  0.1423  0.1506  0.1724  0.1935
+          0.2112  0.2164  0.2176  0.2296  0.2473  0.2608  0.2660  0.2753  0.2962
+          0.3108  0.3163  0.3246  0.3390  0.3412  0.3463  0.3499  0.3612  0.3641
+          0.3755  0.3833  0.3895  0.4092  0.4236  0.4242  0.4341  0.4394  0.4474
+          0.4528  0.4547  0.4568  0.4619  0.4632  0.4701  0.4732  0.4754  0.4759
+          0.4834  0.4836  0.4861  0.4926  0.4935  0.4979  0.5021  0.5064  0.5091
+          0.5143  0.5159  0.5190  0.5265  0.5323  0.5344  0.5359  0.5407  0.5459
+          0.5556  0.5584  0.5637  0.5638  0.5728  0.5872  0.5890  0.5925  0.5987
+          0.6096
+ Writing out eigenvalues/vectors for ikpt= 13
+ Occupation numbers for ikpt= 13
+  13      2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000
+          2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000
+          2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  2.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000
+ Test on the normalization of the wavefunctions
+  min sum_G |a(n,k,G)| = *********
+  max sum_G |a(n,k,G)| =  0.000000
+ Test on the orthogonalization of the wavefunctions
+  min sum_G a(n,k,G)* a(n',k,G) = *********
+  max sum_G a(n,k,G)* a(n',k,G) =  0.000000
+
+ leave_test : synchronization done...
+================================================================================
+
+ ----iterations are completed or convergence reached----
+
+ outwf  : write wavefunction to file 2D_Si_surface_o_DS2_WFK
+ leave_test : synchronization done...
+
+== END DATASET(S) ==============================================================
+================================================================================
+  
+ -outvars: echo values of variables after computation  --------
+ 
+ These variables are accessible in NetCDF format (2D_Si_surface_o_OUT.nc)
+
+            acell      1.2467903000E+01  7.1983000000E+00  3.0000000000E+01 Bohr
+              amu      1.00794000E+00  2.80855000E+01
+           diemac      5.00000000E+00
+           diemix      5.00000000E-01
+             ecut      6.00000000E+00 Hartree
+           enunit           2
+           etotal1    -4.8581050252E+01
+            fcart1    -9.4601401435E-04  0.0000000000E+00 -5.6575182398E-03
+                       9.3734457773E-04  0.0000000000E+00 -5.6475478684E-03
+                       2.4958693018E-04  0.0000000000E+00  3.2853783625E-03
+                      -9.6799397616E-04  0.0000000000E+00  3.0934525101E-03
+                       1.9466735135E-04  0.0000000000E+00  9.1086613944E-04
+                       4.8420458995E-04  0.0000000000E+00 -2.1874222241E-04
+                      -5.2611885909E-04  0.0000000000E+00  2.8117159238E-04
+                      -2.1798179126E-04  0.0000000000E+00 -4.3851790795E-04
+                       8.5787699842E-04  0.0000000000E+00  3.2165463210E-04
+                       4.2565412079E-04  0.0000000000E+00  2.9263061482E-04
+                      -4.3929542027E-04  0.0000000000E+00  1.4028974027E-03
+                      -7.2417010028E-04  0.0000000000E+00  6.7897977031E-04
+                       3.2697699222E-04  0.0000000000E+00  7.6180611444E-04
+                       3.4526260076E-04  0.0000000000E+00  9.3348909976E-04
+           getden1          0
+           getden2         -1
+           iprcel          45
+             iscf1          7
+             iscf2         -2
+           istwfk2       0    0    0    0    1    0    1    0    0    0
+                         1    0    1
+              ixc           2
+           jdtset        1    2
+              kpt1     1.25000000E-01  1.25000000E-01  0.00000000E+00
+                       3.75000000E-01  1.25000000E-01  0.00000000E+00
+                       1.25000000E-01  3.75000000E-01  0.00000000E+00
+                       3.75000000E-01  3.75000000E-01  0.00000000E+00
+              kpt2     1.25000000E-01  1.25000000E-01  0.00000000E+00
+                       3.75000000E-01  1.25000000E-01  0.00000000E+00
+                       1.25000000E-01  3.75000000E-01  0.00000000E+00
+                       3.75000000E-01  3.75000000E-01  0.00000000E+00
+                       0.00000000E+00  0.00000000E+00  0.00000000E+00
+                       2.50000000E-01  0.00000000E+00  0.00000000E+00
+                       5.00000000E-01  0.00000000E+00  0.00000000E+00
+                       0.00000000E+00  2.50000000E-01  0.00000000E+00
+                       2.50000000E-01  2.50000000E-01  0.00000000E+00
+                       5.00000000E-01  2.50000000E-01  0.00000000E+00
+                       0.00000000E+00  5.00000000E-01  0.00000000E+00
+                       2.50000000E-01  5.00000000E-01  0.00000000E+00
+                       5.00000000E-01  5.00000000E-01  0.00000000E+00
+          kptrlen1     2.87932000E+01
+          kptrlen2     3.00000000E+01
+           kptopt1          1
+           kptopt2          0
+         kptrlatt      4  0  0   0  4  0   0  0  1
+          kssform1          1
+          kssform2          3
+           mffmem           0
+P           mkmem           0
+            natom          14
+            nband1      27
+            nband2     100
+           nbdbuf1          0
+           nbdbuf2         10
+           ndtset           2
+            ngfft          30      16      72
+             nkpt1          4
+             nkpt2         13
+            nstep1         50
+            nstep2        100
+             nsym           2
+           ntypat           2
+              occ      2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  0.000000  0.000000
+           prtvol           2
+           shiftk      5.00000000E-01  5.00000000E-01  0.00000000E+00
+          spgroup           6
+           strten1     1.3023175420E-04  1.2242455772E-04  7.9060440694E-05
+                       0.0000000000E+00  2.2445612192E-07  0.0000000000E+00
+           symrel      1  0  0   0  1  0   0  0  1       1  0  0   0 -1  0   0  0  1
+           toldfe1     1.00000000E-06 Hartree
+           toldfe2     0.00000000E+00 Hartree
+           tolwfr1     0.00000000E+00
+           tolwfr2     1.00000000E-09
+            typat      1  1  2  2  2  2  2  2  2  2  2  2  2  2
+              wtk1       0.25000    0.25000    0.25000    0.25000
+              wtk2       1.00000    1.00000    1.00000    1.00000    1.00000    1.00000
+                         1.00000    1.00000    1.00000    1.00000    1.00000    1.00000
+                         1.00000
+           xangst      2.9800788136E+00 -1.9045881503E+00 -3.4478893412E-01
+                       3.1484902192E-01  2.1145176169E-16 -2.1328515078E-01
+                       3.2225261145E+00 -1.9045881503E+00  1.1378075242E+00
+                       6.9228228211E-02  2.1145176169E-16  1.2702481044E+00
+                       1.1060743470E+00 -1.9045881503E+00  2.1325929043E+00
+                      -2.2030323694E+00  2.1145176169E-16  1.7536338948E+00
+                       1.1056518450E+00 -1.9045881503E+00  4.4860857212E+00
+                      -2.1954122348E+00  2.1145176169E-16  4.0587710728E+00
+                      -1.1971218829E+00 -1.9045881503E+00  4.9680027825E+00
+                       2.3081519422E+00  2.1145176169E-16  5.1180569953E+00
+                      -1.5492307907E-02 -1.9045881503E+00  8.4756598800E+00
+                       1.0931119626E+00  2.1145176169E-16  7.9723604773E+00
+                      -1.9718450662E+00 -1.9045881503E+00  7.1927730662E+00
+                       3.2772206742E+00  2.1145176169E-16  7.2885818873E+00
+            xcart      5.6315328121E+00 -3.5991500000E+00 -6.5155665914E-01
+                       5.9497842463E-01  3.9958591991E-16 -4.0305052319E-01
+                       6.0896918125E+00 -3.5991500000E+00  2.1501446126E+00
+                       1.3082239198E-01  3.9958591991E-16  2.4004210381E+00
+                       2.0901775985E+00 -3.5991500000E+00  4.0300165421E+00
+                      -4.1631278401E+00  3.9958591991E-16  3.3138877985E+00
+                       2.0893791854E+00 -3.5991500000E+00  8.4774734218E+00
+                      -4.1487278726E+00  3.9958591991E-16  7.6699657637E+00
+                      -2.2622325063E+00 -3.5991500000E+00  9.3881646864E+00
+                       4.3617750439E+00  3.9958591991E-16  9.6717260537E+00
+                      -2.9276219110E-02 -3.5991500000E+00  1.6016675969E+01
+                       2.0656822418E+00  3.9958591991E-16  1.5065577935E+01
+                      -3.7262471516E+00 -3.5991500000E+00  1.3592371231E+01
+                       6.1930495513E+00  3.9958591991E-16  1.3773423664E+01
+             xred      4.5168243706E-01 -5.0000000000E-01 -2.1718555305E-02
+                       4.7720809556E-02  5.5511151231E-17 -1.3435017440E-02
+                       4.8842951477E-01 -5.0000000000E-01  7.1671487086E-02
+                       1.0492734182E-02  5.5511151231E-17  8.0014034603E-02
+                       1.6764467918E-01 -5.0000000000E-01  1.3433388474E-01
+                      -3.3390762184E-01  5.5511151231E-17  1.1046292662E-01
+                       1.6758064170E-01 -5.0000000000E-01  2.8258244739E-01
+                      -3.3275265877E-01  5.5511151231E-17  2.5566552546E-01
+                      -1.8144450645E-01 -5.0000000000E-01  3.1293882288E-01
+                       3.4984030947E-01  5.5511151231E-17  3.2239086846E-01
+                      -2.3481269553E-03 -5.0000000000E-01  5.3388919895E-01
+                       1.6568000584E-01  5.5511151231E-17  5.0218593116E-01
+                      -2.9886719135E-01 -5.0000000000E-01  4.5307904104E-01
+                       4.9671942036E-01  5.5511151231E-17  4.5911412214E-01
+            znucl        1.00000   14.00000
+
+================================================================================
+  
+
+================================================================================
+
+ Suggested references for the acknowledgment of ABINIT usage.
+
+ The users of ABINIT have little formal obligations with respect to the ABINIT group
+ (those specified in the GNU General Public License, http://www.gnu.org/copyleft/gpl.txt).
+ However, it is common practice in the scientific literature,
+ to acknowledge the efforts of people that have made the research possible.
+ In this spirit, please find below suggested citations of work written by ABINIT developers,
+ corresponding to implementations inside of ABINIT that you have used in the present run.
+ Note also that it will be of great value to readers of publications presenting these results,
+ to read papers enabling them to understand the theoretical formalism and details
+ of the ABINIT implementation.
+ For information on why they are suggested, see also http://www.abinit.org/about/?text=acknowledgments.
+
+ [1] Preconditioning of self-consistent-field cycles in density functional theory : the extrapolar method
+ P.-M. Anglade, X. Gonze, Phys. Rev. B 78, 045126 (2008).
+ Comment : to be cited in case the extrapolar conditioner is used, i.e. non-vanishing iprcel.
+
+ [2] Ab initio pseudopotentials for electronic structure calculations of poly-atomic systems, 
+ using density-functional theory.
+ M. Fuchs, M. Scheffler, Comput. Phys. Commun. 119, 67 (1999).
+ Comment : Some pseudopotential generated using the FHI code were used.
+
+ [3] ABINIT : First-principles approach of materials and nanosystem properties.
+ X. Gonze, B. Amadon, P.-M. Anglade, J.-M. Beuken, F. Bottin, P. Boulanger, F. Bruneval,
+ D. Caliste, R. Caracas, M. Cote, T. Deutsch, L. Genovese, Ph. Ghosez, M. Giantomassi
+ S. Goedecker, D.R. Hamann, P. Hermet, F. Jollet, G. Jomard, S. Leroux, M. Mancini, S. Mazevet,
+ M.J.T. Oliveira, G. Onida, Y. Pouillon, T. Rangel, G.-M. Rignanese, D. Sangalli, R. Shaltaf,
+ M. Torrent, M.J. Verstraete, G. Zerah, J.W. Zwanziger
+ Computer Phys. Comm. 180, 2582-2615 (2009).
+ Comment : the third generic paper describing the ABINIT project.
+ Note that a version of this paper, that is not formatted for Computer Phys. Comm. 
+ is available at http://www.abinit.org/about/ABINIT_CPC_v10.pdf .
+ The licence allows the authors to put it on the Web.
+
+ [4] A brief introduction to the ABINIT software package.
+ X. Gonze, G.-M. Rignanese, M. Verstraete, J.-M. Beuken, Y. Pouillon, R. Caracas, F. Jollet,
+ M. Torrent, G. Zerah, M. Mikami, Ph. Ghosez, M. Veithen, J.-Y. Raty, V. Olevano, F. Bruneval,
+ L. Reining, R. Godby, G. Onida, D.R. Hamann, and D.C. Allan.
+ Z. Kristallogr. 220, 558-562 (2005).
+ Comment : the second generic paper describing the ABINIT project. Note that this paper
+ should be cited especially if you are using the GW part of ABINIT, as several authors
+ of this part are not in the list of authors of the first or third paper.
+ The .pdf of the latter paper is available at http://www.abinit.org/about/zfk_0505-06_558-562.pdf.
+ Note that it should not redistributed (Copyright by Oldenburg Wissenshaftverlag,
+ the licence allows the authors to put it on the Web).
+
+
+ And optionally :
+
+ [5] First-principles computation of material properties : the ABINIT software project. 
+ X. Gonze, J.-M. Beuken, R. Caracas, F. Detraux, M. Fuchs, G.-M. Rignanese, L. Sindic,
+ M. Verstraete, G. Zerah, F. Jollet, M. Torrent, A. Roy, M. Mikami, Ph. Ghosez, J.-Y. Raty, D.C. Allan.
+ Computational Materials Science 25, 478-492 (2002). http://dx.doi.org/10.1016/S0927-0256(02)00325-7
+ Comment : the original paper describing the ABINIT project.
+ Proc.   0 individual time (sec): cpu=         76.4  wall=         76.4
+
+ Calculation completed.
+.Delivered    0 WARNINGs and   6 COMMENTs to log file.

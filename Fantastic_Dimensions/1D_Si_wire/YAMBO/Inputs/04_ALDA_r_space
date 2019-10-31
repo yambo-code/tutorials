@@ -1,0 +1,36 @@
+#  __  __   ________   ___ __ __    _______   ______        
+# /_/\/_/\ /_______/\ /__//_//_/\ /_______/\ /_____/\       
+# \ \ \ \ \\::: _  \ \\::\| \| \ \\::: _  \ \\:::_ \ \      
+#  \:\_\ \ \\::(_)  \ \\:.      \ \\::(_)  \/_\:\ \ \ \     
+#   \::::_\/ \:: __  \ \\:.\-/\  \ \\::  _  \ \\:\ \ \ \    
+#     \::\ \  \:.\ \  \ \\. \  \  \ \\::(_)  \ \\:\_\ \ \   
+#      \__\/   \__\/\__\/ \__\/ \__\/ \_______\/ \_____\/   
+#                                                           
+#             GPL Version 3.2.4 Revision 941                
+#                http://www.yambo-code.org                  
+#
+optics                       # [R OPT] Optics
+bse                          # [R BSK] Bethe Salpeter Equation.
+alda_fxc                     # [R TDDFT] The ALDA TDDFT kernel
+bss                          # [R BSS] Bethe Salpeter Equation solver
+NonPDirs= "none"             # [X/BSS] Non periodic chartesian directions (X,Y,Z,XY...)
+BSresKmod= "x"               # [BSK] Resonant Kernel mode. (`x`;`c`;`d`)
+BScplKmod= "none"            # [BSK] Coupling Kernel mode. (`x`;`c`;`d`;`u`)
+% BSEBands
+   1 | 100 |                 # [BSK] Bands range
+%
+BSENGexx=  997         RL    # [BSK] Exchange components
+#ALLGexx                     # [BSS] Force the use use all RL vectors for the exchange part
+BSSmod= "h"                  # [BSS] Solvers `h/d/i/t`
+% BEnRange
+  0.00000 | 10.00000 | eV    # [BSS] Energy range
+%
+% BDmRange
+  0.10000 |  0.10000 | eV    # [BSS] Damping range
+%
+BEnSteps= 100                # [BSS] Energy steps
+% BLongDir
+ 1.000000 | 0.000000 | 0.000000 |        # [BSS] [cc] Electric Field
+%
+BSHayTrs= -0.02000           # [BSS] [o/o] Haydock treshold. Strict(>0)/Average(<0)
+#BSHayTer                    # [BSS] Terminate Haydock continuos fraction

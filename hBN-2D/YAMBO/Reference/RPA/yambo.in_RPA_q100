@@ -1,0 +1,37 @@
+#                                                           
+#  /$$     /$$ /$$$$$$  /$$      /$$ /$$$$$$$   /$$$$$$     
+# |  $$   /$$//$$__  $$| $$$    /$$$| $$__  $$ /$$__  $$    
+#  \  $$ /$$/| $$  \ $$| $$$$  /$$$$| $$  \ $$| $$  \ $$    
+#   \  $$$$/ | $$$$$$$$| $$ $$/$$ $$| $$$$$$$ | $$  | $$    
+#    \  $$/  | $$__  $$| $$  $$$| $$| $$__  $$| $$  | $$    
+#     | $$   | $$  | $$| $$\  $ | $$| $$  \ $$| $$  | $$    
+#     | $$   | $$  | $$| $$ \/  | $$| $$$$$$$/|  $$$$$$/    
+#     |__/   |__/  |__/|__/     |__/|_______/  \______/     
+#                                                           
+#             GPL Version 4.1.2 Revision 120                
+#                    MPI+OpenMP Build                       
+#               http://www.yambo-code.org                   
+#
+optics                       # [R OPT] Optics
+chi                          # [R CHI] Dyson equation for Chi.
+FFTGvecs=  6           Ry    # [FFT] Plane-waves
+X_Threads= 1                 # [OPENMP/X] Number of threads for response functions
+DIP_Threads= 1               # [OPENMP/X] Number of threads for dipoles
+Chimod= "Hartree"            # [X] IP/Hartree/ALDA/LRC/BSfxc
+NGsBlkXd= 3            Ry    # [Xd] Response block size
+% QpntsRXd
+  1 |  1 |                   # [Xd] Transferred momenta
+%
+% BndsRnXd
+   1 |  60 |                 # [Xd] Polarization function bands
+%
+% EnRngeXd
+  0.00000 | 20.00000 | eV    # [Xd] Energy range
+%
+% DmRngeXd
+  0.20000 |  0.20000 | eV    # [Xd] Damping range
+%
+ETStpsXd= 2001               # [Xd] Total Energy steps
+% LongDrXd
+ 1.000000 | 0.000000 | 0.000000 |        # [Xd] [cc] Electric Field
+%

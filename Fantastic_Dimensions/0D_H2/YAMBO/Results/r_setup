@@ -1,0 +1,198 @@
+                                                                
+    ooooo   oooo ..     ooo        ooo ooooooooo.    .oooo.     
+     `88.   .8" .88.    `88.       .88 `88"   `Y8b  dP"  `Yb    
+      `88. .8" .8"88.    888b     d"88  88     888 88      88   
+       `88.8" .8" `88.   8 Y88. .P  88  88oooo888" 88      88   
+        `88" .88ooo888.  8  `888"   88  88    `88b 88      88   
+         88 .8"     `88. 8    Y     88  88    .88P `8b    d8"   
+        o88o88o      888o8          88 o88bood8P"   `Ybod8P"    
+                                                                
+                 GPL Version 4.0.0 Revision 4281                
+                        MPI+OpenMP Build                        
+                    http://www.yambo-code.org                   
+ 
+ 04/03/2015 at 14:26 YAMBO @ anomaly
+
+ [01] CPU structure, Files & I/O Directories
+ ===========================================
+
+ * CPU-Threads     :1(CPU)-8(threads)
+ * MPI CHAINS      : 1
+ * MPI CPU         : 1
+ * THREADS    (max):  8
+ * THREADS TOT(max):  8
+ * I/O NODES       : 1
+ * Fragmented I/O  :no
+
+ CORE databases in   .
+ Additional I/O in   .
+ Communications in   .
+ Input file     is   Inputs/01_init
+ Report file    is   ./r_setup
+  
+ [RD./SAVE//ns.db1]------------------------------------------
+  Bands                           : 250
+  K-points                        : 1
+  G-vectors             [RL space]:  39127
+  Components       [wavefunctions]:  39127
+  Symmetries       [spatial+T-rev]: 16
+  Spinor components               : 1
+  Spin polarizations              : 1
+  Temperature                 [ev]: 0.000000
+  Electrons                       : 2.000000
+  WF G-vectors                    :  39127
+  Max atoms/species               : 2
+  No. of atom species             : 1
+  Magnetic symmetries             : no
+ - S/N 003540 --------------------------- v.03.03.01 r.2093 -
+
+ [02] CORE Variables Setup
+ =========================
+
+
+  [02.01] Unit cells
+  ==================
+
+  Unit cell is CUB
+
+  ... containing 2H atoms
+
+  ... with scaling factors [a.u.]: 25.00000  25.00000  25.00000
+
+  Direct Lattice(DL) unit cell [iru  /  cc(a.u.)]
+  A1 = 1.000000  0.000000  0.000000      25.00000  0.000000  0.000000
+  A2 = 0.000000  1.000000  0.000000      0.000000  25.00000  0.000000
+  A3 = 0.000000  0.000000  1.000000      0.000000  0.000000  25.00000
+
+  DL volume [au]:0.1562E+5
+
+  Reciprocal Lattice(RL) unit cell [iku  /  cc]
+  B1 = 1.000000  0.000000  0.000000      0.251327  0.000000  0.000000
+  B2 = 0.000000  1.000000  0.000000      0.000000  0.251327  0.000000
+  B3 = 0.000000  0.000000  1.000000      0.000000  0.000000  0.251327
+
+
+  [02.02] Symmetries
+  ==================
+
+  DL (S)ymmetries [cc]
+  [S1] 1.000000  0.000000  0.000000  0.000000  1.000000  0.000000  0.000000  0.000000  1.000000
+  [S2]-1.000000  0.000000  0.000000  0.000000  1.000000  0.000000  0.000000  0.000000 -1.000000
+  [S3]-1.000000  0.000000  0.000000  0.000000 -1.000000  0.000000  0.000000  0.000000  1.000000
+  [S4] 1.000000  0.000000  0.000000  0.000000 -1.000000  0.000000  0.000000  0.000000 -1.000000
+  [S5]-1.000000  0.000000  0.000000  0.000000  0.000000 -1.000000  0.000000 -1.000000  0.000000
+  [S6] 1.000000  0.000000  0.000000  0.000000  0.000000 -1.000000  0.000000  1.000000  0.000000
+  [S7] 1.000000  0.000000  0.000000  0.000000  0.000000  1.000000  0.000000 -1.000000  0.000000
+  [S8]-1.000000  0.000000  0.000000  0.000000  0.000000  1.000000  0.000000  1.000000  0.000000
+
+  [SYMs] Time-reversal derived K-space symmetries:  9  16
+  [SYMs] Spatial inversion 9 is a symmetry
+  [SYMs] Group table built correctly
+
+  [02.03] RL shells
+  =================
+
+  Shells, format: [S#] G_RL(mHa)
+
+   [S151]:9939( 5622.) [S150]:9843( 5590.) [S149]:9795( 5559.) [S148]:9771( 5495.)
+   [S147]:9627( 5464.) [S146]:9459( 5432.) [S145]:9435( 5401.) [S144]:9315( 5369.)
+   [S143]:9171( 5337.) [S142]:9093( 5306.) [S141]:9045( 5243.) [S140]:8925( 5211.)
+   [S139]:8829( 5180.) [S138]:8733( 5148.) [S137]:8709( 5116.) [S136]:8601( 5085.)
+   [S135]:8409( 5053.) [S134]:8385( 4990.) [S133]:8289( 4958.) [S132]:8217( 4895.)
+   [S131]:8121( 4864.) [S130]:8025( 4832.) [S129]:7881( 4801.) [S128]:7809( 4737.)
+   [S127]:7689( 4706.) [S126]:7521( 4674.) [S125]:7497( 4643.) [S124]:7441( 4611.)
+   ...
+   [S12]:179( 378.9928) [S11]:171( 347.4102) [S10]:147( 315.8274) [S9]:123( 284.2446)
+   [S8]:93( 252.6619) [S7]:81( 189.4964) [S6]:57( 157.9137) [S5]:33( 126.3309)
+   [S4]:27( 94.74821) [S3]:19( 63.16547) [S2]:7( 31.58274) [S1]:1( 0.000000)
+
+  [02.04] K-grid lattice
+  ======================
+
+  Compatible Grid is 0D
+  K lattice UC volume       [au]:  0.01588
+
+  [02.05] Energies [ev] & Occupations
+  ===================================
+
+  Fermi Level        [ev]: -9.004031
+  VBM / CBm          [ev]:  0.000000  8.012273
+  Electronic Temp. [ev K]:  0.00      0.00    
+  Bosonic    Temp. [ev K]:  0.00      0.00    
+  El. density      [cm-3]: 0.864E+21
+  States summary         : Full        Metallic    Empty
+                           0001-0001               0002-0250
+  Indirect Gaps      [ev]: 8.012273  8.012273
+  Direct Gaps        [ev]: 8.012273  8.012273
+  X BZ K-points : 1
+
+  Energy unit is electronVolt [eV]
+
+  *X* K [1] : 0.000000  0.000000  0.000000 (rlu) * Comp.s 39127 * weight  1.000000
+              0.000000  0.000000  0.000000 (iku)
+  E  0.000000  8.012273  8.914516  9.563279  9.563279  9.740905  9.813654  9.825105
+  E   9.90508  10.27918  10.27918  10.60589  10.60589  10.62587  10.65609  10.67617
+
+ [03] Transferred momenta grid
+ =============================
+
+
+ IBZ Q-points : 1
+ BZ  Q-points : 1
+
+ Q [00001] : 0.00      0.00      0.00     (iku) * weight  1.000000
+  
+ Q [00001] : 0.00      0.00      0.00     (cc ) * weight  1.000000
+
+ :: Indices: polarization function
+ :: Indices: Self-Energy
+
+ [WR./SAVE//ndb.kindx]---------------------------------------
+  Polarization last K   : 1
+  QP states             : 1  1
+  X grid is uniform     :yes
+  X grid impose -q      :no
+  BS scattering         :no
+  COLL scattering       :no
+ - S/N 003540 --------------------------- v.04.00.00 r.4281 -
+
+ [04] External corrections
+ =========================
+
+
+ [05] Timing Overview
+ ====================
+
+ Routines: global (Only MASTER cpu here)
+                io_WF :     0.00s CPU
+                io_HF :     0.00s CPU
+           io_DIPOLES :     0.00s CPU
+
+ [06] Game Over & Game summary
+ =============================
+
+ 04/03/2015 at 14:26 YAMBO @ anomaly [start]
+ 04/03/2015 at 14:26                 [end]
+
+ Timing   [Min/Max/Average]: 01s/01s/01s
+             [Time-Profile]:  1.000000s
+
+ .-ACKNOWLEDGMENT
+ |
+ | The users of YAMBO have little formal obligations with respect to
+ | the YAMBO group (those specified in the GNU General Public
+ | License, http://www.gnu.org/copyleft/gpl.txt). However, it is
+ | common practice in the scientific literature, to acknowledge the
+ | efforts of people that have made the research possible. In this
+ | spirit, please find below the reference we kindly ask you to use
+ | in order to acknowledge YAMBO:
+ |
+ | Yambo: An ab initio tool for excited state calculations
+ | A. Marini, C. Hogan, M. Gr"uning, D. Varsano
+ | Computer Physics Communications  180, 1392 (2009).
+ |
+  
+ .-Input file : Inputs/01_init
+ | setup                        # [R INI] Initialization
+ | BoseTemp= 0.000000     eV    # Bosonic Temperature
+ | MaxGvecs=  9939        RL    # [INI] Max number of G-vectors planned to use

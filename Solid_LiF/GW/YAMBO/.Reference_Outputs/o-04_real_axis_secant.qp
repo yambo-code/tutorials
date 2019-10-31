@@ -1,0 +1,77 @@
+#                                                           
+# :::   :::   :::     ::::    ::::  :::::::::   ::::::::    
+# :+:   :+: :+: :+:   +:+:+: :+:+:+ :+:    :+: :+:    :+:   
+#  +:+ +:+ +:+   +:+  +:+ +:+:+ +:+ +:+    +:+ +:+    +:+   
+#   +#++: +#++:++#++: +#+  +:+  +#+ +#++:++#+  +#+    +:+   
+#    +#+  +#+     +#+ +#+       +#+ +#+    +#+ +#+    +#+   
+#    #+#  #+#     #+# #+#       #+# #+#    #+# #+#    #+#   
+#    ###  ###     ### ###       ### #########   ########    
+#                                                           
+#               Version 3.3.1 Revision 2093                 
+#                http://www.yambo-code.org                  
+#
+# GW [Secant method Solver]
+#
+#  == Real Axis GW ==
+#  GW SC iterations       :0
+#  dS/dw steps            : 2
+#  dS/dw step         [ev]:  0.10000
+#  X G`s            [used]: 15
+#  X G`s            [disk]: 15
+#  X bands                :  1  20
+#  X poles           [o/o]: 100.0000
+#  X e/h E range      [ev]:-1.000000 -1.000000
+#  X xc-Kernel            :none
+#  X damping range    [ev]:  0.10000   0.10000
+#  X Steps                : 100
+#  X BZ energy RIM        : no
+#  X BZ RIM points        :0
+#  Sc/G bands             :   1   50
+#  Sc/G damping       [ev]:  0.10000
+#  Sx RL components       : 1139
+#  QP @ K 001 - 001 : b 003 - 006
+#
+#  K-point    Band       Eo         Eqp        E-Eo       DFT        HF         Sc(Eo)     Sc(Eqp)    Sc`(Eo)    Z          Width[meV] Width[fs]
+#
+   1.00000    3.00000    0.00000   -2.91498   -2.91498  -22.71824  -30.24829    4.61509    5.35346   -0.25328    0.79790   18.47852   35.62038
+   1.00000    4.00000    0.00000   -2.91409   -2.91409  -22.71824  -30.24824    4.61592    5.35333   -0.25303    0.79806   18.48304   35.61166
+   1.00000    5.00000    9.00799   11.02355    2.01556  -11.07164   -5.98808   -3.06799   -3.34492   -0.13739    0.87921  -10.47416  -62.84146
+   1.00000    6.00000   19.90535   22.25859    2.35324   -8.85663   -2.74568   -3.75771   -4.19304   -0.18327    0.84370  -83.27873   -7.90372
+# 
+# YAMBO@cla-Z800 x 001 CPUs * 04/05/2013  12:07 [start]
+#                             04/05/2013  12:09 [end]
+# 
+# Cpu Timing [Min/Max/Average]: 02m-31s/02m-31s/02m-31s
+#
+# .-Input file : INPUTS/04_real_axis_secant
+# | em1d                         # [R Xd] Dynamical Inverse Dielectric Matrix
+# | HF_and_locXC                 # [R XX] Hartree-Fock Self-energy and Vxc
+# | gw0                          # [R GW] GoWo Quasiparticle energy levels
+# | FFTGvecs= 1139         RL    # [FFT] Plane-waves
+# | EXXRLvcs= 1139         RL    # [XX] Exchange RL components
+# | Chimod= "Hartree"            # [X] IP/Hartree/ALDA/LRC/BSfxc
+# | NGsBlkXd= 15           RL    # [Xd] Response block size
+# | % QpntsRXd
+# |   1 | 19 |                   # [Xd] Transferred momenta
+# | %
+# | % BndsRnXd
+# |   1 | 20 |                   # [Xd] Polarization function bands
+# | %
+# | % EnRngeXd
+# |   7.12440 | 80.13052 | eV    # [Xd] Energy range
+# | %
+# | % DmRngeXd
+# |   0.10000 |  0.10000 | eV    # [Xd] Damping range
+# | %
+# | ETStpsXd= 100                # [Xd] Total Energy steps
+# | % LongDrXd
+# | 0.1000E-4 | 0.000    | 0.000    |        # [Xd] [cc] Electric Field
+# | %
+# | % GbndRnge
+# |    1 |  50 |                 # [GW] G[W] bands range
+# | %
+# | GDamping=  0.10000     eV    # [GW] G[W] damping
+# | dScStep=  0.10000      eV    # [GW] Energy step to evalute Z factors
+# | GwEnComp=-27.21138     eV    # [GW] If <= 0 use 0-order EET; > 0 the Bruneval-Gonze terminator
+# | DysSolver= "s"               # [GW] Dyson Equation solver (`n`,`s`,`g`)
+# | ExtendOut                    # [F GW] Print all variables in the output file

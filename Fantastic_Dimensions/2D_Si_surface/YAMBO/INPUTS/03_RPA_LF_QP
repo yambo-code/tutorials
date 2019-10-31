@@ -1,0 +1,46 @@
+#  __      __   ______   __       __  _______    ______     
+# |  \    /  \ /      \ |  \     /  \|       \  /      \    
+#  \$$\  /  $$|  $$$$$$\| $$\   /  $$| $$$$$$$\|  $$$$$$\   
+#   \$$\/  $$ | $$__| $$| $$$\ /  $$$| $$__/ $$| $$  | $$   
+#    \$$  $$  | $$    $$| $$$$\  $$$$| $$    $$| $$  | $$   
+#     \$$$$   | $$$$$$$$| $$\$$ $$ $$| $$$$$$$\| $$  | $$   
+#     | $$    | $$  | $$| $$ \$$$| $$| $$__/ $$| $$__/ $$   
+#     | $$    | $$  | $$| $$  \$ | $$| $$    $$ \$$    $$   
+#      \$$     \$$   \$$ \$$      \$$ \$$$$$$$   \$$$$$$    
+#                                                           
+#             GPL Version 3.2.4 Revision 941                
+#                http://www.yambo-code.org                  
+#
+optics                       # [R OPT] Optics
+chi                          # [R CHI] Dyson equation for Chi.
+NonPDirs= "X"             # [X/BSS] Non periodic chartesian directions (X,Y,Z,XY...)
+% XfnQP_E
+ 0.200000 | 1.000000 | 1.000000 |        # [EXTQP Xd] E parameters  (c/v) eV|adim|adim
+%
+% Qdirection
+ 0.00     | 0.00     | 0.00     |        # [Xd] Transferred momentum direction (iku)
+%
+QShiftOrder= 1               # [Xd] Pick-up the (QShiftOrder)th q+G vector
+% QpntsRXd
+ 1 | 1 |                     # [Xd] Transferred momenta
+%
+% BndsRnXd
+   1 |  50 |                 # [Xd] Polarization function bands
+%
+NGsBlkXd=  55          RL    # [Xd] Response block size
+GrFnTpXd= "t"                # [Xd] Green`s function t/c/r/a
+% EnRngeXd
+ 0.000000 | 1.500000 | eV    # [Xd] Energy range
+%
+% DmRngeXd
+  0.03000 |  0.10000 | eV    # [Xd] Damping range
+%
+DmERefXd= 0.000000     eV    # [Xd] Damping reference energy
+CGrdSpXd= 100.0000           # [Xd] [o/o] Coarse grid controller
+ETStpsXd= 100                # [Xd] Total Energy steps
+% EhEngyXd
+-1.000000 |-1.000000 | eV    # [Xd] Electron-hole energy range
+%
+% LongDrXd
+ 0.000000 | 1.000000 | 0.000000 |        # [Xd] [cc] Electric Field
+%

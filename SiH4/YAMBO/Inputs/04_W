@@ -1,0 +1,21 @@
+#   __   __     _        __  __       ____      U  ___  u   
+#   \ \ / / U  /"\  U u |" \/ "| u U | __") u    \/"_ \/    
+#    \ V /   \/ _ \/   \| |\/| |/   \|  _ \/     | | | |    
+#   U_|"|_u  / ___ \    | |  | |     | |_) | .-,_| |_| |    
+#     |_|   /_/   \_\   |_|  |_|     |____/   \_)-\___/     
+# .-,//|(_   \\    >>  <<,-,,-.     _|| \\_        \\       
+#  \_) (__) (__)  (__)  (./  \.)   (__) (__)      (__)      
+#                                                           
+#             GPL Version 4.0.0 Revision 4281               
+#                    MPI+OpenMP Build                       
+#                http://www.yambo-code.org                  
+#
+em1s                         # [R Xs] Static Inverse Dielectric Matrix
+Chimod= "hartree"            # [X] IP/Hartree/ALDA/LRC/BSfxc
+% BndsRnXs
+   1 |  40 |                 # [Xs] Polarization function bands
+%
+NGsBlkXs=  437         RL    # [Xs] Response block size
+% LongDrXs
+ 1.000000 | 0.000000 | 0.000000 |        # [Xs] [cc] Electric Field
+%

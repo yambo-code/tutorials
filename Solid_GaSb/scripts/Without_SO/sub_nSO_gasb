@@ -1,0 +1,82 @@
+#!/bin/bash
+
+TMPDIR='./tmp101010k'
+PSEUDO_DIR='/home/palummo/D_pseudo/PWSCF'
+BIN_DIR='/home/palummo/D_PGM/D_dft/espresso-5.1.1/bin/'
+
+cat > gasb.scf.in  << EOF
+ &control
+    title = 'GaSb bulk'
+    calculation = 'scf'
+    verbosity='high',
+    prefix='gasb_bulk',
+     pseudo_dir = '$PSEUDO_DIR',
+    outdir='$TMPDIR'
+    etot_conv_thr=1.0e-4,
+    forc_conv_thr=1.0e-3,
+    disk_io='high',
+    wf_collect=.true.
+ /
+ &system    
+      ibrav=2, 
+      celldm(1)=11.388,
+      nat=2, 
+      ntyp=2,
+      ecutwfc =18.0, 
+ /
+ &electrons
+    mixing_beta = 0.6 
+    conv_thr =  1.0d-8,
+ /
+ATOMIC_SPECIES
+ Ga   69.72   Garel.TMSOFTER.UPF
+ Sb  121.75   Sbrel.TMSOFTER.UPF
+ATOMIC_POSITIONS
+Ga      0.00 0.00 0.00
+Sb      0.25 0.25 0.25                                                          
+K_POINTS {automatic}
+4 4 4 1 1 1
+EOF
+#
+$BIN_DIR/pw.x < gasb.scf.in > gasb.scf.out 
+cat > gasb.nscf.in  << EOF
+ &control
+    title = 'GaSb bulk'
+    calculation = 'nscf'
+    verbosity='high',
+    prefix='gasb_bulk',
+    pseudo_dir = '$PSEUDO_DIR',
+    outdir='$TMPDIR'
+    etot_conv_thr=1.0e-4,
+    forc_conv_thr=1.0e-3,
+    disk_io='high',
+    wf_collect=.true.
+ /
+ &system 
+      ibrav=2, 
+      celldm(1)=11.388,
+      nat=2, 
+      ntyp=2,
+      ecutwfc =18.0, 
+      nbnd=100,
+ /
+ &electrons
+   diago_thr_init=5.0e-6,
+   diago_full_acc=.true.
+   electron_maxstep = 100,
+   diagonalization='david'
+   mixing_mode = 'plain'
+   mixing_beta = 0.6
+   conv_thr =  1.0d-8,
+ /
+ATOMIC_SPECIES
+ Ga   69.72   Garel.TMSOFTER.UPF
+ Sb  121.75   Sbrel.TMSOFTER.UPF
+ATOMIC_POSITIONS
+Ga      0.00 0.00 0.00
+Sb      0.25 0.25 0.25
+K_POINTS {automatic}
+10 10 10 1 1 1
+EOF
+#
+$BIN_DIR/pw.x <gasb.nscf.in > gasb.nscf.out101010k 

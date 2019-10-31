@@ -1,0 +1,93 @@
+
+____    ____    ___      .___  ___.  .______     ______
+\   \  /   /   /   \     |   \/   |  |   _  \   /  __  \
+ \   \/   /   /  ^  \    |  \  /  |  |  |_)  | |  |  |  |
+  \_    _/   /  /_\  \   |  |\/|  |  |   _  <  |  |  |  |
+    |  |    /  _____  \  |  |  |  |  |  |_)  | |  `--"  |
+    |__|   /__/     \__\ |__|  |__|  |______/   \______/
+
+ <---> [01] Job Setup
+ <---> [02] Input variables setup
+ <---> [02.01] K-grid lattice
+ <---> [02.02] RL shells
+ <---> [02.03] Input (E)nergies[ev] & Occupations
+ <---> [03] Transferred momenta grid
+ <---> X indexes |                    | [000%] --(E) --(X)
+ <---> X indexes |####################| [100%] --(E) --(X)
+ <---> SE indexes |                    | [000%] --(E) --(X)
+ <---> SE indexes |####################| [100%] --(E) --(X)
+ <---> [04] Bethe-Salpeter Kernel
+ <---> [BSE] Kernel dimension    : 1656
+ <---> Filling Estimation |                    | [000%] --(E) --(X)
+ <---> Filling Estimation |####################| [100%] --(E) --(X)
+ <---> [P 01] Kernel filling [o/o] 100.0000
+ <---> [FFT-BSK] Mesh size: 12  15  15
+ <---> [WF loader] Wfs (re)loading |                    | [000%] --(E) --(X)
+ <---> [WF loader] Wfs (re)loading |####################| [100%] --(E) --(X)
+ <---> [xc] Functional Perdew & Zunger (xc)
+ <---> [05] Main loop
+ <---> BSK |                    | [000%] --(E) --(X)
+ <06s> BSK |#                   | [005%] 06s(E) 01m-51s(X)
+ <11s> BSK |##                  | [010%] 11s(E) 01m-50s(X)
+ <17s> BSK |###                 | [015%] 16s(E) 01m-49s(X)
+ <22s> BSK |####                | [020%] 22s(E) 01m-49s(X)
+ <28s> BSK |#####               | [025%] 28s(E) 01m-50s(X)
+ <34s> BSK |######              | [030%] 33s(E) 01m-50s(X)
+ <39s> BSK |#######             | [035%] 39s(E) 01m-50s(X)
+ <45s> BSK |########            | [040%] 44s(E) 01m-50s(X)
+ <50s> BSK |#########           | [045%] 50s(E) 01m-50s(X)
+ <56s> BSK |##########          | [050%] 55s(E) 01m-50s(X)
+ <01m-01s> BSK |###########         | [055%] 01m-01s(E) 01m-50s(X)
+ <01m-07s> BSK |############        | [060%] 01m-06s(E) 01m-50s(X)
+ <01m-12s> BSK |#############       | [065%] 01m-12s(E) 01m-50s(X)
+ <01m-18s> BSK |##############      | [070%] 01m-18s(E) 01m-50s(X)
+ <01m-23s> BSK |###############     | [075%] 01m-23s(E) 01m-50s(X)
+ <01m-29s> BSK |################    | [080%] 01m-28s(E) 01m-50s(X)
+ <01m-34s> BSK |#################   | [085%] 01m-34s(E) 01m-50s(X)
+ <01m-40s> BSK |##################  | [090%] 01m-39s(E) 01m-50s(X)
+ <01m-45s> BSK |################### | [095%] 01m-44s(E) 01m-49s(X)
+ <01m-50s> BSK |####################| [100%] 01m-50s(E) 01m-50s(X)
+ <01m-50s> [06] BSE solver(s)
+ <01m-50s> [WF loader] Wfs (re)loading |                    | [000%] --(E) --(X)
+ <01m-50s> [WF loader] Wfs (re)loading |####################| [100%] --(E) --(X)
+ <01m-50s> Dipole (T): |                    | [000%] --(E) --(X)
+ <01m-55s> Dipole (T): |############        | [063%] 05s(E) 08s(X)
+ <01m-58s> Dipole (T): |####################| [100%] 08s(E) 08s(X)
+ <01m-58s> [06.01] Haydock solver
+ <01m-58s> [M 0.044 Gb] Alloc BS_mat (0.044)
+ <01m-58s> [Haydock] Iteration 1
+ <01m-58s> [Haydock] Iteration 2
+ <01m-58s> [Haydock] Iteration 3 Accuracy : 1.838188| -0.02000
+ <01m-59s> [Haydock] Iteration 4 Accuracy : 1.893929| -0.02000
+ <01m-59s> [Haydock] Iteration 5 Accuracy : 0.945202| -0.02000
+ <01m-59s> [Haydock] Iteration 6 Accuracy : 0.690531| -0.02000
+ <01m-59s> [Haydock] Iteration 7 Accuracy : 0.713388| -0.02000
+ <01m-59s> [Haydock] Iteration 8 Accuracy : 0.475542| -0.02000
+ <01m-59s> [Haydock] Iteration 9 Accuracy : 0.564215| -0.02000
+ <01m-59s> [Haydock] Iteration 10 Accuracy : 0.482032| -0.02000
+ <01m-59s> [Haydock] Iteration 11 Accuracy : 0.329119| -0.02000
+ <01m-59s> [Haydock] Iteration 12 Accuracy : 0.331134| -0.02000
+ <01m-59s> [Haydock] Iteration 13 Accuracy : 0.322016| -0.02000
+ <01m-59s> [Haydock] Iteration 14 Accuracy : 0.277411| -0.02000
+ <01m-59s> [Haydock] Iteration 15 Accuracy : 0.199965| -0.02000
+ <01m-59s> [Haydock] Iteration 16 Accuracy : 0.200079| -0.02000
+ <02m-00s> [Haydock] Iteration 17 Accuracy : 0.206110| -0.02000
+ <02m-00s> [Haydock] Iteration 18 Accuracy : 0.134009| -0.02000
+ <02m-00s> [Haydock] Iteration 19 Accuracy : 0.144775| -0.02000
+ <02m-00s> [Haydock] Iteration 20 Accuracy : 0.135633| -0.02000
+ <02m-00s> [Haydock] Iteration 21 Accuracy : 0.113949| -0.02000
+ <02m-00s> [Haydock] Iteration 22 Accuracy : 0.108327| -0.02000
+ <02m-00s> [Haydock] Iteration 23 Accuracy :  0.08521| -0.02000
+ <02m-00s> [Haydock] Iteration 24 Accuracy :  0.06571| -0.02000
+ <02m-00s> [Haydock] Iteration 25 Accuracy :  0.08947| -0.02000
+ <02m-00s> [Haydock] Iteration 26 Accuracy :  0.08458| -0.02000
+ <02m-00s> [Haydock] Iteration 27 Accuracy :  0.05823| -0.02000
+ <02m-00s> [Haydock] Iteration 28 Accuracy :  0.05534| -0.02000
+ <02m-00s> [Haydock] Iteration 29 Accuracy :  0.05565| -0.02000
+ <02m-00s> [Haydock] Iteration 30 Accuracy :  0.04396| -0.02000
+ <02m-01s> [Haydock] Iteration 31 Accuracy :  0.04223| -0.02000
+ <02m-01s> [Haydock] Iteration 32 Accuracy :  0.03985| -0.02000
+ <02m-01s> [Haydock] Iteration 33 Accuracy :  0.03197| -0.02000
+ <02m-01s> [Haydock] Iteration 34 Accuracy :  0.01795| -0.02000
+ <02m-01s> [M 0.000 Gb] Free BS_mat (0.044)
+ <02m-01s> [07] Game Over & Game summary

@@ -1,0 +1,101 @@
+#                                                           
+# ooooo   oooo ..     ooo        ooo ooooooooo.    .oooo.   
+#  `88.   .8" .88.    `88.       .88 `88"   `Y8b  dP"  `Yb  
+#   `88. .8" .8"88.    888b     d"88  88     888 88      88 
+#    `88.8" .8" `88.   8 Y88. .P  88  88oooo888" 88      88 
+#     `88" .88ooo888.  8  `888"   88  88    `88b 88      88 
+#      88 .8"     `88. 8    Y     88  88    .88P `8b    d8" 
+#     o88o88o      888o8          88 o88bood8P"   `Ybod8P"  
+#                                                           
+#                Version 4.0.0 Revision 4079                
+#                     MPI+OpenMP Build                      
+#                 http://www.yambo-code.org                 
+#
+gw0                          # [R GW] GoWo Quasiparticle energy levels
+ppa                          # [R Xp] Plasmon Pole Approximation
+HF_and_locXC                 # [R XX] Hartree-Fock Self-energy and Vxc
+em1d                         # [R Xd] Dynamical Inverse Dielectric Matrix
+StdoHash=  40                # [IO] Live-timing Hashes
+Nelectro= 8.000000           # Electrons number
+ElecTemp= 0.000000     eV    # Electronic Temperature
+BoseTemp=-1.000000     eV    # Bosonic Temperature
+OccTresh=0.1000E-4           # Occupation treshold (metallic bands)
+NLogCPUs=0                   # [PARALLEL] Live-timing CPU`s (0 for all)
+DBsIOoff= "none"             # [IO] Space-separated list of DB with NO I/O. DB=(DIP,X,HF,COLLs,J,GF,OCCs,WF,W,SC,BS)
+FFTGvecs=  10 Ry   # [FFT] Plane-waves
+#WFbuffIO                    # [IO] Wave-functions buffered I/O
+#X_all_q_CPU= "2 2 2 2"              # [PARALLEL] CPUs for each role
+#X_all_q_ROLEs= "q k c v"            # [PARALLEL] CPUs roles (q,k,c,v)
+#X_all_q_nCPU_invert=0        # [PARALLEL] CPUs for matrix inversion
+#X_Threads= 12                # [OPENMP/X] Number of threads for response functions
+#DIP_Threads= 12              # [OPENMP/X] Number of threads for dipoles
+#SE_CPU= "4 2 2"                   # [PARALLEL] CPUs for each role
+#SE_ROLEs= "q qp b"                 # [PARALLEL] CPUs roles (q,qp,b)
+#SE_Threads= 12               # [OPENMP/GW] Number of threads for self-energy
+EXXRLvcs=  10 Ry # [XX] Exchange RL components
+Chimod= "Hartree"                   # [X] IP/Hartree/ALDA/LRC/BSfxc
+XfnQPdb= "none"              # [EXTQP Xd] Database
+XfnQP_N= 1                   # [EXTQP Xd] Interpolation neighbours
+% XfnQP_E
+ 0.000000 | 1.000000 | 1.000000 |        # [EXTQP Xd] E parameters  (c/v) eV|adim|adim
+%
+XfnQP_Z= ( 1.000000 , 0.000000 )       # [EXTQP Xd] Z factor  (c/v)
+XfnQP_Wv_E= 0.000000   eV    # [EXTQP Xd] W Energy reference  (valence)
+% XfnQP_Wv
+ 0.00     | 0.00     | 0.00     |        # [EXTQP Xd] W parameters  (valence) eV|adim|eV^-1
+%
+XfnQP_Wc_E= 0.000000   eV    # [EXTQP Xd] W Energy reference  (conduction)
+% XfnQP_Wc
+ 0.00     | 0.00     | 0.00     |        # [EXTQP Xd] W parameters  (conduction) eV|adim|eV^-1
+%
+ShiftedPath= "none"          # [Xd] Shifted grids path
+% QpntsRXp
+  1 | 29 |                   # [Xp] Transferred momenta
+%
+% BndsRnXp
+   1 | 40 |                 # [Xp] Polarization function bands
+%
+NGsBlkXp= 1 Ry    # [Xp] Response block size
+CGrdSpXp= 100.0000           # [Xp] [o/o] Coarse grid controller
+% EhEngyXp
+-1.000000 |-1.000000 | eV    # [Xp] Electron-hole energy range
+%
+% LongDrXp
+ 1.000000 | 1.000000 | 1.000000 |        # [Xp] [cc] Electric Field
+%
+PPAPntXp= 20.     eV    # [Xp] PPA imaginary energy
+#XTerm                       # [X] Use a terminator for the response
+GfnQPdb= "none"              # [EXTQP G] Database
+GfnQP_N= 1                   # [EXTQP G] Interpolation neighbours
+% GfnQP_E
+ 0.000000 | 1.000000 | 1.000000 |        # [EXTQP G] E parameters  (c/v) eV|adim|adim
+%
+GfnQP_Z= ( 1.000000 , 0.000000 )       # [EXTQP G] Z factor  (c/v)
+GfnQP_Wv_E= 0.000000   eV    # [EXTQP G] W Energy reference  (valence)
+% GfnQP_Wv
+ 0.00     | 0.00     | 0.00     |        # [EXTQP G] W parameters  (valence) eV|adim|eV^-1
+%
+GfnQP_Wc_E= 0.000000   eV    # [EXTQP G] W Energy reference  (conduction)
+% GfnQP_Wc
+ 0.00     | 0.00     | 0.00     |        # [EXTQP G] W parameters  (conduction) eV|adim|eV^-1
+%
+BoseCut=  0.10000            # [BOSE] Finite T Bose function cutoff
+% GbndRnge
+   1 | 40 |                 # [GW] G[W] bands range
+%
+GDamping=  0.10000     eV    # [GW] G[W] damping
+dScStep=  0.10000      eV    # [GW] Energy step to evalute Z factors
+GTermKind= "none"            # [GW] GW terminator ("none","BG" Bruneval-Gonze,"BRS" Berger-Reining-Sottile)
+GTermEn= 40.81708      eV    # [GW] GW terminator energy (only for kind="BG")
+DysSolver= "n"               # [GW] Dyson Equation solver (`n`,`s`,`g`)
+GWoIter=0                    # [GW] GWo SC iterations
+#NewtDchk                    # [F GW] Test dSc/dw convergence
+#ExtendOut                   # [F GW] Print all variables in the output file
+#OnMassShell                 # [F GW] On mass shell approximation
+#QPExpand                    # [F GW] The QP corrections are expanded all over the BZ
+%QPkrange                    # [GW] QP generalized Kpoint/Band indices
+  1| 29|   3| 6|
+%
+%QPerange                    # [GW] QP generalized Kpoint/Energy indices
+  1| 29| 0.0|-1.0|
+%

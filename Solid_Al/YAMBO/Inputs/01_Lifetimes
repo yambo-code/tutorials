@@ -1,0 +1,31 @@
+#                                                           
+#  /$$     /$$ /$$$$$$  /$$      /$$ /$$$$$$$   /$$$$$$     
+# |  $$   /$$//$$__  $$| $$$    /$$$| $$__  $$ /$$__  $$    
+#  \  $$ /$$/| $$  \ $$| $$$$  /$$$$| $$  \ $$| $$  \ $$    
+#   \  $$$$/ | $$$$$$$$| $$ $$/$$ $$| $$$$$$$ | $$  | $$    
+#    \  $$/  | $$__  $$| $$  $$$| $$| $$__  $$| $$  | $$    
+#     | $$   | $$  | $$| $$\  $ | $$| $$  \ $$| $$  | $$    
+#     | $$   | $$  | $$| $$ \/  | $$| $$$$$$$/|  $$$$$$/    
+#     |__/   |__/  |__/|__/     |__/|_______/  \______/     
+#                                                           
+#             GPL Version 3.2.2 Revision 666                
+#               http://www.yambo-code.org                   
+#
+life                         # [R GW] GoWo Quasiparticle lifetimes
+LifeTrCG= 30.0000           # [GW] [o/o] Lifetime transitions reduction
+% BndsRnXd
+  1 | 20 |                   # [Xd] Polarization function bands
+%
+NGsBlkXd=21            RL    # [Xd] Response block size
+% DmRngeXd
+  0.10000 |  0.10000 | eV    # [Xd] Damping range
+%
+% LongDrXd
+ 1.000000 | 0.000000 | 0.000000 |        # [Xd] [cc] Electric Field
+%
+%QPkrange                    # [GW] QP generalized Kpoint/Band indices
+  1| 29|  1| 4|
+%
+%QPerange                    # [GW] QP generalized Kpoint/Energy indices
+  1| 29| 0.0|-1.0|
+%

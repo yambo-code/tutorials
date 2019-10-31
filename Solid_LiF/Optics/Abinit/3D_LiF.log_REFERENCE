@@ -1,0 +1,2479 @@
+  ABINIT 
+  
+  Give name for formatted input file: 
+3D_LiF.in
+  Give name for formatted output file:
+3D_LiF.out
+  Give root name for generic input files:
+3D_LiF_i
+  Give root name for generic output files:
+3D_LiF_o
+  Give root name for generic temporary files:
+3D_LiF
+ leave_test : synchronization done...
+
+.Version 6.8.1  of ABINIT 
+.(MPI version, prepared for a x86_64_linux_intel11.1 computer) 
+
+.Copyright (C) 1998-2011 ABINIT group . 
+ ABINIT comes with ABSOLUTELY NO WARRANTY.
+ It is free software, and you are welcome to redistribute it
+ under certain conditions (GNU General Public License,
+ see ~abinit/COPYING or http://www.gnu.org/copyleft/gpl.txt).
+
+ ABINIT is a project of the Universite Catholique de Louvain,
+ Corning Inc. and other collaborators, see ~abinit/doc/developers/contributors.txt .
+ Please read ~abinit/doc/users/acknowledgments.html for suggested
+ acknowledgments of the ABINIT effort.
+ For more information, see http://www.abinit.org .
+
+.Starting date : Thu 29 Dec 2011.
+- ( at 15h59 )
+  
+ 
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+ === Build Information === 
+  Version       : 6.8.1
+  Build target  : x86_64_linux_intel11.1
+  Build date    : 20110712
+ 
+ === Compiler Suite === 
+  C compiler       : intel11.1
+  CFLAGS           : -axSSE2,SSE3,SSSE3,SSE4.1,SSE4.2 -O3 -m64 -ip -prec-div -static-intel -sox
+  C++ compiler     : gnu11.1
+  CXXFLAGS         : -axSSE2,SSE3,SSSE3,SSE4.1,SSE4.2 -O3 -m64 -ip -prec-div -static-intel -sox
+  Fortran compiler : intel11.1
+  FCFLAGS          : -axSSE2,SSE3,SSSE3,SSE4.1,SSE4.2 -O3 -m64 -ip -prec-div -static-intel -assume buffered_io -sox
+  FC_LDFLAGS       :    -static-intel -static-libgcc
+ 
+ === Optimizations === 
+  Debug level        : basic
+  Optimization level : standard
+  Architecture       : unknown_unknown
+ 
+ === MPI === 
+  Parallel build : yes
+  Parallel I/O   : yes
+  Time tracing   : no
+  GPU support    : no
+ 
+ === Connectors / Fallbacks === 
+  Connectors on : yes
+  Fallbacks on  : yes
+  DFT flavor    : libxc
+  FFT flavor    : none
+  LINALG flavor : custom
+  MATH flavor   : none
+  TIMER flavor  : abinit
+  TRIO flavor   : netcdf+etsf_io
+ 
+ === Experimental features === 
+  Bindings            : no
+  Exports             : no
+  GW double-precision : no
+ 
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Default optimizations:
+   --- None ---
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ CPP options activated during the build:
+
+                  CC_INTEL                   CXX_GNU                  FC_INTEL
+
+            HAVE_DFT_LIBXC HAVE_FC_ALLOCATABLE_DT...             HAVE_FC_ETIME
+
+              HAVE_FC_EXIT             HAVE_FC_FLUSH            HAVE_FC_GETENV
+
+            HAVE_FC_GETPID     HAVE_FC_ISO_C_BINDING        HAVE_FC_LONG_LINES
+
+              HAVE_FC_NULL         HAVE_FC_STREAM_IO               HAVE_LINALG
+
+           HAVE_LINALG_MPI     HAVE_LINALG_SCALAPACK        HAVE_LINALG_SERIAL
+
+                  HAVE_MPI                 HAVE_MPI2               HAVE_MPI_IO
+
+ HAVE_MPI_TYPE_CREATE_S...             HAVE_OS_LINUX              HAVE_STDIO_H
+
+                HAVE_TIMER         HAVE_TIMER_ABINIT            HAVE_TIMER_MPI
+
+         HAVE_TIMER_SERIAL         HAVE_TRIO_ETSF_IO          HAVE_TRIO_NETCDF
+
+              USE_MACROAVE
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+- input  file    -> 3D_LiF.in
+- output file    -> 3D_LiF.out
+- root for input  files -> 3D_LiF_i
+- root for output files -> 3D_LiF_o
+
+ instrng :    57 lines of input have been read
+
+ iofn2 : Please give name of formatted atomic psp file
+ iofn2 : for atom type   1 , psp file is ../../Pseudo_Potentials/03-Li.psp
+
+ iofn2 : Please give name of formatted atomic psp file
+ iofn2 : for atom type   2 , psp file is ../../Pseudo_Potentials/09-F.psp
+  read the values zionpsp=  1.0 , pspcod=   1 , lmax=   1
+  read the values zionpsp=  7.0 , pspcod=   1 , lmax=   1
+
+ inpspheads : deduce mpsang  =   2, n1xccc  =2501.
+ leave_test : synchronization done...
+
+ invars1m : enter jdtset=     1
+ invars1 : treat image number     1
+
+ symlatt : the Bravais lattice is cF (face-centered cubic)
+  xred   is defined in input file
+ ingeo : takes atomic coordinates from input array xred
+
+ symlatt : the Bravais lattice is cF (face-centered cubic)
+
+ symlatt : the Bravais lattice is cF (face-centered cubic)
+ symspgr : the symmetry operation no.   1 is the identity
+ symspgr : the symmetry operation no.   2 is an inversion
+ symaxes : the symmetry operation no.   3 is a 2-axis
+ symplanes : the symmetry operation no.   4 is a mirror plane
+ symaxes : the symmetry operation no.   5 is a 2-axis
+ symplanes : the symmetry operation no.   6 is a mirror plane
+ symaxes : the symmetry operation no.   7 is a 2-axis
+ symplanes : the symmetry operation no.   8 is a mirror plane
+ symplanes : the symmetry operation no.   9 is a mirror plane
+ symaxes : the symmetry operation no.  10 is a 2-axis
+ symspgr : the symmetry operation no.  11 is a -4 axis
+ symaxes : the symmetry operation no.  12 is a 4-axis
+ symplanes : the symmetry operation no.  13 is a mirror plane
+ symaxes : the symmetry operation no.  14 is a 2-axis
+ symspgr : the symmetry operation no.  15 is a -4 axis
+ symaxes : the symmetry operation no.  16 is a 4-axis
+ symaxes : the symmetry operation no.  17 is a 3-axis
+ symspgr : the symmetry operation no.  18 is a -3 axis
+ symaxes : the symmetry operation no.  19 is a 3-axis
+ symspgr : the symmetry operation no.  20 is a -3 axis
+ symaxes : the symmetry operation no.  21 is a 3-axis
+ symspgr : the symmetry operation no.  22 is a -3 axis
+ symaxes : the symmetry operation no.  23 is a 3-axis
+ symspgr : the symmetry operation no.  24 is a -3 axis
+ symplanes : the symmetry operation no.  25 is a mirror plane
+ symaxes : the symmetry operation no.  26 is a 2-axis
+ symspgr : the symmetry operation no.  27 is a -4 axis
+ symaxes : the symmetry operation no.  28 is a 4-axis
+ symspgr : the symmetry operation no.  29 is a -4 axis
+ symaxes : the symmetry operation no.  30 is a 4-axis
+ symplanes : the symmetry operation no.  31 is a mirror plane
+ symaxes : the symmetry operation no.  32 is a 2-axis
+ symaxes : the symmetry operation no.  33 is a 3-axis
+ symspgr : the symmetry operation no.  34 is a -3 axis
+ symaxes : the symmetry operation no.  35 is a 3-axis
+ symspgr : the symmetry operation no.  36 is a -3 axis
+ symaxes : the symmetry operation no.  37 is a 3-axis
+ symspgr : the symmetry operation no.  38 is a -3 axis
+ symaxes : the symmetry operation no.  39 is a 3-axis
+ symspgr : the symmetry operation no.  40 is a -3 axis
+ symplanes : the symmetry operation no.  41 is a mirror plane
+ symaxes : the symmetry operation no.  42 is a 2-axis
+ symplanes : the symmetry operation no.  43 is a mirror plane
+ symaxes : the symmetry operation no.  44 is a 2-axis
+ symspgr : the symmetry operation no.  45 is a -4 axis
+ symaxes : the symmetry operation no.  46 is a 4-axis
+ symspgr : the symmetry operation no.  47 is a -4 axis
+ symaxes : the symmetry operation no.  48 is a 4-axis
+ symspgr : the symmetry operation no.  49 is a pure translation
+ symspgr : the symmetry operation no.  50 is an inversion
+ symaxes : the symmetry operation no.  51 is a 2_1-axis
+ symplanes : the symmetry operation no.  52 is a primary n plane
+ symaxes : the symmetry operation no.  53 is a 2_1-axis
+ symplanes : the symmetry operation no.  54 is a primary n plane
+ symaxes : the symmetry operation no.  55 is a 2-axis
+ symplanes : the symmetry operation no.  56 is a primary n plane
+ symplanes : the symmetry operation no.  57 is a tertiary m plane
+ symaxes : the symmetry operation no.  58 is a 2_1-axis
+ symspgr : the symmetry operation no.  59 is a -4 axis
+ symaxes : the symmetry operation no.  60 is a 4_2-axis
+ symplanes : the symmetry operation no.  61 is a tertiary m plane
+ symaxes : the symmetry operation no.  62 is a 2_1-axis
+ symspgr : the symmetry operation no.  63 is a -4 axis
+ symaxes : the symmetry operation no.  64 is a 4_2-axis
+ symaxes : the symmetry operation no.  65 is a 3, 3_1 or 3_2 axis
+ symspgr : the symmetry operation no.  66 is a -3 axis
+ symaxes : the symmetry operation no.  67 is a 3-axis
+ symspgr : the symmetry operation no.  68 is a -3 axis
+ symaxes : the symmetry operation no.  69 is a 3, 3_1 or 3_2 axis
+ symspgr : the symmetry operation no.  70 is a -3 axis
+ symaxes : the symmetry operation no.  71 is a 3-axis
+ symspgr : the symmetry operation no.  72 is a -3 axis
+ symplanes : the symmetry operation no.  73 is a tertiary m plane
+ symaxes : the symmetry operation no.  74 is a 2-axis
+ symspgr : the symmetry operation no.  75 is a -4 axis
+ symaxes : the symmetry operation no.  76 is a 4-axis
+ symspgr : the symmetry operation no.  77 is a -4 axis
+ symaxes : the symmetry operation no.  78 is a 4-axis
+ symplanes : the symmetry operation no.  79 is a mirror plane
+ symaxes : the symmetry operation no.  80 is a 2-axis
+ symaxes : the symmetry operation no.  81 is a 3, 3_1 or 3_2 axis
+ symspgr : the symmetry operation no.  82 is a -3 axis
+ symaxes : the symmetry operation no.  83 is a 3, 3_1 or 3_2 axis
+ symspgr : the symmetry operation no.  84 is a -3 axis
+ symaxes : the symmetry operation no.  85 is a 3-axis
+ symspgr : the symmetry operation no.  86 is a -3 axis
+ symaxes : the symmetry operation no.  87 is a 3-axis
+ symspgr : the symmetry operation no.  88 is a -3 axis
+ symplanes : the symmetry operation no.  89 is a tertiary m plane
+ symaxes : the symmetry operation no.  90 is a 2_1-axis
+ symplanes : the symmetry operation no.  91 is a tertiary m plane
+ symaxes : the symmetry operation no.  92 is a 2_1-axis
+ symspgr : the symmetry operation no.  93 is a -4 axis
+ symaxes : the symmetry operation no.  94 is a 4_2-axis
+ symspgr : the symmetry operation no.  95 is a -4 axis
+ symaxes : the symmetry operation no.  96 is a 4_2-axis
+ symspgr : the symmetry operation no.  97 is a pure translation
+ symspgr : the symmetry operation no.  98 is an inversion
+ symaxes : the symmetry operation no.  99 is a 2-axis
+ symplanes : the symmetry operation no. 100 is a primary n plane
+ symaxes : the symmetry operation no. 101 is a 2_1-axis
+ symplanes : the symmetry operation no. 102 is a primary n plane
+ symaxes : the symmetry operation no. 103 is a 2_1-axis
+ symplanes : the symmetry operation no. 104 is a primary n plane
+ symplanes : the symmetry operation no. 105 is a tertiary m plane
+ symaxes : the symmetry operation no. 106 is a 2_1-axis
+ symspgr : the symmetry operation no. 107 is a -4 axis
+ symaxes : the symmetry operation no. 108 is a 4_2-axis
+ symplanes : the symmetry operation no. 109 is a tertiary m plane
+ symaxes : the symmetry operation no. 110 is a 2_1-axis
+ symspgr : the symmetry operation no. 111 is a -4 axis
+ symaxes : the symmetry operation no. 112 is a 4_2-axis
+ symaxes : the symmetry operation no. 113 is a 3, 3_1 or 3_2 axis
+ symspgr : the symmetry operation no. 114 is a -3 axis
+ symaxes : the symmetry operation no. 115 is a 3-axis
+ symspgr : the symmetry operation no. 116 is a -3 axis
+ symaxes : the symmetry operation no. 117 is a 3-axis
+ symspgr : the symmetry operation no. 118 is a -3 axis
+ symaxes : the symmetry operation no. 119 is a 3, 3_1 or 3_2 axis
+ symspgr : the symmetry operation no. 120 is a -3 axis
+ symplanes : the symmetry operation no. 121 is a tertiary m plane
+ symaxes : the symmetry operation no. 122 is a 2_1-axis
+ symspgr : the symmetry operation no. 123 is a -4 axis
+ symaxes : the symmetry operation no. 124 is a 4_2-axis
+ symspgr : the symmetry operation no. 125 is a -4 axis
+ symaxes : the symmetry operation no. 126 is a 4_2-axis
+ symplanes : the symmetry operation no. 127 is a tertiary m plane
+ symaxes : the symmetry operation no. 128 is a 2_1-axis
+ symaxes : the symmetry operation no. 129 is a 3, 3_1 or 3_2 axis
+ symspgr : the symmetry operation no. 130 is a -3 axis
+ symaxes : the symmetry operation no. 131 is a 3-axis
+ symspgr : the symmetry operation no. 132 is a -3 axis
+ symaxes : the symmetry operation no. 133 is a 3, 3_1 or 3_2 axis
+ symspgr : the symmetry operation no. 134 is a -3 axis
+ symaxes : the symmetry operation no. 135 is a 3-axis
+ symspgr : the symmetry operation no. 136 is a -3 axis
+ symplanes : the symmetry operation no. 137 is a tertiary m plane
+ symaxes : the symmetry operation no. 138 is a 2-axis
+ symplanes : the symmetry operation no. 139 is a mirror plane
+ symaxes : the symmetry operation no. 140 is a 2-axis
+ symspgr : the symmetry operation no. 141 is a -4 axis
+ symaxes : the symmetry operation no. 142 is a 4-axis
+ symspgr : the symmetry operation no. 143 is a -4 axis
+ symaxes : the symmetry operation no. 144 is a 4-axis
+ symspgr : the symmetry operation no. 145 is a pure translation
+ symspgr : the symmetry operation no. 146 is an inversion
+ symaxes : the symmetry operation no. 147 is a 2_1-axis
+ symplanes : the symmetry operation no. 148 is a primary n plane
+ symaxes : the symmetry operation no. 149 is a 2-axis
+ symplanes : the symmetry operation no. 150 is a primary n plane
+ symaxes : the symmetry operation no. 151 is a 2_1-axis
+ symplanes : the symmetry operation no. 152 is a primary n plane
+ symplanes : the symmetry operation no. 153 is a tertiary m plane
+ symaxes : the symmetry operation no. 154 is a 2-axis
+ symspgr : the symmetry operation no. 155 is a -4 axis
+ symaxes : the symmetry operation no. 156 is a 4-axis
+ symplanes : the symmetry operation no. 157 is a mirror plane
+ symaxes : the symmetry operation no. 158 is a 2-axis
+ symspgr : the symmetry operation no. 159 is a -4 axis
+ symaxes : the symmetry operation no. 160 is a 4-axis
+ symaxes : the symmetry operation no. 161 is a 3, 3_1 or 3_2 axis
+ symspgr : the symmetry operation no. 162 is a -3 axis
+ symaxes : the symmetry operation no. 163 is a 3, 3_1 or 3_2 axis
+ symspgr : the symmetry operation no. 164 is a -3 axis
+ symaxes : the symmetry operation no. 165 is a 3-axis
+ symspgr : the symmetry operation no. 166 is a -3 axis
+ symaxes : the symmetry operation no. 167 is a 3-axis
+ symspgr : the symmetry operation no. 168 is a -3 axis
+ symplanes : the symmetry operation no. 169 is a tertiary m plane
+ symaxes : the symmetry operation no. 170 is a 2_1-axis
+ symspgr : the symmetry operation no. 171 is a -4 axis
+ symaxes : the symmetry operation no. 172 is a 4_2-axis
+ symspgr : the symmetry operation no. 173 is a -4 axis
+ symaxes : the symmetry operation no. 174 is a 4_2-axis
+ symplanes : the symmetry operation no. 175 is a tertiary m plane
+ symaxes : the symmetry operation no. 176 is a 2_1-axis
+ symaxes : the symmetry operation no. 177 is a 3, 3_1 or 3_2 axis
+ symspgr : the symmetry operation no. 178 is a -3 axis
+ symaxes : the symmetry operation no. 179 is a 3-axis
+ symspgr : the symmetry operation no. 180 is a -3 axis
+ symaxes : the symmetry operation no. 181 is a 3-axis
+ symspgr : the symmetry operation no. 182 is a -3 axis
+ symaxes : the symmetry operation no. 183 is a 3, 3_1 or 3_2 axis
+ symspgr : the symmetry operation no. 184 is a -3 axis
+ symplanes : the symmetry operation no. 185 is a tertiary m plane
+ symaxes : the symmetry operation no. 186 is a 2_1-axis
+ symplanes : the symmetry operation no. 187 is a tertiary m plane
+ symaxes : the symmetry operation no. 188 is a 2_1-axis
+ symspgr : the symmetry operation no. 189 is a -4 axis
+ symaxes : the symmetry operation no. 190 is a 4_2-axis
+ symspgr : the symmetry operation no. 191 is a -4 axis
+ symaxes : the symmetry operation no. 192 is a 4_2-axis
+ symspgr : spgroup= 225  Fm -3 m   (=Oh^5)
+ getkgrid : length of smallest supercell vector (bohr)=    3.081390E+01
+       Simple Lattice Grid
+ symkpt : found identity, with number  1
+ mpi_enreg%sizecart(1),np_fft           1           1
+ mpi_enreg%sizecart(2),np_band           1           1
+ mpi_enreg%sizecart(3),np_kpt           1           1
+ in initmpi_grid : me_fft, me_band, me_kpt are           0           0
+           0
+ invars1: mkmem  undefined in the input file. Use default mkmem  = nkpt
+ invars1: With nkpt_me=   10 and mkmem  =    10, ground state wf handled in core.
+ invars1: mkqmem undefined in the input file. Use default mkqmem = nkpt
+ invars1: With nkpt_me=   10 and mkqmem =    10, ground state wf handled in core.
+ invars1: mk1mem undefined in the input file. Use default mk1mem = nkpt
+ invars1: With nkpt_me=   10 and mk1mem =    10, ground state wf handled in core.
+
+ invars1m : enter jdtset=     2
+ invars1 : treat image number     1
+
+ symlatt : the Bravais lattice is cF (face-centered cubic)
+  xred   is defined in input file
+ ingeo : takes atomic coordinates from input array xred
+
+ symlatt : the Bravais lattice is cF (face-centered cubic)
+
+ symlatt : the Bravais lattice is cF (face-centered cubic)
+ symspgr : the symmetry operation no.   1 is the identity
+ symspgr : the symmetry operation no.   2 is an inversion
+ symaxes : the symmetry operation no.   3 is a 2-axis
+ symplanes : the symmetry operation no.   4 is a mirror plane
+ symaxes : the symmetry operation no.   5 is a 2-axis
+ symplanes : the symmetry operation no.   6 is a mirror plane
+ symaxes : the symmetry operation no.   7 is a 2-axis
+ symplanes : the symmetry operation no.   8 is a mirror plane
+ symplanes : the symmetry operation no.   9 is a mirror plane
+ symaxes : the symmetry operation no.  10 is a 2-axis
+ symspgr : the symmetry operation no.  11 is a -4 axis
+ symaxes : the symmetry operation no.  12 is a 4-axis
+ symplanes : the symmetry operation no.  13 is a mirror plane
+ symaxes : the symmetry operation no.  14 is a 2-axis
+ symspgr : the symmetry operation no.  15 is a -4 axis
+ symaxes : the symmetry operation no.  16 is a 4-axis
+ symaxes : the symmetry operation no.  17 is a 3-axis
+ symspgr : the symmetry operation no.  18 is a -3 axis
+ symaxes : the symmetry operation no.  19 is a 3-axis
+ symspgr : the symmetry operation no.  20 is a -3 axis
+ symaxes : the symmetry operation no.  21 is a 3-axis
+ symspgr : the symmetry operation no.  22 is a -3 axis
+ symaxes : the symmetry operation no.  23 is a 3-axis
+ symspgr : the symmetry operation no.  24 is a -3 axis
+ symplanes : the symmetry operation no.  25 is a mirror plane
+ symaxes : the symmetry operation no.  26 is a 2-axis
+ symspgr : the symmetry operation no.  27 is a -4 axis
+ symaxes : the symmetry operation no.  28 is a 4-axis
+ symspgr : the symmetry operation no.  29 is a -4 axis
+ symaxes : the symmetry operation no.  30 is a 4-axis
+ symplanes : the symmetry operation no.  31 is a mirror plane
+ symaxes : the symmetry operation no.  32 is a 2-axis
+ symaxes : the symmetry operation no.  33 is a 3-axis
+ symspgr : the symmetry operation no.  34 is a -3 axis
+ symaxes : the symmetry operation no.  35 is a 3-axis
+ symspgr : the symmetry operation no.  36 is a -3 axis
+ symaxes : the symmetry operation no.  37 is a 3-axis
+ symspgr : the symmetry operation no.  38 is a -3 axis
+ symaxes : the symmetry operation no.  39 is a 3-axis
+ symspgr : the symmetry operation no.  40 is a -3 axis
+ symplanes : the symmetry operation no.  41 is a mirror plane
+ symaxes : the symmetry operation no.  42 is a 2-axis
+ symplanes : the symmetry operation no.  43 is a mirror plane
+ symaxes : the symmetry operation no.  44 is a 2-axis
+ symspgr : the symmetry operation no.  45 is a -4 axis
+ symaxes : the symmetry operation no.  46 is a 4-axis
+ symspgr : the symmetry operation no.  47 is a -4 axis
+ symaxes : the symmetry operation no.  48 is a 4-axis
+ symspgr : the symmetry operation no.  49 is a pure translation
+ symspgr : the symmetry operation no.  50 is an inversion
+ symaxes : the symmetry operation no.  51 is a 2_1-axis
+ symplanes : the symmetry operation no.  52 is a primary n plane
+ symaxes : the symmetry operation no.  53 is a 2_1-axis
+ symplanes : the symmetry operation no.  54 is a primary n plane
+ symaxes : the symmetry operation no.  55 is a 2-axis
+ symplanes : the symmetry operation no.  56 is a primary n plane
+ symplanes : the symmetry operation no.  57 is a tertiary m plane
+ symaxes : the symmetry operation no.  58 is a 2_1-axis
+ symspgr : the symmetry operation no.  59 is a -4 axis
+ symaxes : the symmetry operation no.  60 is a 4_2-axis
+ symplanes : the symmetry operation no.  61 is a tertiary m plane
+ symaxes : the symmetry operation no.  62 is a 2_1-axis
+ symspgr : the symmetry operation no.  63 is a -4 axis
+ symaxes : the symmetry operation no.  64 is a 4_2-axis
+ symaxes : the symmetry operation no.  65 is a 3, 3_1 or 3_2 axis
+ symspgr : the symmetry operation no.  66 is a -3 axis
+ symaxes : the symmetry operation no.  67 is a 3-axis
+ symspgr : the symmetry operation no.  68 is a -3 axis
+ symaxes : the symmetry operation no.  69 is a 3, 3_1 or 3_2 axis
+ symspgr : the symmetry operation no.  70 is a -3 axis
+ symaxes : the symmetry operation no.  71 is a 3-axis
+ symspgr : the symmetry operation no.  72 is a -3 axis
+ symplanes : the symmetry operation no.  73 is a tertiary m plane
+ symaxes : the symmetry operation no.  74 is a 2-axis
+ symspgr : the symmetry operation no.  75 is a -4 axis
+ symaxes : the symmetry operation no.  76 is a 4-axis
+ symspgr : the symmetry operation no.  77 is a -4 axis
+ symaxes : the symmetry operation no.  78 is a 4-axis
+ symplanes : the symmetry operation no.  79 is a mirror plane
+ symaxes : the symmetry operation no.  80 is a 2-axis
+ symaxes : the symmetry operation no.  81 is a 3, 3_1 or 3_2 axis
+ symspgr : the symmetry operation no.  82 is a -3 axis
+ symaxes : the symmetry operation no.  83 is a 3, 3_1 or 3_2 axis
+ symspgr : the symmetry operation no.  84 is a -3 axis
+ symaxes : the symmetry operation no.  85 is a 3-axis
+ symspgr : the symmetry operation no.  86 is a -3 axis
+ symaxes : the symmetry operation no.  87 is a 3-axis
+ symspgr : the symmetry operation no.  88 is a -3 axis
+ symplanes : the symmetry operation no.  89 is a tertiary m plane
+ symaxes : the symmetry operation no.  90 is a 2_1-axis
+ symplanes : the symmetry operation no.  91 is a tertiary m plane
+ symaxes : the symmetry operation no.  92 is a 2_1-axis
+ symspgr : the symmetry operation no.  93 is a -4 axis
+ symaxes : the symmetry operation no.  94 is a 4_2-axis
+ symspgr : the symmetry operation no.  95 is a -4 axis
+ symaxes : the symmetry operation no.  96 is a 4_2-axis
+ symspgr : the symmetry operation no.  97 is a pure translation
+ symspgr : the symmetry operation no.  98 is an inversion
+ symaxes : the symmetry operation no.  99 is a 2-axis
+ symplanes : the symmetry operation no. 100 is a primary n plane
+ symaxes : the symmetry operation no. 101 is a 2_1-axis
+ symplanes : the symmetry operation no. 102 is a primary n plane
+ symaxes : the symmetry operation no. 103 is a 2_1-axis
+ symplanes : the symmetry operation no. 104 is a primary n plane
+ symplanes : the symmetry operation no. 105 is a tertiary m plane
+ symaxes : the symmetry operation no. 106 is a 2_1-axis
+ symspgr : the symmetry operation no. 107 is a -4 axis
+ symaxes : the symmetry operation no. 108 is a 4_2-axis
+ symplanes : the symmetry operation no. 109 is a tertiary m plane
+ symaxes : the symmetry operation no. 110 is a 2_1-axis
+ symspgr : the symmetry operation no. 111 is a -4 axis
+ symaxes : the symmetry operation no. 112 is a 4_2-axis
+ symaxes : the symmetry operation no. 113 is a 3, 3_1 or 3_2 axis
+ symspgr : the symmetry operation no. 114 is a -3 axis
+ symaxes : the symmetry operation no. 115 is a 3-axis
+ symspgr : the symmetry operation no. 116 is a -3 axis
+ symaxes : the symmetry operation no. 117 is a 3-axis
+ symspgr : the symmetry operation no. 118 is a -3 axis
+ symaxes : the symmetry operation no. 119 is a 3, 3_1 or 3_2 axis
+ symspgr : the symmetry operation no. 120 is a -3 axis
+ symplanes : the symmetry operation no. 121 is a tertiary m plane
+ symaxes : the symmetry operation no. 122 is a 2_1-axis
+ symspgr : the symmetry operation no. 123 is a -4 axis
+ symaxes : the symmetry operation no. 124 is a 4_2-axis
+ symspgr : the symmetry operation no. 125 is a -4 axis
+ symaxes : the symmetry operation no. 126 is a 4_2-axis
+ symplanes : the symmetry operation no. 127 is a tertiary m plane
+ symaxes : the symmetry operation no. 128 is a 2_1-axis
+ symaxes : the symmetry operation no. 129 is a 3, 3_1 or 3_2 axis
+ symspgr : the symmetry operation no. 130 is a -3 axis
+ symaxes : the symmetry operation no. 131 is a 3-axis
+ symspgr : the symmetry operation no. 132 is a -3 axis
+ symaxes : the symmetry operation no. 133 is a 3, 3_1 or 3_2 axis
+ symspgr : the symmetry operation no. 134 is a -3 axis
+ symaxes : the symmetry operation no. 135 is a 3-axis
+ symspgr : the symmetry operation no. 136 is a -3 axis
+ symplanes : the symmetry operation no. 137 is a tertiary m plane
+ symaxes : the symmetry operation no. 138 is a 2-axis
+ symplanes : the symmetry operation no. 139 is a mirror plane
+ symaxes : the symmetry operation no. 140 is a 2-axis
+ symspgr : the symmetry operation no. 141 is a -4 axis
+ symaxes : the symmetry operation no. 142 is a 4-axis
+ symspgr : the symmetry operation no. 143 is a -4 axis
+ symaxes : the symmetry operation no. 144 is a 4-axis
+ symspgr : the symmetry operation no. 145 is a pure translation
+ symspgr : the symmetry operation no. 146 is an inversion
+ symaxes : the symmetry operation no. 147 is a 2_1-axis
+ symplanes : the symmetry operation no. 148 is a primary n plane
+ symaxes : the symmetry operation no. 149 is a 2-axis
+ symplanes : the symmetry operation no. 150 is a primary n plane
+ symaxes : the symmetry operation no. 151 is a 2_1-axis
+ symplanes : the symmetry operation no. 152 is a primary n plane
+ symplanes : the symmetry operation no. 153 is a tertiary m plane
+ symaxes : the symmetry operation no. 154 is a 2-axis
+ symspgr : the symmetry operation no. 155 is a -4 axis
+ symaxes : the symmetry operation no. 156 is a 4-axis
+ symplanes : the symmetry operation no. 157 is a mirror plane
+ symaxes : the symmetry operation no. 158 is a 2-axis
+ symspgr : the symmetry operation no. 159 is a -4 axis
+ symaxes : the symmetry operation no. 160 is a 4-axis
+ symaxes : the symmetry operation no. 161 is a 3, 3_1 or 3_2 axis
+ symspgr : the symmetry operation no. 162 is a -3 axis
+ symaxes : the symmetry operation no. 163 is a 3, 3_1 or 3_2 axis
+ symspgr : the symmetry operation no. 164 is a -3 axis
+ symaxes : the symmetry operation no. 165 is a 3-axis
+ symspgr : the symmetry operation no. 166 is a -3 axis
+ symaxes : the symmetry operation no. 167 is a 3-axis
+ symspgr : the symmetry operation no. 168 is a -3 axis
+ symplanes : the symmetry operation no. 169 is a tertiary m plane
+ symaxes : the symmetry operation no. 170 is a 2_1-axis
+ symspgr : the symmetry operation no. 171 is a -4 axis
+ symaxes : the symmetry operation no. 172 is a 4_2-axis
+ symspgr : the symmetry operation no. 173 is a -4 axis
+ symaxes : the symmetry operation no. 174 is a 4_2-axis
+ symplanes : the symmetry operation no. 175 is a tertiary m plane
+ symaxes : the symmetry operation no. 176 is a 2_1-axis
+ symaxes : the symmetry operation no. 177 is a 3, 3_1 or 3_2 axis
+ symspgr : the symmetry operation no. 178 is a -3 axis
+ symaxes : the symmetry operation no. 179 is a 3-axis
+ symspgr : the symmetry operation no. 180 is a -3 axis
+ symaxes : the symmetry operation no. 181 is a 3-axis
+ symspgr : the symmetry operation no. 182 is a -3 axis
+ symaxes : the symmetry operation no. 183 is a 3, 3_1 or 3_2 axis
+ symspgr : the symmetry operation no. 184 is a -3 axis
+ symplanes : the symmetry operation no. 185 is a tertiary m plane
+ symaxes : the symmetry operation no. 186 is a 2_1-axis
+ symplanes : the symmetry operation no. 187 is a tertiary m plane
+ symaxes : the symmetry operation no. 188 is a 2_1-axis
+ symspgr : the symmetry operation no. 189 is a -4 axis
+ symaxes : the symmetry operation no. 190 is a 4_2-axis
+ symspgr : the symmetry operation no. 191 is a -4 axis
+ symaxes : the symmetry operation no. 192 is a 4_2-axis
+ symspgr : spgroup= 225  Fm -3 m   (=Oh^5)
+ getkgrid : length of smallest supercell vector (bohr)=    3.081390E+01
+       Simple Lattice Grid
+ symkpt : found identity, with number  1
+ mpi_enreg%sizecart(1),np_fft           1           1
+ mpi_enreg%sizecart(2),np_band           1           1
+ mpi_enreg%sizecart(3),np_kpt           1           1
+ in initmpi_grid : me_fft, me_band, me_kpt are           0           0
+           0
+ invars1: mkmem  undefined in the input file. Use default mkmem  = nkpt
+ invars1: With nkpt_me=   10 and mkmem  =    10, ground state wf handled in core.
+ invars1: mkqmem undefined in the input file. Use default mkqmem = nkpt
+ invars1: With nkpt_me=   10 and mkqmem =    10, ground state wf handled in core.
+ invars1: mk1mem undefined in the input file. Use default mk1mem = nkpt
+ invars1: With nkpt_me=   10 and mk1mem =    10, ground state wf handled in core.
+
+ DATASET    1 : space group Fm -3 m (#225); Bravais cF (face-center cubic)
+ getkgrid : length of smallest supercell vector (bohr)=    3.081390E+01
+       Simple Lattice Grid
+ symkpt : found identity, with number  1
+ chkneu : initialized the occupation numbers for occopt=    1
+    spin-unpolarized case :
+  2.00  2.00  2.00  2.00  0.00  0.00  0.00  0.00  0.00  0.00
+ For input ecut=  4.000000E+01 best grid ngfft=      32      32      32
+       max ecut=  4.257614E+01
+
+ ==== FFT mesh ====
+  FFT mesh divisions ........................    32   32   32
+  Augmented FFT divisions ...................    33   33   32
+  FFT algorithm .............................   112
+  FFT cache size ............................    16
+ getmpw: optimal value of mpw=    1392
+
+ getdim_nloc : deduce lmnmax  =   1, lnmax  =   1,
+                      lmnmaxso=   1, lnmaxso=   1.
+ setmqgrid : COMMENT -
+  The number of points "mqgrid" in reciprocal space used for the
+  description of the pseudopotentials has been set automatically
+  by abinit to :     3001.
+ memory : analysis of memory needs
+================================================================================
+ Values of the parameters that define the memory need for DATASET  1.
+   intxc =         0  ionmov =         0    iscf =         3 xclevel =         1
+  lmnmax =         1   lnmax =         1   mband =        10  mffmem =         1
+P  mgfft =        32   mkmem =        10 mpssoang=         2     mpw =      1392
+  mqgrid =      3001   natom =         2    nfft =     32768    nkpt =        10
+  nloalg =         4  nspden =         1 nspinor =         1  nsppol =         1
+    nsym =        48  n1xccc =      2501  ntypat =         2  occopt =         1
+================================================================================
+P This job should need less than                       9.499 Mbytes of memory.
+  Rough estimation (10% accuracy) of disk space for files :
+  WF disk file :      2.126 Mbytes ; DEN or POT disk file :      0.252 Mbytes.
+================================================================================
+
+ Biggest array : cg(disk), with      2.1260 MBytes.
+ leave_test : synchronization done...
+ memana : allocated an array of      2.126 Mbytes, for testing purposes.
+ memana : allocated       9.499 Mbytes, for testing purposes.
+ The job will continue.
+
+ DATASET    2 : space group Fm -3 m (#225); Bravais cF (face-center cubic)
+ getkgrid : length of smallest supercell vector (bohr)=    3.081390E+01
+       Simple Lattice Grid
+ symkpt : found identity, with number  1
+ chkneu : initialized the occupation numbers for occopt=    1
+    spin-unpolarized case :
+  2.00  2.00  2.00  2.00  0.00  0.00  0.00  0.00  0.00  0.00
+ For input ecut=  4.000000E+01 best grid ngfft=      32      32      32
+       max ecut=  4.257614E+01
+
+ ==== FFT mesh ====
+  FFT mesh divisions ........................    32   32   32
+  Augmented FFT divisions ...................    33   33   32
+  FFT algorithm .............................   112
+  FFT cache size ............................    16
+ getmpw: optimal value of mpw=    1392
+
+ getdim_nloc : deduce lmnmax  =   1, lnmax  =   1,
+                      lmnmaxso=   1, lnmaxso=   1.
+ setmqgrid : COMMENT -
+  The number of points "mqgrid" in reciprocal space used for the
+  description of the pseudopotentials has been set automatically
+  by abinit to :     3001.
+ memory : analysis of memory needs
+================================================================================
+ Values of the parameters that define the memory need for DATASET  2.
+   intxc =         0  ionmov =         0    iscf =        -2 xclevel =         1
+  lmnmax =         1   lnmax =         1   mband =        10  mffmem =         1
+P  mgfft =        32   mkmem =        10 mpssoang=         2     mpw =      1392
+  mqgrid =      3001   natom =         2    nfft =     32768    nkpt =        10
+  nloalg =         4  nspden =         1 nspinor =         1  nsppol =         1
+    nsym =        48  n1xccc =      2501  ntypat =         2  occopt =         1
+================================================================================
+P This job should need less than                       8.499 Mbytes of memory.
+  Rough estimation (10% accuracy) of disk space for files :
+  WF disk file :      2.126 Mbytes ; DEN or POT disk file :      0.252 Mbytes.
+================================================================================
+
+ Biggest array : cg(disk), with      2.1260 MBytes.
+ leave_test : synchronization done...
+ memana : allocated an array of      2.126 Mbytes, for testing purposes.
+ memana : allocated       8.499 Mbytes, for testing purposes.
+ The job will continue.
+--------------------------------------------------------------------------------
+------------- Echo of variables that govern the present computation ------------
+--------------------------------------------------------------------------------
+-
+- outvars: echo of selected default values                                      
+-   accesswff0 =  0 , fftalg0 =112 , wfoptalg0 =  0
+-
+- outvars: echo of global parameters not present in the input file              
+-   nproc =    1
+-
+ -outvars: echo values of preprocessed input variables --------
+ 
+ These variables are accessible in NetCDF format (3D_LiF_o_OUT.nc)
+
+            acell      7.7034756000E+00  7.7034756000E+00  7.7034756000E+00 Bohr
+              amu      6.94100000E+00  1.89984032E+01
+             ecut      4.00000000E+01 Hartree
+           getden1          0
+           getden2          1
+             iscf1          3
+             iscf2         -2
+           jdtset        1    2
+              kpt     -1.25000000E-01 -2.50000000E-01  0.00000000E+00
+                      -1.25000000E-01  5.00000000E-01  0.00000000E+00
+                      -2.50000000E-01 -3.75000000E-01  0.00000000E+00
+                      -1.25000000E-01 -3.75000000E-01  1.25000000E-01
+                      -1.25000000E-01  2.50000000E-01  0.00000000E+00
+                      -2.50000000E-01  3.75000000E-01  0.00000000E+00
+                      -3.75000000E-01  5.00000000E-01  0.00000000E+00
+                      -2.50000000E-01  5.00000000E-01  1.25000000E-01
+                      -1.25000000E-01  0.00000000E+00  0.00000000E+00
+                      -3.75000000E-01  0.00000000E+00  0.00000000E+00
+          kptrlen      3.08139024E+01
+         kptrlatt      4 -4  4  -4  4  4  -4 -4  4
+          kssform1          1
+          kssform2          3
+P           mkmem          10
+            natom           2
+            nband          10
+           nbdbuf1          0
+           nbdbuf2          2
+           ndtset           2
+            ngfft          32      32      32
+             nkpt          10
+            nstep        3000
+             nsym          48
+           ntypat           2
+              occ      2.000000  2.000000  2.000000  2.000000  0.000000  0.000000
+                       0.000000  0.000000  0.000000  0.000000
+            rprim      0.0000000000E+00  5.0000000000E-01  5.0000000000E-01
+                       5.0000000000E-01  0.0000000000E+00  5.0000000000E-01
+                       5.0000000000E-01  5.0000000000E-01  0.0000000000E+00
+           shiftk      5.00000000E-01  5.00000000E-01  5.00000000E-01
+          spgroup         225
+        symmorphi1          1
+        symmorphi2          0
+           symrel      1  0  0   0  1  0   0  0  1      -1  0  0   0 -1  0   0  0 -1
+                       0 -1  1   0 -1  0   1 -1  0       0  1 -1   0  1  0  -1  1  0
+                      -1  0  0  -1  0  1  -1  1  0       1  0  0   1  0 -1   1 -1  0
+                       0  1 -1   1  0 -1   0  0 -1       0 -1  1  -1  0  1   0  0  1
+                      -1  0  0  -1  1  0  -1  0  1       1  0  0   1 -1  0   1  0 -1
+                       0 -1  1   1 -1  0   0 -1  0       0  1 -1  -1  1  0   0  1  0
+                       1  0  0   0  0  1   0  1  0      -1  0  0   0  0 -1   0 -1  0
+                       0  1 -1   0  0 -1   1  0 -1       0 -1  1   0  0  1  -1  0  1
+                      -1  0  1  -1  1  0  -1  0  0       1  0 -1   1 -1  0   1  0  0
+                       0 -1  0   1 -1  0   0 -1  1       0  1  0  -1  1  0   0  1 -1
+                       1  0 -1   0  0 -1   0  1 -1      -1  0  1   0  0  1   0 -1  1
+                       0  1  0   0  0  1   1  0  0       0 -1  0   0  0 -1  -1  0  0
+                       1  0 -1   0  1 -1   0  0 -1      -1  0  1   0 -1  1   0  0  1
+                       0 -1  0   0 -1  1   1 -1  0       0  1  0   0  1 -1  -1  1  0
+                      -1  0  1  -1  0  0  -1  1  0       1  0 -1   1  0  0   1 -1  0
+                       0  1  0   1  0  0   0  0  1       0 -1  0  -1  0  0   0  0 -1
+                       0  0 -1   0  1 -1   1  0 -1       0  0  1   0 -1  1  -1  0  1
+                       1 -1  0   0 -1  1   0 -1  0      -1  1  0   0  1 -1   0  1  0
+                       0  0  1   1  0  0   0  1  0       0  0 -1  -1  0  0   0 -1  0
+                      -1  1  0  -1  0  0  -1  0  1       1 -1  0   1  0  0   1  0 -1
+                       0  0  1   0  1  0   1  0  0       0  0 -1   0 -1  0  -1  0  0
+                       1 -1  0   0 -1  0   0 -1  1      -1  1  0   0  1  0   0  1 -1
+                       0  0 -1   1  0 -1   0  1 -1       0  0  1  -1  0  1   0 -1  1
+                      -1  1  0  -1  0  1  -1  0  0       1 -1  0   1  0 -1   1  0  0
+           tolwfr      1.00000000E-16
+            typat      1  2
+              wtk        0.09375    0.09375    0.09375    0.18750    0.09375    0.09375
+                         0.09375    0.18750    0.03125    0.03125
+           xangst      0.0000000000E+00  0.0000000000E+00  0.0000000000E+00
+                      -2.0382518572E+00  0.0000000000E+00  0.0000000000E+00
+            xcart      0.0000000000E+00  0.0000000000E+00  0.0000000000E+00
+                      -3.8517378000E+00  0.0000000000E+00  0.0000000000E+00
+             xred      0.0000000000E+00  0.0000000000E+00  0.0000000000E+00
+                       5.0000000000E-01 -5.0000000000E-01 -5.0000000000E-01
+            znucl        3.00000    9.00000
+
+================================================================================
+ leave_test : synchronization done...
+
+ chkinp: machine precision is   2.2204460492503131E-16
+
+ chkinp: Checking input parameters for consistency, jdtset=   1.
+dtsetcopy : copying area  algalch    the actual size (     2) of the index (     1)  differs from its standard size (     0)
+dtsetcopy : copying area  atvshift   the actual size (     0) of the index (     3)  differs from its standard size (     2)
+dtsetcopy : copying area  kberry     the actual size (    20) of the index (     2)  differs from its standard size (     1)
+dtsetcopy : copying area  nband      the actual size (    10) of the index (     1)  differs from its standard size (     1)
+dtsetcopy : copying area  mixalch    the actual size (     2) of the index (     1)  differs from its standard size (     0)
+dtsetcopy : copying area  mixalch    the actual size (     2) of the index (     2)  differs from its standard size (     0)
+dtsetcopy : copying area  shiftk     the actual size (     8) of the index (     2)  differs from its standard size (     1)
+
+ chkinp: Checking input parameters for consistency, jdtset=   2.
+dtsetcopy : copying area  algalch    the actual size (     2) of the index (     1)  differs from its standard size (     0)
+dtsetcopy : copying area  atvshift   the actual size (     0) of the index (     3)  differs from its standard size (     2)
+dtsetcopy : copying area  kberry     the actual size (    20) of the index (     2)  differs from its standard size (     1)
+dtsetcopy : copying area  nband      the actual size (    10) of the index (     1)  differs from its standard size (     1)
+dtsetcopy : copying area  mixalch    the actual size (     2) of the index (     1)  differs from its standard size (     0)
+dtsetcopy : copying area  mixalch    the actual size (     2) of the index (     2)  differs from its standard size (     0)
+dtsetcopy : copying area  shiftk     the actual size (     8) of the index (     2)  differs from its standard size (     1)
+ Checking if input is consistent with KSS generation
+ DATA TYPE INFORMATION: 
+ REAL:      Data type name: REAL(DP) 
+            Kind value:      8
+            Precision:      15
+            Smallest nonnegligible quantity relative to 1: 0.22204460E-15
+            Smallest positive number:                      0.22250739-307
+            Largest representable number:                  0.17976931+309
+ INTEGER:   Data type name: INTEGER(default) 
+            Kind value: 4
+            Bit size:   32
+            Largest representable number: 2147483647
+ LOGICAL:   Data type name: LOGICAL 
+            Kind value: 4
+ CHARACTER: Data type name: CHARACTER             Kind value: 1
+
+================================================================================
+== DATASET  1 ==================================================================
+
+dtsetcopy : copying area  algalch    the actual size (     2) of the index (     1)  differs from its standard size (     0)
+dtsetcopy : copying area  atvshift   the actual size (     0) of the index (     3)  differs from its standard size (     2)
+dtsetcopy : copying area  kberry     the actual size (    20) of the index (     2)  differs from its standard size (     1)
+dtsetcopy : copying area  nband      the actual size (    10) of the index (     1)  differs from its standard size (     1)
+dtsetcopy : copying area  mixalch    the actual size (     2) of the index (     1)  differs from its standard size (     0)
+dtsetcopy : copying area  mixalch    the actual size (     2) of the index (     2)  differs from its standard size (     0)
+dtsetcopy : copying area  shiftk     the actual size (     8) of the index (     2)  differs from its standard size (     1)
+ setmqgrid : COMMENT -
+  The number of points "mqgrid" in reciprocal space used for the
+  description of the pseudopotentials has been set automatically
+  by abinit to :     3001.
+
+ getdim_nloc : deduce lmnmax  =   1, lnmax  =   1,
+                      lmnmaxso=   1, lnmaxso=   1.
+ Exchange-correlation functional for the present dataset will be:
+  LDA: new Teter (4/93) with spin-polarized option - ixc=1
+ Citation for XC functional:
+  S. Goedecker, M. Teter, J. Huetter, PRB 54, 1703 (1996)
+ 
+ Unit cell volume ucvol=  1.1428787E+02 bohr^3
+ Angles (23,13,12)=  6.00000000E+01  6.00000000E+01  6.00000000E+01 degrees
+
+ getcut: wavevector=  0.0000  0.0000  0.0000  ngfft=  32  32  32
+         ecut(hartree)=     40.000   => boxcut(ratio)=   2.06340
+ leave_test : synchronization done...
+kpgio: loop on k-points done in parallel
+- pspatm: opening atomic psp file    ../../Pseudo_Potentials/03-Li.psp
+  Troullier-Martins psp for element  Li        Thu Oct 27 17:29:06 EDT 1994
+-  3.00000   1.00000    940714                znucl, zion, pspdat
+    1    1    1    1      2001   0.00000      pspcod,pspxc,lmax,lloc,mmax,r2well
+    0   2.534   6.726    1   2.4315963        l,e99.0,e99.9,nproj,rcpsp
+   0.00000000   0.00000000   0.00000000   0.00000000     rms, ekb1, ekb2, epsatm
+    1   3.283   5.836    0   2.4315963        l,e99.0,e99.9,nproj,rcpsp
+   0.00000000   0.00000000   0.00000000   0.00000000     rms, ekb1, ekb2, epsatm
+    2.44451305764117    0.01373030920382    0.17502673260160   rchrg,fchrg,qchrg
+ pspatm: epsatm=   -1.77437869
+         --- l  ekb(1:nproj) -->
+             0    1.242797
+ pspatm: atomic psp has been read  and splines computed
+
+- pspatm: opening atomic psp file    ../../Pseudo_Potentials/09-F.psp
+  Troullier-Martins psp for element  F         Thu Oct 27 17:30:08 EDT 1994
+-  9.00000   7.00000    940714                znucl, zion, pspdat
+    1    1    1    1      2001   0.00000      pspcod,pspxc,lmax,lloc,mmax,r2well
+    0   6.771  17.439    1   1.3876018        l,e99.0,e99.9,nproj,rcpsp
+   0.00000000   0.00000000   0.00000000   0.00000000     rms, ekb1, ekb2, epsatm
+    1  24.372  32.350    0   1.3876018        l,e99.0,e99.9,nproj,rcpsp
+   0.00000000   0.00000000   0.00000000   0.00000000     rms, ekb1, ekb2, epsatm
+    0.49406148701180    6.36128955091623    0.66947621353748   rchrg,fchrg,qchrg
+ pspatm: epsatm=    1.80528525
+         --- l  ekb(1:nproj) -->
+             0    6.310228
+ pspatm: atomic psp has been read  and splines computed
+
+   2.47252491E-01                                ecore*ucvol(ha*bohr**3)
+ wfconv:    10 bands initialized randomly with npw=  1380, for ikpt=     1
+ wfconv:    10 bands initialized randomly with npw=  1389, for ikpt=     2
+ wfconv:    10 bands initialized randomly with npw=  1385, for ikpt=     3
+ wfconv:    10 bands initialized randomly with npw=  1380, for ikpt=     4
+ wfconv:    10 bands initialized randomly with npw=  1376, for ikpt=     5
+ wfconv:    10 bands initialized randomly with npw=  1377, for ikpt=     6
+ wfconv:    10 bands initialized randomly with npw=  1370, for ikpt=     7
+ wfconv:    10 bands initialized randomly with npw=  1386, for ikpt=     8
+ wfconv:    10 bands initialized randomly with npw=  1387, for ikpt=     9
+ wfconv:    10 bands initialized randomly with npw=  1392, for ikpt=    10
+ leave_test : synchronization done...
+ newkpt: loop on k-points done in parallel
+ pareigocc : MPI_ALLREDUCE
+ 
+ setup2: Arith. and geom. avg. npw (full set) are    1381.438    1381.426
+ symatm: atom number    1 is reached starting at atom
+   1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+   1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+ symatm: atom number    2 is reached starting at atom
+   2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2
+   2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2
+ initro : for itypat=  1, take decay length=      1.8000,
+ initro : indeed, coreel=      2.0000, nval=  1 and densty=  0.0000E+00.
+ initro : for itypat=  2, take decay length=      0.4000,
+ initro : indeed, coreel=      2.0000, nval=  7 and densty=  0.0000E+00.
+
+================================================================================
+
+ getcut: wavevector=  0.0000  0.0000  0.0000  ngfft=  32  32  32
+         ecut(hartree)=     40.000   => boxcut(ratio)=   2.06340
+  scfcv : before setvtr, energies%e_hartree=  0.000000000000000E+000
+
+ ewald : nr and ng are    4 and   11
+  mklocl_recipspace : will add potential with strength vprtrb(:)=
+  0.000000000000000E+000  0.000000000000000E+000
+  setvtr : istep,n1xccc,moved_rhor=           1        2501           0
+  scfcv : after setvtr, energies%e_hartree=  0.000000000000000E+000
+
+ ITER STEP NUMBER     1
+ vtorho : nnsclo_now=  2, note that nnsclo,dbl_nnsclo,istep=  0 0  1
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.0224E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    1.4478E-03  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT  1  -24.363302498591    -2.436E+01 3.015E-02 2.661E+03
+ scprqt: <Vxc>= -4.0941919E-01 hartree
+
+Simple mixing update:
+  residual square of the potential :   1464.50094522319
+
+ ITER STEP NUMBER     2
+ vtorho : nnsclo_now=  2, note that nnsclo,dbl_nnsclo,istep=  0 0  2
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    2.1447E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7263E-05  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT  2  -24.477101463790    -1.138E-01 6.725E-04 2.449E+03
+ scprqt: <Vxc>= -3.1159416E-01 hartree
+
+Anderson update:
+  residual square of the potential:    1406.58502804184
+  mixing of old trial potential    :  0.494926523001279
+  predicted best residual square on the line:    8.46742637308353
+
+ ITER STEP NUMBER     3
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0  3
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.6020E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.4137E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT  3  -25.198801802153    -7.217E-01 2.446E-02 3.188E+01
+ scprqt: <Vxc>= -3.5827782E-01 hartree
+
+Anderson update:
+  residual square of the potential:    16.9584286430117
+  mixing of old trial potential    : -0.112146255459368
+  predicted best residual square on the line:    2.68321949259272
+
+ ITER STEP NUMBER     4
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0  4
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5539E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.8064E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT  4  -25.206924937711    -8.123E-03 2.719E-03 2.924E-02
+ scprqt: <Vxc>= -3.6383990E-01 hartree
+
+Anderson update:
+  residual square of the potential:   1.826001374781074E-002
+  mixing of old trial potential    :  2.733527772296744E-002
+  predicted best residual square on the line:   4.869984514709905E-003
+
+ ITER STEP NUMBER     5
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0  5
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5545E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7825E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT  5  -25.206932747365    -7.810E-06 1.948E-04 1.775E-04
+ scprqt: <Vxc>= -3.6369220E-01 hartree
+
+Anderson update:
+  residual square of the potential:   1.303316038954402E-004
+  mixing of old trial potential    : -4.545695180579425E-002
+  predicted best residual square on the line:   9.599160055117666E-005
+
+ ITER STEP NUMBER     6
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0  6
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5549E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7795E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT  6  -25.206932765406    -1.804E-08 1.652E-04 1.742E-04
+ scprqt: <Vxc>= -3.6366872E-01 hartree
+
+Anderson update:
+  residual square of the potential:   9.732948345733824E-005
+  mixing of old trial potential    :  0.456738590470523
+  predicted best residual square on the line:   1.775998906738595E-005
+
+ ITER STEP NUMBER     7
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0  7
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7811E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT  7  -25.206932819126    -5.372E-08 5.495E-04 1.073E-06
+ scprqt: <Vxc>= -3.6368144E-01 hartree
+
+Anderson update:
+  residual square of the potential:   6.280319749059970E-007
+  mixing of old trial potential    : -4.258455526698637E-002
+  predicted best residual square on the line:   4.664325533384436E-007
+
+ ITER STEP NUMBER     8
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0  8
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT  8  -25.206932819169    -4.331E-11 2.749E-04 1.538E-07
+ scprqt: <Vxc>= -3.6368168E-01 hartree
+
+Anderson update:
+  residual square of the potential:   8.535889121148147E-008
+  mixing of old trial potential    : -0.323784434235912
+  predicted best residual square on the line:   5.082809145331449E-008
+
+ ITER STEP NUMBER     9
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0  9
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT  9  -25.206932819160     9.351E-12 8.045E-04 1.376E-07
+ scprqt: <Vxc>= -3.6368241E-01 hartree
+
+Anderson update:
+  residual square of the potential:   7.746199072940268E-008
+  mixing of old trial potential    :  0.487028852304178
+  predicted best residual square on the line:   5.258591278176925E-009
+
+ ITER STEP NUMBER    10
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 10
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 10  -25.206932819203    -4.302E-11 2.033E-04 2.451E-09
+ scprqt: <Vxc>= -3.6368199E-01 hartree
+
+Anderson update:
+  residual square of the potential:   1.397041193644844E-009
+  mixing of old trial potential    :  0.109393914407591
+  predicted best residual square on the line:   2.318373562787516E-010
+
+ ITER STEP NUMBER    11
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 11
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 11  -25.206932819204    -1.226E-12 5.214E-04 2.989E-11
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   1.702312257891807E-011
+  mixing of old trial potential    : -7.158645976251005E-002
+  predicted best residual square on the line:   1.083677074008953E-011
+
+ ITER STEP NUMBER    12
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 12
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 12  -25.206932819204     9.592E-14 8.610E-05 2.947E-12
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   1.755409351770435E-012
+  mixing of old trial potential    : -0.260286728472246
+  predicted best residual square on the line:   1.075156081239567E-012
+
+ ITER STEP NUMBER    13
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 13
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 13  -25.206932819204     1.563E-13 2.042E-04 2.538E-12
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   1.432982647516398E-012
+  mixing of old trial potential    :  0.471469610119753
+  predicted best residual square on the line:   1.769506288955138E-013
+
+ ITER STEP NUMBER    14
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 14
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 14  -25.206932819204     1.599E-13 2.866E-05 6.690E-14
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   3.627907645353909E-014
+  mixing of old trial potential    : -0.144382951102388
+  predicted best residual square on the line:   1.368669381050440E-014
+
+ ITER STEP NUMBER    15
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 15
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 15  -25.206932819204    -1.421E-14 6.493E-05 1.525E-15
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   8.295560450746650E-016
+  mixing of old trial potential    : -7.090397251844557E-002
+  predicted best residual square on the line:   6.734720260031105E-016
+
+ ITER STEP NUMBER    16
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 16
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 16  -25.206932819205    -9.130E-13 8.709E-06 2.663E-16
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   1.387129627608087E-016
+  mixing of old trial potential    : -0.101469975039267
+  predicted best residual square on the line:   1.327999260940954E-016
+
+ ITER STEP NUMBER    17
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 17
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 17  -25.206932819204     6.750E-13 1.928E-05 7.507E-17
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   4.390312601471335E-017
+  mixing of old trial potential    :  0.340501012641755
+  predicted best residual square on the line:   9.444156278657074E-018
+
+ ITER STEP NUMBER    18
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 18
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 18  -25.206932819204    -1.279E-13 2.563E-06 3.416E-18
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   1.759165510954781E-018
+  mixing of old trial potential    :  0.135867605268650
+  predicted best residual square on the line:   6.909032774603578E-019
+
+ ITER STEP NUMBER    19
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 19
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 19  -25.206932819204    -8.171E-14 5.608E-06 1.146E-19
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   5.878157549986053E-020
+  mixing of old trial potential    : -0.172445815059163
+  predicted best residual square on the line:   2.118355147003064E-020
+
+ ITER STEP NUMBER    20
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 20
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 20  -25.206932819204     3.908E-14 7.450E-07 1.163E-20
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   6.083446168479391E-021
+  mixing of old trial potential    : -0.224597763163982
+  predicted best residual square on the line:   4.249109415839741E-021
+
+ ITER STEP NUMBER    21
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 21
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 21  -25.206932819204    -7.816E-14 1.622E-06 4.594E-21
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   2.578845933506929E-021
+  mixing of old trial potential    :  0.390132093518976
+  predicted best residual square on the line:   1.513361025777821E-022
+
+ ITER STEP NUMBER    22
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 22
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 22  -25.206932819204     5.329E-14 2.157E-07 2.160E-23
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   1.144257695131561E-023
+  mixing of old trial potential    :  2.681901064150436E-002
+  predicted best residual square on the line:   9.491284671829841E-024
+
+ ITER STEP NUMBER    23
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 23
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 23  -25.206932819204     5.684E-14 4.682E-07 1.843E-23
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   1.070168379138935E-023
+  mixing of old trial potential    :  0.483854638186242
+  predicted best residual square on the line:   5.330034816393221E-024
+
+ ITER STEP NUMBER    24
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 24
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 24  -25.206932819204    -8.171E-14 6.235E-08 3.501E-24
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   2.073784814474324E-024
+  mixing of old trial potential    : -0.722994537172245
+  predicted best residual square on the line:   2.299561163235992E-025
+
+ ITER STEP NUMBER    25
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 25
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 25  -25.206932819204     5.684E-14 1.352E-07 6.170E-24
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   3.460478116677882E-024
+  mixing of old trial potential    :   1.69641518228849
+  predicted best residual square on the line:   1.792720979559997E-024
+
+ ITER STEP NUMBER    26
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 26
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 26  -25.206932819204    -1.776E-14 1.802E-08 1.862E-23
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   1.044848656727137E-023
+  mixing of old trial potential    :   2.33152523580290
+  predicted best residual square on the line:   7.819994709939704E-026
+
+ ITER STEP NUMBER    27
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 27
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 27  -25.206932819204    -3.553E-15 3.906E-08 5.289E-24
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   2.950943865835637E-024
+  mixing of old trial potential    :  -1.05939190436546
+  predicted best residual square on the line:   2.529126090716806E-025
+
+ ITER STEP NUMBER    28
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 28
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 28  -25.206932819204    -1.421E-14 5.210E-09 2.703E-24
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   1.527487135167849E-024
+  mixing of old trial potential    :  0.417993410357457
+  predicted best residual square on the line:   1.111989434183255E-026
+
+ ITER STEP NUMBER    29
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 29
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 29  -25.206932819204     1.066E-14 1.130E-08 8.936E-25
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   4.975060567272818E-025
+  mixing of old trial potential    :  0.362628575876449
+  predicted best residual square on the line:   4.528782697099730E-027
+
+ ITER STEP NUMBER    30
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 30
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 30  -25.206932819204    -3.553E-15 1.507E-09 1.778E-25
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   9.960708218511805E-026
+  mixing of old trial potential    : -0.719369927876642
+  predicted best residual square on the line:   1.517414416403142E-026
+
+ ITER STEP NUMBER    31
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 31
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 31  -25.206932819204     1.066E-14 3.271E-09 1.246E-25
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   7.342808692029768E-026
+  mixing of old trial potential    :  2.134959250287737E-002
+  predicted best residual square on the line:   7.341562216588746E-026
+
+ ITER STEP NUMBER    32
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 32
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 32  -25.206932819204    -3.553E-15 4.365E-10 2.597E-26
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   1.739564645052821E-026
+  mixing of old trial potential    :  0.309511175749993
+  predicted best residual square on the line:   3.306239553678326E-027
+
+ ITER STEP NUMBER    33
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 33
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 33  -25.206932819204    -7.105E-15 9.484E-10 7.338E-26
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   4.280230203287679E-026
+  mixing of old trial potential    :  0.623740175845367
+  predicted best residual square on the line:   2.861736263974671E-027
+
+ ITER STEP NUMBER    34
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 34
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 34  -25.206932819204     7.105E-15 1.266E-10 2.757E-26
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   1.686134704607596E-026
+  mixing of old trial potential    : -0.468384981724275
+  predicted best residual square on the line:   1.392292724612211E-026
+
+ ITER STEP NUMBER    35
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 35
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 35  -25.206932819204     7.105E-15 2.753E-10 1.171E-26
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   9.477478725527704E-027
+  mixing of old trial potential    :  0.338473162211894
+  predicted best residual square on the line:   6.858947638301287E-027
+
+ ITER STEP NUMBER    36
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 36
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 36  -25.206932819204     0.000E+00 3.673E-11 3.852E-27
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   3.358984780773709E-027
+  mixing of old trial potential    :  0.202813962621509
+  predicted best residual square on the line:   2.935554572024738E-027
+
+ ITER STEP NUMBER    37
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 37
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 37  -25.206932819204     7.105E-15 8.005E-11 9.898E-27
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   7.327137872433517E-027
+  mixing of old trial potential    :  0.678280274281503
+  predicted best residual square on the line:   2.207096103704343E-027
+
+ ITER STEP NUMBER    38
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 38
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 38  -25.206932819204     7.105E-15 1.067E-11 5.911E-27
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   4.692146070797499E-027
+  mixing of old trial potential    :  0.239289784814604
+  predicted best residual square on the line:   4.402785373135635E-027
+
+ ITER STEP NUMBER    39
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 39
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 39  -25.206932819204    -1.421E-14 2.330E-11 3.901E-27
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   3.677061134594842E-027
+  mixing of old trial potential    :  0.454967610228334
+  predicted best residual square on the line:   1.344095443326855E-027
+
+ ITER STEP NUMBER    40
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 40
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 40  -25.206932819204     7.105E-15 3.105E-12 2.223E-27
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   2.136617958637224E-027
+  mixing of old trial potential    :  0.331456997522689
+  predicted best residual square on the line:   1.634553654751623E-027
+
+ ITER STEP NUMBER    41
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 41
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 41  -25.206932819204    -7.105E-15 6.794E-12 1.179E-26
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   8.311433700966950E-027
+  mixing of old trial potential    :  0.749551675531219
+  predicted best residual square on the line:   1.360603562679097E-027
+
+ ITER STEP NUMBER    42
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 42
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 42  -25.206932819204     7.105E-15 9.046E-13 4.266E-27
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   3.965216375804097E-027
+  mixing of old trial potential    :  0.261586621410790
+  predicted best residual square on the line:   3.341507566490616E-027
+
+ ITER STEP NUMBER    43
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 43
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 43  -25.206932819204    -7.105E-15 1.983E-12 4.801E-27
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   3.964085489414240E-027
+  mixing of old trial potential    :  0.499948646245737
+  predicted best residual square on the line:   1.211964157296016E-027
+
+ ITER STEP NUMBER    44
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 44
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 44  -25.206932819204     7.105E-15 2.638E-13 3.431E-27
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   3.133118332504116E-027
+  mixing of old trial potential    :  0.452198336864083
+  predicted best residual square on the line:   1.355785441866615E-027
+
+ ITER STEP NUMBER    45
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 45
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 45  -25.206932819204    -7.105E-15 5.798E-13 2.526E-27
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   2.422592442076521E-027
+  mixing of old trial potential    :  0.435685271252836
+  predicted best residual square on the line:   1.374051901787775E-027
+
+ ITER STEP NUMBER    46
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 46
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 46  -25.206932819204     1.421E-14 7.702E-14 3.207E-27
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   2.993005465530479E-027
+  mixing of old trial potential    :  0.542244135157888
+  predicted best residual square on the line:   1.007903861156965E-027
+
+ ITER STEP NUMBER    47
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 47
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 47  -25.206932819204    -7.105E-15 1.697E-13 2.197E-27
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   2.151888566056688E-027
+  mixing of old trial potential    :  0.423324134269644
+  predicted best residual square on the line:   1.168978613287662E-027
+
+ ITER STEP NUMBER    48
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 48
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 48  -25.206932819204    -7.105E-15 2.251E-14 2.061E-27
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   1.990751410561843E-027
+  mixing of old trial potential    :  0.480782184583651
+  predicted best residual square on the line:   1.021674128785771E-027
+
+ ITER STEP NUMBER    49
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 49
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 49  -25.206932819204     7.105E-15 4.972E-14 2.847E-27
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   2.670772960336295E-027
+  mixing of old trial potential    :  0.564135843715098
+  predicted best residual square on the line:   9.836013588170473E-028
+
+ ITER STEP NUMBER    50
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 50
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 50  -25.206932819204     7.105E-15 6.587E-15 2.955E-27
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   2.832745267330704E-027
+  mixing of old trial potential    :  0.513785741494617
+  predicted best residual square on the line:   1.281984743634761E-027
+
+ ITER STEP NUMBER    51
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 51
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 51  -25.206932819204     0.000E+00 1.459E-14 2.319E-27
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   2.233717375018674E-027
+  mixing of old trial potential    :  0.423922632374618
+  predicted best residual square on the line:   1.526203797432676E-027
+
+ ITER STEP NUMBER    52
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 52
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 52  -25.206932819204    -7.105E-15 1.929E-15 2.322E-27
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   2.274168644647019E-027
+  mixing of old trial potential    :  0.503753135666263
+  predicted best residual square on the line:   9.066179856290551E-028
+
+ ITER STEP NUMBER    53
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 53
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 53  -25.206932819204     7.105E-15 4.283E-15 3.833E-27
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   3.556695698295643E-027
+  mixing of old trial potential    :  0.608680180157202
+  predicted best residual square on the line:   1.370623452361514E-027
+
+ ITER STEP NUMBER    54
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 54
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 54  -25.206932819204    -7.105E-15 5.654E-16 2.995E-27
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   2.831828993193662E-027
+  mixing of old trial potential    :  0.429523392920216
+  predicted best residual square on the line:   1.883068020637863E-027
+
+ ITER STEP NUMBER    55
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 55
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 55  -25.206932819204     7.105E-15 1.259E-15 3.757E-27
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   3.501815585385990E-027
+  mixing of old trial potential    :  0.537014122598055
+  predicted best residual square on the line:   8.918182072037498E-028
+
+ ITER STEP NUMBER    56
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 56
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 56  -25.206932819204    -7.105E-15 1.658E-16 2.478E-27
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   2.376776183138234E-027
+  mixing of old trial potential    :  0.359131279649431
+  predicted best residual square on the line:   1.861749614144982E-027
+
+ ITER STEP NUMBER    57
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 57
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 57  -25.206932819204     0.000E+00 3.702E-16 3.086E-27
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+Anderson update:
+  residual square of the potential:   2.927288518205246E-027
+  mixing of old trial potential    :  0.539646903877232
+  predicted best residual square on the line:   9.054467677699611E-028
+
+ ITER STEP NUMBER    58
+ vtorho : nnsclo_now=  1, note that nnsclo,dbl_nnsclo,istep=  0 0 58
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ vtorho: echo density
+ Total charge density [el/Bohr^3]
+,     Maximum=    1.5547E+00  at reduced coord.    0.4688    0.5000    0.5938
+,     Minimum=    3.7812E-04  at reduced coord.    0.0000    0.0000    0.0000
+,  Integrated=    8.0000E+00
+ ETOT 58  -25.206932819204     0.000E+00 8.557E-17 2.830E-27
+ scprqt: <Vxc>= -3.6368204E-01 hartree
+
+ At SCF step   58   max residual=  8.56E-17 < tolwfr=  1.00E-16 =>converged.
+  forstrnps : usepaw=           0
+forstrnps: loop on k-points and spins done in parallel
+ leave_test : synchronization done...
+ leave_test : synchronization done...
+  strhar : before mpi_comm, harstr=  0.152790966682000     
+  0.152790966682000       0.152790966682000       1.734723475976807E-018
+ -6.938893903907228E-018  1.110223024625157E-016
+  strhar : after mpi_comm, harstr=  0.152790966682000     
+  0.152790966682000       0.152790966682000       1.734723475976807E-018
+ -6.938893903907228E-018  1.110223024625157E-016
+  strhar : ehart,ucvol=   8.33756451796106        114.287871014314     
+
+ Cartesian components of stress tensor (hartree/bohr^3)
+  sigma(1 1)=  5.42411132E-05  sigma(3 2)=  0.00000000E+00
+  sigma(2 2)=  5.42411132E-05  sigma(3 1)=  0.00000000E+00
+  sigma(3 3)=  5.42411132E-05  sigma(2 1)=  0.00000000E+00
+ 
+ ioarr: writing density data
+ ioarr: file name is 3D_LiF_o_DS1_DEN
+ ioarr: data written to disk file 3D_LiF_o_DS1_DEN
+ leave_test : synchronization done...
+================================================================================
+
+ ----iterations are completed or convergence reached----
+
+ outwf  : write wavefunction to file 3D_LiF_o_DS1_WFK
+ leave_test : synchronization done...
+
+ === Gap info ===
+  >>>> For spin  1
+   Minimum optical gap =   9.0080 [eV], located at k-point      :  -0.1250  0.0000  0.0000
+   Fundamental gap     =   9.0080 [eV], Top of valence bands at :  -0.1250  0.0000  0.0000
+                                        Bottom of conduction at :  -0.1250  0.0000  0.0000
+
+ Cartesian components of stress tensor (hartree/bohr^3)
+  sigma(1 1)=  5.42411132E-05  sigma(3 2)=  0.00000000E+00
+  sigma(2 2)=  5.42411132E-05  sigma(3 1)=  0.00000000E+00
+  sigma(3 3)=  5.42411132E-05  sigma(2 1)=  0.00000000E+00
+
+-Cartesian components of stress tensor (GPa)         [Pressure= -1.5958E+00 GPa]
+- sigma(1 1)=  1.59582838E+00  sigma(3 2)=  0.00000000E+00
+- sigma(2 2)=  1.59582838E+00  sigma(3 1)=  0.00000000E+00
+- sigma(3 3)=  1.59582838E+00  sigma(2 1)=  0.00000000E+00
+
+================================================================================
+== DATASET  2 ==================================================================
+
+dtsetcopy : copying area  algalch    the actual size (     2) of the index (     1)  differs from its standard size (     0)
+dtsetcopy : copying area  atvshift   the actual size (     0) of the index (     3)  differs from its standard size (     2)
+dtsetcopy : copying area  kberry     the actual size (    20) of the index (     2)  differs from its standard size (     1)
+dtsetcopy : copying area  nband      the actual size (    10) of the index (     1)  differs from its standard size (     1)
+dtsetcopy : copying area  mixalch    the actual size (     2) of the index (     1)  differs from its standard size (     0)
+dtsetcopy : copying area  mixalch    the actual size (     2) of the index (     2)  differs from its standard size (     0)
+dtsetcopy : copying area  shiftk     the actual size (     8) of the index (     2)  differs from its standard size (     1)
+ mkfilename : getden/=0, take file _DEN from output of DATASET   1.
+
+ setmqgrid : COMMENT -
+  The number of points "mqgrid" in reciprocal space used for the
+  description of the pseudopotentials has been set automatically
+  by abinit to :     3001.
+
+ getdim_nloc : deduce lmnmax  =   1, lnmax  =   1,
+                      lmnmaxso=   1, lnmaxso=   1.
+ Exchange-correlation functional for the present dataset will be:
+  LDA: new Teter (4/93) with spin-polarized option - ixc=1
+ Citation for XC functional:
+  S. Goedecker, M. Teter, J. Huetter, PRB 54, 1703 (1996)
+ 
+ Unit cell volume ucvol=  1.1428787E+02 bohr^3
+ Angles (23,13,12)=  6.00000000E+01  6.00000000E+01  6.00000000E+01 degrees
+
+ getcut: wavevector=  0.0000  0.0000  0.0000  ngfft=  32  32  32
+         ecut(hartree)=     40.000   => boxcut(ratio)=   2.06340
+ leave_test : synchronization done...
+kpgio: loop on k-points done in parallel
+ wfconv:    10 bands initialized randomly with npw=  1380, for ikpt=     1
+ wfconv:    10 bands initialized randomly with npw=  1389, for ikpt=     2
+ wfconv:    10 bands initialized randomly with npw=  1385, for ikpt=     3
+ wfconv:    10 bands initialized randomly with npw=  1380, for ikpt=     4
+ wfconv:    10 bands initialized randomly with npw=  1376, for ikpt=     5
+ wfconv:    10 bands initialized randomly with npw=  1377, for ikpt=     6
+ wfconv:    10 bands initialized randomly with npw=  1370, for ikpt=     7
+ wfconv:    10 bands initialized randomly with npw=  1386, for ikpt=     8
+ wfconv:    10 bands initialized randomly with npw=  1387, for ikpt=     9
+ wfconv:    10 bands initialized randomly with npw=  1392, for ikpt=    10
+ leave_test : synchronization done...
+ newkpt: loop on k-points done in parallel
+ pareigocc : MPI_ALLREDUCE
+ 
+ symatm: atom number    1 is reached starting at atom
+   1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+   1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+ symatm: atom number    2 is reached starting at atom
+   2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2
+   2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2
+ ioarr: reading density data
+ ioarr: file name is 3D_LiF_o_DS1_DEN
+
+================================================================================
+
+          - hdr_check: checking restart file header for consistency -
+
+
+        current calculation                         restart file
+        -------------------                         ------------
+
+  calculation expects a density         |  input file contains a density
+. ABINIT  code version 6.8.1            |  ABINIT  code version 6.8.1
+. date 20111229 bantot  100 natom    2  |  date 20111229 bantot  100 natom    2
+  nkpt  10 nsym 48 ngfft  32,  32,  32  |  nkpt  10 nsym 48 ngfft  32,  32,  32
+  ntypat  2 ecut_eff  40.0000000        |  ntypat  2 ecut_eff  40.0000000
+  usepaw  0                             |  usepaw  0
+  usewvl  0                             |  usewvl  0
+  rprimd:                               |  rprimd:
+     0.0000000   3.8517378   3.8517378  |     0.0000000   3.8517378   3.8517378
+     3.8517378   0.0000000   3.8517378  |     3.8517378   0.0000000   3.8517378
+     3.8517378   3.8517378   0.0000000  |     3.8517378   3.8517378   0.0000000
+  nband:                                |  nband:
+    10  10  10  10  10  10  10  10  10  |    10  10  10  10  10  10  10  10  10
+    10                                  |    10
+  symafm:                               |  symafm:
+    1  1  1  1  1  1  1  1  1  1  1  1  |    1  1  1  1  1  1  1  1  1  1  1  1
+    1  1  1  1  1  1  1  1  1  1  1  1  |    1  1  1  1  1  1  1  1  1  1  1  1
+    1  1  1  1  1  1  1  1  1  1  1  1  |    1  1  1  1  1  1  1  1  1  1  1  1
+    1  1  1  1  1  1  1  1  1  1  1  1  |    1  1  1  1  1  1  1  1  1  1  1  1
+  symrel:                               |  symrel:
+    1  0  0  0  1  0  0  0  1           |    1  0  0  0  1  0  0  0  1
+   -1  0  0  0 -1  0  0  0 -1           |   -1  0  0  0 -1  0  0  0 -1
+    0 -1  1  0 -1  0  1 -1  0           |    0 -1  1  0 -1  0  1 -1  0
+    0  1 -1  0  1  0 -1  1  0           |    0  1 -1  0  1  0 -1  1  0
+   -1  0  0 -1  0  1 -1  1  0           |   -1  0  0 -1  0  1 -1  1  0
+    1  0  0  1  0 -1  1 -1  0           |    1  0  0  1  0 -1  1 -1  0
+    0  1 -1  1  0 -1  0  0 -1           |    0  1 -1  1  0 -1  0  0 -1
+    0 -1  1 -1  0  1  0  0  1           |    0 -1  1 -1  0  1  0  0  1
+   -1  0  0 -1  1  0 -1  0  1           |   -1  0  0 -1  1  0 -1  0  1
+    1  0  0  1 -1  0  1  0 -1           |    1  0  0  1 -1  0  1  0 -1
+    0 -1  1  1 -1  0  0 -1  0           |    0 -1  1  1 -1  0  0 -1  0
+    0  1 -1 -1  1  0  0  1  0           |    0  1 -1 -1  1  0  0  1  0
+    1  0  0  0  0  1  0  1  0           |    1  0  0  0  0  1  0  1  0
+   -1  0  0  0  0 -1  0 -1  0           |   -1  0  0  0  0 -1  0 -1  0
+    0  1 -1  0  0 -1  1  0 -1           |    0  1 -1  0  0 -1  1  0 -1
+    0 -1  1  0  0  1 -1  0  1           |    0 -1  1  0  0  1 -1  0  1
+   -1  0  1 -1  1  0 -1  0  0           |   -1  0  1 -1  1  0 -1  0  0
+    1  0 -1  1 -1  0  1  0  0           |    1  0 -1  1 -1  0  1  0  0
+    0 -1  0  1 -1  0  0 -1  1           |    0 -1  0  1 -1  0  0 -1  1
+    0  1  0 -1  1  0  0  1 -1           |    0  1  0 -1  1  0  0  1 -1
+    1  0 -1  0  0 -1  0  1 -1           |    1  0 -1  0  0 -1  0  1 -1
+   -1  0  1  0  0  1  0 -1  1           |   -1  0  1  0  0  1  0 -1  1
+    0  1  0  0  0  1  1  0  0           |    0  1  0  0  0  1  1  0  0
+    0 -1  0  0  0 -1 -1  0  0           |    0 -1  0  0  0 -1 -1  0  0
+    1  0 -1  0  1 -1  0  0 -1           |    1  0 -1  0  1 -1  0  0 -1
+   -1  0  1  0 -1  1  0  0  1           |   -1  0  1  0 -1  1  0  0  1
+    0 -1  0  0 -1  1  1 -1  0           |    0 -1  0  0 -1  1  1 -1  0
+    0  1  0  0  1 -1 -1  1  0           |    0  1  0  0  1 -1 -1  1  0
+   -1  0  1 -1  0  0 -1  1  0           |   -1  0  1 -1  0  0 -1  1  0
+    1  0 -1  1  0  0  1 -1  0           |    1  0 -1  1  0  0  1 -1  0
+    0  1  0  1  0  0  0  0  1           |    0  1  0  1  0  0  0  0  1
+    0 -1  0 -1  0  0  0  0 -1           |    0 -1  0 -1  0  0  0  0 -1
+    0  0 -1  0  1 -1  1  0 -1           |    0  0 -1  0  1 -1  1  0 -1
+    0  0  1  0 -1  1 -1  0  1           |    0  0  1  0 -1  1 -1  0  1
+    1 -1  0  0 -1  1  0 -1  0           |    1 -1  0  0 -1  1  0 -1  0
+   -1  1  0  0  1 -1  0  1  0           |   -1  1  0  0  1 -1  0  1  0
+    0  0  1  1  0  0  0  1  0           |    0  0  1  1  0  0  0  1  0
+    0  0 -1 -1  0  0  0 -1  0           |    0  0 -1 -1  0  0  0 -1  0
+   -1  1  0 -1  0  0 -1  0  1           |   -1  1  0 -1  0  0 -1  0  1
+    1 -1  0  1  0  0  1  0 -1           |    1 -1  0  1  0  0  1  0 -1
+    0  0  1  0  1  0  1  0  0           |    0  0  1  0  1  0  1  0  0
+    0  0 -1  0 -1  0 -1  0  0           |    0  0 -1  0 -1  0 -1  0  0
+    1 -1  0  0 -1  0  0 -1  1           |    1 -1  0  0 -1  0  0 -1  1
+   -1  1  0  0  1  0  0  1 -1           |   -1  1  0  0  1  0  0  1 -1
+    0  0 -1  1  0 -1  0  1 -1           |    0  0 -1  1  0 -1  0  1 -1
+    0  0  1 -1  0  1  0 -1  1           |    0  0  1 -1  0  1  0 -1  1
+   -1  1  0 -1  0  1 -1  0  0           |   -1  1  0 -1  0  1 -1  0  0
+    1 -1  0  1  0 -1  1  0  0           |    1 -1  0  1  0 -1  1  0  0
+  typat:                                |  typat:
+    1  2                                |    1  2
+  so_psp  :                             |  so_psp  :
+    1  1                                |    1  1
+  istwfk:                               |  istwfk:
+    1  1  1  1  1  1  1  1  1  1        |    1  1  1  1  1  1  1  1  1  1
+  kpt:                                  |  kpt:
+    -0.1250000  -0.2500000   0.0000000  |    -0.1250000  -0.2500000   0.0000000
+    -0.1250000   0.5000000   0.0000000  |    -0.1250000   0.5000000   0.0000000
+    -0.2500000  -0.3750000   0.0000000  |    -0.2500000  -0.3750000   0.0000000
+    -0.1250000  -0.3750000   0.1250000  |    -0.1250000  -0.3750000   0.1250000
+    -0.1250000   0.2500000   0.0000000  |    -0.1250000   0.2500000   0.0000000
+  wtk:                                  |  wtk:
+    0.094  0.094  0.094  0.188  0.094   |    0.094  0.094  0.094  0.188  0.094
+  occ:                                  |  occ:
+   2.0 2.0 2.0 2.0 0.0 0.0 0.0 0.0 0.0  |   2.0 2.0 2.0 2.0 0.0 0.0 0.0 0.0 0.0
+   0.0 2.0 2.0 2.0 2.0 0.0 0.0 0.0 0.0  |   0.0 2.0 2.0 2.0 2.0 0.0 0.0 0.0 0.0
+   0.0 0.0 2.0 2.0 2.0 2.0 0.0 0.0 0.0  |   0.0 0.0 2.0 2.0 2.0 2.0 0.0 0.0 0.0
+   0.0 0.0 0.0 2.0 2.0 2.0 2.0 0.0 0.0  |   0.0 0.0 0.0 2.0 2.0 2.0 2.0 0.0 0.0
+   0.0 0.0 0.0 0.0 2.0 2.0 2.0 2.0 0.0  |   0.0 0.0 0.0 0.0 2.0 2.0 2.0 2.0 0.0
+  tnons:                                |  tnons:
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+   znucl:                               |   znucl:
+    3.00  9.00                          |    3.00  9.00
+  pseudopotential atom type  1:         |  pseudopotential atom type  1:
+  pspso   0 pspxc   1                   |  pspso   0 pspxc   1
+  pspdat 940714 pspcod    1 zion   1.0  |  pspdat 940714 pspcod    1 zion   1.0
+  pseudopotential atom type  2:         |  pseudopotential atom type  2:
+  pspso   0 pspxc   1                   |  pspso   0 pspxc   1
+  pspdat 940714 pspcod    1 zion   7.0  |  pspdat 940714 pspcod    1 zion   7.0
+  xred:                                 |  xred:
+     0.0000000   0.0000000   0.0000000  |     0.0000000   0.0000000   0.0000000
+     0.5000000  -0.5000000  -0.5000000  |     0.5000000  -0.5000000  -0.5000000
+ hdr_check:  Density/Potential file is OK for restart of calculation
+================================================================================
+ ioarr: data read from disk file 3D_LiF_o_DS1_DEN
+
+================================================================================
+
+ getcut: wavevector=  0.0000  0.0000  0.0000  ngfft=  32  32  32
+         ecut(hartree)=     40.000   => boxcut(ratio)=   2.06340
+  scfcv : before setvtr, energies%e_hartree=  0.000000000000000E+000
+
+ ewald : nr and ng are    4 and   11
+  mklocl_recipspace : will add potential with strength vprtrb(:)=
+  0.000000000000000E+000  0.000000000000000E+000
+  setvtr : istep,n1xccc,moved_rhor=           1        2501           0
+  scfcv : after setvtr, energies%e_hartree=  0.000000000000000E+000
+ vtorho : nnsclo_now=***, note that nnsclo,dbl_nnsclo,istep=  0 0  1
+ leave_test : synchronization done...
+ vtorho: loop on k-points and spins done in parallel
+ ioarr: writing density data
+ ioarr: file name is 3D_LiF_o_DS2_DEN
+ ioarr: data written to disk file 3D_LiF_o_DS2_DEN
+
+======================================================================
+ Calculating and writing out Kohn-Sham electronic Structure file
+ Using conjugate gradient wavefunctions and energies (kssform=3)
+
+ Sorting g-vecs for an output of states on an unique "big" PW basis.
+
+ remove_inversion: WARNING - 
+ Removing inversion related symmetrie from initial set
+ The inversion is symmetry operation no.   2
+ Symmetry operations no.   1 and no.   2 are related through the inversion.
+ Symmetry operation no.   2 will be suppressed.
+ Symmetry operations no.   3 and no.   4 are related through the inversion.
+ Symmetry operation no.   4 will be suppressed.
+ Symmetry operations no.   5 and no.   6 are related through the inversion.
+ Symmetry operation no.   6 will be suppressed.
+ Symmetry operations no.   7 and no.   8 are related through the inversion.
+ Symmetry operation no.   8 will be suppressed.
+ Symmetry operations no.   9 and no.  10 are related through the inversion.
+ Symmetry operation no.   9 will be suppressed.
+ Symmetry operations no.  11 and no.  12 are related through the inversion.
+ Symmetry operation no.  11 will be suppressed.
+ Symmetry operations no.  13 and no.  14 are related through the inversion.
+ Symmetry operation no.  13 will be suppressed.
+ Symmetry operations no.  15 and no.  16 are related through the inversion.
+ Symmetry operation no.  15 will be suppressed.
+ Symmetry operations no.  17 and no.  18 are related through the inversion.
+ Symmetry operation no.  18 will be suppressed.
+ Symmetry operations no.  19 and no.  20 are related through the inversion.
+ Symmetry operation no.  20 will be suppressed.
+ Symmetry operations no.  21 and no.  22 are related through the inversion.
+ Symmetry operation no.  22 will be suppressed.
+ Symmetry operations no.  23 and no.  24 are related through the inversion.
+ Symmetry operation no.  24 will be suppressed.
+ Symmetry operations no.  25 and no.  26 are related through the inversion.
+ Symmetry operation no.  25 will be suppressed.
+ Symmetry operations no.  27 and no.  28 are related through the inversion.
+ Symmetry operation no.  27 will be suppressed.
+ Symmetry operations no.  29 and no.  30 are related through the inversion.
+ Symmetry operation no.  29 will be suppressed.
+ Symmetry operations no.  31 and no.  32 are related through the inversion.
+ Symmetry operation no.  31 will be suppressed.
+ Symmetry operations no.  33 and no.  34 are related through the inversion.
+ Symmetry operation no.  34 will be suppressed.
+ Symmetry operations no.  35 and no.  36 are related through the inversion.
+ Symmetry operation no.  36 will be suppressed.
+ Symmetry operations no.  37 and no.  38 are related through the inversion.
+ Symmetry operation no.  38 will be suppressed.
+ Symmetry operations no.  39 and no.  40 are related through the inversion.
+ Symmetry operation no.  40 will be suppressed.
+ Symmetry operations no.  41 and no.  42 are related through the inversion.
+ Symmetry operation no.  41 will be suppressed.
+ Symmetry operations no.  43 and no.  44 are related through the inversion.
+ Symmetry operation no.  43 will be suppressed.
+ Symmetry operations no.  45 and no.  46 are related through the inversion.
+ Symmetry operation no.  45 will be suppressed.
+ Symmetry operations no.  47 and no.  48 are related through the inversion.
+ Symmetry operation no.  47 will be suppressed.
+ Inversion related operations have been suppressed from symmetries list.
+ Since the number of g's to be written on file
+ was 0 or too large, it has been set to the max. value.,
+ computed from the union of the sets of G vectors for the different k-points.
+ Number of g-vectors written on file is:  1831
+ Number of bands written on file is:    10
+
+ Total amount of disk space required by _KSS file =     3.94 Mb.
+  Subdivided into : 
+  Header             =     0.02 Mb.
+  KB elements        =     1.12 Mb.
+  Wavefunctions (PW) =     2.79 Mb.
+  PAW projectors     =     0.00 Mb.
+
+
+ Opening file for KS structure output: 3D_LiF_o_DS2_KSS
+ number of Gamma centered plane waves   1831
+ number of Gamma centered shells     71
+ number of bands     10
+ maximum angular momentum components      2
+ number of symmetry operations 24 (without inversion)
+dtsetcopy : copying area  algalch    the actual size (     2) of the index (     1)  differs from its standard size (     0)
+dtsetcopy : copying area  atvshift   the actual size (     0) of the index (     3)  differs from its standard size (     2)
+dtsetcopy : copying area  kberry     the actual size (    20) of the index (     2)  differs from its standard size (     1)
+dtsetcopy : copying area  nband      the actual size (    10) of the index (     1)  differs from its standard size (     1)
+dtsetcopy : copying area  mixalch    the actual size (     2) of the index (     1)  differs from its standard size (     0)
+dtsetcopy : copying area  mixalch    the actual size (     2) of the index (     2)  differs from its standard size (     0)
+dtsetcopy : copying area  shiftk     the actual size (     8) of the index (     2)  differs from its standard size (     1)
+
+ k-point   1
+ Eigenvalues in Hartree for ikpt=   1
+   1     -0.7158 -0.0488 -0.0177 -0.0159  0.3598  0.6482  0.7178  0.7277  0.8192
+          1.0412
+ Writing out eigenvalues/vectors for ikpt=  1
+ Occupation numbers for ikpt=  1
+   1      2.0000  2.0000  2.0000  2.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000
+
+ k-point   2
+ Eigenvalues in Hartree for ikpt=   2
+   2     -0.7048 -0.0955 -0.0285 -0.0196  0.3921  0.5681  0.6613  0.6678  0.9781
+          1.0851
+ Writing out eigenvalues/vectors for ikpt=  2
+ Occupation numbers for ikpt=  2
+   2      2.0000  2.0000  2.0000  2.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000
+
+ k-point   3
+ Eigenvalues in Hartree for ikpt=   3
+   3     -0.7060 -0.0815 -0.0348 -0.0304  0.4270  0.5934  0.6569  0.7047  0.7683
+          1.2002
+ Writing out eigenvalues/vectors for ikpt=  3
+ Occupation numbers for ikpt=  3
+   3      2.0000  2.0000  2.0000  2.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000
+
+ k-point   4
+ Eigenvalues in Hartree for ikpt=   4
+   4     -0.7043 -0.0843 -0.0473 -0.0219  0.4229  0.5564  0.6634  0.6786  0.9080
+          1.0700
+ Writing out eigenvalues/vectors for ikpt=  4
+ Occupation numbers for ikpt=  4
+   4      2.0000  2.0000  2.0000  2.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000
+
+ k-point   5
+ Eigenvalues in Hartree for ikpt=   5
+   5     -0.7114 -0.0683 -0.0284 -0.0106  0.3758  0.5926  0.6918  0.6997  0.9651
+          0.9697
+ Writing out eigenvalues/vectors for ikpt=  5
+ Occupation numbers for ikpt=  5
+   5      2.0000  2.0000  2.0000  2.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000
+
+ k-point   6
+ Eigenvalues in Hartree for ikpt=   6
+   6     -0.7013 -0.0872 -0.0613 -0.0237  0.4431  0.5365  0.6589  0.6746  0.9328
+          1.1051
+ Writing out eigenvalues/vectors for ikpt=  6
+ Occupation numbers for ikpt=  6
+   6      2.0000  2.0000  2.0000  2.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000
+
+ k-point   7
+ Eigenvalues in Hartree for ikpt=   7
+   7     -0.6982 -0.1071 -0.0479 -0.0393  0.4979  0.5598  0.6184  0.7010  0.7478
+          1.1858
+ Writing out eigenvalues/vectors for ikpt=  7
+ Occupation numbers for ikpt=  7
+   7      2.0000  2.0000  2.0000  2.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000
+
+ k-point   8
+ Eigenvalues in Hartree for ikpt=   8
+   8     -0.6987 -0.0924 -0.0658 -0.0334  0.4892  0.5328  0.6318  0.6718  0.8779
+          1.0795
+ Writing out eigenvalues/vectors for ikpt=  8
+ Occupation numbers for ikpt=  8
+   8      2.0000  2.0000  2.0000  2.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000
+
+ k-point   9
+ Eigenvalues in Hartree for ikpt=   9
+   9     -0.7220 -0.0232 -0.0085 -0.0085  0.3225  0.7230  0.7837  0.7837  0.9008
+          0.9090
+ Writing out eigenvalues/vectors for ikpt=  9
+ Occupation numbers for ikpt=  9
+   9      2.0000  2.0000  2.0000  2.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000
+
+ k-point  10
+ Eigenvalues in Hartree for ikpt=  10
+  10     -0.7089 -0.0873 -0.0141 -0.0141  0.3674  0.5871  0.6757  0.6757  1.0001
+          1.0554
+ Writing out eigenvalues/vectors for ikpt= 10
+ Occupation numbers for ikpt= 10
+  10      2.0000  2.0000  2.0000  2.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+          0.0000
+ Test on the normalization of the wavefunctions
+  min sum_G |a(n,k,G)| =  0.067322
+  max sum_G |a(n,k,G)| =  0.067322
+ Test on the orthogonalization of the wavefunctions
+  min sum_G a(n,k,G)* a(n',k,G) =  0.067322
+  max sum_G a(n,k,G)* a(n',k,G) =  0.067322
+
+ leave_test : synchronization done...
+================================================================================
+
+ ----iterations are completed or convergence reached----
+
+ outwf  : write wavefunction to file 3D_LiF_o_DS2_WFK
+ leave_test : synchronization done...
+
+ === Gap info ===
+  >>>> For spin  1
+   Minimum optical gap =   9.0080 [eV], located at k-point      :  -0.1250  0.0000  0.0000
+   Fundamental gap     =   9.0080 [eV], Top of valence bands at :  -0.1250  0.0000  0.0000
+                                        Bottom of conduction at :  -0.1250  0.0000  0.0000
+
+== END DATASET(S) ==============================================================
+================================================================================
+  
+ -outvars: echo values of variables after computation  --------
+ 
+ These variables are accessible in NetCDF format (3D_LiF_o_OUT.nc)
+
+            acell      7.7034756000E+00  7.7034756000E+00  7.7034756000E+00 Bohr
+              amu      6.94100000E+00  1.89984032E+01
+             ecut      4.00000000E+01 Hartree
+           etotal1    -2.5206932819E+01
+            fcart1     0.0000000000E+00  0.0000000000E+00  0.0000000000E+00
+                       0.0000000000E+00  0.0000000000E+00  0.0000000000E+00
+           getden1          0
+           getden2          1
+             iscf1          3
+             iscf2         -2
+           jdtset        1    2
+              kpt     -1.25000000E-01 -2.50000000E-01  0.00000000E+00
+                      -1.25000000E-01  5.00000000E-01  0.00000000E+00
+                      -2.50000000E-01 -3.75000000E-01  0.00000000E+00
+                      -1.25000000E-01 -3.75000000E-01  1.25000000E-01
+                      -1.25000000E-01  2.50000000E-01  0.00000000E+00
+                      -2.50000000E-01  3.75000000E-01  0.00000000E+00
+                      -3.75000000E-01  5.00000000E-01  0.00000000E+00
+                      -2.50000000E-01  5.00000000E-01  1.25000000E-01
+                      -1.25000000E-01  0.00000000E+00  0.00000000E+00
+                      -3.75000000E-01  0.00000000E+00  0.00000000E+00
+          kptrlen      3.08139024E+01
+         kptrlatt      4 -4  4  -4  4  4  -4 -4  4
+          kssform1          1
+          kssform2          3
+P           mkmem          10
+            natom           2
+            nband          10
+           nbdbuf1          0
+           nbdbuf2          2
+           ndtset           2
+            ngfft          32      32      32
+             nkpt          10
+            nstep        3000
+             nsym          48
+           ntypat           2
+              occ      2.000000  2.000000  2.000000  2.000000  0.000000  0.000000
+                       0.000000  0.000000  0.000000  0.000000
+            rprim      0.0000000000E+00  5.0000000000E-01  5.0000000000E-01
+                       5.0000000000E-01  0.0000000000E+00  5.0000000000E-01
+                       5.0000000000E-01  5.0000000000E-01  0.0000000000E+00
+           shiftk      5.00000000E-01  5.00000000E-01  5.00000000E-01
+          spgroup         225
+           strten1     5.4241113193E-05  5.4241113193E-05  5.4241113193E-05
+                       0.0000000000E+00  0.0000000000E+00  0.0000000000E+00
+        symmorphi1          1
+        symmorphi2          0
+           symrel      1  0  0   0  1  0   0  0  1      -1  0  0   0 -1  0   0  0 -1
+                       0 -1  1   0 -1  0   1 -1  0       0  1 -1   0  1  0  -1  1  0
+                      -1  0  0  -1  0  1  -1  1  0       1  0  0   1  0 -1   1 -1  0
+                       0  1 -1   1  0 -1   0  0 -1       0 -1  1  -1  0  1   0  0  1
+                      -1  0  0  -1  1  0  -1  0  1       1  0  0   1 -1  0   1  0 -1
+                       0 -1  1   1 -1  0   0 -1  0       0  1 -1  -1  1  0   0  1  0
+                       1  0  0   0  0  1   0  1  0      -1  0  0   0  0 -1   0 -1  0
+                       0  1 -1   0  0 -1   1  0 -1       0 -1  1   0  0  1  -1  0  1
+                      -1  0  1  -1  1  0  -1  0  0       1  0 -1   1 -1  0   1  0  0
+                       0 -1  0   1 -1  0   0 -1  1       0  1  0  -1  1  0   0  1 -1
+                       1  0 -1   0  0 -1   0  1 -1      -1  0  1   0  0  1   0 -1  1
+                       0  1  0   0  0  1   1  0  0       0 -1  0   0  0 -1  -1  0  0
+                       1  0 -1   0  1 -1   0  0 -1      -1  0  1   0 -1  1   0  0  1
+                       0 -1  0   0 -1  1   1 -1  0       0  1  0   0  1 -1  -1  1  0
+                      -1  0  1  -1  0  0  -1  1  0       1  0 -1   1  0  0   1 -1  0
+                       0  1  0   1  0  0   0  0  1       0 -1  0  -1  0  0   0  0 -1
+                       0  0 -1   0  1 -1   1  0 -1       0  0  1   0 -1  1  -1  0  1
+                       1 -1  0   0 -1  1   0 -1  0      -1  1  0   0  1 -1   0  1  0
+                       0  0  1   1  0  0   0  1  0       0  0 -1  -1  0  0   0 -1  0
+                      -1  1  0  -1  0  0  -1  0  1       1 -1  0   1  0  0   1  0 -1
+                       0  0  1   0  1  0   1  0  0       0  0 -1   0 -1  0  -1  0  0
+                       1 -1  0   0 -1  0   0 -1  1      -1  1  0   0  1  0   0  1 -1
+                       0  0 -1   1  0 -1   0  1 -1       0  0  1  -1  0  1   0 -1  1
+                      -1  1  0  -1  0  1  -1  0  0       1 -1  0   1  0 -1   1  0  0
+           tolwfr      1.00000000E-16
+            typat      1  2
+              wtk        0.09375    0.09375    0.09375    0.18750    0.09375    0.09375
+                         0.09375    0.18750    0.03125    0.03125
+           xangst      0.0000000000E+00  0.0000000000E+00  0.0000000000E+00
+                      -2.0382518572E+00  0.0000000000E+00  0.0000000000E+00
+            xcart      0.0000000000E+00  0.0000000000E+00  0.0000000000E+00
+                      -3.8517378000E+00  0.0000000000E+00  0.0000000000E+00
+             xred      0.0000000000E+00  0.0000000000E+00  0.0000000000E+00
+                       5.0000000000E-01 -5.0000000000E-01 -5.0000000000E-01
+            znucl        3.00000    9.00000
+
+================================================================================
+  
+
+================================================================================
+
+ Suggested references for the acknowledgment of ABINIT usage.
+
+ The users of ABINIT have little formal obligations with respect to the ABINIT group
+ (those specified in the GNU General Public License, http://www.gnu.org/copyleft/gpl.txt).
+ However, it is common practice in the scientific literature,
+ to acknowledge the efforts of people that have made the research possible.
+ In this spirit, please find below suggested citations of work written by ABINIT developers,
+ corresponding to implementations inside of ABINIT that you have used in the present run.
+ Note also that it will be of great value to readers of publications presenting these results,
+ to read papers enabling them to understand the theoretical formalism and details
+ of the ABINIT implementation.
+ For information on why they are suggested, see also http://www.abinit.org/about/?text=acknowledgments.
+
+ [1] ABINIT : First-principles approach of materials and nanosystem properties.
+ X. Gonze, B. Amadon, P.-M. Anglade, J.-M. Beuken, F. Bottin, P. Boulanger, F. Bruneval,
+ D. Caliste, R. Caracas, M. Cote, T. Deutsch, L. Genovese, Ph. Ghosez, M. Giantomassi
+ S. Goedecker, D.R. Hamann, P. Hermet, F. Jollet, G. Jomard, S. Leroux, M. Mancini, S. Mazevet,
+ M.J.T. Oliveira, G. Onida, Y. Pouillon, T. Rangel, G.-M. Rignanese, D. Sangalli, R. Shaltaf,
+ M. Torrent, M.J. Verstraete, G. Zerah, J.W. Zwanziger
+ Computer Phys. Comm. 180, 2582-2615 (2009).
+ Comment : the third generic paper describing the ABINIT project.
+ Note that a version of this paper, that is not formatted for Computer Phys. Comm. 
+ is available at http://www.abinit.org/about/ABINIT_CPC_v10.pdf .
+ The licence allows the authors to put it on the Web.
+
+ [2] A brief introduction to the ABINIT software package.
+ X. Gonze, G.-M. Rignanese, M. Verstraete, J.-M. Beuken, Y. Pouillon, R. Caracas, F. Jollet,
+ M. Torrent, G. Zerah, M. Mikami, Ph. Ghosez, M. Veithen, J.-Y. Raty, V. Olevano, F. Bruneval,
+ L. Reining, R. Godby, G. Onida, D.R. Hamann, and D.C. Allan.
+ Z. Kristallogr. 220, 558-562 (2005).
+ Comment : the second generic paper describing the ABINIT project. Note that this paper
+ should be cited especially if you are using the GW part of ABINIT, as several authors
+ of this part are not in the list of authors of the first or third paper.
+ The .pdf of the latter paper is available at http://www.abinit.org/about/zfk_0505-06_558-562.pdf.
+ Note that it should not redistributed (Copyright by Oldenburg Wissenshaftverlag,
+ the licence allows the authors to put it on the Web).
+
+
+ And optionally :
+
+ [3] First-principles computation of material properties : the ABINIT software project. 
+ X. Gonze, J.-M. Beuken, R. Caracas, F. Detraux, M. Fuchs, G.-M. Rignanese, L. Sindic,
+ M. Verstraete, G. Zerah, F. Jollet, M. Torrent, A. Roy, M. Mikami, Ph. Ghosez, J.-Y. Raty, D.C. Allan.
+ Computational Materials Science 25, 478-492 (2002). http://dx.doi.org/10.1016/S0927-0256(02)00325-7
+ Comment : the original paper describing the ABINIT project.
+
+ [4] Fast radix 2, 3, 4 and 5 kernels for Fast Fourier Transformations
+ on computers with overlapping multiply-add instructions.
+ S. Goedecker, SIAM J. on Scientific Computing 18, 1605 (1997).
+ Proc.   0 individual time (sec): cpu=         10.7  wall=         10.7
+
+ Calculation completed.
+.Delivered    1 WARNINGs and   4 COMMENTs to log file.

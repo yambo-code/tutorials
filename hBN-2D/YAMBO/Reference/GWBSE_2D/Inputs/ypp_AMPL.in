@@ -1,0 +1,19 @@
+#                                                           
+#   __   __     _        __  __       ____      U  ___  u   
+#   \ \ / / U  /"\  U u |" \/ "| u U | __") u    \/"_ \/    
+#    \ V /   \/ _ \/   \| |\/| |/   \|  _ \/     | | | |    
+#   U_|"|_u  / ___ \    | |  | |     | |_) | .-,_| |_| |    
+#     |_|   /_/   \_\   |_|  |_|     |____/   \_)-\___/     
+# .-,//|(_   \\    >>  <<,-,,-.     _|| \\_        \\       
+#  \_) (__) (__)  (__)  (./  \.)   (__) (__)      (__)      
+#                                                           
+#                                                           
+#             GPL Version 4.1.2 Revision 120                
+#                    MPI+OpenMP Build                       
+#                http://www.yambo-code.org                  
+#
+excitons                     # [R] Excitons
+amplitude                    # [R] Amplitude
+States= "1 - 5"              # Index of the BS state(s)
+#DipWeight                   #  Weight the contribution to the exciton WFs with the dipoles
+Degen_Step=   0.0100   eV    # Maximum energy separation of two degenerate states

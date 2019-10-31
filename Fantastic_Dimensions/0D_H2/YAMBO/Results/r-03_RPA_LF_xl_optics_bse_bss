@@ -1,0 +1,232 @@
+                                                                
+    Y88b    /   e           e    e      888~~\    ,88~-_        
+     Y88b  /   d8b         d8b  d8b     888   |  d888   \       
+      Y88b/   /Y88b       d888bdY88b    888 _/  88888    |      
+       Y8Y   /  Y88b     / Y88Y Y888b   888  \  88888    |      
+        Y   /____Y88b   /   YY   Y888b  888   |  Y888   /       
+       /   /      Y88b /          Y888b 888__/    `88_-~        
+                                                                
+                GPL Version 3.1.2 Revision 297                  
+                  http://www.yambo-code.org                     
+ 
+ YAMBO@anomaly.roma2.infn.it x 001 CPUs * 08/29/2008  10:04
+
+ [01] Job Setup
+ ==============
+
+ CORE databases in .
+ Additional I/O in .
+ Communications in .
+ Input file     is Inputs/03_RPA_LF_xl
+ Report file    is ./r-03_RPA_LF_xl_optics_bse_bss
+ Job string     is 03_RPA_LF_xl
+ Log file       is ./l-03_RPA_LF_xl_optics_bse_bss
+  
+ [RD./SAVE/ns.db1]-------------------------------------------
+  Bands                           : 250
+  K-points                        : 1
+  G-vectors             [RL space]:  39127
+  Components       [wavefunctions]:  39127
+  Symmetries       [spatial+T-rev]: 16
+  Spinor components               : 1
+  Spin polarizations              : 1
+  Temperature                 [ev]: 0.000000
+  Electrons                       : 2.000000
+  WF G-vectors                    :  39127
+  Max atoms/species               : 2
+  No. of atom species             : 1
+ - S/N 006644 ---------------------------- v.03.01.02 r.297 -
+
+ [02] Input variables setup
+ ==========================
+
+ Unit cell contains 2H atoms
+
+ Unit cell scaling factors [a.u.]: 25.00000  25.00000  25.00000
+
+ Direct Lattice(DL) unit cell [iru]
+ A1 = 1.000000  0.000000  0.000000
+ A2 = 0.000000  1.000000  0.000000
+ A3 = 0.000000  0.000000  1.000000
+
+ DL volume [au]:0.1562E+5
+
+ Reciprocal Lattice(RL) unit cell [iku]
+ B1 = 1.000000  0.000000  0.000000
+ B2 = 0.000000  1.000000  0.000000
+ B3 = 0.000000  0.000000  1.000000
+
+ DL (S)ymmetries [cc]
+ [S1] 1.000000  0.000000  0.000000  0.000000  1.000000  0.000000  0.000000  0.000000  1.000000
+ [S2]-1.000000  0.000000  0.000000  0.000000  1.000000  0.000000  0.000000  0.000000 -1.000000
+ [S3]-1.000000  0.000000  0.000000  0.000000 -1.000000  0.000000  0.000000  0.000000  1.000000
+ [S4] 1.000000  0.000000  0.000000  0.000000 -1.000000  0.000000  0.000000  0.000000 -1.000000
+ [S5]-1.000000  0.000000  0.000000  0.000000  0.000000 -1.000000  0.000000 -1.000000  0.000000
+ [S6] 1.000000  0.000000  0.000000  0.000000  0.000000 -1.000000  0.000000  1.000000  0.000000
+ [S7] 1.000000  0.000000  0.000000  0.000000  0.000000  1.000000  0.000000 -1.000000  0.000000
+ [S8]-1.000000  0.000000  0.000000  0.000000  0.000000  1.000000  0.000000  1.000000  0.000000
+
+ [SYMs] Time-reversal derived K-space symmetries:  9  16
+ [SYMs] Spatial inversion 9 is a symmetry
+ [SYMs] Group table built correctly
+
+  [02.01] K-grid lattice
+  ======================
+
+  Compatible Grid is 0D
+  K lattice UC volume       [au]:  0.01588
+
+  [02.02] RL shells
+  =================
+
+  Shells, format: [S#] G_RL(mHa)
+
+   [S152]:9987( 3363.) [S151]:9939( 3353.) [S150]:9843( 3344.) [S149]:9795( 3334.)
+   [S148]:9771( 3315.) [S147]:9627( 3306.) [S146]:9459( 3296.) [S145]:9435( 3287.)
+   [S144]:9315( 3277.) [S143]:9171( 3267.) [S142]:9093( 3258.) [S141]:9045( 3238.)
+   [S140]:8925( 3228.) [S139]:8829( 3219.) [S138]:8733( 3209.) [S137]:8709( 3199.)
+   [S136]:8601( 3189.) [S135]:8409( 3179.) [S134]:8385( 3159.) [S133]:8289( 3149.)
+   [S132]:8217( 3129.) [S131]:8121( 3119.) [S130]:8025( 3109.) [S129]:7881( 3099.)
+   [S128]:7809( 3078.) [S127]:7689( 3068.) [S126]:7521( 3058.) [S125]:7497( 3047.)
+   ...
+   [S12]:179( 870.6237) [S11]:171( 833.5588) [S10]:147( 794.7672) [S9]:123( 753.9822)
+   [S8]:93( 710.8613) [S7]:81( 615.6240) [S6]:57( 561.9852) [S5]:33( 502.6548)
+   [S4]:27( 435.3119) [S3]:19( 355.4306) [S2]:7( 251.3274) [S1]:1( 0.000000)
+
+  [02.03] Input (E)nergies[ev] & Occupations
+  ==========================================
+
+  Fermi Energy[ev] - T[ev/K] :-9.004031  0.000000  0.000000
+  States summary             : Full        Metallic    Empty
+                               0001-0001               0002-0250
+  Indirect Gaps          [ev]: 8.012273  8.012273
+  Direct Gaps            [ev]: 8.012273  8.012273
+  X BZ K-points : 1
+
+  *X* K [1] : 0.000000  0.000000  0.000000 (iku) * Comp.s 39127 * weight  1.000000
+  E  0.000000  8.012273  8.914516  9.563279  9.563279  9.740905  9.813654  9.825105
+  E   9.90508  10.27918  10.27918  10.60589  10.60589  10.62587  10.65609  10.67617
+
+ [03] Transferred momenta grid
+ =============================
+
+ [RD./SAVE/ndb.kindx]----------------------------------------
+  Polarization last K   : 1
+  QP states             : 1  1
+  X grid is uniform     :yes
+  BS scattering         :yes
+ - S/N 006644 ---------------------------- v.03.01.02 r.297 -
+
+ IBZ Q-points : 1
+ BZ  Q-points : 1
+
+ Q [00001] : 0.000     0.000     0.000    (iku) * weight  1.000000
+
+ [04] Bethe-Salpeter Kernel
+ ==========================
+
+ [BSE] Kernel dimension    : 199
+ [BSE] Exchange components :  9045
+ [P 01] Kernel filling [o/o] 100.0000
+ [FFT-BSK] Mesh size: 27  27  27
+
+ [RD./SAVE/ns.wf]--------------------------------------------
+  Bands in each block             : 250
+  Blocks                          : 1
+ - S/N 006644 ---------------------------- v.03.01.02 r.297 -
+ [WF loader] Normalization (few states)  min/max  :0.2863E-9  1.000   
+
+
+ [05] Main loop
+ ==============
+
+ [WR./03_RPA_LF_xl/ndb.BS_Q1]--------------------------------
+  Brillouin Zone Q/K grids (IBZ/BZ): 1  1  1  1
+  RL vectors                   (WF):  9987
+  BS kernel          wavefunctions :Perdew & Wang (xc)
+  Static diel. fun.  energies      :Perdew & Wang (xc)
+                     wavefunctions :Perdew & Wang (xc)
+  BSK|Identifier              :  7358
+     |Dimension               : 199
+     |Bands                   :   1  200
+     |Exchange           [res]:yes
+     |Correlation        [res]:no
+     |Kernel`s coupling       :no
+     |Exchange           [cpl]:no
+     |Correlation        [cpl]:no
+     |ALDA kernel in R-space  :no
+     |RL vectors    [exchange]:  9045
+     |E/h energy range    [ev]:-1.000000 -1.000000
+     |Coupling range     [o/o]: 100.0000  100.0000
+ - S/N 006644 ---------------------------- v.03.01.02 r.297 -
+
+ CpuTiming [Min/Max/Average]: 03s/03s/03s
+
+ [06] BSE solver(s)
+ ==================
+
+ Optical renormalization   [au]:0.1562E+5
+ Polarizability dimension      :volume
+
+ [RD./SAVE/ns.wf]--------------------------------------------
+  Bands in each block             : 250
+  Blocks                          : 1
+ - S/N 006644 ---------------------------- v.03.01.02 r.297 -
+ [WR./03_RPA_LF_xl/ndb.ostnts]-------------------------------
+  Brillouin Zone Q/K grids (IBZ/BZ): 1  1  1  1
+  RL vectors                   (WF):  9987
+  Electronic Temperature       [ev]: 0.000000
+  X band range           :   1  200
+  X e/h energy range [ev]:-1.000000 -1.000000
+  Metallic bands         : 1
+  Filled bands           : 1
+  RL vectors in the sum  :  9987
+  [r,Vnl] included       :yes
+  Transitions ordered    :yes
+  Longitudinal Gauge     :no
+  Field momentum norm    :0.1000E-4
+  Wavefunctions          :Perdew & Wang (xc)
+ - S/N 006644 ---------------------------- v.03.01.02 r.297 -
+
+  [06.01] Diagonalization solver
+  ==============================
+
+  [WR./03_RPA_LF_xl/ndb.BS_diago_Q01]-------------------------
+   BS kernel          energies      :Perdew & Wang (xc)
+   BSK Identifier                  :  7358
+   Excitonic eigenstates included  :no
+   Field direction                 :0.1000E-4  0.000     0.000   
+  - S/N 006644 ---------------------------- v.03.01.02 r.297 -
+
+ CpuTiming [Min/Max/Average]: 01s/01s/01s
+
+ [07] Game Over & Game summary
+ =============================
+
+ YAMBO@anomaly.roma2.infn.it x 001 CPUs * 08/29/2008  10:04 [start]
+                                          08/29/2008  10:05 [end]
+
+ Cpu Timing [Min/Max/Average]: 04s/04s/04s
+
+ .-Input file : Inputs/03_RPA_LF_xl
+ | optics                       # [R OPT] Optics
+ | bse                          # [R BSK] Bethe Salpeter Equation.
+ | bss                          # [R BSS] Bethe Salpeter Equation solver
+ | FFTGvecs=  9987          RL  # [FFT] Plane-waves
+ | BSresKmod= "x"               # [BSK] Resonant Kernel mode. (`x`;`c`;`d`)
+ | % BSEBands
+ |    1 | 200 |                 # [BSK] Bands range
+ | %
+ | BSENGBlk= 1              RL  # [BSK] Screened interaction block size
+ | BSENGexx=  9045          RL  # [BSK] Exchange components
+ | BSSmod= "d"                  # [BSS] Solvers `h/d/i/t`
+ | % BEnRange
+ |   0.00000 | 15.00000 |   eV  # [BSS] Energy range
+ | %
+ | % BDmRange
+ |   0.10000 |  0.10000 |   eV  # [BSS] Damping range
+ | %
+ | BEnSteps= 1000               # [BSS] Energy steps
+ | % BLongDir
+ | 0.1000E-4 | 0.000    | 0.000    |      # [BSS] [cc] Electric Field
+ | %

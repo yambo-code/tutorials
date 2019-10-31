@@ -1,0 +1,37 @@
+#                                                           
+# ooooo   oooo ..     ooo        ooo ooooooooo.    .oooo.   
+#  `88.   .8" .88.    `88.       .88 `88"   `Y8b  dP"  `Yb  
+#   `88. .8" .8"88.    888b     d"88  88     888 88      88 
+#    `88.8" .8" `88.   8 Y88. .P  88  88oooo888" 88      88 
+#     `88" .88ooo888.  8  `888"   88  88    `88b 88      88 
+#      88 .8"     `88. 8    Y     88  88    .88P `8b    d8" 
+#     o88o88o      888o8          88 o88bood8P"   `Ybod8P"  
+#                                                           
+#                Version 3.3.1 Revision 2093                
+#                 http://www.yambo-code.org                 
+#
+gw0                          # [R GW] GoWo Quasiparticle energy levels
+cohsex                       # [R Xp] COlumb Hole Screened EXchange
+em1s                         # [R Xs] Static Inverse Dielectric Matrix
+HF_and_locXC                 # [R XX] Hartree-Fock Self-energy and Vxc
+EXXRLvcs=  7           Ry    # [XX] Exchange RL components
+Chimod= "Hartree"            # [X] IP/Hartree/ALDA/LRC/BSfxc
+% QpntsRXs
+ 1 | 1 |                     # [Xs] Transferred momenta
+%
+% BndsRnXs
+  1 | 10 |                   # [Xs] Polarization function bands
+%
+NGsBlkXs= 1            RL    # [Xs] Response block size
+% LongDrXs
+ 1.000000 | 0.000000 | 0.000000 |        # [Xs] [cc] Electric Field
+%
+% GbndRnge
+  1 | 10 |                   # [GW] G[W] bands range
+%
+%QPkrange                    # [GW] QP generalized Kpoint/Band indices
+  1|  1|  1| 10|
+%
+%QPerange                    # [GW] QP generalized Kpoint/Energy indices
+  1|  1| 0.0|-1.0|
+%

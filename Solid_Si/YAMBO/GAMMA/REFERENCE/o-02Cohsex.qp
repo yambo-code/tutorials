@@ -1,0 +1,80 @@
+#  __      __   ______   __       __  _______    ______     
+# |  \    /  \ /      \ |  \     /  \|       \  /      \    
+#  \$$\  /  $$|  $$$$$$\| $$\   /  $$| $$$$$$$\|  $$$$$$\   
+#   \$$\/  $$ | $$__| $$| $$$\ /  $$$| $$__/ $$| $$  | $$   
+#    \$$  $$  | $$    $$| $$$$\  $$$$| $$    $$| $$  | $$   
+#     \$$$$   | $$$$$$$$| $$\$$ $$ $$| $$$$$$$\| $$  | $$   
+#     | $$    | $$  | $$| $$ \$$$| $$| $$__/ $$| $$__/ $$   
+#     | $$    | $$  | $$| $$  \$ | $$| $$    $$ \$$    $$   
+#      \$$     \$$   \$$ \$$      \$$ \$$$$$$$   \$$$$$$    
+#                                                           
+#             GPL Version 4.0.0 Revision 4325               
+#                    MPI+OpenMP Build                       
+#                http://www.yambo-code.org                  
+#
+# GW [Newton Solver]
+#
+#  == COHSEX GW ==
+#  GW SC iterations       :0
+#  X G`s            [used]: 1
+#  X G`s            [disk]: 1
+#  X bands                :  1  10
+#  X poles           [o/o]: 100.0000
+#  X e/h E range      [ev]:-1.000000 -1.000000
+#  X xc-Kernel            : none
+#  X BZ energy RIM        : no
+#  X BZ RIM points        :0
+#  Sc bands terminator    : no
+#  Sx RL components       :  89
+#  QP @ K 001 - 001 : b 001 - 010
+#
+#  K-point    Band       Eo         E-Eo       Sc(Eo)
+#
+   1.00000    1.00000  -12.07289    0.48423    4.98385
+  1.000000   2.000000   0.000000   1.390460   4.983851
+  1.000000   3.000000   0.000000   1.390463   4.983851
+  1.000000   4.000000   0.000000   1.390462   4.983851
+  1.000000   5.000000   2.576077   1.553041  -4.983851
+  1.000000   6.000000   2.576077   1.553041  -4.983851
+  1.000000   7.000000   2.576077   1.553041  -4.983851
+  1.000000   8.000000   3.532436   1.986246  -4.983851
+  1.000000   9.000000   7.790952   0.446797  -4.983851
+   1.00000   10.00000    7.91753    1.79594   -4.98385
+# 
+# 04/08/2015 at 18:36 YAMBO @ anomaly [start]
+# 04/08/2015 at 18:36                 [end]
+#  
+# Timing   [Min/Max/Average]: 03s/03s/03s
+#
+# .-Input file : INPUTS/02Cohsex
+# | em1s                         # [R Xs] Static Inverse Dielectric Matrix
+# | HF_and_locXC                 # [R XX] Hartree-Fock Self-energy and Vxc
+# | gw0                          # [R GW] GoWo Quasiparticle energy levels
+# | cohsex                       # [R Xp] COlumb Hole Screened EXchange
+# | BoseTemp= 0.000000     eV    # Bosonic Temperature
+# | X_all_q_CPU= ""              # [PARALLEL] CPUs for each role
+# | X_all_q_ROLEs= ""            # [PARALLEL] CPUs roles (q,k,c,v)
+# | X_all_q_nCPU_invert= 1       # [PARALLEL] CPUs for matrix inversion
+# | X_Threads=  8                # [OPENMP/X] Number of threads for response functions
+# | DIP_Threads=  8              # [OPENMP/X] Number of threads for dipoles
+# | SE_CPU= ""                   # [PARALLEL] CPUs for each role
+# | SE_ROLEs= ""                 # [PARALLEL] CPUs roles (q,qp,b)
+# | SE_Threads=  8               # [OPENMP/GW] Number of threads for self-energy
+# | EXXRLvcs=  7           Ry    # [XX] Exchange RL components
+# | Chimod= "Hartree"            # [X] IP/Hartree/ALDA/LRC/BSfxc
+# | % BndsRnXs
+# |   1 | 10 |                   # [Xs] Polarization function bands
+# | %
+# | NGsBlkXs= 1            RL    # [Xs] Response block size
+# | % LongDrXs
+# | 0.1000E-4 | 0.000    | 0.000    |        # [Xs] [cc] Electric Field
+# | %
+# | % GbndRnge
+# |   1 | 10 |                   # [GW] G[W] bands range
+# | %
+# | %QPkrange                    # [GW] QP generalized Kpoint/Band indices
+# |   1|  1|  1| 10|
+# | %
+# | %QPerange                    # [GW] QP generalized Kpoint/Energy indices
+# |   1|  1| 0.0|-1.0|
+# | %

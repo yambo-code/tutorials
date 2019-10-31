@@ -1,0 +1,35 @@
+#                                                           
+#  **    **    **     ****     ****  ******     *******     
+# //**  **    ****   /**/**   **/** /*////**   **/////**    
+#  //****    **//**  /**//** ** /** /*   /**  **     //**   
+#   //**    **  //** /** //***  /** /******  /**      /**   
+#    /**   **********/**  //*   /** /*//// **/**      /**   
+#    /**  /**//////**/**   /    /** /*    /**//**     **    
+#    /**  /**     /**/**        /** /*******  //*******     
+#    //   //      // //         //  ///////    ///////      
+#                                                           
+#               Version 3.3.1 Revision 2093                 
+#                http://www.yambo-code.org                  
+#
+optics                       # [R OPT] Optics
+chi                          # [R CHI] Dyson equation for Chi.
+tddft                        # [R   K] Use TDDFT kernel
+Chimod= "ALDA"               # [X] IP/Hartree/ALDA/LRC/BSfxc
+FxcGRLc= 51             RL    # [TDDFT] XC-kernel RL size
+NGsBlkXd=  51          RL    # [Xd] Response block size
+% QpntsRXd
+ 1 | 1 |                     # [Xd] Transferred momenta
+%
+% BndsRnXd
+  1 | 10 |                   # [Xd] Polarization function bands
+%
+% EnRngeXd
+  7.50000 | 25.00000 | eV    # [Xd] Energy range
+%
+% DmRngeXd
+  0.10000 |  0.30000 | eV    # [Xd] Damping range
+%
+ETStpsXd= 300                # [Xd] Total Energy steps
+% LongDrXd
+ 1.000000 | 0.000000 | 0.000000 |        # [Xd] [cc] Electric Field
+%

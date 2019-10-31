@@ -1,0 +1,33 @@
+#                                                           
+#  **    **    **     ****     ****  ******     *******     
+# //**  **    ****   /**/**   **/** /*////**   **/////**    
+#  //****    **//**  /**//** ** /** /*   /**  **     //**   
+#   //**    **  //** /** //***  /** /******  /**      /**   
+#    /**   **********/**  //*   /** /*//// **/**      /**   
+#    /**  /**//////**/**   /    /** /*    /**//**     **    
+#    /**  /**     /**/**        /** /*******  //*******     
+#    //   //      // //         //  ///////    ///////      
+#                                                           
+#               Version 3.3.1 Revision 2085                 
+#                http://www.yambo-code.org                  
+#
+optics                       # [R OPT] Optics
+bse                          # [R BSE] Bethe Salpeter Equation.
+BSEmod= "causal"             # [BSE] resonant/causal/coupling
+BSKmod= "IP"                 # [BSE] IP/Hartree/HF/ALDA/SEX/BSfxc
+Gauge= "length"              # [BSE] Gauge (length|velocity). In metals length misses An-Hall
+EvalKerr                     # [BSE] Compute the Kerr effect
+DrudeWBS= ( 4.800000 , 5.650000 )  eV  # [BSE] Drude plasmon
+% BEnRange
+ 0.000000 | 8.000000 | eV    # [BSS] Energy range
+%
+% BDmRange
+ 0.300000 | 0.500000 | eV    # [BSS] Damping range
+%
+BEnSteps=  400               # [BSS] Energy steps
+% BLongDir
+ 1.000000 | 0.000000 | 0.000000 |        # [BSS] [cc] Electric Field
+%
+% BSEBands
+  1 | 30 |                   # [BSK] Bands range
+%

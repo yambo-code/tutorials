@@ -1,0 +1,137 @@
+Tutorials on Solid_Si.
+QP correction on Si direct and indirect band gap.
+Approximation levels:
+1) HF
+2) Cohsex
+3) GoWo (PPA) with Wp=1 Ha
+
+Tutorial files.
+A) PWscf: information on the ground state generation
+   - input dir with input files for pw.x
+   - output dir with output files of pw.x
+   - psps dir with Si psp
+   - .scripts dir with scripts used for the gs convergence
+B) Workspace: dir with miscellneous files
+C) Yambo: dir with yambo data-base, inputs, report, out, and agr
+
+******************************************************
+***    To run the tutorial go in the YAMBO dir:    ***
+******************************************************
+1) HF correction to the Si gap
+1.1) convergence on kpts
+     in each k_grid_? dir run:
+      a) yambo -x -F Input/01HF.in
+         (otherwise you can use the existent file Input/01HF_corrections.in) 
+      b) open your input file and set EXXRLvcs=7 Ry
+         (leave others unchanged)
+      c) run: yambo -F Input/01HF.in -J HF_7Ry
+      d) Check how the HF Direct and Indirect band gap behave as a function of the kpts
+1.2) convergence on HF cutoff
+     in the k_grid_4x4x4 dir:
+     a) open your input file and change only EXXRLvcs=1 Ry
+     b) run: yambo -F Input/01HF.in -J HF_1Ry
+     c) repeat points a) and b) for EXXRLvcs=3,6,7 and 15 Ry
+        (remember to change also the name of your run "HF_?Ry")
+     d) Check how the HF Direct and Indirect band gap behave as a function of the cut-off
+
+
+2) Cohsex correction to the Si gap
+2.1) convergence on kpts
+     in each k_grid_? dir run:
+     a) yambo -g n -p c -V qp -F Input/02Cosex.in
+        (otherwise you can use the existent file Input/02Cohsex_corrections.in)
+     b) open your input file and set the follwong input variables:
+        (leave others unchanged)
+       *   EXXRLvcs=7 Ry
+       *   %BndsRnXs
+            1 | 10  |                   # [Xs] Polarization function bands
+           %
+       *   NGsBlkXs= 0            Ry    # [Xs] Response block size
+       *   #UseEbands                   # [GW] Force COHSEX to use empty bands
+       *   %QPkrange                    # [GW] QP generalized Kpoint/Band indices
+            1|  8|  1| 10|
+           %
+     c) run yambo -F Input/02Cohsex.in -J Cohsex_HF7Ry_X0Ry-nb10
+     d) Check how the Cosex Direct and Indirect band gap behave as a function of the kpts
+2.2) convergence on cutoff in the screening
+     in the k_grid_4x4x4 dir:
+     a) open your input file and change only the input variable NGsBlkXs=1 Ry
+     c) run yambo -F Input/02Cohsex.in -J Cohsex_HF7Ry_X1Ry-nb10
+     d) repeat points a) and b) for NGsBlkXs=3,6,7 Ry
+        (remember to change also the name of your run "Cohsex_HF7Ry_X?Ry-nb10")
+     e) Check how the Cosex Direct and Indirect band gap behave as a function of the cut-off in the screening
+2.3) convergence as a function of the number of bands in the screening
+     stay the k_grid_4x4x4 dir:
+     a) open your input file and change NGsBlkXs=1 Ry and 
+        %BndsRnXs
+          1 | 20  |        # [Xs] Polarization function bands
+        %
+     b) run yambo -F Input/02Cohsex.in -J Cohsex_HF7Ry_X1Ry-nb20
+     c) repeat points a) and b) for BndsRnXs 30 and 40
+        (remember to change also the name of your run "Cohsex_HF7Ry_X1Ry-nb?0")
+     d) Check how the Cosex Direct and Indirect band gap behave as a function of the number of bands in the screening
+2.4) convergence as a function of the number of bands in the green function
+     stay the k_grid_4x4x4 dir:
+     a) open your input file, uncomment #UseEbands --> UseEbands and set
+        % GbndRnge
+         1 | 10 |                   # [GW] G[W] bands range
+        %
+        (Bring BndsRnXs back to 10 and NGsBlkXs=0 Ry)
+     b) run yambo -F Input/02Cohsex.in -J Cohsex_HF7Ry_X0Ry-nb10_nb10
+        (remember to change also the name of your run "Cohsex_HF7Ry_X0Ry-nb10_nb?0")
+     c) repeat points a) and b) for GbndRnge 20 30 40
+     d) Check how the Cosex Direct and Indirect band gap behave as a function of the number of bands in the green function
+
+3) GoWo (PPA) correction to the Si gap
+3.1) convergence on kpts
+     in each k_grid_? dir run:
+     a) yambo -g n -p p -V qp -F Input/03GoWo_PPA.in
+        (otherwise you can use the existent file Input/03GoWo_PPA_corrections.in)
+     b) open your input file and set the follwong input variables:
+        (leave others unchanged)
+       *   EXXRLvcs=7 Ry
+       *   %BndsRnXd
+            1 | 10  |                   # [Xs] Polarization function bands
+           %
+       *   NGsBlkXd= 0            Ry    # [Xs] Response block size
+       *   % GbndRnge
+            1 | 10 |                   # [GW] G[W] bands range
+           %
+       *   %QPkrange                    # [GW] QP generalized Kpoint/Band indices
+            1|  8|  1| 10|
+           %
+     c) run yambo -F Input/02Cohsex.in -J GoWo_PPA_HF7Ry_X0Ry-nb10_nb10
+     d) Check how the GoWo Direct and Indirect band gap behave as a function of the kpts
+3.2) convergence on cutoff in the screening
+     in the k_grid_4x4x4 dir:
+     a) open your input file and change only the input variable NGsBlkXd=1 Ry
+     c) run yambo -F Input/03GoWo_PPA.in -J GoWo_PPA_HF7Ry_X1Ry-nb10_nb10
+     d) repeat points a) and b) for NGsBlkXs=3,6,7 Ry
+        (remember to change also the name of your run "GoWo_PPA_HF7Ry_X?Ry-nb10_nb10")
+     e) Check how the GoWo Direct and Indirect band gap behave as a function of the cut-off in the screening
+3.3) convergence as a function of the number of bands in the screening
+     stay the k_grid_4x4x4 dir:
+     a) open your input file set back NGsBlkXd=1 Ry and
+        %BndsRnXd
+          1 | 20  |        # [Xs] Polarization function bands
+        %
+     b) run yambo -F Input/02GoWo_PPA.in -J GoWo_PPA_HF7Ry_X1Ry-nb20
+     c) repeat points a) and b) for BndsRnXd 30 and 40
+        (remember to change also the name of your run "GoWo_PPA_HF7Ry_X1Ry-nb?0_nb10")
+     d) Check how the GoWo Direct and Indirect band gap behave as a function of the number of bands in the screening
+3.4) convergence as a function of the number of bands in the green function
+     stay the k_grid_4x4x4 dir:
+     a) open your input file and set
+        % GbndRnge
+         1 | 20 |                   # [GW] G[W] bands range
+        %
+        (Bring BndsRnXd back to 10 and NGsBlkXs=0 Ry)
+     b) run yambo -F Input/03GoWo_PPA.in -J GoWo_PPA_HF7Ry_X0Ry-nb10_nb10
+        (remember to change also the name of your run "GoWo_PPA_HF7Ry_X0Ry-nb10_nb?0")
+     c) repeat points a) and b) for GbndRnge 30 40
+     d) Check how the GoWo Direct and Indirect band gap behave as a function of the number of bands in the green function
+
+4) Final runs.
+   Now decide which are the parameters you need for full convergence and do first a Cohsex and
+   then a GoWo (PPA) run at convergence
+   

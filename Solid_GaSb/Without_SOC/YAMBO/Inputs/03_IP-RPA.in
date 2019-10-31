@@ -1,0 +1,73 @@
+#  __      __   ______   __       __  _______    ______     
+# |  \    /  \ /      \ |  \     /  \|       \  /      \    
+#  \$$\  /  $$|  $$$$$$\| $$\   /  $$| $$$$$$$\|  $$$$$$\   
+#   \$$\/  $$ | $$__| $$| $$$\ /  $$$| $$__/ $$| $$  | $$   
+#    \$$  $$  | $$    $$| $$$$\  $$$$| $$    $$| $$  | $$   
+#     \$$$$   | $$$$$$$$| $$\$$ $$ $$| $$$$$$$\| $$  | $$   
+#     | $$    | $$  | $$| $$ \$$$| $$| $$__/ $$| $$__/ $$   
+#     | $$    | $$  | $$| $$  \$ | $$| $$    $$ \$$    $$   
+#      \$$     \$$   \$$ \$$      \$$ \$$$$$$$   \$$$$$$    
+#                                                           
+#             GPL Version 4.0.0 Revision 4245               
+#                      Serial Build                         
+#                http://www.yambo-code.org                  
+#
+optics                       # [R OPT] Optics
+chi                          # [R CHI] Dyson equation for Chi.
+StdoHash=  40                # [IO] Live-timing Hashes
+Nelectro= 8.000000           # Electrons number
+ElecTemp= 0.000000     eV    # Electronic Temperature
+BoseTemp=-1.000000     eV    # Bosonic Temperature
+OccTresh=0.1000E-4           # Occupation treshold (metallic bands)
+FFTGvecs=  10         Ry    # [FFT] Plane-waves
+#WFbuffIO                    # [IO] Wave-functions buffered I/O
+#X_all_q_CPU= "2 2 2 2"              # [PARALLEL] CPUs for each role
+#X_all_q_ROLEs= "q k c v"            # [PARALLEL] CPUs roles (q,k,c,v)
+#X_all_q_nCPU_invert=0        # [PARALLEL] CPUs for matrix inversion
+#X_Threads= 12                # [OPENMP/X] Number of threads for response functions
+#DIP_Threads= 12              # [OPENMP/X] Number of threads for dipoles
+NonPDirs= "none"             # [X/BSS] Non periodic chartesian directions (X,Y,Z,XY...)
+Chimod= "IP"                 # [X] IP/Hartree/ALDA/LRC/BSfxc
+NGsBlkXd= 1            RL    # [Xd] Response block size
+% QpntsRXd
+   1 |  1 |                 # [Xd] Transferred momenta
+%
+% BndsRnXd
+   1 | 10 |                 # [Xd] Polarization function bands
+%
+GrFnTpXd= "c"                # [Xd] Green`s function t/c/r/a
+% EnRngeXd
+  0.00000 | 6.00000 | eV    # [Xd] Energy range
+%
+% DmRngeXd
+  0.10000 |  0.10000 | eV    # [Xd] Damping range
+%
+DmERefXd= 0.000000     eV    # [Xd] Damping reference energy
+CGrdSpXd= 200.0000           # [Xd] [o/o] Coarse grid controller
+ETStpsXd= 100                # [Xd] Total Energy steps
+EMStpsXd= 100.0000           # [Xd] [o/o] Memory Energy steps
+DrudeWXd= ( 0.00     , 0.00     )  eV  # [Xd] Drude plasmon
+% EhEngyXd
+-1.000000 |-1.000000 | eV    # [Xd] Electron-hole energy range
+%
+% LongDrXd
+ 1.000000 | 1.000000 | 1.000000 |        # [Xd] [cc] Electric Field
+%
+XfnQPdb= "none"              # [EXTQP Xd] Database
+XfnQP_N= 1                   # [EXTQP Xd] Interpolation neighbours
+% XfnQP_E
+ 0.000000 | 1.000000 | 1.000000 |        # [EXTQP Xd] E parameters  (c/v) eV|adim|adim
+%
+XfnQP_Z= ( 1.000000 , 0.000000 )       # [EXTQP Xd] Z factor  (c/v)
+XfnQP_Wv_E= 0.000000   eV    # [EXTQP Xd] W Energy reference  (valence)
+% XfnQP_Wv
+ 0.00     | 0.00     | 0.00     |        # [EXTQP Xd] W parameters  (valence) eV|adim|eV^-1
+%
+XfnQP_Wc_E= 0.000000   eV    # [EXTQP Xd] W Energy reference  (conduction)
+% XfnQP_Wc
+ 0.00     | 0.00     | 0.00     |        # [EXTQP Xd] W parameters  (conduction) eV|adim|eV^-1
+%
+% Qdirection
+ 0.00     | 0.00     | 0.00     |        # [Xd] Transferred momentum direction (iku)
+%
+QShiftOrder= 1               # [Xd] Pick-up the (QShiftOrder)th q+G vector

@@ -1,0 +1,31 @@
+
+ ___ __  _____  __ __  _____   _____
+|   Y  ||  _  ||  Y  ||  _  \ |  _  |
+|   |  ||. |  ||.    ||. |  / |. |  |
+ \_  _/ |. _  ||.\_/ ||. _  \ |. |  |
+  |: |  |: |  ||: |  ||: |   \|: |  |
+  |::|  |:.|:.||:.|:.||::.   /|::.  |
+  `--"  `-- --"`-- --"`-----" `-----"
+
+ <---> [01] Job Setup
+ <---> [02] Input variables setup
+ <---> [02.01] K-grid lattice
+ <---> [02.02] RL shells
+ <---> [02.03] Input (E)nergies[ev] & Occupations
+ <---> [03] Transferred momenta grid
+ <---> [04] External QP corrections (X)
+ <---> [04.01] QP Corrections extrapolation
+ <---> [05] Optics
+ <---> [M 0.019 Gb] Alloc X (0.018)
+ <---> [FFT-X] Mesh size: 12  15  15
+ <---> [WF loader] Wfs (re)loading |                    | [000%] --(E) --(X)
+ <---> [WF loader] Wfs (re)loading |####################| [100%] --(E) --(X)
+ <---> [X-CG] R(p) Tot o/o(of R)  :  293   936   100
+ <---> Xo@q[1] 1-200 |                    | [000%] --(E) --(X)
+ <05s> Xo@q[1] 1-200 |########            | [044%] 05s(E) 11s(X)
+ <10s> Xo@q[1] 1-200 |#################   | [089%] 10s(E) 11s(X)
+ <11s> Xo@q[1] 1-200 |####################| [100%] 11s(E) 11s(X)
+ <11s> X @q[1] 1-200 |                    | [000%] --(E) --(X)
+ <15s> X @q[1] 1-200 |####################| [100%] 04s(E) 04s(X)
+ <16s> [M 0.002 Gb] Free X (0.018)
+ <16s> [06] Game Over & Game summary

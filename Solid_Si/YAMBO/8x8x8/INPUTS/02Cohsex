@@ -1,0 +1,36 @@
+#                                                           
+# Y88b    /   e           e    e      888~~\    ,88~-_      
+#  Y88b  /   d8b         d8b  d8b     888   |  d888   \     
+#   Y88b/   /Y88b       d888bdY88b    888 _/  88888    |    
+#    Y8Y   /  Y88b     / Y88Y Y888b   888  \  88888    |    
+#     Y   /____Y88b   /   YY   Y888b  888   |  Y888   /     
+#    /   /      Y88b /          Y888b 888__/    `88_-~      
+#                                                           
+#              Version 3.3.1 Revision 2093                  
+#               http://www.yambo-code.org                   
+#
+gw0                          # [R GW] GoWo Quasiparticle energy levels
+cohsex                       # [R Xp] COlumb Hole Screened EXchange
+em1s                         # [R Xs] Static Inverse Dielectric Matrix
+HF_and_locXC                 # [R XX] Hartree-Fock Self-energy and Vxc
+EXXRLvcs=  7           Ry    # [XX] Exchange RL components
+Chimod= "Hartree"            # [X] IP/Hartree/ALDA/LRC/BSfxc
+% QpntsRXs
+  1 | 29 |                   # [Xs] Transferred momenta
+%
+% BndsRnXs
+  1 | 10 |                   # [Xs] Polarization function bands
+%
+NGsBlkXs= 1            RL    # [Xs] Response block size
+% LongDrXs
+ 1.000000 | 0.000000 | 0.000000 |        # [Xs] [cc] Electric Field
+%
+% GbndRnge
+  1 | 10 |                   # [GW] G[W] bands range
+%
+%QPkrange                    # [GW] QP generalized Kpoint/Band indices
+  1| 29|  1| 10|
+%
+%QPerange                    # [GW] QP generalized Kpoint/Energy indices
+  1| 29| 0.0|-1.0|
+%

@@ -1,0 +1,51 @@
+
+  __ __  ____ ___ ___ ____   ___
+ |  |  |/    |   |   |    \ /   \
+ |  |  |  o  | _   _ |  o  )     |
+ |  ~  |     |  \_/  |     |  O  |
+ |___, |  _  |   |   |  O  |     |
+ |     |  |  |   |   |     |     |
+ |____/|__|__|___|___|_____|\___/
+
+ <---> [01] Job Setup
+ <---> [02] Input variables setup
+ <---> [02.01] K-grid lattice
+ <---> [02.02] RL shells
+ <---> [02.03] Input (E)nergies[ev] & Occupations
+ <---> [03] Transferred momenta grid
+ <---> [04] Bethe-Salpeter Kernel
+ <---> [BSE] Kernel dimension    : 199
+ <---> Filling Estimation |                    | [000%] --(E) --(X)
+ <---> Filling Estimation |####################| [100%] --(E) --(X)
+ <---> [P 01] Kernel filling [o/o] 100.0000
+ <---> [M 0.033 Gb] Alloc WF (0.031)
+ <---> [FFT-BSK] Mesh size: 27  27  27
+ <---> [WF loader] Wfs (re)loading |                    | [000%] --(E) --(X)
+ <01s> [WF loader] Wfs (re)loading |####################| [100%] 01s(E) 01s(X)
+ <01s> [M 0.074 Gb] Alloc O_table (0.041)
+ <01s> [xc] Functional Perdew & Wang (xc)
+ <01s> [05] Main loop
+ <01s> [M 0.103 Gb] Alloc O1x O2x (0.029)
+ <01s> BSK |                    | [000%] --(E) --(X)
+ <06s> BSK |###                 | [018%] 05s(E) 27s(X)
+ <11s> BSK |#######             | [039%] 10s(E) 25s(X)
+ <16s> BSK |############        | [060%] 15s(E) 25s(X)
+ <21s> BSK |################    | [082%] 20s(E) 24s(X)
+ <26s> [M 0.062 Gb] Free O_table (0.041)
+ <26s> [M 0.030 Gb] Free WF (0.031)
+ <26s> [M 0.001 Gb] Free O1x O2x (0.029)
+ <26s> [06] BSE solver(s)
+ <26s> [M 0.017 Gb] Alloc WF (0.016)
+ <26s> [WF loader] Wfs (re)loading |                    | [000%] --(E) --(X)
+ <26s> [WF loader] Wfs (re)loading |####################| [100%] --(E) --(X)
+ <26s> Dipole (T): |                    | [000%] --(E) --(X)
+ <27s> Dipole (T): |####################| [100%] --(E) --(X)
+ <27s> [M 0.001 Gb] Free WF (0.016)
+ <27s> [06.01] Diagonalization solver
+ <27s> BSK diagonalize |                    | [000%] --(E) --(X)
+ <27s> BSK diagonalize |####################| [100%] --(E) --(X)
+ <27s> BSK   residuals |                    | [000%] --(E) --(X)
+ <27s> BSK   residuals |####################| [100%] --(E) --(X)
+ <27s> BSK res epsilon |                    | [000%] --(E) --(X)
+ <27s> BSK res epsilon |####################| [100%] --(E) --(X)
+ <27s> [07] Game Over & Game summary

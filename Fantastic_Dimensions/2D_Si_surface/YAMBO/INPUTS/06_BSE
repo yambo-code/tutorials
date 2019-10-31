@@ -1,0 +1,45 @@
+#                                                           
+#  /$$     /$$ /$$$$$$  /$$      /$$ /$$$$$$$   /$$$$$$     
+# |  $$   /$$//$$__  $$| $$$    /$$$| $$__  $$ /$$__  $$    
+#  \  $$ /$$/| $$  \ $$| $$$$  /$$$$| $$  \ $$| $$  \ $$    
+#   \  $$$$/ | $$$$$$$$| $$ $$/$$ $$| $$$$$$$ | $$  | $$    
+#    \  $$/  | $$__  $$| $$  $$$| $$| $$__  $$| $$  | $$    
+#     | $$   | $$  | $$| $$\  $ | $$| $$  \ $$| $$  | $$    
+#     | $$   | $$  | $$| $$ \/  | $$| $$$$$$$/|  $$$$$$/    
+#     |__/   |__/  |__/|__/     |__/|_______/  \______/     
+#                                                           
+#             GPL Version 3.2.4 Revision 941                
+#               http://www.yambo-code.org                   
+#
+optics                       # [R OPT] Optics
+bse                          # [R BSK] Bethe Salpeter Equation.
+bss                          # [R BSS] Bethe Salpeter Equation solver
+NonPDirs= "X"             # [X/BSS] Non periodic chartesian directions (X,Y,Z,XY...)
+% KfnQP_E
+ 0.200000 | 1.000000 | 1.000000 |        # [EXTQP BSK BSS] E parameters  (c/v) eV|adim|adim
+%
+BSEmod="causal"
+BSKmod="SEX"
+BSSmod="h"
+% BSEBands
+ 23 | 26 |                   # [BSK] Bands range
+%
+BSENGBlk= 201          RL    # [BSK] Screened interaction block size
+BSENGexx=  995         RL    # [BSK] Exchange components
+#ALLGexx                     # [BSS] Force the use use all RL vectors for the exchange part
+% BSEEhEny
+-1.000000 |-1.000000 | eV    # [BSK] Electron-hole energy range
+%
+BSSmod= "h"                  # [BSS] Solvers `h/d/i/t`
+% BEnRange
+ 0.000000 | 1.500000 | eV    # [BSS] Energy range
+%
+% BDmRange
+  0.03000 |  0.10000 | eV    # [BSS] Damping range
+%
+BEnSteps= 300                # [BSS] Energy steps
+% BLongDir
+ 0.000000 | 1.000000 | 0.000000 |        # [BSS] [cc] Electric Field
+%
+BSHayTrs=   0.0100           # [BSS] [o/o] Haydock treshold. Strict(>0)/Average(<0)
+#BSHayTer                    # [BSS] Terminate Haydock continuos fraction
