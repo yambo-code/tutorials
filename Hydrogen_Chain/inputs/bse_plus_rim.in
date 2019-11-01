@@ -1,0 +1,47 @@
+#                                                           
+# Y88b    /   e           e    e      888~~\    ,88~-_      
+#  Y88b  /   d8b         d8b  d8b     888   |  d888   \     
+#   Y88b/   /Y88b       d888bdY88b    888 _/  88888    |    
+#    Y8Y   /  Y88b     / Y88Y Y888b   888  \  88888    |    
+#     Y   /____Y88b   /   YY   Y888b  888   |  Y888   /     
+#    /   /      Y88b /          Y888b 888__/    `88_-~      
+#                                                           
+#               Version 3.1.2 Revision 292                  
+#               http://www.yambo-code.org                   
+#
+optics                       # [R OPT] Optics
+bse                          # [R BSK] Bethe Salpeter Equation.
+rim_cut                      # [R RIM CUT] Coulomb interaction
+em1s                         # [R Xs] Static Inverse Dielectric Matrix
+bss                          # [R BSS] Bethe Salpeter Equation solver
+RandQpts= 1000000            # [RIM] Number of random q-points in the BZ
+RandGvec= 1              RL  # [RIM] Coulomb interaction RS components
+% KfnQP_E
+ 3.500000 | 1.000000 | 1.000000 |      # [EXTQP BSK BSS] E parameters (c/v)
+%
+BSresKmod= "xc"              # [BSK] Resonant Kernel mode. (`x`;`c`;`d`)
+BScplKmod= "none"            # [BSK] Coupling Kernel mode. (`x`;`c`;`d`)
+% BSEBands
+ 1 | 2 |                     # [BSK] Bands range
+%
+BSENGBlk= 109            RL  # [BSK] Screened interaction block size
+BSENGexx=  4521          RL  # [BSK] Exchange components
+% BndsRnXs
+  1 | 20 |                   # [Xs] Polarization function bands
+%
+NGsBlkXs= 109            RL  # [Xs] Response block size
+% LongDrXs
+ 1.000000 | 0.000000 | 0.000000 |      # [Xs] [cc] Electric Field
+%
+BSSmod= "d"                  # [BSS] Solvers `h/d/i/t`
+% BEnRange
+  0.00000 | 10.00000 |   eV  # [BSS] Energy range
+%
+% BDmRange
+  0.10000 |  0.10000 |   eV  # [BSS] Damping range
+%
+BEnSteps= 1000                # [BSS] Energy steps
+% BLongDir
+ 1.000000 | 0.000000 | 0.000000 |      # [BSS] [cc] Electric Field
+%
+WRbsWF
