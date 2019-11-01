@@ -1,0 +1,16 @@
+#  __  __   ________   ___ __ __    _______   ______        
+# /_/\/_/\ /_______/\ /__//_//_/\ /_______/\ /_____/\       
+# \ \ \ \ \\::: _  \ \\::\| \| \ \\::: _  \ \\:::_ \ \      
+#  \:\_\ \ \\::(_)  \ \\:.      \ \\::(_)  \/_\:\ \ \ \     
+#   \::::_\/ \:: __  \ \\:.\-/\  \ \\::  _  \ \\:\ \ \ \    
+#     \::\ \  \:.\ \  \ \\. \  \  \ \\::(_)  \ \\:\_\ \ \   
+#      \__\/   \__\/\__\/ \__\/ \__\/ \_______\/ \_____\/   
+#                                                           
+#               Version 3.3.1 Revision 2067                 
+#                http://www.yambo-code.org                  
+#
+bzrim                        # [R] BZ energy RIM analyzer
+BZ_RIM_path= "."             # Path to the SAVE folder with the RIM DB1
+BZ_RIM_Nk=5000                  # BZ Random Integration points
+cooOut= "iku"                # Points coordinates (out) cc/rlu/iku/alat
+#NoWeights                   #  Do not print points weight

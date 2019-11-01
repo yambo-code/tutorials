@@ -1,0 +1,260 @@
+                                                                
+    ooooo   oooo ..     ooo        ooo ooooooooo.    .oooo.     
+     `88.   .8" .88.    `88.       .88 `88"   `Y8b  dP"  `Yb    
+      `88. .8" .8"88.    888b     d"88  88     888 88      88   
+       `88.8" .8" `88.   8 Y88. .P  88  88oooo888" 88      88   
+        `88" .88ooo888.  8  `888"   88  88    `88b 88      88   
+         88 .8"     `88. 8    Y     88  88    .88P `8b    d8"   
+        o88o88o      888o8          88 o88bood8P"   `Ybod8P"    
+                                                                
+                   Version 3.2.4 Revision 774                   
+                    http://www.yambo-code.org                   
+ 
+ YAMBO_PH@anomaly.roma2.infn.it x 001 CPUs * 02/16/2011  14:33
+
+ [01] Files & I/O Directories
+ ============================
+
+ CORE databases in .
+ Additional I/O in .
+ Communications in .
+ Input file     is INPUTS/02_elph
+ Report file    is ./r-02_elph_gw0_el_ph
+ Job string     is 02_elph
+ Log file       is ./l-02_elph_gw0_el_ph
+  
+ [RD./SAVE//ns.db1]------------------------------------------
+  Bands                           : 200
+  K-points                        : 1
+  G-vectors             [RL space]:  331
+  Components       [wavefunctions]:  331
+  Symmetries       [spatial+T-rev]:  48
+  Spinor components               : 1
+  Spin polarizations              : 1
+  Temperature                 [ev]: 0.000000
+  Electrons                       : 8.000000
+  WF G-vectors                    :  331
+  Max atoms/species               : 2
+  No. of atom species             : 1
+ - S/N 000062 ---------------------------- v.03.02.04 r.746 -
+
+ [02] CORE Variables Setup
+ =========================
+
+
+  [02.01] Unit cells
+  ==================
+
+  Unit cell is FCC
+
+  ... containing 2C atoms
+
+  ... with scaling factors [a.u.]: 6.740000  6.740000  6.740000
+
+  Direct Lattice(DL) unit cell [iru]
+  A1 =-0.500000  0.000000  0.500000
+  A2 = 0.000000  0.500000  0.500000
+  A3 =-0.500000  0.500000  0.000000
+
+  DL volume [au]: 76.54550
+
+  Reciprocal Lattice(RL) unit cell [iku]
+  B1 =-1.000000 -1.000000  1.000000
+  B2 = 1.000000  1.000000  1.000000
+  B3 =-1.000000  1.000000 -1.000000
+
+
+  [02.02] Symmetries
+  ==================
+
+  DL (S)ymmetries [cc]
+  [S1] 1.000000  0.000000  0.000000  0.000000  1.000000  0.000000  0.000000  0.000000  1.000000
+  [S2]-1.000000  0.000000  0.000000  0.000000 -1.000000  0.000000  0.000000  0.000000  1.000000
+  [S3]-1.000000  0.000000  0.000000  0.000000  1.000000  0.000000  0.000000  0.000000 -1.000000
+  [S4] 1.000000  0.000000  0.000000  0.000000 -1.000000  0.000000  0.000000  0.000000 -1.000000
+  [S5] 0.000000  0.000000  1.000000  1.000000  0.000000  0.000000  0.000000  1.000000  0.000000
+  [S6] 0.000000  0.000000 -1.000000 -1.000000  0.000000  0.000000  0.000000  1.000000  0.000000
+  [S7] 0.000000  0.000000 -1.000000  1.000000  0.000000  0.000000  0.000000 -1.000000  0.000000
+  [S8] 0.000000  0.000000  1.000000 -1.000000  0.000000  0.000000  0.000000 -1.000000  0.000000
+  [S9] 0.000000  1.000000  0.000000  0.000000  0.000000  1.000000  1.000000  0.000000  0.000000
+  [S10] 0.000000 -1.000000  0.000000  0.000000  0.000000 -1.000000  1.000000  0.000000  0.000000
+  [S11] 0.000000 -1.000000  0.000000  0.000000  0.000000  1.000000 -1.000000  0.000000  0.000000
+  [S12] 0.000000  1.000000  0.000000  0.000000  0.000000 -1.000000 -1.000000  0.000000  0.000000
+  [S13] 0.000000 -1.000000  0.000000 -1.000000  0.000000  0.000000  0.000000  0.000000  1.000000
+  [S14] 0.000000  1.000000  0.000000  1.000000  0.000000  0.000000  0.000000  0.000000  1.000000
+  [S15] 0.000000  1.000000  0.000000 -1.000000  0.000000  0.000000  0.000000  0.000000 -1.000000
+  [S16] 0.000000 -1.000000  0.000000  1.000000  0.000000  0.000000  0.000000  0.000000 -1.000000
+  [S17] 0.000000  0.000000 -1.000000  0.000000  1.000000  0.000000 -1.000000  0.000000  0.000000
+  [S18] 0.000000  0.000000  1.000000  0.000000  1.000000  0.000000  1.000000  0.000000  0.000000
+  [S19] 0.000000  0.000000  1.000000  0.000000 -1.000000  0.000000 -1.000000  0.000000  0.000000
+  [S20] 0.000000  0.000000 -1.000000  0.000000 -1.000000  0.000000  1.000000  0.000000  0.000000
+  [S21] 1.000000  0.000000  0.000000  0.000000  0.000000 -1.000000  0.000000 -1.000000  0.000000
+  [S22] 1.000000  0.000000  0.000000  0.000000  0.000000  1.000000  0.000000  1.000000  0.000000
+  [S23]-1.000000  0.000000  0.000000  0.000000  0.000000  1.000000  0.000000 -1.000000  0.000000
+  [S24]-1.000000  0.000000  0.000000  0.000000  0.000000 -1.000000  0.000000  1.000000  0.000000
+
+  [SYMs] Time-reversal derived K-space symmetries:  25   48
+  [SYMs] Spatial inversion 25 is NOT a symmetry
+  [SYMs] Group table built correctly
+
+  [02.03] RL shells
+  =================
+
+  Shells, format: [S#] G_RL(mHa)
+
+   [S17]:331(0.1912E+5) [S16]:307(0.1868E+5) [S15]:283(0.1738E+5) [S14]:259(0.1564E+5)
+   [S13]:229(0.1521E+5) [S12]:181(0.1390E+5) [S11]:169(0.1173E+5) [S10]:137(0.1043E+5)
+   [S9]:113( 8690.) [S8]:89( 8256.) [S7]:65( 6952.) [S6]:59( 5214.)
+   [S5]:51( 4780.) [S4]:27( 3476.) [S3]:15( 1738.) [S2]:9( 1304.)
+   [S1]:1( 0.000000)
+   ...
+   [S12]:181(0.1390E+5) [S11]:169(0.1173E+5) [S10]:137(0.1043E+5) [S9]:113( 8690.)
+   [S8]:89( 8256.) [S7]:65( 6952.) [S6]:59( 5214.) [S5]:51( 4780.)
+   [S4]:27( 3476.) [S3]:15( 1738.) [S2]:9( 1304.) [S1]:1( 0.000000)
+
+  [02.04] K-grid lattice
+  ======================
+
+  Compatible Grid is 0D
+  K lattice UC volume       [au]: 3.240559
+
+  [02.05] Energies [ev] & Occupations
+  ===================================
+
+  Fermi Level        [ev]: 13.39170
+  Electronic Temp. [ev K]: 0.000     0.000   
+  Bosonic    Temp. [ev K]: 0.000     0.000   
+  States summary         : Full        Metallic    Empty
+                           0001-0004               0005-0200
+  Indirect Gaps      [ev]: 5.651850  5.651850
+  Direct Gaps        [ev]: 5.651850  5.651850
+  X BZ K-points : 1
+
+  Energy unit is electronVolt [eV]
+
+  *X* K [1] : 0.000000  0.000000  0.000000 (iku) * Comp.s 331 * weight  1.000000
+  E -21.47087   0.00000   0.00000   0.00000   5.65185   5.65185   5.65185  13.15804
+  E  18.67636  26.17813  26.17813  27.13854  27.13854  27.13854  33.94695  48.52341
+  E  48.52341  48.52341  66.69535  66.69535  66.69535  70.95985  70.95985  74.25558
+  E  74.25558  74.25558  81.84989  81.84989  81.84989  82.83749  97.94903  97.94903
+  E   97.9490  103.4447  103.4447  103.8735  103.8735  104.4868  104.4868  104.4868
+
+ [03] Transferred momenta grid
+ =============================
+
+
+ IBZ Q-points : 1
+ BZ  Q-points : 1
+
+ Q [00001] : 0.000     0.000     0.000    (iku) * weight  1.000000
+
+ :: Indices: polarization function
+ :: Indices: Self-Energy
+
+ [WR./SAVE//ndb.kindx]---------------------------------------
+  Polarization last K   : 1
+  QP states             : 1  1
+  X grid is uniform     :yes
+  BS scattering         :no
+ - S/N 000062 ---------------------------- v.03.02.04 r.774 -
+
+ [04] Dyson equation: Newton solver
+ ==================================
+
+ [Newton] SC iterations :0
+
+
+ [05] Correlation: Phonon Self-energy
+ ====================================
+
+ [GW/El-Ph] Bands range       :   1  100
+ [GW/El-Ph] G damping     [ev]:  0.10000
+  
+ QP @ K 001 - 001 : b 001 - 010
+  
+ [RD./SAVE//ndb.elph_gkkp]-----------------------------------
+  Brillouin Zone Q/K grids (IBZ/BZ): 1  1  1  1
+  Phonon modes           :  6
+  Q points        [avail]: 10
+  El-PH bands            : 200
+  Using the Q-grid       :no
+ - S/N 000062 ---------------------------- v.03.02.04 r.774 -
+
+ [Ph] Debye energy [ev/ThZ]:  0.16983  41.07935
+
+ [06] QP properties and I/O
+ ==========================
+
+ Legend (energies in eV):
+ - B  : Band       - Eo  : bare energy
+ - E  : QP energy  - Z   : Renormalization factor
+ - So : Sc(Eo)     - S   : Sc(E)
+ - Gm : Width [meV]- Gf  : Width [fs]
+ - dSp: Sc derivative precision
+
+
+ QP [eV] @ K [1] (iku): 0.000     0.000     0.000   
+  B=1 Eo=-21.47 E=-21.42 E-Eo=  0.05 Z=0.98 So=0.5400E-1 Gm=0.6317E-6 Gf=*********
+  B=2 Eo=  0.00 E=  0.16 E-Eo=  0.16 Z=-.04 So=   1.4662 Gm=-246.5613
+  B=3 Eo=  0.00 E=  0.16 E-Eo=  0.16 Z=-.04 So=   1.4662 Gm=-246.5613
+  B=4 Eo=  0.00 E=  0.16 E-Eo=  0.16 Z=-.04 So=   1.4662 Gm=-246.5613
+  B=5 Eo=  5.65 E=  5.40 E-Eo= -0.25 Z=0.09 So=  -0.7963 Gm= 191.9889 Gf=   3.4271
+  B=6 Eo=  5.65 E=  5.40 E-Eo= -0.25 Z=0.09 So=  -0.7963 Gm= 191.9889 Gf=   3.4271
+  B=7 Eo=  5.65 E=  5.40 E-Eo= -0.25 Z=0.09 So=  -0.7963 Gm= 191.9889 Gf=   3.4271
+  B=8 Eo= 13.16 E= 13.27 E-Eo=  0.12 Z=0.50 So=  0.18016 Gm=-23.97393
+  B=9 Eo= 18.68 E= 18.62 E-Eo= -0.05 Z=0.84 So= -0.06461 Gm= -0.18949
+  B=10 Eo= 26.18 E= 26.50 E-Eo=  0.32 Z=0.13 So=   1.0635 Gm= 121.7263 Gf=   5.4053
+
+ [WR./02_elph//ndb.QP]---------------------------------------
+  Lattice constants                : 6.740000  6.740000  6.740000
+  Coulomb cutoff potential         :none
+  Electronic Temperature        [K]: 0.000000
+  Bosonic    Temperature        [K]: 0.000000
+  Green`s function   energies      :Perdew & Zunger (xc)
+                     wavefunctions :Perdew & Zunger (xc)
+  QP tot states          : 10
+  GW SC iterations       :0
+  GW solver              : Newton
+  == Real Axis GW ==
+  [ph] dS/dw steps        : 2
+  [ph] dS/dw step     [ev]:  0.10000
+  [ph] Sc/G damping   [ev]:  0.10000
+  El-Ph correlation      : yes
+  El-Ph Sc. G bands      :   1 100
+  El-Ph phonon branches  :  1  6
+  QP @ K 001 - 001 : b 001 - 010
+ - S/N 000062 ---------------------------- v.03.02.04 r.774 -
+
+ [07] Game Over & Game summary
+ =============================
+
+ YAMBO_PH@anomaly.roma2.infn.it x 001 CPUs * 02/16/2011  14:33 [start]
+                                             02/16/2011  14:33 [end]
+ .-ACKNOWLEDGMENT
+ |
+ | The users of YAMBO have little formal obligations with respect to
+ | the YAMBO group (those specified in the GNU General Public
+ | License, http://www.gnu.org/copyleft/gpl.txt). However, it is
+ | common practice in the scientific literature, to acknowledge the
+ | efforts of people that have made the research possible. In this
+ | spirit, please find below the reference we kindly ask you to use
+ | in order to acknowledge YAMBO:
+ |
+ | Yambo: An ab initio tool for excited state calculations
+ | A. Marini, C. Hogan, M. Gr"uning, D. Varsano
+ | Computer Physics Communications  180, 1392 (2009).
+ |
+  
+ .-Input file : INPUTS/02_elph
+ | gw0                          # [R GW] GoWo Quasiparticle energy levels
+ | el_ph                        # [R] Electron-Phonon Correlation
+ | BoseTemp= 0.000000     eV    # Bosonic Temperature
+ | DysSolver= "n"               # [GW] Dyson Equation solver (`n`,`s`,`g`)
+ | GphBRnge= 100                # [ELPH] G[W] bands range
+ | % ElPhModes
+ |   1 |  6 |                   # [ELPH] Phonon modes included
+ | %
+ | GDamping=  0.10000     eV    # [GW] G[W] damping
+ | dScStep=  0.10000      eV    # [GW] Energy step to evalute Z factors
+ | RandQpts=0                   # [RIM] Number of random q-points in the BZ
+ | #WRgFsq                      # [ELPH] Dump on file gFsq coefficients

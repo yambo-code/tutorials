@@ -1,0 +1,24 @@
+#  __      __   ______   __       __  _______    ______     
+# |  \    /  \ /      \ |  \     /  \|       \  /      \    
+#  \$$\  /  $$|  $$$$$$\| $$\   /  $$| $$$$$$$\|  $$$$$$\   
+#   \$$\/  $$ | $$__| $$| $$$\ /  $$$| $$__/ $$| $$  | $$   
+#    \$$  $$  | $$    $$| $$$$\  $$$$| $$    $$| $$  | $$   
+#     \$$$$   | $$$$$$$$| $$\$$ $$ $$| $$$$$$$\| $$  | $$   
+#     | $$    | $$  | $$| $$ \$$$| $$| $$__/ $$| $$__/ $$   
+#     | $$    | $$  | $$| $$  \$ | $$| $$    $$ \$$    $$   
+#      \$$     \$$   \$$ \$$      \$$ \$$$$$$$   \$$$$$$    
+#                                                           
+#               Version 3.3.1 Revision 2054                 
+#                http://www.yambo-code.org                  
+#
+bzgrids                      # [R] BZ Grid
+Q_grid                       # [R] Q-grid analysis
+cooIn= "iku"                 # Points coordinates (in) cc/rlu/iku/alat
+cooOut= "alat"                # Points coordinates (out) cc/rlu/iku/alat
+% Qpts
+ 0.00     | 0.00     | 0.00     |        # Q-point grid
+%
+NoWeights                   #  Do not print points weight
+#ForceUserPts                #  Do not check the correcteness of the user points
+ListPts                     #  List the internal q/k points also in the parser format
+#ExpandPts                   #  Expand the internal q/k points in the BZ

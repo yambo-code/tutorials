@@ -1,0 +1,19 @@
+#                                                           
+# :::   :::   :::     ::::    ::::  :::::::::   ::::::::    
+# :+:   :+: :+: :+:   +:+:+: :+:+:+ :+:    :+: :+:    :+:   
+#  +:+ +:+ +:+   +:+  +:+ +:+:+ +:+ +:+    +:+ +:+    +:+   
+#   +#++: +#++:++#++: +#+  +:+  +#+ +#++:++#+  +#+    +:+   
+#    +#+  +#+     +#+ +#+       +#+ +#+    +#+ +#+    +#+   
+#    #+#  #+#     #+# #+#       #+# #+#    #+# #+#    #+#   
+#    ###  ###     ### ###       ### #########   ########    
+#                                                           
+#               Version 3.3.1 Revision 2054                 
+#                http://www.yambo-code.org                  
+#
+eliashberg                   # [R] Eliashberg
+electrons                    # [R] Electrons (and holes)
+PhBroad=   0.00100      eV    # Phonon broadening (Eliashberg & DOS)
+PhStps= 500                  # Energy steps
+%QPkrange                    #  generalized Kpoint/Band indices
+  1|  1|  2| 7|
+%

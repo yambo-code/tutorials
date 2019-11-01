@@ -1,0 +1,24 @@
+#                                                           
+# ooooo   oooo ..     ooo        ooo ooooooooo.    .oooo.   
+#  `88.   .8" .88.    `88.       .88 `88"   `Y8b  dP"  `Yb  
+#   `88. .8" .8"88.    888b     d"88  88     888 88      88 
+#    `88.8" .8" `88.   8 Y88. .P  88  88oooo888" 88      88 
+#     `88" .88ooo888.  8  `888"   88  88    `88b 88      88 
+#      88 .8"     `88. 8    Y     88  88    .88P `8b    d8" 
+#     o88o88o      888o8          88 o88bood8P"   `Ybod8P"  
+#                                                           
+#                Version 3.3.1 Revision 2051                
+#                 http://www.yambo-code.org                 
+#
+setup                        # [R INI] Initialization
+StdoHash= 20                 # [IO] Live-timing Hashes
+Nelectro= 8.000000           # Electrons number
+ElecTemp= 0.000000     eV    # Electronic Temperature
+BoseTemp=-1.000000     eV    # Bosonic Temperature
+OccTresh=0.1000E-4           # Occupation treshold (metallic bands)
+MaxGvecs= 2085         RL    # [INI] Max number of G-vectors planned to use
+% IkSigLim
+  1 |  8 |                   # [KPT] QP K-points indices range
+%
+IkXLim=  8                   # [KPT] X grid last k-point index
+MinusQ                      # [KPT] Use -{q} grid

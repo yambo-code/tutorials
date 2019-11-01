@@ -1,0 +1,31 @@
+#                                                           
+#  /$$     /$$ /$$$$$$  /$$      /$$ /$$$$$$$   /$$$$$$     
+# |  $$   /$$//$$__  $$| $$$    /$$$| $$__  $$ /$$__  $$    
+#  \  $$ /$$/| $$  \ $$| $$$$  /$$$$| $$  \ $$| $$  \ $$    
+#   \  $$$$/ | $$$$$$$$| $$ $$/$$ $$| $$$$$$$ | $$  | $$    
+#    \  $$/  | $$__  $$| $$  $$$| $$| $$__  $$| $$  | $$    
+#     | $$   | $$  | $$| $$\  $ | $$| $$  \ $$| $$  | $$    
+#     | $$   | $$  | $$| $$ \/  | $$| $$$$$$$/|  $$$$$$/    
+#     |__/   |__/  |__/|__/     |__/|_______/  \______/     
+#                                                           
+#              Version 3.3.1 Revision 2051                  
+#               http://www.yambo-code.org                   
+#
+gw0                          # [R GW] GoWo Quasiparticle energy levels
+el_ph                        # [R] Electron-Phonon Correlation
+DysSolver= "n"               # [GW] Dyson Equation solver (`n`,`s`,`g`)
+GphBRnge=  50                # [ELPH] G[W] bands range
+BoseTemp= 200 K              # Bosonic Temperature
+% ElPhModes
+  1 |  6 |                   # [ELPH] Phonon modes included
+%
+GDamping=  0.10000     eV    # [GW] G[W] damping
+dScStep=  0.10000      eV    # [GW] Energy step to evalute Z factors
+RandQpts=0                   # [RIM] Number of random q-points in the BZ
+OnMassShell                  # [F GW] On mass shell approximation
+%QPkrange                    # [GW] QP generalized Kpoint/Band indices
+  1|  8|  1|  8|
+%
+%QPerange                    # [GW] QP generalized Kpoint/Energy indices
+  1|  1| 0.0|-1.0|
+%

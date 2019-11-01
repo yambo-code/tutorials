@@ -1,0 +1,47 @@
+#  ____  ____     _       ____    ____  ______      ___     
+# |_  _||_  _|   / \     |_   \  /   _||_   _ \   ."   `.   
+#   \ \  / /    / _ \      |   \/   |    | |_) | /  .-.  \  
+#    \ \/ /    / ___ \     | |\  /| |    |  __". | |   | |  
+#    _|  |_  _/ /   \ \_  _| |_\/_| |_  _| |__) |\  `-"  /  
+#   |______||____| |____||_____||_____||_______/  `.___."   
+#                                                           
+#               Version 3.3.1 Revision 2054                 
+#                http://www.yambo-code.org                  
+#
+# GW [Newton Solver]
+#
+#  == Real Axis GW ==
+#  [ph] dS/dw steps        : 2
+#  [ph] dS/dw step     [ev]:  0.10000
+#  [ph] Sc/G damping   [ev]:  0.10000
+#  El-Ph correlation      : yes
+#  El-Ph Sc. G bands      :   1  50
+#  El-Ph phonon branches  :  1  6
+#  QP @ K 001 - 001 : b 002 - 004
+#  QP @ K 007 - 007 : b 005 - 006
+#
+#  K-point    Band       Eo         Eqp        E-Eo       Z          Width[meV]
+#
+   1.00000    2.00000    0.00000    0.05737    0.05737    1.00000   14.92794
+   1.00000    3.00000    0.00000    0.05737    0.05737    1.00000   14.92794
+   1.00000    4.00000    0.00000    0.05737    0.05737    1.00000   14.92794
+   7.00000    5.00000    0.60780    0.55592   -0.05188    1.00000   13.92514
+   7.00000    6.00000    0.60781    0.55593   -0.05188    1.00000   13.92514
+# 
+# YAMBO_PH@anomaly x 001 CPUs * 03/26/2013  14:29 [start]
+#                               03/26/2013  14:29 [end]
+#
+# .-Input file : INPUTS/06_OMS_room_temperature
+# | gw0                          # [R GW] GoWo Quasiparticle energy levels
+# | el_ph                        # [R] Electron-Phonon Correlation
+# | BoseTemp= 300.0000     Kn    # Bosonic Temperature
+# | DysSolver= "n"               # [GW] Dyson Equation solver (`n`,`s`,`g`)
+# | GphBRnge= 20                 # [ELPH] G[W] bands range
+# | % ElPhModes
+# |   1 |  6 |                   # [ELPH] Phonon modes included
+# | %
+# | GDamping=  0.10000     eV    # [GW] G[W] damping
+# | dScStep=  0.10000      eV    # [GW] Energy step to evalute Z factors
+# | RandQpts=0                   # [RIM] Number of random q-points in the BZ
+# | WRgFsq                       # [ELPH] Dump on file gFsq coefficients
+# | OnMassShell                  # [F GW] On mass shell approximation

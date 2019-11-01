@@ -1,0 +1,50 @@
+#                                                           
+#  /$$     /$$ /$$$$$$  /$$      /$$ /$$$$$$$   /$$$$$$     
+# |  $$   /$$//$$__  $$| $$$    /$$$| $$__  $$ /$$__  $$    
+#  \  $$ /$$/| $$  \ $$| $$$$  /$$$$| $$  \ $$| $$  \ $$    
+#   \  $$$$/ | $$$$$$$$| $$ $$/$$ $$| $$$$$$$ | $$  | $$    
+#    \  $$/  | $$__  $$| $$  $$$| $$| $$__  $$| $$  | $$    
+#     | $$   | $$  | $$| $$\  $ | $$| $$  \ $$| $$  | $$    
+#     | $$   | $$  | $$| $$ \/  | $$| $$$$$$$/|  $$$$$$/    
+#     |__/   |__/  |__/|__/     |__/|_______/  \______/     
+#                                                           
+#              Version 3.3.1 Revision 2071                  
+#               http://www.yambo-code.org                   
+#
+# GW [Newton Solver]
+#
+#  == Real Axis GW ==
+#  [ph] dS/dw steps        : 2
+#  [ph] dS/dw step     [ev]:  0.10000
+#  [ph] Sc/G damping   [ev]:  0.10000
+#  El-Ph correlation      : yes
+#  El-Ph Sc. G bands      :  1 20
+#  El-Ph phonon branches  :  1  6
+#  QP @ K 001 - 001 : b 002 - 007
+#
+#  K-point    Band       Eo         Eqp        E-Eo       Z          Width[meV]
+#
+  1.000      2.000      0.000     0.1449     0.1449      1.000     0.1273E-4
+  1.000      3.000      0.000     0.1449     0.1449      1.000     0.1273E-4
+  1.000      4.000      0.000     0.1449     0.1449      1.000     0.1273E-4
+   1.00000    5.00000    5.65266    5.28799   -0.36467    1.00000  -64.61224
+   1.00000    6.00000    5.65266    5.28799   -0.36467    1.00000  -64.61224
+   1.00000    7.00000    5.65266    5.28799   -0.36467    1.00000  -64.61224
+# 
+# YAMBO_PH@anomaly x 001 CPUs * 03/27/2013  09:53 [start]
+#                               03/27/2013  09:53 [end]
+#
+# .-Input file : INPUTS/03_OMS_RIM
+# | gw0                          # [R GW] GoWo Quasiparticle energy levels
+# | el_ph                        # [R] Electron-Phonon Correlation
+# | BoseTemp= 0.000000     eV    # Bosonic Temperature
+# | DysSolver= "n"               # [GW] Dyson Equation solver (`n`,`s`,`g`)
+# | GphBRnge= 20                 # [ELPH] G[W] bands range
+# | % ElPhModes
+# |   1 |  6 |                   # [ELPH] Phonon modes included
+# | %
+# | GDamping=  0.10000     eV    # [GW] G[W] damping
+# | dScStep=  0.10000      eV    # [GW] Energy step to evalute Z factors
+# | RandQpts= 100000             # [RIM] Number of random q-points in the BZ
+# | WRgFsq                       # [ELPH] Dump on file gFsq coefficients
+# | OnMassShell                  # [F GW] On mass shell approximation

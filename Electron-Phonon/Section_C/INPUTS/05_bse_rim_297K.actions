@@ -1,0 +1,3 @@
+mkdir 05_bse_rim_297K
+cd 05_bse_rim_297K/ ; ln -s ../02_bse/ndb.BS_Q1 .; cd ..
+cd 05_bse_rim_297K/ ; ln -s ../RIM/ndb.E_RIM . ; cd ..

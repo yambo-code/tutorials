@@ -1,0 +1,29 @@
+#                                                           
+# ooooo   oooo ..     ooo        ooo ooooooooo.    .oooo.   
+#  `88.   .8" .88.    `88.       .88 `88"   `Y8b  dP"  `Yb  
+#   `88. .8" .8"88.    888b     d"88  88     888 88      88 
+#    `88.8" .8" `88.   8 Y88. .P  88  88oooo888" 88      88 
+#     `88" .88ooo888.  8  `888"   88  88    `88b 88      88 
+#      88 .8"     `88. 8    Y     88  88    .88P `8b    d8" 
+#     o88o88o      888o8          88 o88bood8P"   `Ybod8P"  
+#                                                           
+#              GPL Version 3.2.3 Revision 682               
+#                 http://www.yambo-code.org                 
+#
+gw0                          # [R GW] GoWo Quasiparticle energy levels
+el_ph                        # [R] Electron-Phonon Correlation
+DysSolver= "n"               # [GW] Dyson Equation solver (`n`,`s`,`g`)
+GphBRnge= 100                # [ELPH] G[W] bands range
+% ElPhModes
+  1 |  6 |                   # [ELPH] Phonon modes included
+%
+GDamping=  0.10000     eV    # [GW] G[W] damping
+dScStep=  0.10000      eV    # [GW] Energy step to evalute Z factors
+#RandQpts= 100000             # [RIM] Number of random q-points in the BZ
+#WRgFsq                      # [ELPH] Dump on file gFsq coefficients
+%QPkrange                    # [GW] QP generalized Kpoint/Band indices
+  1|  1|  1| 10|
+%
+%QPerange                    # [GW] QP generalized Kpoint/Energy indices
+  1|  1| 0.0|-1.0|
+%
