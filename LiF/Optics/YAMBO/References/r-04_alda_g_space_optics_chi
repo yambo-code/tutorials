@@ -1,11 +1,11 @@
                                                                 
-     __  __   ________   ___ __ __    _______   ______          
-    /_/\/_/\ /_______/\ /__//_//_/\ /_______/\ /_____/\         
-    \ \ \ \ \\::: _  \ \\::\| \| \ \\::: _  \ \\:::_ \ \        
-     \:\_\ \ \\::(_)  \ \\:.      \ \\::(_)  \/_\:\ \ \ \       
-      \::::_\/ \:: __  \ \\:.\-/\  \ \\::  _  \ \\:\ \ \ \      
-        \::\ \  \:.\ \  \ \\. \  \  \ \\::(_)  \ \\:\_\ \ \     
-         \__\/   \__\/\__\/ \__\/ \__\/ \_______\/ \_____\/     
+      __   __     _        __  __       ____      U  ___  u     
+      \ \ / / U  /"\  U u |" \/ "| u U | __") u    \/"_ \/      
+       \ V /   \/ _ \/   \| |\/| |/   \|  _ \/     | | | |      
+      U_|"|_u  / ___ \    | |  | |     | |_) | .-,_| |_| |      
+        |_|   /_/   \_\   |_|  |_|     |____/   \_)-\___/       
+    .-,//|(_   \\    >>  <<,-,,-.     _|| \\_        \\         
+     \_) (__) (__)  (__)  (./  \.)   (__) (__)      (__)        
                                                                 
                                                                 
     GPL Version 4.4.0 Revision 148. (Based on r.16920 h.961a8d9a
@@ -26,11 +26,11 @@
  CORE databases in   .
  Additional I/O in   .
  Communications in   References
- Input file     is   References/01_init_01_init.in
- Report file    is   References/r-01_init_setup
+ Input file     is   References/04_alda_g_space_04_alda_g_space.in
+ Report file    is   References/r-04_alda_g_space_optics_chi
  Precision      is   SINGLE
 
- Job string(s)-dir(s) (main): 01_init
+ Job string(s)-dir(s) (main): 04_alda_g_space
   
  [RD./SAVE//ns.db1]------------------------------------------
   Bands                           :  50
@@ -312,33 +312,83 @@
  Q [00018] : 0.000000 -0.611722  0.611722 (cc ) * weight   0.04688
  Q [00019] : 0.000000 -0.815630  0.000000 (cc ) * weight   0.01172
 
- [04] Timing Overview
+ [04] Optics
+ ===========
+
+ [RD./SAVE//ns.kb_pp_pwscf]----------------------------------
+  Fragmentation                    :yes
+ - S/N 002231 -------------------------- v.04.04.00 r.00148 -
+ [WF-Oscillators/G space] Performing Wave-Functions I/O from ./SAVE
+
+ [WF-Oscillators/G space loader] Normalization (few states)  min/max  :0.13051E-8  1.0000   
+
+ [WR./04_alda_g_space//ndb.dip_iR_and_P]---------------------
+  Brillouin Zone Q/K grids (IBZ/BZ):  19  256   10  256
+  RL vectors                   (WF): 1893
+  Fragmentation                    :yes
+  Electronic Temperature        [K]: 0.0000000
+  Bosonic    Temperature        [K]: 0.0000000
+  X band range           :  1  10
+  X band range limits    :  4   5
+  X e/h energy range [ev]:-1.0000000 -1.0000000
+  RL vectors in the sum  : 1893
+  [r,Vnl] included       :yes
+  Using shifted grids    :no
+  Using covariant dipoles:no
+  Using G-space approach :yes
+  Using R-space approach :no
+  Direct v evaluation    :no
+  Field momentum norm    :0.10000E-4
+  Wavefunctions          :Slater exchange(X)+Perdew & Zunger(C)
+ - S/N 002231 -------------------------- v.04.04.00 r.00148 -
+ [WF-X] Performing Wave-Functions I/O from ./SAVE
+
+ [FFT-X] Mesh size: 18  18  18
+
+ [X-CG] R(p) Tot o/o(of R)  :   221   6144    100
+
+ [05] Timing Overview
  ====================
 
  Routines: global (Only MASTER cpu here)
-                                    io_WF :     0.00s CPU
-                                  io_GROT :     0.00s CPU (         2 calls,   4.568 millisec avg)
-                                 io_QINDX :     0.00s CPU (         2 calls,   2.061 millisec avg)
+                                    io_WF :     0.00s CPU (        25 calls,   0.588 millisec avg)
+                                  io_GROT :     0.00s CPU (         2 calls,   3.080 millisec avg)
+                                 io_QINDX :     0.00s CPU (         2 calls,   1.492 millisec avg)
                                io_COL_CUT :     0.00s CPU
                            io_Double_Grid :     0.00s CPU
                                     io_HF :     0.00s CPU
-                               io_DIPOLES :     0.00s CPU
-                              io_KB_pwscf :     0.00s CPU
+                               io_DIPOLES :     0.00s CPU (        13 calls,   1.805 millisec avg)
+                              io_KB_pwscf :     0.00s CPU (        12 calls,   0.795 millisec avg)
                              io_KB_abinit :     0.00s CPU
-                                     io_X :     0.00s CPU (         4 calls,   0.023 millisec avg)
+                                     io_X :     0.00s CPU (         4 calls,   0.017 millisec avg)
                                     io_BS :     0.00s CPU
+                  IO_and_Messaging_switch :     0.00s CPU (         4 calls,   0.003 millisec avg)
+                                  Dipoles :     0.00s CPU
+                        DIPOLE_transverse :     0.00s CPU
+                             PP_uspp_init :     0.00s CPU (         2 calls,   0.016 millisec avg)
+                              WF_load_FFT :     0.00s CPU (         2 calls,  13.417 millisec avg)
+                              io_fragment :     0.00s CPU (        40 calls,   0.411 millisec avg)
+                                FFT_setup :     0.00s CPU
+                           Xo (procedure) :     0.00s CPU
+                               Xo (REDUX) :     0.00s CPU
+                            X (procedure) :     0.00s CPU
+     MATRIX transfer (X_G_q0_X_redux_1_1) :     0.00s CPU (       300 calls,   0.004 millisec avg)
+                           LINEAR ALGEBRA :     0.00s CPU (       300 calls,   0.233 millisec avg)
+                        SERIAL_lin_system :     0.00s CPU (       300 calls,   0.233 millisec avg)
+                                X (REDUX) :     0.00s CPU
+     MATRIX transfer (X_G_q0_X_redux_2_1) :     0.00s CPU (       300 calls,   0.004 millisec avg)
 
- [05] Memory Overview
+ [06] Memory Overview
  ====================
 
  Memory Usage: global (Only MASTER cpu here). [O] stands for group 'O'
  Memory treshold are: 10.00000Mb (basic treshold)  100.0000Mb (SAVEs treshold)
 
-         TOTAL not deallocated :  3.998000Mb
+         TOTAL not deallocated :  4.098000Mb
 
-         Max memory used   :  3.998000Mb
+         Max memory used   :  22.85800Mb
 
- [06] Game Over & Game summary
+ [07] Game Over & Game summary
  =============================
 
  11/04/2019 at 16:19 YAMBO @ dufour [start]
@@ -360,7 +410,28 @@
  | Computer Physics Communications  180, 1392 (2009).
  |
   
- .-Input file : References/01_init_01_init.in
- | setup                          # [R INI] Initialization
+ .-Input file : References/04_alda_g_space_04_alda_g_space.in
+ | optics                         # [R OPT] Optics
+ | chi                            # [R CHI] Dyson equation for Chi.
  | BoseTemp= 0.000000     eV      # Bosonic Temperature
- | MaxGvecs=  821         RL      # [INI] Max number of G-vectors planned to use
+ | FFTGvecs= 1893         RL      # [FFT] Plane-waves
+ | X_Threads= 1                   # [OPENMP/X] Number of threads for response functions
+ | DIP_Threads= 1                 # [OPENMP/X] Number of threads for dipoles
+ | Chimod= ""                     # [X] IP/Hartree/ALDA/LRC/PF/BSfxc
+ | NGsBlkXd=  51          RL      # [Xd] Response block size
+ | % QpntsRXd
+ |  1 | 1 |                       # [Xd] Transferred momenta
+ | %
+ | % BndsRnXd
+ |   1 | 10 |                     # [Xd] Polarization function bands
+ | %
+ | % EnRngeXd
+ |   7.50000 | 25.00000 | eV      # [Xd] Energy range
+ | %
+ | % DmRngeXd
+ |   0.10000 |  0.30000 | eV      # [Xd] Damping range
+ | %
+ | ETStpsXd= 300                  # [Xd] Total Energy steps
+ | % LongDrXd
+ | 0.1000E-4 | 0.000    | 0.000    |        # [Xd] [cc] Electric Field
+ | %
