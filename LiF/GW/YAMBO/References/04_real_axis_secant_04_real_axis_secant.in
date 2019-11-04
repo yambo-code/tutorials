@@ -1,0 +1,50 @@
+#                                                           
+#  **    **    **     ****     ****  ******     *******     
+# //**  **    ****   /**/**   **/** /*////**   **/////**    
+#  //****    **//**  /**//** ** /** /*   /**  **     //**   
+#   //**    **  //** /** //***  /** /******  /**      /**   
+#    /**   **********/**  //*   /** /*//// **/**      /**   
+#    /**  /**//////**/**   /    /** /*    /**//**     **    
+#    /**  /**     /**/**        /** /*******  //*******     
+#    //   //      // //         //  ///////    ///////      
+#                                                           
+#               Version 3.3.1 Revision 2093                 
+#                http://www.yambo-code.org                  
+#
+em1d                         # [R Xd] Dynamical Inverse Dielectric Matrix
+gw0                          # [R GW] GoWo Quasiparticle energy levels
+HF_and_locXC                 # [R XX] Hartree-Fock Self-energy and Vxc
+FFTGvecs= 1139         RL    # [FFT] Plane-waves
+EXXRLvcs= 1139         RL    # [XX] Exchange RL components
+Chimod= "Hartree"            # [X] IP/Hartree/ALDA/LRC/BSfxc
+NGsBlkXd= 15           RL    # [Xd] Response block size
+% QpntsRXd
+  1 | 19 |                   # [Xd] Transferred momenta
+%
+% BndsRnXd
+  1 | 20 |                   # [Xd] Polarization function bands
+%
+% EnRngeXd
+  0.00000 | 20.00000 | eV    # [Xd] Energy range
+%
+% DmRngeXd
+  0.10000 |  0.10000 | eV    # [Xd] Damping range
+%
+ETStpsXd= 100                # [Xd] Total Energy steps
+% LongDrXd
+ 1.000000 | 0.000000 | 0.000000 |        # [Xd] [cc] Electric Field
+%
+% GbndRnge
+   1 |  50 |                 # [GW] G[W] bands range
+%
+GDamping=  0.10000     eV    # [GW] G[W] damping
+dScStep=  0.10000      eV    # [GW] Energy step to evalute Z factors
+GwEnComp=-27.21138     eV    # [GW] If <= 0 use 0-order EET; > 0 the Bruneval-Gonze terminator
+DysSolver= "s"               # [GW] Dyson Equation solver (`n`,`s`,`g`)
+ExtendOut                    # [F GW] Print all variables in the output file
+%QPkrange                    # [GW] QP generalized Kpoint/Band indices
+  1| 1|  3|  6|
+%
+%QPerange                    # [GW] QP generalized Kpoint/Energy indices
+  1| 10| 0.0|-1.0|
+%
