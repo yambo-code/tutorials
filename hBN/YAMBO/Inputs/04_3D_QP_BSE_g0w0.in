@@ -1,0 +1,40 @@
+#                                                           
+# ooooo   oooo ..     ooo        ooo ooooooooo.    .oooo.   
+#  `88.   .8" .88.    `88.       .88 `88"   `Y8b  dP"  `Yb  
+#   `88. .8" .8"88.    888b     d"88  88     888 88      88 
+#    `88.8" .8" `88.   8 Y88. .P  88  88oooo888" 88      88 
+#     `88" .88ooo888.  8  `888"   88  88    `88b 88      88 
+#      88 .8"     `88. 8    Y     88  88    .88P `8b    d8" 
+#     o88o88o      888o8          88 o88bood8P"   `Ybod8P"  
+#                                                           
+#                                                           
+#               GPL Version 4.1.2 Revision 76               
+#                     MPI+OpenMP Build                      
+#                 http://www.yambo-code.org                 
+#
+ppa                          # [R Xp] Plasmon Pole Approximation
+gw0                          # [R GW] GoWo Quasiparticle energy levels
+HF_and_locXC                 # [R XX] Hartree-Fock Self-energy and Vxc
+em1d                         # [R Xd] Dynamical Inverse Dielectric Matrix
+X_Threads=  4                # [OPENMP/X] Number of threads for response functions
+DIP_Threads=  4              # [OPENMP/X] Number of threads for dipoles
+SE_Threads=  4               # [OPENMP/GW] Number of threads for self-energy
+EXXRLvcs=  30 Ry    # [XX] Exchange RL components
+Chimod= "Hartree"                   # [X] IP/Hartree/ALDA/LRC/BSfxc
+% BndsRnXp
+   1 | 40 |                 # [Xp] Polarization function bands
+%
+NGsBlkXp= 4 Ry    # [Xp] Response block size
+% LongDrXp
+ 1.000000 | 1.000000 | 1.000000 |        # [Xp] [cc] Electric Field
+%
+PPAPntXp= 27.21138     eV    # [Xp] PPA imaginary energy
+% GbndRnge
+   1 | 40 |                 # [GW] G[W] bands range
+%
+GDamping=  0.10000     eV    # [GW] G[W] damping
+dScStep=  0.10000      eV    # [GW] Energy step to evaluate Z factors
+DysSolver= "n"               # [GW] Dyson Equation solver ("n","s","g")
+%QPkrange                    # [GW] QP generalized Kpoint/Band indices
+  1| 14|  6|10|
+%

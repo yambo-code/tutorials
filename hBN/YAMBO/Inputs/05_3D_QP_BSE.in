@@ -1,0 +1,53 @@
+#                                                           
+# ooooo   oooo ..     ooo        ooo ooooooooo.    .oooo.   
+#  `88.   .8" .88.    `88.       .88 `88"   `Y8b  dP"  `Yb  
+#   `88. .8" .8"88.    888b     d"88  88     888 88      88 
+#    `88.8" .8" `88.   8 Y88. .P  88  88oooo888" 88      88 
+#     `88" .88ooo888.  8  `888"   88  88    `88b 88      88 
+#      88 .8"     `88. 8    Y     88  88    .88P `8b    d8" 
+#     o88o88o      888o8          88 o88bood8P"   `Ybod8P"  
+#                                                           
+#                                                           
+#               GPL Version 4.1.2 Revision 76               
+#                     MPI+OpenMP Build                      
+#                 http://www.yambo-code.org                 
+#
+optics                       # [R OPT] Optics
+bss                          # [R BSS] Bethe Salpeter Equation solver
+bse                          # [R BSE] Bethe Salpeter Equation.
+bsk                          # [R BSK] Bethe Salpeter Equation kernel
+X_Threads=  4                # [OPENMP/X] Number of threads for response functions
+DIP_Threads=  4              # [OPENMP/X] Number of threads for dipoles
+BSEmod= "retarded"           # [BSE] resonant/retarded/coupling
+BSKmod= "SEX"                # [BSE] IP/Hartree/HF/ALDA/SEX
+BSSmod= "d"                  # [BSS] (h)aydock/(d)iagonalization/(i)nversion/(t)ddft`
+BSENGexx=30 Ry      # [BSK] Exchange components
+BSENGBlk= 2 Ry    # [BSK] Screened interaction block size
+#WehCpl                      # [BSK] eh interaction included also in coupling
+KfnQPdb= "E < 3D_QP_BSE/ndb.QP"              # [EXTQP BSK BSS] Database
+KfnQP_N= 1                   # [EXTQP BSK BSS] Interpolation neighbours
+% KfnQP_E
+ 0.000000 | 1.000000 | 1.000000 |        # [EXTQP BSK BSS] E parameters  (c/v) eV|adim|adim
+%
+KfnQP_Z= ( 1.000000 , 0.000000 )       # [EXTQP BSK BSS] Z factor  (c/v)
+KfnQP_Wv_E= 0.000000   eV    # [EXTQP BSK BSS] W Energy reference  (valence)
+% KfnQP_Wv
+ 0.00     | 0.00     | 0.00     |        # [EXTQP BSK BSS] W parameters  (valence) eV| eV|eV^-1
+%
+KfnQP_Wc_E= 0.000000   eV    # [EXTQP BSK BSS] W Energy reference  (conduction)
+% KfnQP_Wc
+ 0.00     | 0.00     | 0.00     |        # [EXTQP BSK BSS] W parameters  (conduction) eV| eV|eV^-1
+%
+% BEnRange
+  2.00000 | 8.00000 | eV    # [BSS] Energy range
+%
+% BDmRange
+  0.10000 |  0.10000 | eV    # [BSS] Damping range
+%
+BEnSteps= 200                # [BSS] Energy steps
+% BLongDir
+ 1.000000 | 1.000000 | 0.000000 |        # [BSS] [cc] Electric Field
+%
+% BSEBands
+   6 | 10 |                 # [BSK] Bands range
+%
