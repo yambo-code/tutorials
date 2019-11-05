@@ -21,15 +21,15 @@ Chimod= "Hartree"            # [X] IP/Hartree/ALDA/LRC/BSfxc
   1 |  8 |                   # [Xp] Transferred momenta
 %
 % BndsRnXp
-  1 | 30 |                   # [Xp] Polarization function bands
+  1 | 10 |                   # [Xp] Polarization function bands
 %
-NGsBlkXp=  7           Ry    # [Xp] Response block size
+NGsBlkXp= 1  RL              # [Xp] Response block size
 % LongDrXp
  1.000000 | 0.000000 | 0.000000 |        # [Xp] [cc] Electric Field
 %
 PPAPntXp= 27.21138     eV    # [Xp] PPA imaginary energy
 % GbndRnge
-  1 | 30 |                   # [GW] G[W] bands range
+  1 |  10 |                   # [GW] G[W] bands range
 %
 GDamping= 0.100000     eV    # [GW] G[W] damping
 dScStep= 0.100000      eV    # [GW] Energy step to evalute Z factors

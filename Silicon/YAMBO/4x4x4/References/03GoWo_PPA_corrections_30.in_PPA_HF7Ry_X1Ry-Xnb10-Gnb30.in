@@ -1,0 +1,42 @@
+#                                                           
+#  **    **    **     ****     ****  ******     *******     
+# //**  **    ****   /**/**   **/** /*////**   **/////**    
+#  //****    **//**  /**//** ** /** /*   /**  **     //**   
+#   //**    **  //** /** //***  /** /******  /**      /**   
+#    /**   **********/**  //*   /** /*//// **/**      /**   
+#    /**  /**//////**/**   /    /** /*    /**//**     **    
+#    /**  /**     /**/**        /** /*******  //*******     
+#    //   //      // //         //  ///////    ///////      
+#                                                           
+#               Version 3.3.1 Revision 2093                 
+#                http://www.yambo-code.org                  
+#
+gw0                          # [R GW] GoWo Quasiparticle energy levels
+ppa                          # [R Xp] Plasmon Pole Approximation
+em1d                         # [R Xd] Dynamical Inverse Dielectric Matrix
+HF_and_locXC                 # [R XX] Hartree-Fock Self-energy and Vxc
+EXXRLvcs=  7           Ry    # [XX] Exchange RL components
+Chimod= "Hartree"            # [X] IP/Hartree/ALDA/LRC/BSfxc
+% QpntsRXp
+  1 |  8 |                   # [Xp] Transferred momenta
+%
+% BndsRnXp
+  1 | 10 |                   # [Xp] Polarization function bands
+%
+NGsBlkXp=  1 RL              # [Xp] Response block size
+% LongDrXp
+ 1.000000 | 0.000000 | 0.000000 |        # [Xp] [cc] Electric Field
+%
+PPAPntXp= 27.21138     eV    # [Xp] PPA imaginary energy
+% GbndRnge
+  1 |  30 |                   # [GW] G[W] bands range
+%
+GDamping= 0.100000     eV    # [GW] G[W] damping
+dScStep= 0.100000      eV    # [GW] Energy step to evalute Z factors
+DysSolver= "n"               # [GW] Dyson Equation solver (`n`,`s`,`g`)
+%QPkrange                    # [GW] QP generalized Kpoint/Band indices
+  1|  8|  1| 10|
+%
+%QPerange                    # [GW] QP generalized Kpoint/Energy indices
+  1|  8| 0.0|-1.0|
+%

@@ -1,38 +1,36 @@
                                                                 
-     **    **    **     ****     ****  ******     *******       
-    //**  **    ****   /**/**   **/** /*////**   **/////**      
-     //****    **//**  /**//** ** /** /*   /**  **     //**     
-      //**    **  //** /** //***  /** /******  /**      /**     
-       /**   **********/**  //*   /** /*//// **/**      /**     
-       /**  /**//////**/**   /    /** /*    /**//**     **      
-       /**  /**     /**/**        /** /*******  //*******       
-       //   //      // //         //  ///////    ///////        
+     __  __   ________   ___ __ __    _______   ______          
+    /_/\/_/\ /_______/\ /__//_//_/\ /_______/\ /_____/\         
+    \ \ \ \ \\::: _  \ \\::\| \| \ \\::: _  \ \\:::_ \ \        
+     \:\_\ \ \\::(_)  \ \\:.      \ \\::(_)  \/_\:\ \ \ \       
+      \::::_\/ \:: __  \ \\:.\-/\  \ \\::  _  \ \\:\ \ \ \      
+        \::\ \  \:.\ \  \ \\. \  \  \ \\::(_)  \ \\:\_\ \ \     
+         \__\/   \__\/\__\/ \__\/ \__\/ \_______\/ \_____\/     
                                                                 
-                GPL Version 4.0.0 Revision 4325                 
-                       MPI+OpenMP Build                         
+                                                                
+    GPL Version 4.4.0 Revision 148. (Based on r.16920 h.961a8d9a
+                     MPI+SLK+OpenMP Build                       
                    http://www.yambo-code.org                    
  
- 04/08/2015 at 18:38 YAMBO @ anomaly
-
- CpuTiming [Min/Max/Average]: **d-16h-38m-10s/**d-16h-38m-10s/**d-16h-38m-10s
+ 11/04/2019 at 17:20 YAMBO @ dufour
 
  [01] CPU structure, Files & I/O Directories
  ===========================================
 
- * CPU-Threads     :1(CPU)-8(threads)
- * MPI CHAINS      : 1
- * MPI CPU         : 1
- * THREADS    (max):  8
- * THREADS TOT(max):  8
+ * CPU             : 1
+ * THREADS    (max): 1
+ * THREADS TOT(max): 1
  * I/O NODES       : 1
- * Fragmented I/O  :no
+ * Fragmented WFs  :yes
 
  CORE databases in   .
  Additional I/O in   .
- Communications in   .
- Input file     is   INPUTS/00_init
- Report file    is   ./r-00_init_setup
- Job string(main): 00_init
+ Communications in   References
+ Input file     is   References/00_init_00_init.in
+ Report file    is   References/r-00_init_setup
+ Precision      is   SINGLE
+
+ Job string(s)-dir(s) (main): 00_init
   
  [RD./SAVE//ns.db1]------------------------------------------
   Bands                           :  50
@@ -48,7 +46,7 @@
   Max atoms/species               : 2
   No. of atom species             : 1
   Magnetic symmetries             : no
- - S/N 003573 --------------------------- v.03.03.01 r.2126 -
+ - S/N 003573 -------------------------- v.03.03.01 r.00148 -
 
  [02] CORE Variables Setup
  =========================
@@ -57,7 +55,7 @@
   [02.01] Unit cells
   ==================
 
-  Unit cell is Unknown
+  Unit cell is FCC
 
   ... containing 2Si atoms
 
@@ -139,37 +137,38 @@
   [02.05] Energies [ev] & Occupations
   ===================================
 
-  Fermi Level        [ev]:  6.314672
-  VBM / CBm          [ev]:  0.000000  0.636567
-  Electronic Temp. [ev K]:  0.00      0.00    
-  Bosonic    Temp. [ev K]:  0.00      0.00    
-  El. density      [cm-3]: 0.205E+24
-  States summary         : Full        Metallic    Empty
-                           0001-0004               0005-0050
-  Indirect Gaps      [ev]: 0.636567  3.569947
-  Direct Gaps        [ev]: 2.576077  3.569947
+  [X]Fermi Level        [ev]:  6.314672
+  [X]VBM / CBm          [ev]:  0.000000  0.636567
+  [X]Electronic Temp. [ev K]:  0.00      0.00    
+  [X]Bosonic    Temp. [ev K]:  0.00      0.00    
+  [X]Finite Temperature mode: no
+  [X]El. density      [cm-3]: 0.205E+24
+  [X]States summary         : Full        Metallic    Empty
+                                 0001-0004               0005-0050
+  [X]Indirect Gaps      [ev]: 0.636567  3.569947
+  [X]Direct Gaps        [ev]: 2.576077  3.569947
   X BZ K-points :  8
 
   Energy unit is electronVolt [eV]
 
-  *X* K [1] : 0.000000  0.000000  0.000000 (rlu) * Comp.s 259 * weight  0.125000
-              0.000000  0.000000  0.000000 (iku)
+  *X* K [1] : 0.000000  0.000000  0.000000 ( cc) * Comp.s 259 * weight  0.125000
+              0.000000  0.000000  0.000000 (rlu)
   E -12.07289   0.00000   0.00000   0.00000   2.57608   2.57608   2.57608   3.53244
   E   7.79095   7.91753   7.91753  11.28687  11.28687  11.28687  15.19173  23.46497
   E  23.46497  23.46497  24.90289  24.90289  25.85814  25.85814  25.85814  29.85881
   E  29.85881  29.85881  34.70887  35.51024  35.51024  35.51024  39.43927  39.43927
   E  41.53417  41.53417  41.68240  42.11322  42.11322  42.11322  42.95761  44.58422
    
-  *X* K [2] : 0.000000  0.000000 -0.500000 (rlu) * Comp.s 266 * weight  0.500000
-              0.250000 -0.250000  0.250000 (iku)
+  *X* K [2] : 0.308513 -0.308513  0.308513 ( cc) * Comp.s 266 * weight  0.500000
+              0.000000  0.000000 -0.500000 (rlu)
   E -9.683749 -7.093059 -1.231905 -1.231905  1.608910  3.353555  3.353555  7.598269
   E  10.79392  10.79392  11.33962  11.50255  11.50255  13.02346  19.48626  20.09049
   E  21.92921  21.92921  22.15783  22.15783  25.81626  26.84464  26.84464  27.68809
   E  27.68809  28.38520  31.70848  32.47686  32.67754  32.67754  33.34948  33.34948
   E  35.69681  37.01543  41.40419  41.47882  41.47882  43.10870  43.10870  43.49327
    
-  *X* K [3] : 0.000000 -0.500000 -0.500000 (rlu) * Comp.s 254 * weight  0.375000
-              0.000000 -0.500000  0.000000 (iku)
+  *X* K [3] : 0.000000 -0.617027  0.000000 ( cc) * Comp.s 254 * weight  0.375000
+              0.000000 -0.500000 -0.500000 (rlu)
   E  -7.84843  -7.84842  -2.93338  -2.93338   0.63657   0.63657  10.22489  10.22489
   E  11.22855  11.22855  12.83425  12.83426  13.06911  13.06913  19.01132  19.01133
   E  19.85268  19.85268  20.49357  20.49357  21.43495  21.43505  25.93862  25.93862
@@ -179,6 +178,14 @@
  [03] Transferred momenta grid
  =============================
 
+ [RD./SAVE//ndb.kindx]---------------------------------------
+  Fragmentation                    :no
+  Polarization last K   : 3
+  QP states             : 1  3
+  X grid is uniform     :yes
+  BS scattering         :no
+  COLL scattering       :no
+ - S/N 003573 -------------------------- v.04.04.00 r.00148 -
 
  IBZ Q-points : 3
  BZ  Q-points :  8
@@ -191,35 +198,37 @@
  Q [00002] : 0.308513 -0.308513  0.308513 (cc ) * weight  0.500000
  Q [00003] : 0.000000 -0.617027  0.000000 (cc ) * weight  0.375000
 
- :: Indices: polarization function
- :: Indices: Self-Energy
-
- [WR./SAVE//ndb.kindx]---------------------------------------
-  Polarization last K   : 3
-  QP states             : 1  3
-  X grid is uniform     :yes
-  X grid impose -q      :no
-  BS scattering         :no
-  COLL scattering       :no
- - S/N 003573 --------------------------- v.04.00.00 r.4325 -
-
- [04] External corrections
- =========================
-
-
- [05] Timing Overview
+ [04] Timing Overview
  ====================
 
  Routines: global (Only MASTER cpu here)
-                io_WF :     0.00s CPU
-                io_HF :     0.00s CPU
-           io_DIPOLES :     0.00s CPU
+                                    io_WF :     0.00s CPU
+                                  io_GROT :     0.00s CPU (         2 calls,   2.288 millisec avg)
+                                 io_QINDX :     0.00s CPU (         2 calls,   1.979 millisec avg)
+                               io_COL_CUT :     0.00s CPU
+                           io_Double_Grid :     0.00s CPU
+                                    io_HF :     0.00s CPU
+                               io_DIPOLES :     0.00s CPU
+                              io_KB_pwscf :     0.00s CPU
+                             io_KB_abinit :     0.00s CPU
+                                     io_X :     0.00s CPU (         4 calls,   0.024 millisec avg)
+                                    io_BS :     0.00s CPU
+
+ [05] Memory Overview
+ ====================
+
+ Memory Usage: global (Only MASTER cpu here). [O] stands for group 'O'
+ Memory treshold are: 10.00000Mb (basic treshold)  100.0000Mb (SAVEs treshold)
+
+         TOTAL not deallocated :  318.0000Kb
+
+         Max memory used   :  322.0000Kb
 
  [06] Game Over & Game summary
  =============================
 
- 04/08/2015 at 18:38 YAMBO @ anomaly [start]
- 04/08/2015 at 18:38                 [end]
+ 11/04/2019 at 17:20 YAMBO @ dufour [start]
+ 11/04/2019 at 17:20                [end]
 
   
  .-ACKNOWLEDGMENT
@@ -233,11 +242,10 @@
  | in order to acknowledge YAMBO:
  |
  | Yambo: An ab initio tool for excited state calculations
- | A. Marini, C. Hogan, M. Gr"uning, D. Varsano
+ | A. Marini, C. Hogan, M. Gr\"uning, D. Varsano
  | Computer Physics Communications  180, 1392 (2009).
  |
   
- .-Input file : INPUTS/00_init
- | setup                        # [R INI] Initialization
- | BoseTemp= 0.000000     eV    # Bosonic Temperature
- | MaxGvecs= 1139         RL    # [INI] Max number of G-vectors planned to use
+ .-Input file : References/00_init_00_init.in
+ | setup                          # [R INI] Initialization
+ | BoseTemp= 0.000000     eV      # Bosonic Temperature

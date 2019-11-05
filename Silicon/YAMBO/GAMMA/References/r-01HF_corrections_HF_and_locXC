@@ -1,0 +1,310 @@
+     __      __   ______   __       __  _______    ______       
+    |  \    /  \ /      \ |  \     /  \|       \  /      \      
+     \$$\  /  $$|  $$$$$$\| $$\   /  $$| $$$$$$$\|  $$$$$$\     
+      \$$\/  $$ | $$__| $$| $$$\ /  $$$| $$__/ $$| $$  | $$     
+       \$$  $$  | $$    $$| $$$$\  $$$$| $$    $$| $$  | $$     
+        \$$$$   | $$$$$$$$| $$\$$ $$ $$| $$$$$$$\| $$  | $$     
+        | $$    | $$  | $$| $$ \$$$| $$| $$__/ $$| $$__/ $$     
+        | $$    | $$  | $$| $$  \$ | $$| $$    $$ \$$    $$     
+         \$$     \$$   \$$ \$$      \$$ \$$$$$$$   \$$$$$$      
+                                                                
+    GPL Version 4.4.0 Revision 148. (Based on r.16920 h.961a8d9a
+                     MPI+SLK+OpenMP Build                       
+                   http://www.yambo-code.org                    
+ 
+ 11/04/2019 at 17:19 YAMBO @ dufour
+
+ [01] CPU structure, Files & I/O Directories
+ ===========================================
+
+ * CPU             : 1
+ * THREADS    (max): 1
+ * THREADS TOT(max): 1
+ * I/O NODES       : 1
+ * Fragmented WFs  :yes
+
+ CORE databases in   .
+ Additional I/O in   .
+ Communications in   References
+ Input file     is   References/01HF_corrections_01HF_corrections.in
+ Report file    is   References/r-01HF_corrections_HF_and_locXC
+ Precision      is   SINGLE
+
+ Job string(s)-dir(s) (main): 01HF_corrections
+  
+ [RD./SAVE//ns.db1]------------------------------------------
+  Bands                           :  50
+  K-points                        : 1
+  G-vectors             [RL space]: 2085
+  Components       [wavefunctions]: 259
+  Symmetries       [spatial+T-rev]:  48
+  Spinor components               : 1
+  Spin polarizations              : 1
+  Temperature                 [ev]: 0.000000
+  Electrons                       : 8.000000
+  WF G-vectors                    : 259
+  Max atoms/species               : 2
+  No. of atom species             : 1
+  Magnetic symmetries             : no
+ - S/N 007710 -------------------------- v.03.03.01 r.00148 -
+
+ [02] CORE Variables Setup
+ =========================
+
+
+  [02.01] Unit cells
+  ==================
+
+  Unit cell is FCC
+
+  ... containing 2Si atoms
+
+  ... with scaling factors [a.u.]: 5.091500  5.091500  5.091500
+
+  Direct Lattice(DL) unit cell [iru  /  cc(a.u.)]
+  A1 =-1.000000  0.000000  1.000000     -5.091500  0.000000  5.091500
+  A2 = 0.000000  1.000000  1.000000      0.000000  5.091500  5.091500
+  A3 =-1.000000  1.000000  0.000000     -5.091500  5.091500  0.000000
+
+  DL volume [au]: 263.9777
+
+  Reciprocal Lattice(RL) unit cell [iku  /  cc]
+  B1 =-0.500000 -0.500000  0.500000     -0.617027 -0.617027  0.617027
+  B2 = 0.500000  0.500000  0.500000      0.617027  0.617027  0.617027
+  B3 =-0.500000  0.500000 -0.500000     -0.617027  0.617027 -0.617027
+
+
+  [02.02] Symmetries
+  ==================
+
+  DL (S)ymmetries [cc]
+  [S1] 1.000    -.5014E-8 0.5014E-8 -.5014E-8  1.000    0.5014E-8 0.5014E-8 -.5014E-8  1.000   
+  [S2]-1.000    0.5014E-8 0.5014E-8 0.5014E-8 -1.000    0.5014E-8 -.5014E-8 0.5014E-8  1.000   
+  [S3]-1.000    -.5014E-8 -.5014E-8 0.5014E-8  1.000    -.5014E-8 -.5014E-8 -.5014E-8 -1.000   
+  [S4] 1.000    0.5014E-8 -.5014E-8 -.5014E-8 -1.000    -.5014E-8 0.5014E-8 0.5014E-8 -1.000   
+  [S5]-.5014E-8 0.5014E-8  1.000     1.000    0.5014E-8 -.5014E-8 -.5014E-8  1.000    0.5014E-8
+  [S6]0.5014E-8 0.5014E-8 -1.000    -1.000    0.5014E-8 0.5014E-8 0.5014E-8  1.000    -.5014E-8
+  [S7]-.5014E-8 -.5014E-8 -1.000     1.000    -.5014E-8 0.5014E-8 -.5014E-8 -1.000    -.5014E-8
+  [S8]0.5014E-8 -.5014E-8  1.000    -1.000    -.5014E-8 -.5014E-8 0.5014E-8 -1.000    0.5014E-8
+  [S9]0.5014E-8  1.000    -.5014E-8 0.5014E-8 -.5014E-8  1.000     1.000    0.5014E-8 -.5014E-8
+  [S10]0.5014E-8 -1.000    0.5014E-8 0.5014E-8 0.5014E-8 -1.000     1.000    -.5014E-8 0.5014E-8
+  [S11]-.5014E-8 -1.000    -.5014E-8 -.5014E-8 0.5014E-8  1.000    -1.000    -.5014E-8 -.5014E-8
+  [S12]-.5014E-8  1.000    0.5014E-8 -.5014E-8 -.5014E-8 -1.000    -1.000    0.5014E-8 0.5014E-8
+  [S13]0.5014E-8 -1.000    0.5014E-8 -1.000    0.5014E-8 0.5014E-8 0.5014E-8 -.5014E-8  1.000   
+  [S14]-.5014E-8  1.000    0.5014E-8  1.000    -.5014E-8 0.5014E-8 -.5014E-8 0.5014E-8  1.000   
+  [S15]0.5014E-8  1.000    -.5014E-8 -1.000    -.5014E-8 -.5014E-8 0.5014E-8 0.5014E-8 -1.000   
+  [S16]-.5014E-8 -1.000    -.5014E-8  1.000    0.5014E-8 -.5014E-8 -.5014E-8 -.5014E-8 -1.000   
+  [S17]-.5014E-8 -.5014E-8 -1.000    -.5014E-8  1.000    0.5014E-8 -1.000    -.5014E-8 -.5014E-8
+  [S18]0.5014E-8 -.5014E-8  1.000    0.5014E-8  1.000    -.5014E-8  1.000    -.5014E-8 0.5014E-8
+  [S19]-.5014E-8 0.5014E-8  1.000    -.5014E-8 -1.000    -.5014E-8 -1.000    0.5014E-8 0.5014E-8
+  [S20]0.5014E-8 0.5014E-8 -1.000    0.5014E-8 -1.000    0.5014E-8  1.000    0.5014E-8 -.5014E-8
+  [S21] 1.000    -.5014E-8 0.5014E-8 -.5014E-8 -.5014E-8 -1.000    0.5014E-8 -1.000    0.5014E-8
+  [S22] 1.000    0.5014E-8 -.5014E-8 -.5014E-8 0.5014E-8  1.000    0.5014E-8  1.000    -.5014E-8
+  [S23]-1.000    -.5014E-8 -.5014E-8 0.5014E-8 -.5014E-8  1.000    -.5014E-8 -1.000    -.5014E-8
+  [S24]-1.000    0.5014E-8 0.5014E-8 0.5014E-8 0.5014E-8 -1.000    -.5014E-8  1.000    0.5014E-8
+
+  [SYMs] Time-reversal derived K-space symmetries:  25   48
+  [SYMs] Spatial inversion 25 is NOT a symmetry
+  [SYMs] Group table built correctly
+
+  [02.03] RL shells
+  =================
+
+  Shells, format: [S#] G_RL(mHa)
+
+   [S37]:1139(0.1980E+5) [S36]:1067(0.1904E+5) [S35]:1037(0.1885E+5) [S34]:965(0.1827E+5)
+   [S33]:941(0.1732E+5) [S32]:893(0.1675E+5) [S31]:869(0.1599E+5) [S30]:821(0.1580E+5)
+   [S29]:749(0.1523E+5) [S28]:725(0.1447E+5) [S27]:701(0.1428E+5) [S26]:645(0.1371E+5)
+   [S25]:609(0.1294E+5) [S24]:561(0.1275E+5) [S23]:537(0.1218E+5) [S22]:531(0.1123E+5)
+   [S21]:459(0.1066E+5) [S20]:411( 9899.) [S19]:387( 9708.) [S18]:339( 9137.)
+   [S17]:331( 8376.) [S16]:307( 8186.) [S15]:283( 7614.) [S14]:259( 6853.)
+   [S13]:229( 6663.) [S12]:181( 6092.) [S11]:169( 5140.) [S10]:137( 4569.)
+   ...
+   [S12]:181( 6092.) [S11]:169( 5140.) [S10]:137( 4569.) [S9]:113( 3807.)
+   [S8]:89( 3617.) [S7]:65( 3046.) [S6]:59( 2284.) [S5]:51( 2094.)
+   [S4]:27( 1523.) [S3]:15( 761.4446) [S2]:9( 571.0835) [S1]:1( 0.000000)
+
+  [02.04] K-grid lattice
+  ======================
+
+  Compatible Grid is 0D
+  K lattice UC volume       [au]: 0.939663
+
+  [02.05] Energies [ev] & Occupations
+  ===================================
+
+  [X]Fermi Level        [ev]:  6.314672
+  [X]VBM / CBm          [ev]:  0.000000  2.576077
+  [X]Electronic Temp. [ev K]:  0.00      0.00    
+  [X]Bosonic    Temp. [ev K]:  0.00      0.00    
+  [X]Finite Temperature mode: no
+  [X]El. density      [cm-3]: 0.205E+24
+  [X]States summary         : Full        Metallic    Empty
+                                 0001-0004               0005-0050
+  [X]Indirect Gaps      [ev]: 2.576077  2.576077
+  [X]Direct Gaps        [ev]: 2.576077  2.576077
+  X BZ K-points : 1
+
+  Energy unit is electronVolt [eV]
+
+  *X* K [1] : 0.000000  0.000000  0.000000 ( cc) * Comp.s 259 * weight  1.000000
+              0.000000  0.000000  0.000000 (rlu)
+  E -12.07289   0.00000   0.00000   0.00000   2.57608   2.57608   2.57608   3.53244
+  E   7.79095   7.91753   7.91753  11.28687  11.28687  11.28687  15.19173  23.46497
+  E  23.46497  23.46497  24.90289  24.90289  25.85814  25.85814  25.85814  29.85881
+  E  29.85881  29.85881  34.70887  35.51024  35.51024  35.51024  39.43927  39.43927
+  E  41.53417  41.53417  41.68240  42.11322  42.11322  42.11322  42.95761  44.58422
+
+ [03] Transferred momenta grid
+ =============================
+
+ [RD./SAVE//ndb.kindx]---------------------------------------
+  Fragmentation                    :no
+  Polarization last K   : 1
+  QP states             : 1  1
+  X grid is uniform     :yes
+  BS scattering         :no
+  COLL scattering       :no
+ - S/N 007710 -------------------------- v.04.04.00 r.00148 -
+
+ IBZ Q-points : 1
+ BZ  Q-points : 1
+
+ Q [00001] : 0.00      0.00      0.00     (iku) * weight  1.000000
+  
+ Q [00001] : 0.00      0.00      0.00     (cc ) * weight  1.000000
+
+ [04] Bare local and non-local Exchange-Correlation
+ ==================================================
+
+ [VXC] Plane waves : 1139
+ [EXS] Plane waves :  89
+  
+ QP @ K 1 - 1 : b 1 - 15
+  
+ [WF-HF/Rho] Performing Wave-Functions I/O from ./SAVE
+
+ [FFT-HF/Rho] Mesh size: 15  15  15
+
+ [WF-HF/Rho loader] Normalization (few states)  min/max  :0.2394E-8  1.000   
+
+ [xc] Functional Slater exchange(X)+Perdew & Zunger(C)
+ [xc] LIBXC used to calculate xc functional
+
+ [xc] E_xc :  -2.568185 [Ha]
+      E_xc :  -5.136370 [Ry]
+
+ XC HF and DFT [eV] @ K [1] (iku): 0.00      0.00      0.00    
+ <1|HF|1> = -14.95834 -.1811E-7 <1|DFT|1> = -10.45886 0.1458E-7
+ <2|HF|2> = -15.30192 0.1444E-7 <2|DFT|2> = -11.70893 -.7470E-8
+ <3|HF|3> = -15.30192 0.1687E-7 <3|DFT|3> = -11.70895 0.3146E-8
+ <4|HF|4> = -15.30192 -.1320E-7 <4|DFT|4> = -11.70895 0.9981E-8
+ <5|HF|5> = -3.198176 -.1263E-8 <5|DFT|5> = -9.734192 0.578E-09
+ <6|HF|6> = -3.198177 -.1016E-7 <6|DFT|6> = -9.734221 -.2884E-8
+ <7|HF|7> = -3.198177 -.6086E-8 <7|DFT|7> = -9.734213 0.2636E-8
+ <8|HF|8> = -3.705767 0.9202E-8 <8|DFT|8> = -10.67677 0.1049E-7
+ <9|HF|9> = -2.177094 0.3267E-8 <9|DFT|9> = -7.607756 -.1521E-8
+ <10|HF|10> = -3.199798 -.1575E-7 <10|DFT|10> = -9.981524 0.2052E-8
+ <11|HF|11> = -3.199797 -.7458E-8 <11|DFT|11> = -9.981514 -.5544E-8
+ <12|HF|12> = -1.319702 -.3267E-8 <12|DFT|12> = -7.812625 -.4809E-8
+ <13|HF|13> = -1.319702 0.567E-09 <13|DFT|13> = -7.812627 0.1592E-8
+ <14|HF|14> = -1.319702 -.866E-09 <14|DFT|14> = -7.812623 -.4102E-8
+ <15|HF|15> = -0.780376 -.1166E-8 <15|DFT|15> = -6.161935 -.3415E-8
+
+ [WR./01HF_corrections//ndb.HF_and_locXC]--------------------
+  Brillouin Zone Q/K grids (IBZ/BZ): 1  1  1  1
+  RL vectors                   (WF): 259
+  Fragmentation                    :no
+  Electronic Temperature        [K]: 0.000000
+  Bosonic    Temperature        [K]: 0.000000
+  Green`s function   wavefunctions :Slater exchange(X)+Perdew & Zunger(C)
+  Total number of QP states       : 15
+  Exchange RL vectors             :  89
+  Exchange summation bands        :  4
+  RIM RL components               :0
+  RIM random points               :0
+ - S/N 007710 -------------------------- v.04.04.00 r.00148 -
+
+  [04.01] HF occupations report
+  =============================
+
+  [HF]Fermi Level        [ev]:  6.314672
+  [HF]VBM / CBm          [ev]: -3.592970  9.112093
+  [HF]Electronic Temp. [ev K]:  0.00      0.00    
+  [HF]Bosonic    Temp. [ev K]:  0.00      0.00    
+  [HF]Finite Temperature mode: no
+  [HF]El. density      [cm-3]: 0.205E+24
+  [HF]States summary         : Full        Metallic    Empty
+                                   0001-0004               0005-0050
+  [HF]Indirect Gaps      [ev]: 12.70506  12.70506
+  [HF]Direct Gaps        [ev]: 12.70506  12.70506
+
+ [05] Timing Overview
+ ====================
+
+ Routines: global (Only MASTER cpu here)
+                                    io_WF :     0.00s CPU (         4 calls,   1.174 millisec avg)
+                                  io_GROT :     0.00s CPU (         2 calls,   2.245 millisec avg)
+                                 io_QINDX :     0.00s CPU (         2 calls,   1.859 millisec avg)
+                               io_COL_CUT :     0.00s CPU
+                           io_Double_Grid :     0.00s CPU
+                                    io_HF :     0.00s CPU (         3 calls,   1.723 millisec avg)
+                               io_DIPOLES :     0.00s CPU
+                              io_KB_pwscf :     0.00s CPU
+                             io_KB_abinit :     0.00s CPU
+                                     io_X :     0.00s CPU (         4 calls,   0.023 millisec avg)
+                                    io_BS :     0.00s CPU
+                  IO_and_Messaging_switch :     0.00s CPU (         2 calls,   0.005 millisec avg)
+                                FFT_setup :     0.00s CPU
+                             PP_uspp_init :     0.00s CPU
+                              WF_load_FFT :     0.00s CPU
+                              io_fragment :     0.00s CPU
+                                       HF :     0.00s CPU
+                                HF(REDUX) :     0.00s CPU
+                                XCo_local :     0.00s CPU
+                      XC_potential_driver :     0.00s CPU (         2 calls,   1.476 millisec avg)
+
+ [06] Memory Overview
+ ====================
+
+ Memory Usage: global (Only MASTER cpu here). [O] stands for group 'O'
+ Memory treshold are: 10.00000Mb (basic treshold)  100.0000Mb (SAVEs treshold)
+
+         TOTAL not deallocated :  319.0000Kb
+
+         Max memory used   :  1.646000Mb
+
+ [07] Game Over & Game summary
+ =============================
+
+ 11/04/2019 at 17:19 YAMBO @ dufour [start]
+ 11/04/2019 at 17:19                [end]
+
+  
+ .-ACKNOWLEDGMENT
+ |
+ | The users of YAMBO have little formal obligations with respect to
+ | the YAMBO group (those specified in the GNU General Public
+ | License, http://www.gnu.org/copyleft/gpl.txt). However, it is
+ | common practice in the scientific literature, to acknowledge the
+ | efforts of people that have made the research possible. In this
+ | spirit, please find below the reference we kindly ask you to use
+ | in order to acknowledge YAMBO:
+ |
+ | Yambo: An ab initio tool for excited state calculations
+ | A. Marini, C. Hogan, M. Gr\"uning, D. Varsano
+ | Computer Physics Communications  180, 1392 (2009).
+ |
+  
+ .-Input file : References/01HF_corrections_01HF_corrections.in
+ | HF_and_locXC                   # [R XX] Hartree-Fock Self-energy and Vxc
+ | BoseTemp= 0.000000     eV      # Bosonic Temperature
+ | SE_Threads= 1                  # [OPENMP/GW] Number of threads for self-energy
+ | EXXRLvcs=  7           Ry      # [XX] Exchange    RL components
+ | VXCRLvcs= 1139         RL      # [XC] XCpotential RL components
+ | %QPkrange                      # # [GW] QP generalized Kpoint/Band indices
+ | 1|1|1|15|
+ | %
+ | %QPerange                      # # [GW] QP generalized Kpoint/Energy indices
+ | 1|1| 0.000000|-1.000000|
+ | %

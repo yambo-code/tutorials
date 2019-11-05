@@ -1,0 +1,37 @@
+#                                                           
+#  /$$     /$$ /$$$$$$  /$$      /$$ /$$$$$$$   /$$$$$$     
+# |  $$   /$$//$$__  $$| $$$    /$$$| $$__  $$ /$$__  $$    
+#  \  $$ /$$/| $$  \ $$| $$$$  /$$$$| $$  \ $$| $$  \ $$    
+#   \  $$$$/ | $$$$$$$$| $$ $$/$$ $$| $$$$$$$ | $$  | $$    
+#    \  $$/  | $$__  $$| $$  $$$| $$| $$__  $$| $$  | $$    
+#     | $$   | $$  | $$| $$\  $ | $$| $$  \ $$| $$  | $$    
+#     | $$   | $$  | $$| $$ \/  | $$| $$$$$$$/|  $$$$$$/    
+#     |__/   |__/  |__/|__/     |__/|_______/  \______/     
+#                                                           
+# GPL Version 4.4.0 Revision 148. (Based on r.16920 h.961a8d
+#                  MPI+SLK+OpenMP Build                     
+#               http://www.yambo-code.org                   
+#
+em1s                           # [R Xs] Static Inverse Dielectric Matrix
+gw0                            # [R GW] GoWo Quasiparticle energy levels
+cohsex                         # [R Xp] COlumb Hole Screened EXchange
+HF_and_locXC                   # [R XX] Hartree-Fock Self-energy and Vxc
+X_Threads=0                    # [OPENMP/X] Number of threads for response functions
+DIP_Threads=0                  # [OPENMP/X] Number of threads for dipoles
+SE_Threads=0                   # [OPENMP/GW] Number of threads for self-energy
+EXXRLvcs=  7           Ry      # [XX] Exchange    RL components
+VXCRLvcs= 2085         RL      # [XC] XCpotential RL components
+Chimod= "HARTREE"              # [X] IP/Hartree/ALDA/LRC/PF/BSfxc
+% BndsRnXs
+  1 | 20 |                     # [Xs] Polarization function bands
+%
+NGsBlkXs=  1 Ry       # [Xs] Response block size
+% DmRngeXs
+  0.10000 |  0.10000 | eV      # [Xs] Damping range
+%
+% LongDrXs
+ 1.000000 | 0.000000 | 0.000000 |        # [Xs] [cc] Electric Field
+%
+%QPkrange                      # # [GW] QP generalized Kpoint/Band indices
+1|8|1|10|
+%

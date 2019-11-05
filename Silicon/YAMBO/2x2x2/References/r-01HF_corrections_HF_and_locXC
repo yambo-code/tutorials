@@ -1,36 +1,36 @@
-      __   __     _        __  __       ____      U  ___  u     
-      \ \ / / U  /"\  U u |" \/ "| u U | __") u    \/"_ \/      
-       \ V /   \/ _ \/   \| |\/| |/   \|  _ \/     | | | |      
-      U_|"|_u  / ___ \    | |  | |     | |_) | .-,_| |_| |      
-        |_|   /_/   \_\   |_|  |_|     |____/   \_)-\___/       
-    .-,//|(_   \\    >>  <<,-,,-.     _|| \\_        \\         
-     \_) (__) (__)  (__)  (./  \.)   (__) (__)      (__)        
                                                                 
-                GPL Version 4.0.0 Revision 4325                 
-                       MPI+OpenMP Build                         
+     ____  ____     _       ____    ____  ______      ___       
+    |_  _||_  _|   / \     |_   \  /   _||_   _ \   ."   `.     
+      \ \  / /    / _ \      |   \/   |    | |_) | /  .-.  \    
+       \ \/ /    / ___ \     | |\  /| |    |  __". | |   | |    
+       _|  |_  _/ /   \ \_  _| |_\/_| |_  _| |__) |\  `-"  /    
+      |______||____| |____||_____||_____||_______/  `.___."     
+                                                                
+                                                                
+                                                                
+    GPL Version 4.4.0 Revision 148. (Based on r.16920 h.961a8d9a
+                      MPI+SLK+OpenMP Build                      
                    http://www.yambo-code.org                    
  
- 04/08/2015 at 18:38 YAMBO @ anomaly
-
- CpuTiming [Min/Max/Average]: **d-16h-38m-25s/**d-16h-38m-25s/**d-16h-38m-25s
+ 11/04/2019 at 17:20 YAMBO @ dufour
 
  [01] CPU structure, Files & I/O Directories
  ===========================================
 
- * CPU-Threads     :1(CPU)-8(threads)
- * MPI CHAINS      : 1
- * MPI CPU         : 1
- * THREADS    (max):  8
- * THREADS TOT(max):  8
+ * CPU             : 1
+ * THREADS    (max): 1
+ * THREADS TOT(max): 1
  * I/O NODES       : 1
- * Fragmented I/O  :no
+ * Fragmented WFs  :yes
 
  CORE databases in   .
  Additional I/O in   .
- Communications in   .
- Input file     is   INPUTS/01HF_corrections
- Report file    is   ./r-01HF_corrections_HF_and_locXC
- Job string(main): 01HF_corrections
+ Communications in   References
+ Input file     is   References/01HF_corrections_01HF_corrections.in
+ Report file    is   References/r-01HF_corrections_HF_and_locXC
+ Precision      is   SINGLE
+
+ Job string(s)-dir(s) (main): 01HF_corrections
   
  [RD./SAVE//ns.db1]------------------------------------------
   Bands                           :  50
@@ -46,7 +46,7 @@
   Max atoms/species               : 2
   No. of atom species             : 1
   Magnetic symmetries             : no
- - S/N 003573 --------------------------- v.03.03.01 r.2126 -
+ - S/N 003573 -------------------------- v.03.03.01 r.00148 -
 
  [02] CORE Variables Setup
  =========================
@@ -55,7 +55,7 @@
   [02.01] Unit cells
   ==================
 
-  Unit cell is Unknown
+  Unit cell is FCC
 
   ... containing 2Si atoms
 
@@ -137,37 +137,38 @@
   [02.05] Energies [ev] & Occupations
   ===================================
 
-  Fermi Level        [ev]:  6.314672
-  VBM / CBm          [ev]:  0.000000  0.636567
-  Electronic Temp. [ev K]:  0.00      0.00    
-  Bosonic    Temp. [ev K]:  0.00      0.00    
-  El. density      [cm-3]: 0.205E+24
-  States summary         : Full        Metallic    Empty
-                           0001-0004               0005-0050
-  Indirect Gaps      [ev]: 0.636567  3.569947
-  Direct Gaps        [ev]: 2.576077  3.569947
+  [X]Fermi Level        [ev]:  6.314672
+  [X]VBM / CBm          [ev]:  0.000000  0.636567
+  [X]Electronic Temp. [ev K]:  0.00      0.00    
+  [X]Bosonic    Temp. [ev K]:  0.00      0.00    
+  [X]Finite Temperature mode: no
+  [X]El. density      [cm-3]: 0.205E+24
+  [X]States summary         : Full        Metallic    Empty
+                                 0001-0004               0005-0050
+  [X]Indirect Gaps      [ev]: 0.636567  3.569947
+  [X]Direct Gaps        [ev]: 2.576077  3.569947
   X BZ K-points :  8
 
   Energy unit is electronVolt [eV]
 
-  *X* K [1] : 0.000000  0.000000  0.000000 (rlu) * Comp.s 259 * weight  0.125000
-              0.000000  0.000000  0.000000 (iku)
+  *X* K [1] : 0.000000  0.000000  0.000000 ( cc) * Comp.s 259 * weight  0.125000
+              0.000000  0.000000  0.000000 (rlu)
   E -12.07289   0.00000   0.00000   0.00000   2.57608   2.57608   2.57608   3.53244
   E   7.79095   7.91753   7.91753  11.28687  11.28687  11.28687  15.19173  23.46497
   E  23.46497  23.46497  24.90289  24.90289  25.85814  25.85814  25.85814  29.85881
   E  29.85881  29.85881  34.70887  35.51024  35.51024  35.51024  39.43927  39.43927
   E  41.53417  41.53417  41.68240  42.11322  42.11322  42.11322  42.95761  44.58422
    
-  *X* K [2] : 0.000000  0.000000 -0.500000 (rlu) * Comp.s 266 * weight  0.500000
-              0.250000 -0.250000  0.250000 (iku)
+  *X* K [2] : 0.308513 -0.308513  0.308513 ( cc) * Comp.s 266 * weight  0.500000
+              0.000000  0.000000 -0.500000 (rlu)
   E -9.683749 -7.093059 -1.231905 -1.231905  1.608910  3.353555  3.353555  7.598269
   E  10.79392  10.79392  11.33962  11.50255  11.50255  13.02346  19.48626  20.09049
   E  21.92921  21.92921  22.15783  22.15783  25.81626  26.84464  26.84464  27.68809
   E  27.68809  28.38520  31.70848  32.47686  32.67754  32.67754  33.34948  33.34948
   E  35.69681  37.01543  41.40419  41.47882  41.47882  43.10870  43.10870  43.49327
    
-  *X* K [3] : 0.000000 -0.500000 -0.500000 (rlu) * Comp.s 254 * weight  0.375000
-              0.000000 -0.500000  0.000000 (iku)
+  *X* K [3] : 0.000000 -0.617027  0.000000 ( cc) * Comp.s 254 * weight  0.375000
+              0.000000 -0.500000 -0.500000 (rlu)
   E  -7.84843  -7.84842  -2.93338  -2.93338   0.63657   0.63657  10.22489  10.22489
   E  11.22855  11.22855  12.83425  12.83426  13.06911  13.06913  19.01132  19.01133
   E  19.85268  19.85268  20.49357  20.49357  21.43495  21.43505  25.93862  25.93862
@@ -178,13 +179,13 @@
  =============================
 
  [RD./SAVE//ndb.kindx]---------------------------------------
+  Fragmentation                    :no
   Polarization last K   : 3
   QP states             : 1  3
   X grid is uniform     :yes
-  X grid impose -q      :no
   BS scattering         :no
   COLL scattering       :no
- - S/N 003573 --------------------------- v.04.00.00 r.4325 -
+ - S/N 003573 -------------------------- v.04.04.00 r.00148 -
 
  IBZ Q-points : 3
  BZ  Q-points :  8
@@ -197,81 +198,81 @@
  Q [00002] : 0.308513 -0.308513  0.308513 (cc ) * weight  0.500000
  Q [00003] : 0.000000 -0.617027  0.000000 (cc ) * weight  0.375000
 
- [04] External corrections
- =========================
-
-
- [05] Bare local and non-local Exchange-Correlation
+ [04] Bare local and non-local Exchange-Correlation
  ==================================================
 
+ [VXC] Plane waves : 1139
  [EXS] Plane waves : 283
   
- QP @ K 001 - 003 : b 001 - 015
+ QP @ K 1 - 3 : b 1 - 15
   
- [WF] Performing Wave-Functions I/O
+ [WF-HF/Rho] Performing Wave-Functions I/O from ./SAVE
 
- [FFT-HF/Rho] Mesh size: 12  12  12
+ [FFT-HF/Rho] Mesh size: 18  18  18
 
- [WF loader] Normalization (few states)  min/max  :0.2452E-8  1.000   
+ [WF-HF/Rho loader] Normalization (few states)  min/max  :0.4629E-8  1.000   
 
  [xc] Functional Slater exchange(X)+Perdew & Zunger(C)
  [xc] LIBXC used to calculate xc functional
 
+ [xc] E_xc :  -2.451180 [Ha]
+      E_xc :  -4.902360 [Ry]
+
  XC HF and DFT [eV] @ K [1] (iku): 0.00      0.00      0.00    
- <1|HF|1> = -16.39840 0.7225E-7 <1|DFT|1> = -10.50716 -.9776E-8
- <2|HF|2> = -13.56352 0.441E-10 <2|DFT|2> = -11.43773 0.3986E-8
- <3|HF|3> = -13.56352 0.1156E-7 <3|DFT|3> = -11.43773 -.1781E-8
- <4|HF|4> = -13.56352 0.1405E-7 <4|DFT|4> = -11.43774 -.1891E-7
- <5|HF|5> = -4.958699 0.4477E-8 <5|DFT|5> = -10.04863 0.3507E-8
- <6|HF|6> = -4.958700 -.3725E-8 <6|DFT|6> = -10.04863 0.4997E-8
- <7|HF|7> = -4.958700 -.1003E-7 <7|DFT|7> = -10.04863 -.1392E-7
- <8|HF|8> = -4.937267 -.2229E-7 <8|DFT|8> = -10.84471 -.1012E-7
- <9|HF|9> = -2.351509 0.945E-09 <9|DFT|9> = -7.902005 -.785E-09
- <10|HF|10> = -4.194313 0.8530E-8 <10|DFT|10> = -10.12671 0.1376E-8
- <11|HF|11> = -4.194312 0.226E-09 <11|DFT|11> = -10.12671 -.7027E-8
- <12|HF|12> = -2.027380 0.634E-09 <12|DFT|12> = -8.359511 -.567E-09
- <13|HF|13> = -2.027380 -.916E-09 <13|DFT|13> = -8.359510 0.5775E-8
- <14|HF|14> = -2.027380 0.686E-09 <14|DFT|14> = -8.359512 -.6855E-8
- <15|HF|15> = -1.010201 0.376E-10 <15|DFT|15> = -6.724784 -.3884E-8
+ <1|HF|1> = -16.39841 -.3291E-7 <1|DFT|1> = -10.50713 0.4402E-8
+ <2|HF|2> = -13.56352 -.2018E-7 <2|DFT|2> = -11.43771 -.5991E-8
+ <3|HF|3> = -13.56351 -.5261E-8 <3|DFT|3> = -11.43770 0.779E-09
+ <4|HF|4> = -13.56351 -.3647E-8 <4|DFT|4> = -11.43771 0.1511E-8
+ <5|HF|5> = -4.958698 0.5361E-8 <5|DFT|5> = -10.04841 0.2200E-8
+ <6|HF|6> = -4.958699 0.2582E-8 <6|DFT|6> = -10.04842 0.1713E-8
+ <7|HF|7> = -4.958698 -.6428E-8 <7|DFT|7> = -10.04842 -.951E-09
+ <8|HF|8> = -4.937266 0.6990E-8 <8|DFT|8> = -10.84509 -.2678E-8
+ <9|HF|9> = -2.351508 0.2202E-8 <9|DFT|9> = -7.902277 -.399E-09
+ <10|HF|10> = -4.194312 0.6783E-8 <10|DFT|10> = -10.12671 -.2486E-8
+ <11|HF|11> = -4.194311 0.2299E-8 <11|DFT|11> = -10.12676 -.8916E-8
+ <12|HF|12> = -2.027380 0.498E-09 <12|DFT|12> = -8.359401 -.2720E-8
+ <13|HF|13> = -2.027379 0.2031E-8 <13|DFT|13> = -8.359386 0.846E-09
+ <14|HF|14> = -2.027380 -.2590E-8 <14|DFT|14> = -8.359371 0.639E-09
+ <15|HF|15> = -1.010201 0.1790E-8 <15|DFT|15> = -6.725075 0.970E-09
 
  XC HF and DFT [eV] @ K [2] (iku): 0.250000 -0.250000  0.250000
- <1|HF|1> = -15.91556 -.1066E-7 <1|DFT|1> = -10.91007 -.5889E-8
- <2|HF|2> = -13.69060 -.1879E-7 <2|DFT|2> = -10.22821 -.1765E-7
- <3|HF|3> = -13.39774 -.8130E-8 <3|DFT|3> = -11.15225 -.122E-10
- <4|HF|4> = -13.39774 0.1905E-7 <4|DFT|4> = -11.15225 0.1523E-7
- <5|HF|5> = -5.081800 -.1861E-7 <5|DFT|5> = -10.12527 -.573E-09
- <6|HF|6> = -4.467641 0.8122E-8 <6|DFT|6> = -9.686969 -.9674E-8
- <7|HF|7> = -4.467641 -.6599E-8 <7|DFT|7> = -9.686967 0.1137E-7
- <8|HF|8> = -2.043983 0.6368E-8 <8|DFT|8> = -7.795208 0.2730E-8
- <9|HF|9> = -3.875355 -.6313E-8 <9|DFT|9> = -10.29925 -.4447E-8
- <10|HF|10> = -3.875355 0.2656E-8 <10|DFT|10> = -10.29925 0.272E-09
- <11|HF|11> = -3.688254 -.2401E-8 <11|DFT|11> = -9.833353 0.1057E-8
- <12|HF|12> = -3.479874 -.1704E-8 <12|DFT|12> = -10.03361 0.1712E-8
- <13|HF|13> = -3.479873 -.4709E-8 <13|DFT|13> = -10.03361 0.5154E-8
- <14|HF|14> = -3.363875 -.2959E-8 <14|DFT|14> = -10.32950 0.2892E-8
- <15|HF|15> = -2.522693 -.3632E-8 <15|DFT|15> = -9.994277 -.5994E-8
+ <1|HF|1> = -15.91555 -.5968E-8 <1|DFT|1> = -10.91011 0.4992E-8
+ <2|HF|2> = -13.69060 0.2220E-7 <2|DFT|2> = -10.22815 -.4035E-8
+ <3|HF|3> = -13.39773 -.9392E-8 <3|DFT|3> = -11.15218 -.1046E-8
+ <4|HF|4> = -13.39773 -.6252E-8 <4|DFT|4> = -11.15218 0.5802E-8
+ <5|HF|5> = -5.081796 -.3654E-8 <5|DFT|5> = -10.12534 -.2467E-8
+ <6|HF|6> = -4.467639 0.9052E-8 <6|DFT|6> = -9.686819 -.3991E-8
+ <7|HF|7> = -4.467639 0.1458E-7 <7|DFT|7> = -9.686831 0.6056E-8
+ <8|HF|8> = -2.043983 0.4192E-8 <8|DFT|8> = -7.795123 0.600E-10
+ <9|HF|9> = -3.875354 -.7062E-8 <9|DFT|9> = -10.29928 0.1847E-8
+ <10|HF|10> = -3.875355 0.1010E-7 <10|DFT|10> = -10.29927 -.5549E-8
+ <11|HF|11> = -3.688253 0.6388E-8 <11|DFT|11> = -9.833437 0.1472E-7
+ <12|HF|12> = -3.479873 0.1150E-8 <12|DFT|12> = -10.03342 0.467E-09
+ <13|HF|13> = -3.479873 0.6518E-8 <13|DFT|13> = -10.03344 0.361E-09
+ <14|HF|14> = -3.363873 0.3128E-8 <14|DFT|14> = -10.32964 -.3898E-8
+ <15|HF|15> = -2.522692 0.1684E-8 <15|DFT|15> = -9.994675 -.2908E-8
 
  XC HF and DFT [eV] @ K [3] (iku): 0.000000 -0.500000  0.000000
- <1|HF|1> = -15.06879 -.4025E-8 <1|DFT|1> = -10.89672 -.1145E-8
- <2|HF|2> = -15.06878 0.5029E-8 <2|DFT|2> = -10.89672 0.3577E-8
- <3|HF|3> = -13.13034 -.6086E-8 <3|DFT|3> = -10.66187 -.5383E-8
- <4|HF|4> = -13.13034 -.1114E-7 <4|DFT|4> = -10.66187 0.6048E-8
- <5|HF|5> = -4.244644 0.3429E-8 <5|DFT|5> = -9.020511 0.3661E-8
- <6|HF|6> = -4.244644 -.1465E-8 <6|DFT|6> = -9.020511 0.220E-09
- <7|HF|7> = -3.797811 0.526E-09 <7|DFT|7> = -10.55114 0.1061E-7
- <8|HF|8> = -3.797811 -.1180E-8 <8|DFT|8> = -10.55114 -.2413E-8
- <9|HF|9> = -4.409672 -.2343E-8 <9|DFT|9> = -10.66459 0.6846E-8
- <10|HF|10> = -4.409671 0.3916E-8 <10|DFT|10> = -10.66459 -.1110E-7
- <11|HF|11> = -3.462170 0.912E-09 <11|DFT|11> = -10.22081 0.1480E-7
- <12|HF|12> = -3.462167 -.3657E-8 <12|DFT|12> = -10.22081 -.9088E-8
- <13|HF|13> = -3.579888 0.346E-10 <13|DFT|13> = -10.31564 0.1567E-7
- <14|HF|14> = -3.579890 0.3208E-8 <14|DFT|14> = -10.31565 -.4504E-8
- <15|HF|15> = -2.143813 -.1985E-8 <15|DFT|15> = -9.156370 0.7258E-8
+ <1|HF|1> = -15.06879 0.5823E-7 <1|DFT|1> = -10.89676 -.1326E-8
+ <2|HF|2> = -15.06878 -.1350E-7 <2|DFT|2> = -10.89674 -.686E-11
+ <3|HF|3> = -13.13033 0.1925E-7 <3|DFT|3> = -10.66179 0.5223E-8
+ <4|HF|4> = -13.13033 -.5093E-8 <4|DFT|4> = -10.66177 -.2541E-8
+ <5|HF|5> = -4.244643 0.8607E-8 <5|DFT|5> = -9.020512 0.1736E-8
+ <6|HF|6> = -4.244643 0.7582E-8 <6|DFT|6> = -9.020485 -.3501E-8
+ <7|HF|7> = -3.797809 0.3389E-8 <7|DFT|7> = -10.55068 0.1333E-8
+ <8|HF|8> = -3.797810 -.2966E-8 <8|DFT|8> = -10.55068 -.5928E-8
+ <9|HF|9> = -4.409671 -.1247E-8 <9|DFT|9> = -10.66471 0.2459E-8
+ <10|HF|10> = -4.409670 0.5657E-8 <10|DFT|10> = -10.66468 0.1350E-8
+ <11|HF|11> = -3.462170 -.3018E-8 <11|DFT|11> = -10.22083 -.5861E-8
+ <12|HF|12> = -3.462168 -.3035E-8 <12|DFT|12> = -10.22080 0.413E-09
+ <13|HF|13> = -3.579888 0.4067E-8 <13|DFT|13> = -10.31576 -.4614E-8
+ <14|HF|14> = -3.579891 0.2177E-8 <14|DFT|14> = -10.31573 -.800E-10
+ <15|HF|15> = -2.143813 -.674E-09 <15|DFT|15> = -9.156520 -.2738E-8
 
  [WR./01HF_corrections//ndb.HF_and_locXC]--------------------
   Brillouin Zone Q/K grids (IBZ/BZ):  3   8   3   8
   RL vectors                   (WF):  387
-  Coulomb cutoff potential         :none
+  Fragmentation                    :no
   Electronic Temperature        [K]: 0.000000
   Bosonic    Temperature        [K]: 0.000000
   Green`s function   wavefunctions :Slater exchange(X)+Perdew & Zunger(C)
@@ -280,36 +281,64 @@
   Exchange summation bands        :  4
   RIM RL components               :0
   RIM random points               :0
- - S/N 003573 --------------------------- v.04.00.00 r.4325 -
+ - S/N 003573 -------------------------- v.04.04.00 r.00148 -
 
-  [05.01] HF occupations report
+  [04.01] HF occupations report
   =============================
 
-  States summary         : Full        Metallic    Empty
-                           0001-0004               0005-0050
-  Indirect Gaps      [ev]:  7.53822  10.81428
-  Direct Gaps        [ev]:  9.79179  10.81428
+  [HF]Fermi Level        [ev]:  6.314672
+  [HF]VBM / CBm          [ev]: -2.125803  5.412436
+  [HF]Electronic Temp. [ev K]:  0.00      0.00    
+  [HF]Bosonic    Temp. [ev K]:  0.00      0.00    
+  [HF]Finite Temperature mode: no
+  [HF]El. density      [cm-3]: 0.205E+24
+  [HF]States summary         : Full        Metallic    Empty
+                                   0001-0004               0005-0050
+  [HF]Indirect Gaps      [ev]:  7.53824  10.81438
+  [HF]Direct Gaps        [ev]:  9.79160  10.81438
 
- [06] Timing Overview
+ [05] Timing Overview
  ====================
 
  Routines: global (Only MASTER cpu here)
-                io_WF :     0.00s CPU (       5 calls,   0.000 s avg)
-                io_HF :     0.00s CPU (       3 calls,   0.001 s avg)
-           io_DIPOLES :     0.00s CPU
-                 io_X :     0.00s CPU (       4 calls,   0.000 s avg)
-                   HF :     0.00s CPU
-        MPI_ALLREDUCE :     0.00s CPU
+                                    io_WF :     0.00s CPU (         6 calls,   1.000 millisec avg)
+                                  io_GROT :     0.00s CPU (         2 calls,   2.337 millisec avg)
+                                 io_QINDX :     0.00s CPU (         2 calls,   2.038 millisec avg)
+                               io_COL_CUT :     0.00s CPU
+                           io_Double_Grid :     0.00s CPU
+                                    io_HF :     0.00s CPU (         3 calls,   1.734 millisec avg)
+                               io_DIPOLES :     0.00s CPU
+                              io_KB_pwscf :     0.00s CPU
+                             io_KB_abinit :     0.00s CPU
+                                     io_X :     0.00s CPU (         4 calls,   0.023 millisec avg)
+                                    io_BS :     0.00s CPU
+                  IO_and_Messaging_switch :     0.00s CPU (         2 calls,   0.004 millisec avg)
+                                FFT_setup :     0.00s CPU
+                             PP_uspp_init :     0.00s CPU
+                              WF_load_FFT :     0.00s CPU
+                              io_fragment :     0.00s CPU (         3 calls,   0.619 millisec avg)
+                                       HF :     0.00s CPU
+                                HF(REDUX) :     0.00s CPU
+                                XCo_local :     0.00s CPU
+                      XC_potential_driver :     0.00s CPU (         2 calls,   3.776 millisec avg)
+
+ [06] Memory Overview
+ ====================
+
+ Memory Usage: global (Only MASTER cpu here). [O] stands for group 'O'
+ Memory treshold are: 10.00000Mb (basic treshold)  100.0000Mb (SAVEs treshold)
+
+         TOTAL not deallocated :  339.0000Kb
+
+         Max memory used   :  3.956000Mb
 
  [07] Game Over & Game summary
  =============================
 
- 04/08/2015 at 18:38 YAMBO @ anomaly [start]
- 04/08/2015 at 18:38                 [end]
+ 11/04/2019 at 17:20 YAMBO @ dufour [start]
+ 11/04/2019 at 17:20                [end]
 
- Timing   [Min/Max/Average]: 01s/01s/01s
-              [Time-Profile]:  1.670087s
-
+  
  .-ACKNOWLEDGMENT
  |
  | The users of YAMBO have little formal obligations with respect to
@@ -321,21 +350,20 @@
  | in order to acknowledge YAMBO:
  |
  | Yambo: An ab initio tool for excited state calculations
- | A. Marini, C. Hogan, M. Gr"uning, D. Varsano
+ | A. Marini, C. Hogan, M. Gr\"uning, D. Varsano
  | Computer Physics Communications  180, 1392 (2009).
  |
   
- .-Input file : INPUTS/01HF_corrections
- | HF_and_locXC                 # [R XX] Hartree-Fock Self-energy and Vxc
- | BoseTemp= 0.000000     eV    # Bosonic Temperature
- | FFTGvecs=  387         RL    # [FFT] Plane-waves
- | SE_CPU= ""                   # [PARALLEL] CPUs for each role
- | SE_ROLEs= ""                 # [PARALLEL] CPUs roles (q,qp,b)
- | SE_Threads=  8               # [OPENMP/GW] Number of threads for self-energy
- | EXXRLvcs= 15           Ry    # [XX] Exchange RL components
- | %QPkrange                    # [GW] QP generalized Kpoint/Band indices
- |   1|  3|  1| 15|
+ .-Input file : References/01HF_corrections_01HF_corrections.in
+ | HF_and_locXC                   # [R XX] Hartree-Fock Self-energy and Vxc
+ | BoseTemp= 0.000000     eV      # Bosonic Temperature
+ | FFTGvecs=  387         RL      # [FFT] Plane-waves
+ | SE_Threads= 1                  # [OPENMP/GW] Number of threads for self-energy
+ | EXXRLvcs= 15           Ry      # [XX] Exchange    RL components
+ | VXCRLvcs= 1139         RL      # [XC] XCpotential RL components
+ | %QPkrange                      # # [GW] QP generalized Kpoint/Band indices
+ | 1|3|1|15|
  | %
- | %QPerange                    # [GW] QP generalized Kpoint/Energy indices
- |   1|  3| 0.0|-1.0|
+ | %QPerange                      # # [GW] QP generalized Kpoint/Energy indices
+ | 1|3| 0.000000|-1.000000|
  | %

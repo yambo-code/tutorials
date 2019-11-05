@@ -1,0 +1,21 @@
+#                                                           
+#  **    **    **     ****     ****  ******     *******     
+# //**  **    ****   /**/**   **/** /*////**   **/////**    
+#  //****    **//**  /**//** ** /** /*   /**  **     //**   
+#   //**    **  //** /** //***  /** /******  /**      /**   
+#    /**   **********/**  //*   /** /*//// **/**      /**   
+#    /**  /**//////**/**   /    /** /*    /**//**     **    
+#    /**  /**     /**/**        /** /*******  //*******     
+#    //   //      // //         //  ///////    ///////      
+#                                                           
+#               Version 3.2.5 Revision 1034                 
+#                http://www.yambo-code.org                  
+#
+HF_and_locXC                 # [R XX] Hartree-Fock Self-energy and Vxc
+EXXRLvcs= 15           Ry    # [XX] Exchange RL components
+%QPkrange                    # [GW] QP generalized Kpoint/Band indices
+  1|  8|  1| 15|
+%
+%QPerange                    # [GW] QP generalized Kpoint/Energy indices
+  1|  8| 0.0|-1.0|
+%

@@ -1,0 +1,106 @@
+#                                                           
+#   __   __     _        __  __       ____      U  ___  u   
+#   \ \ / / U  /"\  U u |" \/ "| u U | __") u    \/"_ \/    
+#    \ V /   \/ _ \/   \| |\/| |/   \|  _ \/     | | | |    
+#   U_|"|_u  / ___ \    | |  | |     | |_) | .-,_| |_| |    
+#     |_|   /_/   \_\   |_|  |_|     |____/   \_)-\___/     
+# .-,//|(_   \\    >>  <<,-,,-.     _|| \\_        \\       
+#  \_) (__) (__)  (__)  (./  \.)   (__) (__)      (__)      
+#                                                           
+#                                                           
+# GPL Version 4.4.0 Revision 148. (Based on r.16920 h.961a8d
+#                  MPI+SLK+OpenMP Build                     
+#                http://www.yambo-code.org                  
+#
+# GW [Newton Solver]
+#
+# == PPA-GN GW ==
+#
+# PPA imaginary pt   [ev]: 27.21138
+# GW SC iterations       :0
+# dS/dw steps            : 2
+# dS/dw step         [ev]:  0.10000
+# X G`s            [used]: 1
+# X G`s            [disk]: 1
+# X bands                :  1  10
+# X poles           [o/o]: 100.0000
+# X e/h E range      [ev]:-1.000000 -1.000000
+# X xc-Kernel            : none
+# X BZ energy Double Grid: no
+# X BZ Double Grid points:0
+# Sc/G bands             :  1  10
+# Sc/G damping       [ev]:  0.10000
+# Sc bands terminator    : no
+# Sx RL components       :  89
+#
+# QP @ K 1 - 3 : b 1 - 10
+#
+#    K-point      Band         Eo           E-Eo         Sc|Eo
+#
+     1.00000      1.00000    -12.07289     -1.45849      4.03804
+    1.000000     2.000000     0.000000     0.663801     2.859196
+    1.000000     3.000000     0.000000     0.663805     2.859195
+    1.000000     4.000000     0.000000     0.663818     2.859195
+    1.000000     5.000000     2.576077     2.033766    -2.780642
+    1.000000     6.000000     2.576077     2.033762    -2.780642
+    1.000000     7.000000     2.576077     2.033758    -2.780642
+    1.000000     8.000000     3.532436     2.693090    -2.844859
+    1.000000     9.000000     7.790952     2.097154    -3.067586
+     1.00000     10.00000      7.91753      2.79456     -2.75854
+    2.000000     1.000000    -9.683749    -0.939905     3.796739
+    2.000000     2.000000    -7.093059    -0.175219     3.236751
+    2.000000     3.000000    -1.231905     0.550120     2.852964
+    2.000000     4.000000    -1.231905     0.562649     2.867017
+    2.000000     5.000000     1.608910     1.970667    -2.816200
+    2.000000     6.000000     3.353555     2.166950    -2.767250
+    2.000000     7.000000     3.353555     2.185133    -2.748629
+    2.000000     8.000000     7.598269     2.251707    -3.100982
+     2.00000      9.00000     10.79392      2.69591     -3.15273
+     2.00000     10.00000     10.79392      2.70360     -3.14504
+    3.000000     1.000000    -7.848431    -0.553049     3.477512
+    3.000000     2.000000    -7.848420    -0.553061     3.477509
+    3.000000     3.000000    -2.933380     0.390050     2.900331
+    3.000000     4.000000    -2.933380     0.390036     2.900331
+    3.000000     5.000000     0.636567     1.743322    -2.805054
+    3.000000     6.000000     0.636571     1.743312    -2.805054
+     3.00000      7.00000     10.22489      3.11784     -3.02944
+     3.00000      8.00000     10.22489      3.11782     -3.02944
+     3.00000      9.00000     11.22855      2.48096     -3.19877
+     3.00000     10.00000     11.22855      2.48092     -3.19877
+# 
+# 11/05/2019 at 13:19 YAMBO @ dufour [start]
+# 11/05/2019 at 13:19                [end]
+#
+# .-Input file : References/03GoWo_PPA_corrections_PPA_HF7Ry_X1Ry-Xnb10-Gnb10.in
+# | em1d                           # [R Xd] Dynamical Inverse Dielectric Matrix
+# | ppa                            # [R Xp] Plasmon Pole Approximation
+# | HF_and_locXC                   # [R XX] Hartree-Fock Self-energy and Vxc
+# | gw0                            # [R GW] GoWo Quasiparticle energy levels
+# | BoseTemp= 0.000000     eV      # Bosonic Temperature
+# | FFTGvecs=  387         RL      # [FFT] Plane-waves
+# | X_Threads= 1                   # [OPENMP/X] Number of threads for response functions
+# | DIP_Threads= 1                 # [OPENMP/X] Number of threads for dipoles
+# | SE_Threads= 1                  # [OPENMP/GW] Number of threads for self-energy
+# | EXXRLvcs=  7           Ry      # [XX] Exchange    RL components
+# | VXCRLvcs= 1139         RL      # [XC] XCpotential RL components
+# | Chimod= "HARTREE"              # [X] IP/Hartree/ALDA/LRC/PF/BSfxc
+# | % BndsRnXp
+# |   1 | 10 |                     # [Xp] Polarization function bands
+# | %
+# | NGsBlkXp= 1            RL      # [Xp] Response block size
+# | % LongDrXp
+# | 0.1000E-4 | 0.000    | 0.000    |        # [Xp] [cc] Electric Field
+# | %
+# | PPAPntXp= 27.21138     eV      # [Xp] PPA imaginary energy
+# | % GbndRnge
+# |   1 | 10 |                     # [GW] G[W] bands range
+# | %
+# | GDamping=  0.10000     eV      # [GW] G[W] damping
+# | dScStep=  0.10000      eV      # [GW] Energy step to evaluate Z factors
+# | DysSolver= "n"                 # [GW] Dyson Equation solver ("n","s","g")
+# | %QPkrange                      # # [GW] QP generalized Kpoint/Band indices
+# | 1|3|1|10|
+# | %
+# | %QPerange                      # # [GW] QP generalized Kpoint/Energy indices
+# | 1|3| 0.000000|-1.000000|
+# | %
