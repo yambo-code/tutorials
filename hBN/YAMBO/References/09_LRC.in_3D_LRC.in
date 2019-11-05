@@ -1,0 +1,38 @@
+#                                                           
+#  **    **    **     ****     ****  ******     *******     
+# //**  **    ****   /**/**   **/** /*////**   **/////**    
+#  //****    **//**  /**//** ** /** /*   /**  **     //**   
+#   //**    **  //** /** //***  /** /******  /**      /**   
+#    /**   **********/**  //*   /** /*//// **/**      /**   
+#    /**  /**//////**/**   /    /** /*    /**//**     **    
+#    /**  /**     /**/**        /** /*******  //*******     
+#    //   //      // //         //  ///////    ///////      
+#                                                           
+#              GPL Version 4.1.2 Revision 76                
+#                    MPI+OpenMP Build                       
+#                http://www.yambo-code.org                  
+#
+optics                       # [R OPT] Optics
+chi                          # [R CHI] Dyson equation for Chi.
+tddft                        # [R   K] Use TDDFT kernel
+X_Threads=  4                # [OPENMP/X] Number of threads for response functions
+DIP_Threads=  4              # [OPENMP/X] Number of threads for dipoles
+Chimod= "LRC"                # [X] IP/Hartree/ALDA/LRC/BSfxc
+LRC_alpha= -1.200000          # [TDDFT] LRC alpha factor
+NGsBlkXd= 3            Ry    # [Xd] Response block size
+% QpntsRXd
+  1 | 1 |                   # [Xd] Transferred momenta
+%
+% BndsRnXd
+   1 | 100 |                 # [Xd] Polarization function bands
+%
+% EnRngeXd
+  0.00000 | 10.00000 | eV    # [Xd] Energy range
+%
+% DmRngeXd
+  0.20000 |  0.20000 | eV    # [Xd] Damping range
+%
+ETStpsXd= 1001                # [Xd] Total Energy steps
+% LongDrXd
+ 1.000000 | 1.000000 | 0.000000 |        # [Xd] [cc] Electric Field
+%

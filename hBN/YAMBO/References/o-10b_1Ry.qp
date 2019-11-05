@@ -1,0 +1,84 @@
+#                                                           
+#  ____  ____     _       ____    ____  ______      ___     
+# |_  _||_  _|   / \     |_   \  /   _||_   _ \   ."   `.   
+#   \ \  / /    / _ \      |   \/   |    | |_) | /  .-.  \  
+#    \ \/ /    / ___ \     | |\  /| |    |  __". | |   | |  
+#    _|  |_  _/ /   \ \_  _| |_\/_| |_  _| |__) |\  `-"  /  
+#   |______||____| |____||_____||_____||_______/  `.___."   
+#                                                           
+#                                                           
+#                                                           
+# GPL Version 4.4.0 Revision 148. (Based on r.16920 h.961a8d
+#                   MPI+SLK+OpenMP Build                    
+#                http://www.yambo-code.org                  
+#
+# GW [Newton Solver]
+#
+# == PPA-GN GW ==
+#
+# PPA imaginary pt   [ev]: 27.21138
+# GW SC iterations       :0
+# dS/dw steps            : 2
+# dS/dw step         [ev]:  0.10000
+# X G`s            [used]:  5
+# X G`s            [disk]:  5
+# X bands                :  1  10
+# X poles           [o/o]: 100.0000
+# X e/h E range      [ev]:-1.000000 -1.000000
+# X xc-Kernel            : none
+# X BZ energy Double Grid: no
+# X BZ Double Grid points:0
+# Sc/G bands             :   1   40
+# Sc/G damping       [ev]:  0.10000
+# Sc bands terminator    : no
+# Sx RL components       : 1009
+#
+# QP @ K 7 - 7 : b 8 - 9
+#
+#    K-point      Band         Eo           E-Eo         Sc|Eo
+#
+    7.000000     8.000000    -0.411876    -0.521245     2.375018
+    7.000000     9.000000     3.877976     2.351345    -2.284810
+# 
+# 11/05/2019 at 15:38 YAMBO @ dufour [start]
+# 11/05/2019 at 15:38                [end]
+#  
+# Timing   [Min/Max/Average]: 01s/01s/01s
+#
+# .-Input file : References/gw_ppa_10b_1Ry.in_10b_1Ry.in
+# | em1d                           # [R Xd] Dynamical Inverse Dielectric Matrix
+# | ppa                            # [R Xp] Plasmon Pole Approximation
+# | HF_and_locXC                   # [R XX] Hartree-Fock Self-energy and Vxc
+# | gw0                            # [R GW] GoWo Quasiparticle energy levels
+# | BoseTemp= 0.000000     eV      # Bosonic Temperature
+# | FFTGvecs= 1491         RL      # [FFT] Plane-waves
+# | X_all_q_CPU= "2.2.2.1.1"       # [PARALLEL] CPUs for each role
+# | X_all_q_ROLEs= "g.v.c.k.q"     # [PARALLEL] CPUs roles (q,g,k,c,v)
+# | X_Threads= 1                   # [OPENMP/X] Number of threads for response functions
+# | DIP_Threads= 1                 # [OPENMP/X] Number of threads for dipoles
+# | SE_CPU= "2.2.2"                # [PARALLEL] CPUs for each role
+# | SE_ROLEs= "b.qp.q"             # [PARALLEL] CPUs roles (q,qp,b)
+# | SE_Threads= 1                  # [OPENMP/GW] Number of threads for self-energy
+# | EXXRLvcs=  40          Ry      # [XX] Exchange    RL components
+# | VXCRLvcs=  3187        RL      # [XC] XCpotential RL components
+# | Chimod= "HARTREE"              # [X] IP/Hartree/ALDA/LRC/PF/BSfxc
+# | % BndsRnXp
+# |   1 | 10 |                     # [Xp] Polarization function bands
+# | %
+# | NGsBlkXp= 1            Ry      # [Xp] Response block size
+# | % LongDrXp
+# | 0.1000E-4 | 0.000    | 0.000    |        # [Xp] [cc] Electric Field
+# | %
+# | PPAPntXp= 27.21138     eV      # [Xp] PPA imaginary energy
+# | % GbndRnge
+# |    1 |  40 |                   # [GW] G[W] bands range
+# | %
+# | GDamping=  0.10000     eV      # [GW] G[W] damping
+# | dScStep=  0.10000      eV      # [GW] Energy step to evaluate Z factors
+# | DysSolver= "n"                 # [GW] Dyson Equation solver ("n","s","g")
+# | %QPkrange                      # # [GW] QP generalized Kpoint/Band indices
+# | 7|7|8|9|
+# | %
+# | %QPerange                      # # [GW] QP generalized Kpoint/Energy indices
+# | 1|14| 0.000000|-1.000000|
+# | %

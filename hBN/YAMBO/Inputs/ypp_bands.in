@@ -1,0 +1,40 @@
+#                                                           
+#  __  __   ________   ___ __ __    _______   ______        
+# /_/\/_/\ /_______/\ /__//_//_/\ /_______/\ /_____/\       
+# \ \ \ \ \\::: _  \ \\::\| \| \ \\::: _  \ \\:::_ \ \      
+#  \:\_\ \ \\::(_)  \ \\:.      \ \\::(_)  \/_\:\ \ \ \     
+#   \::::_\/ \:: __  \ \\:.\-/\  \ \\::  _  \ \\:\ \ \ \    
+#     \::\ \  \:.\ \  \ \\. \  \  \ \\::(_)  \ \\:\_\ \ \   
+#      \__\/   \__\/\__\/ \__\/ \__\/ \_______\/ \_____\/   
+#                                                           
+#                                                           
+# GPL Version 4.4.0 Revision 148. (Based on r.16920 h.961a8d
+#                  MPI+SLK+OpenMP Build                     
+#                http://www.yambo-code.org                  
+#
+electrons                      # [R] Electrons (and holes)
+bnds                           # [R] Bands
+INTERP_mode= "NN"              # Interpolation mode (NN=nearest point, BOLTZ=boltztrap aproach)
+cooIn= "rlu"                   # Points coordinates (in) cc/rlu/iku/alat
+cooOut= "rlu"                  # Points coordinates (out) cc/rlu/iku/alat
+% INTERP_Grid
+-1 |-1 |-1 |                             # Interpolation BZ Grid
+%
+INTERP_Shell_Fac= 20.00000     # The bigger it is a higher number of shells is used
+CIRCUIT_E_DB_path= "none"      # SAVE obtained from the QE `bands` run (alternative to %BANDS_kpts)
+BANDS_path= ""                 # BANDS path points labels (G,M,K,L...)
+GfnQPdb= "E < ../gw_ppa_all_Bz/ndb.QP"
+
+% BANDS_bands
+   6 | 11 |                   # Number of bands
+%
+BANDS_steps=30
+%BANDS_kpts                       # K points of the bands circuit
+ 0.33300 |-.66667 |0.00000 |
+ 0.00000 |0.00000 |0.00000 |
+ 0.50000 |-.50000 |0.00000 |
+ 0.33300 |-.66667 |0.00000 |
+ 0.33300 |-.66667 |0.50000 |
+ 0.00000 |0.00000 |0.50000 |
+ 0.50000 |-.50000 |0.50000 |
+%

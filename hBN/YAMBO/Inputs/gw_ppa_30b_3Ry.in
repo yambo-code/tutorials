@@ -1,0 +1,41 @@
+#  __      __   ______   __       __  _______    ______     
+# |  \    /  \ /      \ |  \     /  \|       \  /      \    
+#  \$$\  /  $$|  $$$$$$\| $$\   /  $$| $$$$$$$\|  $$$$$$\   
+#   \$$\/  $$ | $$__| $$| $$$\ /  $$$| $$__/ $$| $$  | $$   
+#    \$$  $$  | $$    $$| $$$$\  $$$$| $$    $$| $$  | $$   
+#     \$$$$   | $$$$$$$$| $$\$$ $$ $$| $$$$$$$\| $$  | $$   
+#     | $$    | $$  | $$| $$ \$$$| $$| $$__/ $$| $$__/ $$   
+#     | $$    | $$  | $$| $$  \$ | $$| $$    $$ \$$    $$   
+#      \$$     \$$   \$$ \$$      \$$ \$$$$$$$   \$$$$$$    
+#                                                           
+# GPL Version 4.4.0 Revision 148. (Based on r.16920 h.961a8d
+#                  MPI+SLK+OpenMP Build                     
+#                http://www.yambo-code.org                  
+#
+HF_and_locXC                   # [R XX] Hartree-Fock Self-energy and Vxc
+ppa                            # [R Xp] Plasmon Pole Approximation
+gw0                            # [R GW] GoWo Quasiparticle energy levels
+em1d                           # [R Xd] Dynamical Inverse Dielectric Matrix
+X_Threads=0                    # [OPENMP/X] Number of threads for response functions
+DIP_Threads=0                  # [OPENMP/X] Number of threads for dipoles
+SE_Threads=0                   # [OPENMP/GW] Number of threads for self-energy
+EXXRLvcs=  40          Ry      # [XX] Exchange    RL components
+VXCRLvcs=  3187        RL      # [XC] XCpotential RL components
+Chimod= "HARTREE"              # [X] IP/Hartree/ALDA/LRC/PF/BSfxc
+% BndsRnXp
+   1 | 30 |                   # [Xp] Polarization function bands
+%
+ NGsBlkXp= 3            Ry      # [Xp] Response block size
+% LongDrXp
+ 1.000000 | 0.000000 | 0.000000 |        # [Xp] [cc] Electric Field
+%
+PPAPntXp= 27.21138     eV      # [Xp] PPA imaginary energy
+% GbndRnge
+   1 | 40 |                   # [GW] G[W] bands range
+%
+GDamping=  0.10000     eV      # [GW] G[W] damping
+dScStep=  0.10000      eV      # [GW] Energy step to evaluate Z factors
+DysSolver= "n"                 # [GW] Dyson Equation solver ("n","s","g")
+%QPkrange                      # # [GW] QP generalized Kpoint/Band indices
+7|7|8|9|
+%

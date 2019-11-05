@@ -1,0 +1,54 @@
+#                                                           
+#                                                           
+# Y88b    /   e           e    e      888~~\    ,88~-_      
+#  Y88b  /   d8b         d8b  d8b     888   |  d888   \     
+#   Y88b/   /Y88b       d888bdY88b    888 _/  88888    |    
+#    Y8Y   /  Y88b     / Y88Y Y888b   888  \  88888    |    
+#     Y   /____Y88b   /   YY   Y888b  888   |  Y888   /     
+#    /   /      Y88b /          Y888b 888__/    `88_-~      
+#                                                           
+#                                                           
+#             GPL Version 4.1.2 Revision 120                
+#                    MPI+OpenMP Build                       
+#               http://www.yambo-code.org                   
+#
+bss                          # [R BSS] Bethe Salpeter Equation solver
+optics                       # [R OPT] Optics
+bse                          # [R BSE] Bethe Salpeter Equation.
+bsk                          # [R BSK] Bethe Salpeter Equation kernel
+X_Threads=0                  # [OPENMP/X] Number of threads for response functions
+DIP_Threads=0                # [OPENMP/X] Number of threads for dipoles
+NonPDirs= "none"             # [X/BSS] Non periodic chartesian directions (X,Y,Z,XY...)
+BSEmod= "retarded"           # [BSE] resonant/retarded/coupling
+BSKmod= "SEX"                # [BSE] IP/Hartree/HF/ALDA/SEX
+BSSmod= "d"                  # [BSS] (h)aydock/(d)iagonalization/(i)nversion/(t)ddft`
+BSENGexx=  30 Ry    # [BSK] Exchange components
+#ALLGexx                     # [BSS] Force the use use all RL vectors for the exchange part
+BSENGBlk= 4 Ry    # [BSK] Screened interaction block size
+#WehDiag                     # [BSK] diagonal (G-space) the eh interaction
+#WehCpl                      # [BSK] eh interaction included also in coupling
+Gauge= "length"              # [BSE] Gauge (length|velocity)
+#MetDamp                     # [BSE] Define \w+=sqrt(\w*(\w+i\eta))
+DrudeWBS= ( 0.00     , 0.00     )  eV  # [BSE] Drude plasmon
+#Reflectivity                # [BSS] Compute reflectivity at normal incidence
+% KfnQP_E
+ 1.440000 | 1.000000 | 1.000000 |        # [EXTQP BSK BSS] E parameters  (c/v) eV|adim|adim
+%
+% BEnRange
+  2.00000 | 8.00000 | eV    # [BSS] Energy range
+%
+% BDmRange
+  0.10000 |  0.10000 | eV    # [BSS] Damping range
+%
+BEnSteps= 200                # [BSS] Energy steps
+% BLongDir
+ 1.000000 | 1.000000 | 0.000000 |        # [BSS] [cc] Electric Field
+%
+% BSEBands
+   6 | 10 |                 # [BSK] Bands range
+%
+% BSEEhEny
+-1.000000 |-1.000000 | eV    # [BSK] Electron-hole energy range
+%
+#WRbsWF                      # [BSS] Write to disk excitonic the WFs
+#BSSPertWidth                # [BSS] Include QPs lifetime in a perturbative way
