@@ -1,0 +1,39 @@
+#                                                           
+#   __   __     _        __  __       ____      U  ___  u   
+#   \ \ / / U  /"\  U u |" \/ "| u U | __") u    \/"_ \/    
+#    \ V /   \/ _ \/   \| |\/| |/   \|  _ \/     | | | |    
+#   U_|"|_u  / ___ \    | |  | |     | |_) | .-,_| |_| |    
+#     |_|   /_/   \_\   |_|  |_|     |____/   \_)-\___/     
+# .-,//|(_   \\    >>  <<,-,,-.     _|| \\_        \\       
+#  \_) (__) (__)  (__)  (./  \.)   (__) (__)      (__)      
+#                                                           
+#                                                           
+# GPL Version 4.4.0 Revision 148. (Based on r.16920 h.961a8d
+#                  MPI+SLK+OpenMP Build                     
+#                http://www.yambo-code.org                  
+#
+# Hartree-Fock Components and Corrections
+#
+#    K-point      Band         Eo           Ehf          DFT          HF
+#
+     7.00000      4.00000      0.00000     -2.94111    -16.21953    -19.16064
+     7.00000      5.00000      4.40109      9.75330    -11.10755     -5.75534
+# 
+# 11/05/2019 at 17:14 YAMBO @ dufour [start]
+# 11/05/2019 at 17:14                [end]
+#  
+# Timing   [Min/Max/Average]: 01s/01s/01s
+#
+# .-Input file : References/yambo_HF_NR.in_2D_NR.in
+# | HF_and_locXC                   # [R XX] Hartree-Fock Self-energy and Vxc
+# | BoseTemp= 0.000000     eV      # Bosonic Temperature
+# | FFTGvecs=  3951        RL      # [FFT] Plane-waves
+# | SE_Threads= 1                  # [OPENMP/GW] Number of threads for self-energy
+# | EXXRLvcs= 21817        RL      # [XX] Exchange    RL components
+# | VXCRLvcs= 21817        RL      # [XC] XCpotential RL components
+# | %QPkrange                      # # [GW] QP generalized Kpoint/Band indices
+# | 7|7|4|5|
+# | %
+# | %QPerange                      # # [GW] QP generalized Kpoint/Energy indices
+# | 1|7| 0.000000|-1.000000|
+# | %

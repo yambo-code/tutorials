@@ -1,18 +1,18 @@
-     __      __   ______   __       __  _______    ______       
-    |  \    /  \ /      \ |  \     /  \|       \  /      \      
-     \$$\  /  $$|  $$$$$$\| $$\   /  $$| $$$$$$$\|  $$$$$$\     
-      \$$\/  $$ | $$__| $$| $$$\ /  $$$| $$__/ $$| $$  | $$     
-       \$$  $$  | $$    $$| $$$$\  $$$$| $$    $$| $$  | $$     
-        \$$$$   | $$$$$$$$| $$\$$ $$ $$| $$$$$$$\| $$  | $$     
-        | $$    | $$  | $$| $$ \$$$| $$| $$__/ $$| $$__/ $$     
-        | $$    | $$  | $$| $$  \$ | $$| $$    $$ \$$    $$     
-         \$$     \$$   \$$ \$$      \$$ \$$$$$$$   \$$$$$$      
                                                                 
-                GPL Version 4.1.2 Revision 120                  
-                       MPI+OpenMP Build                         
-                   http://www.yambo-code.org                    
+                                                                
+    Y88b    /   e           e    e      888~~\    ,88~-_        
+     Y88b  /   d8b         d8b  d8b     888   |  d888   \       
+      Y88b/   /Y88b       d888bdY88b    888 _/  88888    |      
+       Y8Y   /  Y88b     / Y88Y Y888b   888  \  88888    |      
+        Y   /____Y88b   /   YY   Y888b  888   |  Y888   /       
+       /   /      Y88b /          Y888b 888__/    `88_-~        
+                                                                
+                                                                
+    GPL Version 4.4.0 Revision 148. (Based on r.16920 h.961a8d9a
+                     MPI+SLK+OpenMP Build                       
+                  http://www.yambo-code.org                     
  
- 03/31/2017 at 17:33 YAMBO @ Conors-MacBook-Pro.local
+ 11/05/2019 at 17:15 YAMBO @ dufour
 
  [01] CPU structure, Files & I/O Directories
  ===========================================
@@ -25,10 +25,13 @@
 
  CORE databases in   .
  Additional I/O in   .
- Communications in   .
- Input file     is   yambo.in_RPA
- Report file    is   ./r-q001_optics_chi
- Job string(main): q001
+ Communications in   References
+ Input file     is   References/yambo_HF_WR.in_HF_WR.in
+ Report file    is   References/r-HF_WR_HF_and_locXC_rim_cut
+ Precision      is   SINGLE
+
+ Job string(s)-dir(s) (main): HF_WR
+                     (alt#1): 2D_WR
   
  [RD./SAVE//ns.db1]------------------------------------------
   Bands                           :  60
@@ -122,15 +125,16 @@
   [02.05] Energies [ev] & Occupations
   ===================================
 
-  Fermi Level        [ev]: -3.914960
-  VBM / CBm          [ev]:  0.000000  4.401093
-  Electronic Temp. [ev K]:  0.00      0.00    
-  Bosonic    Temp. [ev K]:  0.00      0.00    
-  El. density      [cm-3]: 0.849E+23
-  States summary         : Full        Metallic    Empty
-                           0001-0004               0005-0060
-  Indirect Gaps      [ev]: 4.401093  7.828886
-  Direct Gaps        [ev]:  4.40109  10.65532
+  [X]Fermi Level        [ev]: -3.914960
+  [X]VBM / CBm          [ev]:  0.000000  4.401093
+  [X]Electronic Temp. [ev K]:  0.00      0.00    
+  [X]Bosonic    Temp. [ev K]:  0.00      0.00    
+  [X]Finite Temperature mode: no
+  [X]El. density      [cm-3]: 0.849E+23
+  [X]States summary         : Full        Metallic    Empty
+                                 0001-0004               0005-0060
+  [X]Indirect Gaps      [ev]: 4.401093  7.828886
+  [X]Direct Gaps        [ev]:  4.40109  10.65532
   X BZ K-points :  36
 
   Energy unit is electronVolt [eV]
@@ -168,7 +172,7 @@
   E  28.49173  29.45319  29.99674  30.09873  30.14022  30.23292  30.57322  31.33309
    
   *X* K [5] : 0.222052  0.384605  0.000000 ( cc) * Comp.s 2717 * weight  0.166667
-              0.166667  0.250000  0.000000 (rlu)
+              0.166667  0.166667  0.000000 (rlu)
   E -16.68655  -5.73561  -4.07847  -3.42779   7.22753   7.71458   8.65694   8.93637
   E  10.27068  10.39494  12.11362  12.91023  13.01542  14.69145  16.45005  17.62440
   E  18.98497  19.37580  22.05913  22.97550  23.56541  23.95864  24.14632  24.77980
@@ -176,7 +180,7 @@
   E  28.73811  29.39094  29.82653  29.94982  30.75586  30.87955  32.95081  33.65985
    
   *X* K [6] : 0.222052  0.641009  0.000000 ( cc) * Comp.s 2716 * weight  0.333333
-              0.166667  0.416667  0.000000 (rlu)
+              0.166667  0.333333  0.000000 (rlu)
   E -15.21553  -8.31996  -5.49558  -1.18829   5.27213  10.42994  11.77953  12.07427
   E  12.46374  13.21774  14.01384  14.83774  15.38174  16.70762  16.98547  17.53361
   E  17.78760  18.45771  19.13912  19.77054  20.56540  20.84154  21.68040  21.81373
@@ -184,7 +188,7 @@
   E  26.42100  27.43149  27.66286  27.98863  28.84004  29.23604  30.96200  31.96255
    
   *X* K [7] : 0.444104  0.769211  0.000000 ( cc) * Comp.s 2709 * weight   0.05556
-              0.333333  0.500000  0.000000 (rlu)
+              0.333333  0.333333  0.000000 (rlu)
   E -14.55116  -8.25477  -7.28510   0.00000   4.40109  11.93496  13.40551  14.47637
   E  15.14148  16.13622  16.50294  16.54938  16.60871  16.70018  16.96908  17.58515
   E  17.79366  17.83132  17.91474  18.09872  18.54646  18.82921  19.65093  19.80482
@@ -201,7 +205,7 @@
   X grid is uniform     :yes
   BS scattering         :no
   COLL scattering       :no
- - S/N 005962 -------------------------- v.04.01.02 r.00120 -
+ - S/N 005962 -------------------------- v.04.04.00 r.00148 -
 
  IBZ Q-points :  7
  BZ  Q-points :  36
@@ -222,54 +226,125 @@
  Q [00006] : 0.222052  0.641009  0.000000 (cc ) * weight  0.333333
  Q [00007] : 0.444104  0.769211  0.000000 (cc ) * weight   0.05556
 
- [04] External corrections
- =========================
+ [04] Coloumb potential Random Integration (RIM)
+ ===============================================
 
-
- [05] Optics
- ===========
-
- [RD./SAVE//ns.kb_pp_pwscf]----------------------------------
-  Fragmentation                    :yes
- - S/N 005962 -------------------------- v.04.01.02 r.00120 -
- [WF] Performing Wave-Functions I/O from ./SAVE
-
- [WF loader] Normalization (few states)  min/max  :0.65105E-8 0.99989   
-
- [WR./q001//ndb.dip_iR_and_P]--------------------------------
+ [RD./2D_WR//ndb.RIM]----------------------------------------
   Brillouin Zone Q/K grids (IBZ/BZ):   7   36    7   36
-  RL vectors                   (WF): 153
-  Fragmentation                    :yes
-  Electronic Temperature        [K]: 0.0000000
-  Bosonic    Temperature        [K]: 0.0000000
-  X band range           :   1   60
-  X band range limits    :  4   5
-  X e/h energy range [ev]:-1.0000000 -1.0000000
-  RL vectors in the sum  : 153
-  [r,Vnl] included       :yes
-  Using shifted grids    :no
-  Using covariant dipoles:no
-  Using G-space approach :yes
-  Using R-space approach :no
-  Direct v evaluation    :no
-  Field momentum norm    :0.10000E-4
-  Wavefunctions          :Slater exchange(X)+Perdew & Zunger(C)
- - S/N 005962 -------------------------- v.04.01.02 r.00120 -
- [WF] Performing Wave-Functions I/O from ./SAVE
+  Coulombian RL components        : 111
+  Coulombian diagonal components  :yes
+  RIM random points               : 1000000
+  RIM  RL volume             [a.u.]: 0.390267
+  Real RL volume             [a.u.]: 0.390112
+  Eps^-1 reference component       :0
+  Eps^-1 components                : 0.00      0.00      0.00    
+  RIM anysotropy factor            : 0.000000
+ - S/N 005962 -------------------------- v.04.04.00 r.00148 -
 
- [FFT-X] Mesh size:   5    5   35
+ Summary of Coulomb integrals for non-metallic bands |Q|[au] RIM/Bare:
 
- [X-CG] R(p) Tot o/o(of R)  :  1464   8064    100
+ Q [1]:0.1000E-40.9834 * Q [2]: 0.256404 1.094643
+ Q [5]: 0.444104 1.032002 * Q [3]: 0.512807 1.023922
+ Q [6]: 0.678380 1.013815 * Q [4]: 0.769211 1.010811
+ Q [7]: 0.888208 1.008213
 
- CpuTiming [Min/Max/Average]: 01m-29s/01m-29s/01m-29s
+ [05] Bare local and non-local Exchange-Correlation
+ ==================================================
 
- [06] Game Over & Game summary
+ [VXC] Plane waves : 21817
+ [EXS] Plane waves : 21817
+  
+ QP @ K 7 - 7 : b 4 - 5
+  
+ [WF-HF/Rho] Performing Wave-Functions I/O from ./SAVE
+
+ [FFT-HF/Rho] Mesh size:  21   21  150
+
+ [WF-HF/Rho loader] Normalization (few states)  min/max  :0.871E-09  1.00    
+
+ [xc] Functional Slater exchange(X)+Perdew & Zunger(C)
+ [xc] LIBXC used to calculate xc functional
+
+ [xc] E_xc :  -3.621013 [Ha]
+      E_xc :  -7.242027 [Ry]
+
+ XC HF and DFT [eV] @ K [7] (iku): 0.333333  0.500000  0.000000
+ <4|HF|4> = -19.44151 0.1059E-7 <4|DFT|4> = -16.21953 0.814E-09
+ <5|HF|5> = -5.822812 -.454E-09 <5|DFT|5> = -11.10755 -.6808E-8
+
+ [WR./HF_WR//ndb.HF_and_locXC]-------------------------------
+  Brillouin Zone Q/K grids (IBZ/BZ):   7   36    7   36
+  RL vectors                   (WF):  3951
+  Fragmentation                    :no
+  Electronic Temperature        [K]: 0.000000
+  Bosonic    Temperature        [K]: 0.000000
+  Green`s function   wavefunctions :Slater exchange(X)+Perdew & Zunger(C)
+  Total number of QP states       : 2
+  Exchange RL vectors             : 21817
+  Exchange summation bands        :  4
+  RIM RL components               : 111
+  RIM random points               : 1000000
+ - S/N 005962 -------------------------- v.04.04.00 r.00148 -
+
+  [05.01] HF occupations report
+  =============================
+
+  [HF]Fermi Level        [ev]: -3.914960
+  [HF]VBM / CBm          [ev]: -0.997842  4.511319
+  [HF]Electronic Temp. [ev K]:  0.00      0.00    
+  [HF]Bosonic    Temp. [ev K]:  0.00      0.00    
+  [HF]Finite Temperature mode: no
+  [HF]El. density      [cm-3]: 0.849E+23
+  [HF]States summary         : Full        Metallic    Empty
+                                   0001-0004               0005-0060
+  [HF]Indirect Gaps      [ev]: 5.509161  7.939111
+  [HF]Direct Gaps        [ev]:  5.50916  12.90782
+
+ Timing [Min/Max/Average]: 01s/01s/01s
+
+ [06] Timing Overview
+ ====================
+
+ Routines: global (Only MASTER cpu here)
+                                    io_WF :     0.00s CPU (        10 calls,   0.950 millisec avg)
+                                  io_GROT :     0.00s CPU (         2 calls,   4.890 millisec avg)
+                                 io_QINDX :     0.00s CPU (         2 calls,   2.029 millisec avg)
+                               io_COL_CUT :     0.00s CPU (         2 calls,   0.044 millisec avg)
+                           io_Double_Grid :     0.00s CPU
+                                    io_HF :     0.00s CPU (         3 calls,   1.295 millisec avg)
+                               io_DIPOLES :     0.00s CPU
+                              io_KB_pwscf :     0.00s CPU
+                             io_KB_abinit :     0.00s CPU
+                                     io_X :     0.00s CPU (         4 calls,   0.033 millisec avg)
+                                    io_BS :     0.00s CPU
+                  IO_and_Messaging_switch :     0.00s CPU (         2 calls,   0.004 millisec avg)
+                                FFT_setup :     0.00s CPU
+                             PP_uspp_init :     0.00s CPU
+                              WF_load_FFT :     0.00s CPU
+                              io_fragment :     0.00s CPU (         7 calls,   0.582 millisec avg)
+                                       HF :     0.00s CPU
+                                HF(REDUX) :     0.00s CPU
+                                XCo_local :     0.00s CPU
+                      XC_potential_driver :     0.00s CPU (         2 calls,  53.149 millisec avg)
+
+ [07] Memory Overview
+ ====================
+
+ Memory Usage: global (Only MASTER cpu here). [O] stands for group 'O'
+ Memory treshold are: 10.00000Mb (basic treshold)  100.0000Mb (SAVEs treshold)
+
+         TOTAL not deallocated :  4.058000Mb
+
+         Max memory used   :  35.38900Mb
+
+ [08] Game Over & Game summary
  =============================
 
- 03/31/2017 at 17:33 YAMBO @ Conors-MacBook-Pro.local [start]
- 03/31/2017 at 17:34                                  [end]
+ 11/05/2019 at 17:15 YAMBO @ dufour [start]
+ 11/05/2019 at 17:15                [end]
 
- Timing   [Min/Max/Average]: 01m-29s/01m-29s/01m-29s
+ Timing   [Min/Max/Average]: 01s/01s/01s
+             [Time-Profile]: 01s
 
  .-ACKNOWLEDGMENT
  |
@@ -286,28 +361,26 @@
  | Computer Physics Communications  180, 1392 (2009).
  |
   
- .-Input file : yambo.in_RPA
- | optics                       # [R OPT] Optics
- | chi                          # [R CHI] Dyson equation for Chi.
- | BoseTemp= 0.000000     eV    # Bosonic Temperature
- | FFTGvecs=  6           Ry    # [FFT] Plane-waves
- | X_Threads= 1                 # [OPENMP/X] Number of threads for response functions
- | DIP_Threads= 1               # [OPENMP/X] Number of threads for dipoles
- | Chimod= "Hartree"            # [X] IP/Hartree/ALDA/LRC/BSfxc
- | NGsBlkXd= 3            Ry    # [Xd] Response block size
- | % QpntsRXd
- |  1 | 1 |                     # [Xd] Transferred momenta
+ .-Input file : References/yambo_HF_WR.in_HF_WR.in
+ | HF_and_locXC                   # [R XX] Hartree-Fock Self-energy and Vxc
+ | rim_cut                        # [R RIM CUT] Coulomb potential
+ | BoseTemp= 0.000000     eV      # Bosonic Temperature
+ | FFTGvecs=  3951        RL      # [FFT] Plane-waves
+ | SE_Threads= 1                  # [OPENMP/GW] Number of threads for self-energy
+ | RandQpts= 1000000              # [RIM] Number of random q-points in the BZ
+ | RandGvec= 111          RL      # [RIM] Coulomb interaction RS components
+ | CUTGeo= "none"                 # [CUT] Coulomb Cutoff geometry: box/cylinder/sphere/ws X/Y/Z/XY..
+ | % CUTBox
+ |  0.00     | 0.00     | 0.00     |        # [CUT] [au] Box sides
  | %
- | % BndsRnXd
- |    1 |  60 |                 # [Xd] Polarization function bands
+ | CUTRadius= 0.000000            # [CUT] [au] Sphere/Cylinder radius
+ | CUTCylLen= 0.000000            # [CUT] [au] Cylinder length
+ | CUTwsGvec= 0.000000            # [CUT] WS cutoff: number of G to be modified
+ | EXXRLvcs= 21817        RL      # [XX] Exchange    RL components
+ | VXCRLvcs= 21817        RL      # [XC] XCpotential RL components
+ | %QPkrange                      # # [GW] QP generalized Kpoint/Band indices
+ | 7|7|4|5|
  | %
- | % EnRngeXd
- |   0.00000 | 20.00000 | eV    # [Xd] Energy range
- | %
- | % DmRngeXd
- |  0.200000 | 0.200000 | eV    # [Xd] Damping range
- | %
- | ETStpsXd= 2001               # [Xd] Total Energy steps
- | % LongDrXd
- |  0.000    | 0.000    |0.1000E-4 |        # [Xd] [cc] Electric Field
+ | %QPerange                      # # [GW] QP generalized Kpoint/Energy indices
+ | 1|7| 0.000000|-1.000000|
  | %
