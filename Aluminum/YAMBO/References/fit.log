@@ -86,3 +86,612 @@ correlation matrix of the fit parameters:
 Mh              1.000 
 
 
+
+
+*******************************************************************************
+Tue Nov  5 17:40:34 2019
+
+
+FIT:    data read from 'o-01_Lifetimes.qp' u 3:4
+        format = x:z
+        x range restricted to [0.00000 : *]
+        #datapoints = 73
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)=a+m*x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             m            
+   0 9.6526141494e+06   0.00e+00  5.35e+00    1.000000e+00   1.000000e+00
+   4 2.2321497225e+05  -3.28e-07  5.35e-04   -1.156200e+02   6.183353e+01
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 223215
+rel. change during last iteration : -3.27605e-12
+
+degrees of freedom    (FIT_NDF)                        : 71
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 56.0702
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3143.87
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = -115.62          +/- 13.37        (11.57%)
+m               = 61.8335          +/- 1.782        (2.882%)
+
+correlation matrix of the fit parameters:
+                a      m      
+a               1.000 
+m              -0.871  1.000 
+
+
+*******************************************************************************
+Tue Nov  5 17:40:53 2019
+
+
+FIT:    data read from 'o-01_Lifetimes.qp' u 3:4
+        format = x:z
+        x range restricted to [0.00000 : *]
+        #datapoints = 73
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)=a+b*x+c*x**2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b             c            
+   0 1.0888844035e+07   0.00e+00  7.99e+01   -1.156200e+02   1.000000e+00   1.000000e+00
+   4 4.8254391430e+04  -3.96e-01  7.99e-03   -4.265245e+00   1.324128e+01   3.664858e+00
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 48254.4
+rel. change during last iteration : -3.96445e-06
+
+degrees of freedom    (FIT_NDF)                        : 70
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 26.2554
+variance of residuals (reduced chisquare) = WSSR/ndf   : 689.348
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = -4.26524         +/- 9.384        (220%)
+b               = 13.2413          +/- 3.162        (23.88%)
+c               = 3.66486          +/- 0.23         (6.277%)
+
+correlation matrix of the fit parameters:
+                a      b      c      
+a               1.000 
+b              -0.872  1.000 
+c               0.745 -0.965  1.000 
+
+
+*******************************************************************************
+Tue Nov  5 17:42:42 2019
+
+
+FIT:    data read from 'o-01_Lifetimes.qp' u 3:4
+        format = x:z
+        x range restricted to [0.00000 : *]
+        #datapoints = 73
+        residuals are weighted equally (unit weight)
+
+function used for fitting: c(x)
+	c(x)=a+b*x+c*x**2
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Tue Nov  5 17:43:28 2019
+
+
+FIT:    data read from 'o-01_Lifetimes.qp' u 3:4
+        format = x:z
+        x range restricted to [0.00000 : *]
+        #datapoints = 73
+        residuals are weighted equally (unit weight)
+
+function used for fitting: c(x)
+	c(x)=a+b*x+c*x**2
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Tue Nov  5 17:43:49 2019
+
+
+FIT:    data read from 'o-01_Lifetimes.qp' u 3:4
+        format = x:z
+        x range restricted to [0.00000 : *]
+        #datapoints = 73
+        residuals are weighted equally (unit weight)
+
+function used for fitting: c(x)
+	c(x)=a+b*x+c*x**2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b             c            
+   0 6.0689155782e+06   0.00e+00  4.39e+01    1.000000e+00   1.000000e+00   1.000000e+00
+   4 4.8254391430e+04  -3.90e-01  4.39e-03   -4.265216e+00   1.324127e+01   3.664859e+00
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 48254.4
+rel. change during last iteration : -3.89623e-06
+
+degrees of freedom    (FIT_NDF)                        : 70
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 26.2554
+variance of residuals (reduced chisquare) = WSSR/ndf   : 689.348
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = -4.26522         +/- 9.384        (220%)
+b               = 13.2413          +/- 3.162        (23.88%)
+c               = 3.66486          +/- 0.23         (6.277%)
+
+correlation matrix of the fit parameters:
+                a      b      c      
+a               1.000 
+b              -0.872  1.000 
+c               0.745 -0.965  1.000 
+
+
+*******************************************************************************
+Tue Nov  5 17:44:19 2019
+
+
+FIT:    data read from 'o-01_Lifetimes.qp' u 3:4
+        format = x:z
+        x range restricted to [0.00000 : *]
+        #datapoints = 73
+        residuals are weighted equally (unit weight)
+
+function used for fitting: c(x)
+	c(x)=a+b*x+c*x**2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b             c            
+   0 6.0689155782e+06   0.00e+00  4.39e+01    1.000000e+00   1.000000e+00   1.000000e+00
+   4 4.8254391430e+04  -3.90e-01  4.39e-03   -4.265216e+00   1.324127e+01   3.664859e+00
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 48254.4
+rel. change during last iteration : -3.89623e-06
+
+degrees of freedom    (FIT_NDF)                        : 70
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 26.2554
+variance of residuals (reduced chisquare) = WSSR/ndf   : 689.348
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = -4.26522         +/- 9.384        (220%)
+b               = 13.2413          +/- 3.162        (23.88%)
+c               = 3.66486          +/- 0.23         (6.277%)
+
+correlation matrix of the fit parameters:
+                a      b      c      
+a               1.000 
+b              -0.872  1.000 
+c               0.745 -0.965  1.000 
+
+
+*******************************************************************************
+Tue Nov  5 17:44:19 2019
+
+
+FIT:    data read from 'o-01_Lifetimes.qp' u 3:4
+        format = x:z
+        x range restricted to [* : 0.00000]
+        #datapoints = 43
+        residuals are weighted equally (unit weight)
+
+function used for fitting: v(x)
+	v(x)=d+e*x+f*x**2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   d             e             f            
+   0 1.1117488391e+07   0.00e+00  3.07e+01    1.000000e+00   1.000000e+00   1.000000e+00
+   5 4.4477364475e+04  -5.67e-08  3.07e-04    2.718724e+01   2.479918e+01   1.283377e+01
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 44477.4
+rel. change during last iteration : -5.66668e-13
+
+degrees of freedom    (FIT_NDF)                        : 40
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 33.3457
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1111.93
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+d               = 27.1872          +/- 13.67        (50.27%)
+e               = 24.7992          +/- 5.956        (24.02%)
+f               = 12.8338          +/- 0.5122       (3.991%)
+
+correlation matrix of the fit parameters:
+                d      e      f      
+d               1.000 
+e               0.863  1.000 
+f               0.747  0.967  1.000 
+
+
+*******************************************************************************
+Tue Nov  5 17:45:06 2019
+
+
+FIT:    data read from 'o-01_Lifetimes.qp' u 3:4
+        format = x:z
+        x range restricted to [0.00000 : *]
+        #datapoints = 73
+        residuals are weighted equally (unit weight)
+
+function used for fitting: c(x)
+	c(x)=a+c*x**2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             c            
+   0 6.3817255986e+06   0.00e+00  5.35e+01    1.000000e+00   1.000000e+00
+   4 6.0341155839e+04  -7.35e-01  5.35e-03    2.999461e+01   4.593961e+00
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 60341.2
+rel. change during last iteration : -7.34762e-06
+
+degrees of freedom    (FIT_NDF)                        : 71
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 29.1526
+variance of residuals (reduced chisquare) = WSSR/ndf   : 849.875
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 29.9946          +/- 5.103        (17.01%)
+c               = 4.59396          +/- 0.06741      (1.467%)
+
+correlation matrix of the fit parameters:
+                a      c      
+a               1.000 
+c              -0.744  1.000 
+
+
+*******************************************************************************
+Tue Nov  5 17:45:06 2019
+
+
+FIT:    data read from 'o-01_Lifetimes.qp' u 3:4
+        format = x:z
+        x range restricted to [* : 0.00000]
+        #datapoints = 43
+        residuals are weighted equally (unit weight)
+
+function used for fitting: v(x)
+	v(x)=d+f*x**2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   d             f            
+   0 1.0872473697e+07   0.00e+00  3.74e+01    1.000000e+00   1.000000e+00
+   4 6.3757337534e+04  -9.37e-02  3.74e-03   -2.192674e+01   1.077162e+01
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 63757.3
+rel. change during last iteration : -9.36641e-07
+
+degrees of freedom    (FIT_NDF)                        : 41
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 39.4342
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1555.06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+d               = -21.9267         +/- 8.163        (37.23%)
+f               = 10.7716          +/- 0.1544       (1.434%)
+
+correlation matrix of the fit parameters:
+                d      f      
+d               1.000 
+f              -0.676  1.000 
+
+
+*******************************************************************************
+Tue Nov  5 17:45:24 2019
+
+
+FIT:    data read from 'o-01_Lifetimes.qp' u 3:4
+        format = x:z
+        x range restricted to [0.00000 : *]
+        #datapoints = 73
+        residuals are weighted equally (unit weight)
+
+function used for fitting: c(x)
+	c(x)=a*x**2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a            
+   0 6.4155700034e+06   0.00e+00  7.57e+01    1.000000e+00
+   3 8.9700243479e+04  -2.42e-05  7.57e-02    4.888600e+00
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 89700.2
+rel. change during last iteration : -2.41601e-10
+
+degrees of freedom    (FIT_NDF)                        : 72
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 35.2964
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1245.84
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 4.8886           +/- 0.05457      (1.116%)
+
+
+*******************************************************************************
+Tue Nov  5 17:45:24 2019
+
+
+FIT:    data read from 'o-01_Lifetimes.qp' u 3:4
+        format = x:z
+        x range restricted to [* : 0.00000]
+        #datapoints = 43
+        residuals are weighted equally (unit weight)
+
+function used for fitting: v(x)
+	v(x)=b*x**2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b            
+   0 1.0900589091e+07   0.00e+00  5.29e+01    1.000000e+00
+   3 7.4976073033e+04  -4.03e-04  5.29e-02    1.049113e+01
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 74976.1
+rel. change during last iteration : -4.03168e-09
+
+degrees of freedom    (FIT_NDF)                        : 42
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 42.251
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1785.14
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b               = 10.4911          +/- 0.1219       (1.162%)
+
+
+*******************************************************************************
+Tue Nov  5 17:46:02 2019
+
+
+FIT:    data read from 'o-01_Lifetimes.qp' u 3:4
+        format = x:z
+        x range restricted to [0.00000 : *]
+        #datapoints = 73
+        residuals are weighted equally (unit weight)
+
+function used for fitting: c(x)
+	c(x)=a*x**2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a            
+   0 8.9700243479e+04   0.00e+00  3.70e+02    4.888600e+00
+   1 8.9700243479e+04   0.00e+00  3.70e+02    4.888600e+00
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 89700.2
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 72
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 35.2964
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1245.84
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 4.8886           +/- 0.05457      (1.116%)
+
+
+*******************************************************************************
+Tue Nov  5 17:46:02 2019
+
+
+FIT:    data read from 'o-01_Lifetimes.qp' u 3:4
+        format = x:z
+        x range restricted to [* : 0.00000]
+        #datapoints = 43
+        residuals are weighted equally (unit weight)
+
+function used for fitting: v(x)
+	v(x)=b*x**2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b            
+   0 7.4976073033e+04   0.00e+00  5.55e+02    1.049113e+01
+   1 7.4976073033e+04  -3.88e-11  5.55e+01    1.049113e+01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 74976.1
+rel. change during last iteration : -3.88175e-16
+
+degrees of freedom    (FIT_NDF)                        : 42
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 42.251
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1785.14
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b               = 10.4911          +/- 0.1219       (1.162%)
+
+
+*******************************************************************************
+Tue Nov  5 17:46:05 2019
+
+
+FIT:    data read from 'o-01_Lifetimes.qp' u 3:4
+        format = x:z
+        x range restricted to [0.00000 : *]
+        #datapoints = 73
+        residuals are weighted equally (unit weight)
+
+function used for fitting: c(x)
+	c(x)=a*x**2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a            
+   0 6.4155700034e+06   0.00e+00  7.57e+01    1.000000e+00
+   3 8.9700243479e+04  -2.42e-05  7.57e-02    4.888600e+00
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 89700.2
+rel. change during last iteration : -2.41601e-10
+
+degrees of freedom    (FIT_NDF)                        : 72
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 35.2964
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1245.84
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 4.8886           +/- 0.05457      (1.116%)
+
+
+*******************************************************************************
+Tue Nov  5 17:46:05 2019
+
+
+FIT:    data read from 'o-01_Lifetimes.qp' u 3:4
+        format = x:z
+        x range restricted to [* : 0.00000]
+        #datapoints = 43
+        residuals are weighted equally (unit weight)
+
+function used for fitting: v(x)
+	v(x)=b*x**2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b            
+   0 1.0900589091e+07   0.00e+00  5.29e+01    1.000000e+00
+   3 7.4976073033e+04  -4.03e-04  5.29e-02    1.049113e+01
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 74976.1
+rel. change during last iteration : -4.03168e-09
+
+degrees of freedom    (FIT_NDF)                        : 42
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 42.251
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1785.14
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b               = 10.4911          +/- 0.1219       (1.162%)
+
+
+*******************************************************************************
+Tue Nov  5 17:46:31 2019
+
+
+FIT:    data read from 'o-01_Lifetimes.qp' u 3:4
+        format = x:z
+        x range restricted to [0.00000 : *]
+        #datapoints = 73
+        residuals are weighted equally (unit weight)
+
+function used for fitting: c(x)
+	c(x)=a*x**2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a            
+   0 6.4155700034e+06   0.00e+00  7.57e+01    1.000000e+00
+   3 8.9700243479e+04  -2.42e-05  7.57e-02    4.888600e+00
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 89700.2
+rel. change during last iteration : -2.41601e-10
+
+degrees of freedom    (FIT_NDF)                        : 72
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 35.2964
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1245.84
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 4.8886           +/- 0.05457      (1.116%)
+
+
+*******************************************************************************
+Tue Nov  5 17:46:31 2019
+
+
+FIT:    data read from 'o-01_Lifetimes.qp' u 3:4
+        format = x:z
+        x range restricted to [* : 0.00000]
+        #datapoints = 43
+        residuals are weighted equally (unit weight)
+
+function used for fitting: v(x)
+	v(x)=b*x**2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b            
+   0 1.0900589091e+07   0.00e+00  5.29e+01    1.000000e+00
+   3 7.4976073033e+04  -4.03e-04  5.29e-02    1.049113e+01
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 74976.1
+rel. change during last iteration : -4.03168e-09
+
+degrees of freedom    (FIT_NDF)                        : 42
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 42.251
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1785.14
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b               = 10.4911          +/- 0.1219       (1.162%)
+
+
+*******************************************************************************
+Tue Nov  5 17:48:53 2019
+
+
+FIT:    data read from 'o-01_Lifetimes.qp' u 3:4
+        format = x:z
+        x range restricted to [0.00000 : *]
+        #datapoints = 73
+        residuals are weighted equally (unit weight)
+
+function used for fitting: c(x)
+	c(x)=a*x**2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a            
+   0 6.4155700034e+06   0.00e+00  7.57e+01    1.000000e+00
+   3 8.9700243479e+04  -2.42e-05  7.57e-02    4.888600e+00
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 89700.2
+rel. change during last iteration : -2.41601e-10
+
+degrees of freedom    (FIT_NDF)                        : 72
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 35.2964
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1245.84
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 4.8886           +/- 0.05457      (1.116%)
+
+
+*******************************************************************************
+Tue Nov  5 17:48:53 2019
+
+
+FIT:    data read from 'o-01_Lifetimes.qp' u 3:4
+        format = x:z
+        x range restricted to [* : 0.00000]
+        #datapoints = 43
+        residuals are weighted equally (unit weight)
+
+function used for fitting: v(x)
+	v(x)=b*x**2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b            
+   0 1.0900589091e+07   0.00e+00  5.29e+01    1.000000e+00
+   3 7.4976073033e+04  -4.03e-04  5.29e-02    1.049113e+01
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 74976.1
+rel. change during last iteration : -4.03168e-09
+
+degrees of freedom    (FIT_NDF)                        : 42
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 42.251
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1785.14
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b               = 10.4911          +/- 0.1219       (1.162%)
