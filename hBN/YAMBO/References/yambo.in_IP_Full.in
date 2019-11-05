@@ -1,0 +1,35 @@
+#                                                           
+# ooooo   oooo ..     ooo        ooo ooooooooo.    .oooo.   
+#  `88.   .8" .88.    `88.       .88 `88"   `Y8b  dP"  `Yb  
+#   `88. .8" .8"88.    888b     d"88  88     888 88      88 
+#    `88.8" .8" `88.   8 Y88. .P  88  88oooo888" 88      88 
+#     `88" .88ooo888.  8  `888"   88  88    `88b 88      88 
+#      88 .8"     `88. 8    Y     88  88    .88P `8b    d8" 
+#     o88o88o      888o8          88 o88bood8P"   `Ybod8P"  
+#                                                           
+#                                                           
+# GPL Version 4.4.0 Revision 148. (Based on r.16920 h.961a8d
+#                   MPI+SLK+OpenMP Build                    
+#                 http://www.yambo-code.org                 
+#
+optics                         # [R OPT] Optics
+chi                            # [R CHI] Dyson equation for Chi.
+X_Threads=0                    # [OPENMP/X] Number of threads for response functions
+DIP_Threads=0                  # [OPENMP/X] Number of threads for dipoles
+Chimod= "IP"                   # [X] IP/Hartree/ALDA/LRC/PF/BSfxc
+% QpntsRXd
+  1 | 1 |                     # [Xd] Transferred momenta
+%
+% BndsRnXd
+   1 | 1001 |                   # [Xd] Polarization function bands
+%
+% EnRngeXd
+  0.00000 | 10.00000 | eV      # [Xd] Energy range
+%
+% DmRngeXd
+  0.10000 |  0.10000 | eV      # [Xd] Damping range
+%
+ETStpsXd= 100                  # [Xd] Total Energy steps
+% LongDrXd
+ 1.000000 | 0.000000 | 0.000000 |        # [Xd] [cc] Electric Field
+%

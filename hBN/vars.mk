@@ -1,7 +1,7 @@
 TUTORIAL_HOME=$(CURDIR)
 PW_HOME=$(TUTORIAL_HOME)/PWSCF
-Y_HOME=$(TUTORIAL_HOME)/Yambo
-YMB_EXE=/data/myrta/Src/yambo-gpl-compile/bin
+Y_HOME=$(TUTORIAL_HOME)/YAMBO
+YMB_EXE=/home/marini/Yambo/gpl/bin
 P2Y=$(YMB_EXE)/p2y
 YYY=$(YMB_EXE)/yambo
 PW=pw.x
