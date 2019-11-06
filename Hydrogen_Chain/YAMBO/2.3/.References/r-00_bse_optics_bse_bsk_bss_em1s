@@ -1,0 +1,865 @@
+                                                                
+     ____  ____     _       ____    ____  ______      ___       
+    |_  _||_  _|   / \     |_   \  /   _||_   _ \   ."   `.     
+      \ \  / /    / _ \      |   \/   |    | |_) | /  .-.  \    
+       \ \/ /    / ___ \     | |\  /| |    |  __". | |   | |    
+       _|  |_  _/ /   \ \_  _| |_\/_| |_  _| |__) |\  `-"  /    
+      |______||____| |____||_____||_____||_______/  `.___."     
+                                                                
+                                                                
+                                                                
+    GPL Version 4.4.0 Revision 148. (Based on r.16920 h.961a8d9a
+                      MPI+SLK+OpenMP Build                      
+                   http://www.yambo-code.org                    
+ 
+ 11/06/2019 at 14:15 YAMBO @ dufour
+
+ [01] CPU structure, Files & I/O Directories
+ ===========================================
+
+ * CPU             : 1
+ * THREADS    (max): 1
+ * THREADS TOT(max): 1
+ * I/O NODES       : 1
+ * Fragmented WFs  :no
+
+ CORE databases in   .
+ Additional I/O in   .
+ Communications in   Outputs
+ Input file     is   Outputs/00_bse_00_bse.in
+ Report file    is   Outputs/r-00_bse_optics_bse_bsk_bss_em1s
+ Precision      is   SINGLE
+
+ Job string(s)-dir(s) (main): 00_bse
+  
+ [RD./SAVE//ns.db1]------------------------------------------
+  Bands                           : 20
+  K-points                        :  41
+  G-vectors             [RL space]:  8077
+  Components       [wavefunctions]:  8077
+  Symmetries       [spatial+T-rev]: 16
+  Spinor components               : 1
+  Spin polarizations              : 1
+  Temperature                 [ev]: 0.000000
+  Electrons                       : 2.000000
+  WF G-vectors                    :  8077
+  Max atoms/species               : 2
+  No. of atom species             : 1
+ - S/N 009422 -------------------------- v.03.02.04 r.00148 -
+
+ [02] CORE Variables Setup
+ =========================
+
+
+  [02.01] Unit cells
+  ==================
+
+  Unit cell is Unknown
+
+  ... containing 2H atoms
+
+  ... with scaling factors [a.u.]:  8.60000  50.00000  50.00000
+
+  Direct Lattice(DL) unit cell [iru  /  cc(a.u.)]
+  A1 = 0.500000  0.000000  0.000000      4.300000  0.000000  0.000000
+  A2 = 0.000000  0.500000  0.000000      0.000000  25.00000  0.000000
+  A3 = 0.000000  0.000000  0.500000      0.000000  0.000000  25.00000
+
+  DL volume [au]: 2688.   
+
+  Reciprocal Lattice(RL) unit cell [iku  /  cc]
+  B1 = 2.000000  0.000000  0.000000      1.461206  0.000000  0.000000
+  B2 = 0.000000  2.000000  0.000000      0.000000  0.251327  0.000000
+  B3 = 0.000000  0.000000  2.000000      0.000000  0.000000  0.251327
+
+
+  [02.02] Symmetries
+  ==================
+
+  DL (S)ymmetries [cc]
+  [S1] 1.000000  0.000000  0.000000  0.000000  1.000000  0.000000  0.000000  0.000000  1.000000
+  [S2]-1.000000  0.000000  0.000000  0.000000 -1.000000  0.000000  0.000000  0.000000  1.000000
+  [S3] 1.000000  0.000000  0.000000  0.000000 -1.000000  0.000000  0.000000  0.000000 -1.000000
+  [S4]-1.000000  0.000000  0.000000  0.000000  1.000000  0.000000  0.000000  0.000000 -1.000000
+  [S5]-1.000000  0.000000  0.000000  0.000000  0.000000 -1.000000  0.000000 -1.000000  0.000000
+  [S6] 1.000000  0.000000  0.000000  0.000000  0.000000  1.000000  0.000000 -1.000000  0.000000
+  [S7]-1.000000  0.000000  0.000000  0.000000  0.000000  1.000000  0.000000  1.000000  0.000000
+  [S8] 1.000000  0.000000  0.000000  0.000000  0.000000 -1.000000  0.000000  1.000000  0.000000
+
+  [SYMs] Time-reversal derived K-space symmetries:  9  16
+  [SYMs] Spatial inversion 9 is a symmetry
+  [SYMs] Group table built correctly
+
+  [02.03] RL shells
+  =================
+
+  Shells, format: [S#] G_RL(mHa)
+
+   [S556]:8077(0.1800E+5) [S555]:8061(0.1790E+5) [S554]:8045(0.1787E+5) [S553]:8021(0.1771E+5)
+   [S552]:8005(0.1765E+5) [S551]:7997(0.1762E+5) [S550]:7981(0.1759E+5) [S549]:7973(0.1749E+5)
+   [S548]:7957(0.1740E+5) [S547]:7941(0.1737E+5) [S546]:7933(0.1733E+5) [S545]:7925(0.1724E+5)
+   [S544]:7909(0.1721E+5) [S543]:7901(0.1714E+5) [S542]:7893(0.1711E+5) [S541]:7885(0.1708E+5)
+   [S540]:7883(0.1694E+5) [S539]:7867(0.1684E+5) [S538]:7851(0.1675E+5) [S537]:7835(0.1671E+5)
+   [S536]:7811(0.1659E+5) [S535]:7779(0.1649E+5) [S534]:7763(0.1630E+5) [S533]:7747(0.1618E+5)
+   [S532]:7731(0.1608E+5) [S531]:7699(0.1599E+5) [S530]:7683(0.1592E+5) [S529]:7659(0.1583E+5)
+   ...
+   [S12]:61( 568.4895) [S11]:57( 536.9068) [S10]:49( 505.3239) [S9]:45( 410.5757)
+   [S8]:37( 315.8275) [S7]:29( 284.2447) [S6]:25( 252.6619) [S5]:21( 157.9137)
+   [S4]:13( 126.3310) [S3]:9( 63.16549) [S2]:5( 31.58275) [S1]:1( 0.000000)
+
+  [02.04] K-grid lattice
+  ======================
+
+  Compatible Grid is 1D
+  B1 [rlu]= -0.01250   0.00000   0.00000
+  Grid dimensions               :  80
+  K lattice UC volume       [au]:   0.0012
+
+  [02.05] Energies [ev] & Occupations
+  ===================================
+
+  [X]Fermi Level        [ev]: -5.696604
+  [X]VBM / CBm          [ev]:  0.000000  1.457071
+  [X]Electronic Temp. [ev K]:  0.00      0.00    
+  [X]Bosonic    Temp. [ev K]:  0.00      0.00    
+  [X]Finite Temperature mode: no
+  [X]El. density      [cm-3]: 0.502E+22
+  [X]States summary         : Full        Metallic    Empty
+                                 0001-0001               0002-0020
+  [X]Indirect Gaps      [ev]: 1.457071  7.905053
+  [X]Direct Gaps        [ev]:  1.45707  12.07496
+  X BZ K-points :  80
+
+  Energy unit is electronVolt [eV]
+
+  *X* K [1] : 0.000000  0.000000  0.000000 ( cc) * Comp.s 8077 * weight   0.01250
+              0.000000  0.000000  0.000000 (rlu)
+  E -6.447982  5.582650  5.582650  5.640121  6.538653  6.594859  6.965016  6.965016
+  E  7.260978  7.602535  8.162323  8.162323  8.719433  9.343271  9.440072  9.440072
+   
+  *X* K [2] :  0.01827  0.000000  0.000000 ( cc) * Comp.s 8077 * weight   0.02500
+               0.01250  0.000000  0.000000 (rlu)
+  E -6.443520  5.587188  5.587188  5.644658  6.543192  6.599392  6.969555  6.969555
+  E  7.265518  7.607069  8.166862  8.166862  8.723972  9.347808  9.444612  9.444612
+   
+  *X* K [3] :  0.03653  0.000000  0.000000 ( cc) * Comp.s 8077 * weight   0.02500
+               0.02500  0.000000  0.000000 (rlu)
+  E -6.430035  5.600819  5.600819  5.658268  6.556810  6.612998  6.983176  6.983176
+  E  7.279135  7.620672  8.180489  8.180489  8.737590  9.361418  9.458231  9.458231
+   
+  *X* K [4] :  0.05480  0.000000  0.000000 ( cc) * Comp.s 8077 * weight   0.02500
+               0.03750  0.000000  0.000000 (rlu)
+  E -6.407777  5.623507  5.623507  5.680944  6.579505  6.635660  7.005869  7.005869
+  E  7.301829  7.643334  8.203178  8.203178  8.760284  9.384097  9.480925  9.480925
+   
+  *X* K [5] :  0.07306  0.000000  0.000000 ( cc) * Comp.s 8077 * weight   0.02500
+               0.05000  0.000000  0.000000 (rlu)
+  E -6.376591  5.655272  5.655272  5.712692  6.611278  6.667390  7.037640  7.037640
+  E  7.333603  7.675061  8.234945  8.234945  8.792057  9.415848  9.512696  9.512696
+   
+  *X* K [6] :  0.09133  0.000000  0.000000 ( cc) * Comp.s 8077 * weight   0.02500
+               0.06250  0.000000  0.000000 (rlu)
+  E -6.336461  5.696119  5.696119  5.753511  6.652129  6.708185  7.078490  7.078490
+  E  7.374454  7.715854  8.275794  8.275794  8.832909  9.456670  9.553547  9.553547
+   
+  *X* K [7] : 0.109590  0.000000  0.000000 ( cc) * Comp.s 8077 * weight   0.02500
+               0.07500  0.000000  0.000000 (rlu)
+  E -6.287399  5.746044  5.746044  5.803401  6.702059  6.758045  7.128418  7.128418
+  E  7.424384  7.765710  8.325721  8.325721  8.882838  9.506563  9.603476  9.603476
+   
+  *X* K [8] : 0.127856  0.000000  0.000000 ( cc) * Comp.s 8077 * weight   0.02500
+               0.08750  0.000000  0.000000 (rlu)
+  E -6.229402  5.805051  5.805051  5.862361  6.761066  6.816968  7.187426  7.187426
+  E  7.483391  7.824628  8.384727  8.384727  8.941845  9.565525  9.662483  9.662483
+   
+  *X* K [9] : 0.146121  0.000000  0.000000 ( cc) * Comp.s 8077 * weight   0.02500
+               0.10000  0.000000  0.000000 (rlu)
+  E -6.162573  5.873125  5.873125  5.930388  6.829152  6.884949  7.255508  7.255508
+  E  7.551476  7.892600  8.452805  8.452805  9.009931  9.633551  9.730566  9.730566
+   
+  *X* K [10] : 0.164386  0.000000  0.000000 ( cc) * Comp.s 8077 * weight   0.02500
+               0.112500  0.000000  0.000000 (rlu)
+  E -6.086766  5.950286  5.950286  6.007483  6.906315  6.961990  7.332671  7.332671
+  E  7.628640  7.969630  8.529966  8.529966  9.087094  9.710643  9.807730  9.807730
+   
+  *X* K [11] : 0.182651  0.000000  0.000000 ( cc) * Comp.s 8077 * weight   0.02500
+               0.125000  0.000000  0.000000 (rlu)
+  E -6.002081  6.036522  6.036522  6.093645  6.992557  7.048085  7.418911  7.418911
+  E  7.714882  8.055710  8.616204  8.616204  9.173336  9.796793  9.893970  9.893970
+   
+  *X* K [12] : 0.200916  0.000000  0.000000 ( cc) * Comp.s 8077 * weight   0.02500
+               0.137500  0.000000  0.000000 (rlu)
+  E -5.908438  6.131838  6.131838  6.188871  7.087876  7.143232  7.514230  7.514230
+  E  7.810201  8.150834  8.711521  8.711521  9.268655  9.891994  9.989288  9.989288
+   
+  *X* K [13] : 0.219181  0.000000  0.000000 ( cc) * Comp.s 8077 * weight   0.02500
+               0.150000  0.000000  0.000000 (rlu)
+  E -5.805988  6.236228  6.236228  6.293157  7.192274  7.247419  7.618626  7.618626
+  E   7.91460   8.25499   8.81591   8.81591   9.37305   9.99623  10.09368  10.09368
+   
+  *X* K [14] : 0.237446  0.000000  0.000000 ( cc) * Comp.s 8077 * weight   0.02500
+               0.162500  0.000000  0.000000 (rlu)
+  E -5.694717  6.349685  6.349685  6.406497  7.305750  7.360636  7.732097  7.732097
+  E   8.02808   8.36815   8.92938   8.92938   9.48653  10.10948  10.20716  10.20716
+   
+  *X* K [15] : 0.255711  0.000000  0.000000 ( cc) * Comp.s 8077 * weight   0.02500
+               0.175000  0.000000  0.000000 (rlu)
+  E -5.574555  6.472225  6.472225  6.528890  7.428304  7.482871  7.854648  7.854648
+  E   8.15063   8.49031   9.05192   9.05192   9.60908  10.23170  10.32971  10.32971
+   
+  *X* K [16] : 0.273976  0.000000  0.000000 ( cc) * Comp.s 8077 * weight   0.02500
+               0.187500  0.000000  0.000000 (rlu)
+  E -5.445528  6.603842  6.603842  6.660325  7.559936  7.614100  7.986276  7.986276
+  E   8.28226   8.62141   9.18354   9.18354   9.74071  10.36276  10.46134  10.46134
+   
+  *X* K [17] : 0.292241  0.000000  0.000000 ( cc) * Comp.s 8077 * weight   0.02500
+               0.200000  0.000000  0.000000 (rlu)
+  E -5.307533  6.744555  6.744555  6.800794  7.700646  7.754287  8.126987  8.126987
+  E   8.42297   8.76136   9.32425   9.32425   9.88142  10.50225  10.60205  10.60205
+   
+  *X* K [18] : 0.310506  0.000000  0.000000 ( cc) * Comp.s 8077 * weight   0.02500
+               0.212500  0.000000  0.000000 (rlu)
+  E -5.160854  6.894324  6.894324  6.950264  7.850434  7.903340  8.276771  8.276771
+  E   8.57276   8.90994   9.47403   9.47403  10.03121  10.64746  10.75183  10.75183
+   
+  *X* K [19] : 0.328771  0.000000  0.000000 ( cc) * Comp.s 8077 * weight   0.02500
+               0.225000  0.000000  0.000000 (rlu)
+  E -5.005317  7.053177  7.053177  7.108702  8.009300  8.061107  8.435633  8.435633
+  E   8.73162   9.06658   9.63288   9.63288  10.19008  10.58790  10.83050  10.91070
+   
+  *X* K [20] : 0.347036  0.000000  0.000000 ( cc) * Comp.s 8077 * weight   0.02500
+               0.237500  0.000000  0.000000 (rlu)
+  E -4.841082  7.221090  7.221090  7.276021  8.177245  8.227175  8.603569  8.603569
+  E   8.89957   9.22886   9.80081   9.80081  10.08695  10.35802  10.98613  11.07863
+   
+  *X* K [21] : 0.365301  0.000000  0.000000 ( cc) * Comp.s 8077 * weight   0.02500
+               0.250000  0.000000  0.000000 (rlu)
+  E -4.667994  7.398096  7.398096  7.452038  8.354267  8.400185  8.780587  8.780587
+  E   9.07659   9.36544   9.61797   9.97782   9.97782  10.53504  11.16132  11.25565
+   
+  *X* K [22] : 0.383567  0.000000  0.000000 ( cc) * Comp.s 8077 * weight   0.02500
+               0.262500  0.000000  0.000000 (rlu)
+  E -4.486159  7.584175  7.584175  7.636185  8.540367  8.571045  8.966681  8.966681
+  E   9.05400   9.26269   9.62319  10.16390  10.16390  10.72114  11.34667  11.44175
+   
+  *X* K [23] : 0.401832  0.000000  0.000000 ( cc) * Comp.s 8077 * weight   0.02500
+               0.275000  0.000000  0.000000 (rlu)
+  E -4.295625  7.779333  7.779333  7.825653  8.500915  8.735546  8.832049  9.161856
+  E   9.16186   9.45787   9.80789  10.35906  10.35906  10.91632  11.54142  11.63692
+   
+  *X* K [24] : 0.420097  0.000000  0.000000 ( cc) * Comp.s 8077 * weight   0.02500
+               0.287500  0.000000  0.000000 (rlu)
+  E -4.096515  7.944366  7.983560  7.983560  8.121005  8.939802  9.008157  9.366103
+  E   9.36610   9.66213  10.00898  10.56330  10.56330  11.12057  11.74538  11.84117
+   
+  *X* K [25] : 0.438362  0.000000  0.000000 ( cc) * Comp.s 8077 * weight   0.02500
+               0.300000  0.000000  0.000000 (rlu)
+  E -3.888658  7.531419  8.196876  8.196876  8.265130  9.153137  9.216181  9.579433
+  E   9.57943   9.87546  10.22073  10.77662  10.77662  11.33391  11.95850  12.05450
+   
+  *X* K [26] : 0.456627  0.000000  0.000000 ( cc) * Comp.s 8077 * weight   0.02500
+               0.312500  0.000000  0.000000 (rlu)
+  E -3.672410  7.058561  8.419250  8.419250  8.482191  9.375549  9.436309  9.801837
+  E   9.80184  10.09787  10.44215  10.99900  10.99900  11.55632  12.18074  12.27691
+   
+  *X* K [27] : 0.474892  0.000000  0.000000 ( cc) * Comp.s 8077 * weight   0.02500
+               0.325000  0.000000  0.000000 (rlu)
+  E  -3.44763   6.58888   8.65071   8.65071   8.71177   9.60704   9.66648  10.03332
+  E  10.03332  10.32936  10.67293  11.23047  11.23047  11.78781  12.41208  12.50839
+   
+  *X* K [28] : 0.493157  0.000000  0.000000 ( cc) * Comp.s 8077 * weight   0.02500
+               0.337500  0.000000  0.000000 (rlu)
+  E  -3.21443   6.12609   8.89125   8.89125   8.95132   9.84761   9.90615  10.27388
+  E  10.27388  10.56993  10.91295  11.47101  11.47101  12.02838  12.65251  12.74895
+   
+  *X* K [29] : 0.511422  0.000000  0.000000 ( cc) * Comp.s 8077 * weight   0.02500
+               0.350000  0.000000  0.000000 (rlu)
+  E  -2.97306   5.67094   9.14085   9.14085   9.20030  10.09726  10.15511  10.52352
+  E  10.52352  10.81958  11.16213  11.72062  11.72062  12.27802  12.90202  12.99859
+   
+  *X* K [30] : 0.529687  0.000000  0.000000 ( cc) * Comp.s 8077 * weight   0.02500
+               0.362500  0.000000  0.000000 (rlu)
+  E  -2.72374   5.22445   9.39953   9.39953   9.45854  10.35598  10.41327  10.78223
+  E  10.78223  11.07830  11.42043  11.97931  11.97931  12.53675  13.16062  13.25730
+   
+  *X* K [31] : 0.547952  0.000000  0.000000 ( cc) * Comp.s 8077 * weight   0.02500
+               0.375000  0.000000  0.000000 (rlu)
+  E  -2.46667   4.78710   9.66727   9.66727   9.72594  10.62378  10.68058  11.05001
+  E  11.05001  11.34610  11.68784  12.24706  12.24706  12.80455  13.42829  13.52509
+   
+  *X* K [32] : 0.566217  0.000000  0.000000 ( cc) * Comp.s 8077 * weight   0.02500
+               0.387500  0.000000  0.000000 (rlu)
+  E  -2.20218   4.35897   9.94409   9.94409  10.00248  10.90066  10.95700  11.32688
+  E  11.32688  11.62298  11.96434  12.52387  12.52387  13.08143  13.70503  13.80194
+   
+  *X* K [33] : 0.584482  0.000000  0.000000 ( cc) * Comp.s 8077 * weight   0.02500
+               0.400000  0.000000  0.000000 (rlu)
+  E  -1.93058   3.94110  10.22998  10.22998  10.28814  11.18662  11.24253  11.61281
+  E  11.61281  11.90894  12.24993  12.80976  12.80976  13.36738  13.99084  14.08787
+   
+  *X* K [34] : 0.602747  0.000000  0.000000 ( cc) * Comp.s 8077 * weight   0.02500
+               0.412500  0.000000  0.000000 (rlu)
+  E  -1.65301   3.53421  10.52493  10.52493  10.58288  11.48166  11.53714  11.90782
+  E  11.90782  12.20398  12.54457  13.10469  13.10469  13.66242  14.28569  14.38284
+   
+  *X* K [35] : 0.621013  0.000000  0.000000 ( cc) * Comp.s 8077 * weight   0.02500
+               0.425000  0.000000  0.000000 (rlu)
+  E  -1.37048   3.13936  10.82894  10.82894  10.88672  11.78578  11.84082  12.21190
+  E  12.21190  12.50809  12.84827  13.40863  13.40863  13.96653  14.58951  14.68675
+   
+  *X* K [36] : 0.639278  0.000000  0.000000 ( cc) * Comp.s 8077 * weight   0.02500
+               0.437500  0.000000  0.000000 (rlu)
+  E  -1.08515   2.75875  11.14199  11.14199  11.19962  12.09897  12.15356  12.52504
+  E  12.52504  12.82129  13.16098  13.72147  13.72147  14.27971  14.77401  14.77401
+   
+  *X* K [37] : 0.657543  0.000000  0.000000 ( cc) * Comp.s 8077 * weight   0.02500
+               0.450000  0.000000  0.000000 (rlu)
+  E  -0.80072   2.39659  11.46407  11.46407  11.52160  12.42124  12.47531  12.84722
+  E  12.84722  13.14356  13.48259  14.04208  14.04208  14.37246  14.37246  14.42512
+   
+  *X* K [38] : 0.675808  0.000000  0.000000 ( cc) * Comp.s 8077 * weight   0.02500
+               0.462500  0.000000  0.000000 (rlu)
+  E  -0.52475   2.05982  11.79513  11.79513  11.85261  12.75259  12.80601  13.17833
+  E  13.17833  13.47490  13.81192  13.97400  13.97400  14.03227  14.37739  14.37739
+   
+  *X* K [39] : 0.694073  0.000000  0.000000 ( cc) * Comp.s 8077 * weight   0.02500
+               0.475000  0.000000  0.000000 (rlu)
+  E  -0.27255   1.76432  12.13504  12.13504  12.19264  13.09301  13.14526  13.51460
+  E  13.51460  13.59403  13.59403  13.64486  13.81532  14.15358  14.54550  14.59944
+   
+  *X* K [40] : 0.712338  0.000000  0.000000 ( cc) * Comp.s 8077 * weight   0.02500
+               0.487500  0.000000  0.000000 (rlu)
+  E  -0.07802   1.54362  12.48313  12.48313  12.54154  13.21384  13.21384  13.26618
+  E  13.44252  13.49669  13.86907  13.86907  14.16482  14.16877  14.22038  14.50530
+   
+  *X* K [41] : 0.730603  0.000000  0.000000 ( cc) * Comp.s 8077 * weight   0.01250
+               0.500000  0.000000  0.000000 (rlu)
+  E   0.00000   1.45707  12.80095  12.80095  12.88200  12.88719  12.88719  12.91806
+  E  13.79951  13.80269  13.82748  13.88052  14.21860  14.21860  14.23624  14.23624
+
+ [03] Transferred momenta grid
+ =============================
+
+
+ IBZ Q-points :  41
+ BZ  Q-points :  80
+
+ Q [00001] : 0.00      0.00      0.00     (iku) * weight   0.01250
+ Q [00002] :  0.02500   0.00000   0.00000 (iku) * weight   0.02500
+ Q [00003] :  0.05000   0.00000   0.00000 (iku) * weight   0.02500
+ Q [00004] :  0.07500   0.00000   0.00000 (iku) * weight   0.02500
+ Q [00005] : 0.100000  0.000000  0.000000 (iku) * weight   0.02500
+ Q [00006] : 0.125000  0.000000  0.000000 (iku) * weight   0.02500
+ Q [00007] : 0.150000  0.000000  0.000000 (iku) * weight   0.02500
+ Q [00008] : 0.175000  0.000000  0.000000 (iku) * weight   0.02500
+ Q [00009] : 0.200000  0.000000  0.000000 (iku) * weight   0.02500
+ Q [00010] : 0.225000  0.000000  0.000000 (iku) * weight   0.02500
+ Q [00011] : 0.250000  0.000000  0.000000 (iku) * weight   0.02500
+ Q [00012] : 0.275000  0.000000  0.000000 (iku) * weight   0.02500
+ Q [00013] : 0.300000  0.000000  0.000000 (iku) * weight   0.02500
+ Q [00014] : 0.325000  0.000000  0.000000 (iku) * weight   0.02500
+ Q [00015] : 0.350000  0.000000  0.000000 (iku) * weight   0.02500
+ Q [00016] : 0.375000  0.000000  0.000000 (iku) * weight   0.02500
+ Q [00017] : 0.400000  0.000000  0.000000 (iku) * weight   0.02500
+ Q [00018] : 0.425000  0.000000  0.000000 (iku) * weight   0.02500
+ Q [00019] : 0.450000  0.000000  0.000000 (iku) * weight   0.02500
+ Q [00020] : 0.475000  0.000000  0.000000 (iku) * weight   0.02500
+ Q [00021] : 0.500000  0.000000  0.000000 (iku) * weight   0.02500
+ Q [00022] : 0.525000  0.000000  0.000000 (iku) * weight   0.02500
+ Q [00023] : 0.550000  0.000000  0.000000 (iku) * weight   0.02500
+ Q [00024] : 0.575000  0.000000  0.000000 (iku) * weight   0.02500
+ Q [00025] : 0.600000  0.000000  0.000000 (iku) * weight   0.02500
+ Q [00026] : 0.625000  0.000000  0.000000 (iku) * weight   0.02500
+ Q [00027] : 0.650000  0.000000  0.000000 (iku) * weight   0.02500
+ Q [00028] : 0.675000  0.000000  0.000000 (iku) * weight   0.02500
+ Q [00029] : 0.700000  0.000000  0.000000 (iku) * weight   0.02500
+ Q [00030] : 0.725000  0.000000  0.000000 (iku) * weight   0.02500
+ Q [00031] : 0.750000  0.000000  0.000000 (iku) * weight   0.02500
+ Q [00032] : 0.775000  0.000000  0.000000 (iku) * weight   0.02500
+ Q [00033] : 0.800000  0.000000  0.000000 (iku) * weight   0.02500
+ Q [00034] : 0.825000  0.000000  0.000000 (iku) * weight   0.02500
+ Q [00035] : 0.850000  0.000000  0.000000 (iku) * weight   0.02500
+ Q [00036] : 0.875000  0.000000  0.000000 (iku) * weight   0.02500
+ Q [00037] : 0.900000  0.000000  0.000000 (iku) * weight   0.02500
+ Q [00038] : 0.925000  0.000000  0.000000 (iku) * weight   0.02500
+ Q [00039] : 0.950000  0.000000  0.000000 (iku) * weight   0.02500
+ Q [00040] : 0.975000  0.000000  0.000000 (iku) * weight   0.02500
+ Q [00041] : 1.000000  0.000000  0.000000 (iku) * weight   0.01250
+  
+ Q [00001] : 0.00      0.00      0.00     (cc ) * weight   0.01250
+ Q [00002] :  0.01827   0.00000   0.00000 (cc ) * weight   0.02500
+ Q [00003] :  0.03653   0.00000   0.00000 (cc ) * weight   0.02500
+ Q [00004] :  0.05480   0.00000   0.00000 (cc ) * weight   0.02500
+ Q [00005] : 0.073060  0.000000  0.000000 (cc ) * weight   0.02500
+ Q [00006] : 0.091325  0.000000  0.000000 (cc ) * weight   0.02500
+ Q [00007] : 0.109590  0.000000  0.000000 (cc ) * weight   0.02500
+ Q [00008] : 0.127856  0.000000  0.000000 (cc ) * weight   0.02500
+ Q [00009] : 0.146121  0.000000  0.000000 (cc ) * weight   0.02500
+ Q [00010] : 0.164386  0.000000  0.000000 (cc ) * weight   0.02500
+ Q [00011] : 0.182651  0.000000  0.000000 (cc ) * weight   0.02500
+ Q [00012] : 0.200916  0.000000  0.000000 (cc ) * weight   0.02500
+ Q [00013] : 0.219181  0.000000  0.000000 (cc ) * weight   0.02500
+ Q [00014] : 0.237446  0.000000  0.000000 (cc ) * weight   0.02500
+ Q [00015] : 0.255711  0.000000  0.000000 (cc ) * weight   0.02500
+ Q [00016] : 0.273976  0.000000  0.000000 (cc ) * weight   0.02500
+ Q [00017] : 0.292241  0.000000  0.000000 (cc ) * weight   0.02500
+ Q [00018] : 0.310506  0.000000  0.000000 (cc ) * weight   0.02500
+ Q [00019] : 0.328771  0.000000  0.000000 (cc ) * weight   0.02500
+ Q [00020] : 0.347036  0.000000  0.000000 (cc ) * weight   0.02500
+ Q [00021] : 0.365301  0.000000  0.000000 (cc ) * weight   0.02500
+ Q [00022] : 0.383567  0.000000  0.000000 (cc ) * weight   0.02500
+ Q [00023] : 0.401832  0.000000  0.000000 (cc ) * weight   0.02500
+ Q [00024] : 0.420097  0.000000  0.000000 (cc ) * weight   0.02500
+ Q [00025] : 0.438362  0.000000  0.000000 (cc ) * weight   0.02500
+ Q [00026] : 0.456627  0.000000  0.000000 (cc ) * weight   0.02500
+ Q [00027] : 0.474892  0.000000  0.000000 (cc ) * weight   0.02500
+ Q [00028] : 0.493157  0.000000  0.000000 (cc ) * weight   0.02500
+ Q [00029] : 0.511422  0.000000  0.000000 (cc ) * weight   0.02500
+ Q [00030] : 0.529687  0.000000  0.000000 (cc ) * weight   0.02500
+ Q [00031] : 0.547952  0.000000  0.000000 (cc ) * weight   0.02500
+ Q [00032] : 0.566217  0.000000  0.000000 (cc ) * weight   0.02500
+ Q [00033] : 0.584482  0.000000  0.000000 (cc ) * weight   0.02500
+ Q [00034] : 0.602748  0.000000  0.000000 (cc ) * weight   0.02500
+ Q [00035] : 0.621013  0.000000  0.000000 (cc ) * weight   0.02500
+ Q [00036] : 0.639278  0.000000  0.000000 (cc ) * weight   0.02500
+ Q [00037] : 0.657543  0.000000  0.000000 (cc ) * weight   0.02500
+ Q [00038] : 0.675808  0.000000  0.000000 (cc ) * weight   0.02500
+ Q [00039] : 0.694073  0.000000  0.000000 (cc ) * weight   0.02500
+ Q [00040] : 0.712338  0.000000  0.000000 (cc ) * weight   0.02500
+ Q [00041] : 0.730603  0.000000  0.000000 (cc ) * weight   0.01250
+
+ :: Indices: polarization function + BSE
+ :: Indices: Self-Energy
+
+ [WR./SAVE//ndb.kindx]---------------------------------------
+  Fragmentation                    :no
+  Polarization last K   :  41
+  QP states             :   1   41
+  X grid is uniform     :yes
+  BS scattering         :yes
+  COLL scattering       :no
+ - S/N 009422 -------------------------- v.04.04.00 r.00148 -
+
+  [03.01] External/Internal QP corrections
+  ========================================
+
+  [K]Fermi Level        [ev]:  0.000000
+  [K]VBM / CBm          [ev]:  0.000000  4.957071
+  [K]Electronic Temp. [ev K]:  0.00      0.00    
+  [K]Bosonic    Temp. [ev K]:  0.00      0.00    
+  [K]Finite Temperature mode: no
+  [K]El. density      [cm-3]: 0.502E+22
+  [K]States summary         : Full        Metallic    Empty
+                                 0001-0001               0002-0020
+  [K]Indirect Gaps      [ev]:  4.95707  11.40505
+  [K]Direct Gaps        [ev]:  4.95707  15.57496
+  [QP apply] Ind. Gap Correction   [ev]: 3.500000
+
+ [04] Static Dielectric Matrix
+ =============================
+
+ [RD./SAVE//ns.kb_pp]----------------------------------------
+  Fragmentation                    :no
+ - S/N 009422 -------------------------- v.04.04.00 r.00148 -
+ [WF-Oscillators/G space] Performing Wave-Functions I/O from ./SAVE
+
+ [WF-Oscillators/G space loader] Normalization (few states)  min/max  :0.135E-09  1.00    
+
+ [WR./00_bse//ndb.dip_iR_and_P]------------------------------
+  Brillouin Zone Q/K grids (IBZ/BZ):  41   80   41   80
+  RL vectors                   (WF):  8077
+  Fragmentation                    :yes
+  Electronic Temperature        [K]: 0.000000
+  Bosonic    Temperature        [K]: 0.000000
+  X band range           :  1  20
+  X band range limits    : 1  2
+  X e/h energy range [ev]:-1.000000 -1.000000
+  RL vectors in the sum  :  8077
+  [r,Vnl] included       :yes
+  Using shifted grids    :no
+  Using covariant dipoles:no
+  Using G-space approach :yes
+  Using R-space approach :no
+  Direct v evaluation    :no
+  Field momentum norm    :0.1000E-4
+  Wavefunctions          :+AMGB (for 2D systems)(C)
+ - S/N 009422 -------------------------- v.04.04.00 r.00148 -
+ [WF-X] Performing Wave-Functions I/O from ./SAVE
+
+ [FFT-X] Mesh size:   9   44   44
+
+ [X-CG] R(p) Tot o/o(of R)  :  553  1520   100
+ [WR./00_bse//ndb.em1s]--------------------------------------
+  Brillouin Zone Q/K grids (IBZ/BZ):  41   80   41   80
+  RL vectors                   (WF):  8077
+  Coulomb cutoff potential         :none
+  Fragmentation                    :yes
+  Electronic Temperature        [K]: 0.000000
+  Bosonic    Temperature        [K]: 0.000000
+  Static diel. fun.  energies      :+AMGB (for 2D systems)(C)
+                     wavefunctions :+AMGB (for 2D systems)(C)
+  Global Gauge                     :length
+  X matrix size          : 111
+  X band range           :  1  20
+  X e/h energy range [ev]:-1.000000 -1.000000
+  X Time ordering        :T
+  X xc-Kernel            :none
+  X Drude frequency      : 0.00      0.00    
+  X poles           [o/o]: 100.0000
+  RL vectors in the sum  :  8077
+  [r,Vnl] included       :yes
+  Field direction        :0.1000E-4  0.000     0.000   
+  BZ energy Double Grid  :no
+  BZ energy DbGd points  :0
+  BZ Q point size factor : 1.000000
+ - S/N 009422 -------------------------- v.04.04.00 r.00148 -
+ [WR./00_bse//ndb.em1s_fragment_1]---------------------------
+  :: Current Q-pt index     : 1
+  :: X energy range     [ev]: 0.00      0.00    
+  :: X damping range    [ev]:  0.10000   0.10000
+  :: Number of frequencies  : 1
+ - S/N 009422 -------------------------- v.04.04.00 r.00148 -
+ [X-CG] R(p) Tot o/o(of R)  : 1106  1520   100
+ [WR./00_bse//ndb.em1s_fragment_2]---------------------------
+  :: Current Q-pt index     : 2
+  :: X energy range     [ev]: 0.00      0.00    
+  :: X damping range    [ev]:  0.10000   0.10000
+  :: Number of frequencies  : 1
+ - S/N 009422 -------------------------- v.04.04.00 r.00148 -
+ [X-CG] R(p) Tot o/o(of R)  : 1121  1520   100
+ [X-CG] R(p) Tot o/o(of R)  : 1110  1520   100
+ [X-CG] R(p) Tot o/o(of R)  : 1117  1520   100
+ [X-CG] R(p) Tot o/o(of R)  : 1115  1520   100
+ [X-CG] R(p) Tot o/o(of R)  : 1120  1520   100
+ [X-CG] R(p) Tot o/o(of R)  : 1125  1520   100
+ [X-CG] R(p) Tot o/o(of R)  : 1127  1520   100
+ [X-CG] R(p) Tot o/o(of R)  : 1136  1520   100
+ [X-CG] R(p) Tot o/o(of R)  : 1125  1520   100
+ [X-CG] R(p) Tot o/o(of R)  : 1134  1520   100
+ [X-CG] R(p) Tot o/o(of R)  : 1133  1520   100
+ [X-CG] R(p) Tot o/o(of R)  : 1136  1520   100
+ [X-CG] R(p) Tot o/o(of R)  : 1128  1520   100
+ [X-CG] R(p) Tot o/o(of R)  : 1143  1520   100
+ [X-CG] R(p) Tot o/o(of R)  : 1140  1520   100
+ [X-CG] R(p) Tot o/o(of R)  : 1140  1520   100
+ [X-CG] R(p) Tot o/o(of R)  : 1144  1520   100
+ [X-CG] R(p) Tot o/o(of R)  : 1145  1520   100
+ [X-CG] R(p) Tot o/o(of R)  : 1143  1520   100
+ [X-CG] R(p) Tot o/o(of R)  : 1135  1520   100
+ [X-CG] R(p) Tot o/o(of R)  : 1140  1520   100
+ [X-CG] R(p) Tot o/o(of R)  : 1137  1520   100
+ [X-CG] R(p) Tot o/o(of R)  : 1132  1520   100
+ [X-CG] R(p) Tot o/o(of R)  : 1145  1520   100
+ [X-CG] R(p) Tot o/o(of R)  : 1145  1520   100
+ [X-CG] R(p) Tot o/o(of R)  : 1140  1520   100
+ [X-CG] R(p) Tot o/o(of R)  : 1141  1520   100
+ [X-CG] R(p) Tot o/o(of R)  : 1139  1520   100
+ [X-CG] R(p) Tot o/o(of R)  : 1147  1520   100
+ [X-CG] R(p) Tot o/o(of R)  : 1140  1520   100
+ [X-CG] R(p) Tot o/o(of R)  : 1153  1520   100
+ [X-CG] R(p) Tot o/o(of R)  : 1141  1520   100
+ [X-CG] R(p) Tot o/o(of R)  : 1150  1520   100
+ [X-CG] R(p) Tot o/o(of R)  : 1141  1520   100
+ [X-CG] R(p) Tot o/o(of R)  : 1145  1520   100
+ [X-CG] R(p) Tot o/o(of R)  : 1146  1520   100
+ [X-CG] R(p) Tot o/o(of R)  : 1149  1520   100
+ [X-CG] R(p) Tot o/o(of R)  : 1141  1520   100
+ [X-CG] R(p) Tot o/o(of R)  :  589  1520   100
+
+ Timing [Min/Max/Average]: 44s/44s/44s
+
+ [05] Response Functions in Transition space
+ ===========================================
+
+
+  [05.01] Transition Groups build-up
+  ==================================
+
+  [BSK] Transition groups (total)  41
+
+  [05.02] CPU-dependent Block structure
+  =====================================
+
+  [BSK] Size (resonant)  80
+  [BSK]         (total)  80
+
+  [05.03] Independent Particles absorption
+  ========================================
+
+  [RD./00_bse//ndb.dip_iR_and_P]------------------------------
+   Brillouin Zone Q/K grids (IBZ/BZ):  41   80   41   80
+   RL vectors                   (WF):  8077
+   Fragmentation                    :yes
+   Electronic Temperature        [K]: 0.000000
+   Bosonic    Temperature        [K]: 0.000000
+   X band range           :  1  20
+   X band range limits    : 1  2
+   X e/h energy range [ev]:-1.000000 -1.000000
+   RL vectors in the sum  :  8077
+   [r,Vnl] included       :yes
+   Using shifted grids    :no
+   Using covariant dipoles:no
+   Using G-space approach :yes
+   Using R-space approach :no
+   Direct v evaluation    :no
+   Field momentum norm    :0.1000E-4
+   Wavefunctions          :+AMGB (for 2D systems)(C)
+  - S/N 009422 -------------------------- v.04.04.00 r.00148 -
+
+  [05.04] Bethe-Salpeter (Resonant CORRRELATION EXCHANGE)
+  =======================================================
+
+  [BSE] Exchange components :  4531
+
+   [05.04.01] Screened interaction header I/O
+   ==========================================
+
+   [RD./00_bse//ndb.em1s]--------------------------------------
+    Brillouin Zone Q/K grids (IBZ/BZ):  41   80   41   80
+    RL vectors                   (WF):  8077
+    Coulomb cutoff potential         :none
+    Fragmentation                    :yes
+    Electronic Temperature        [K]: 0.000000
+    Bosonic    Temperature        [K]: 0.000000
+    Static diel. fun.  energies      :+AMGB (for 2D systems)(C)
+                       wavefunctions :+AMGB (for 2D systems)(C)
+    Global Gauge                     :length
+    X matrix size          : 111
+    X band range           :  1  20
+    X e/h energy range [ev]:-1.000000 -1.000000
+    X Time ordering        :T
+    X xc-Kernel            :none
+    X Drude frequency      : 0.00      0.00    
+    X poles           [o/o]: 100.0000
+    RL vectors in the sum  :  8077
+    [r,Vnl] included       :yes
+    Field direction        :0.1000E-4  0.000     0.000   
+    BZ energy Double Grid  :no
+    BZ energy DbGd points  :0
+    BZ Q point size factor : 1.000000
+   [RD./00_bse//ndb.em1s_fragment_1]---------------------------
+    :: Current Q-pt index     : 1
+    :: X energy range     [ev]: 0.00      0.00    
+    :: X damping range    [ev]:  0.10000   0.10000
+    :: Number of frequencies  : 1
+   - S/N 009422 -------------------------- v.04.04.00 r.00148 -
+   [WF-BSK] Performing Wave-Functions I/O from ./SAVE
+
+   [FFT-BSK] Mesh size:   9   44   44
+
+
+   [05.04.02] Wave-Function Phases
+   ===============================
+
+   [BSE] WF phases found  [o/o]: 77.59146
+   [WR./00_bse//ndb.BS_PAR_Q1]---------------------------------
+    Brillouin Zone Q/K grids (IBZ/BZ):  41   80   41   80
+    RL vectors                   (WF):  8077
+    Coulomb cutoff potential         :none
+    Parallel CPUs                    :
+    Parallel Roles                   :
+    Fragmentation                    :no
+    BS kernel          wavefunctions :+AMGB (for 2D systems)(C)
+    Static diel. fun.  energies      :+AMGB (for 2D systems)(C)
+                       wavefunctions :+AMGB (for 2D systems)(C)
+    BSK|Identifier              :  7132
+       |Dimension               :  80
+       |Bands                   : 1  2
+       |Exchange           [res]:yes
+       |Correlation        [res]:yes
+       |Kernel`s coupling       :no
+       |Exchange           [cpl]:no
+       |Correlation        [cpl]:no
+       |W interaction is bare   :no
+       |ALDA kernel in R-space  :no
+       |RL vectors    [exchange]:  4531
+       |RL vectors [correlation]: 111
+       |E/h energy range    [ev]:-1.000000 -1.000000
+       |Coupling range     [o/o]: 100.0000  100.0000
+     W |Interaction is diagonal :no
+       |Matrix size             : 111
+       |Bands                   :  1  20
+       |e/h energy range    [ev]:-1.000000 -1.000000
+       |Poles              [o/o]: 100.0000
+       |RL vectors in the sum   :  8077
+       |[r,Vnl] included        :yes
+       |Field direction         :0.1000E-4  0.000     0.000   
+       |Coulomb Cutoff          :none
+       |xc-Kernel               :none
+    RIM|RL components      [col]:0
+       |Random points      [col]:0
+   - S/N 009422 -------------------------- v.04.04.00 r.00148 -
+
+   [05.04.03] Kernel loop
+   ======================
+
+
+ Timing [Min/Max/Average]: 02s/02s/02s
+
+ [06] BSE solver(s)
+ ==================
+
+
+  [06.01] Diago solver
+  ====================
+
+  [WR./00_bse//ndb.BS_diago_Q01]------------------------------
+   BS kernel          energies      : Analyt. E
+   BSK|Identifier              :  7132
+      |Dimension               :  80
+      |Bands                   : 1  2
+      |Exchange           [res]:yes
+      |Correlation        [res]:yes
+      |Kernel`s coupling       :no
+      |Exchange           [cpl]:no
+      |Correlation        [cpl]:no
+      |W interaction is bare   :no
+      |ALDA kernel in R-space  :no
+      |RL vectors    [exchange]:  4531
+      |RL vectors [correlation]: 111
+      |E/h energy range    [ev]:-1.000000 -1.000000
+      |Coupling range     [o/o]: 100.0000  100.0000
+    W |Interaction is diagonal :no
+      |Matrix size             : 111
+      |Bands                   :  1  20
+      |e/h energy range    [ev]:-1.000000 -1.000000
+      |Poles              [o/o]: 100.0000
+      |RL vectors in the sum   :  8077
+      |[r,Vnl] included        :yes
+      |Field direction         :0.1000E-4  0.000     0.000   
+      |Coulomb Cutoff          :none
+      |xc-Kernel               :none
+   RIM|RL components      [col]:0
+      |Random points      [col]:0
+  - S/N 009422 -------------------------- v.04.04.00 r.00148 -
+   BSK Identifier                  :  7132
+   Excitonic eigenstates included  :yes
+   Field direction                 :0.1000E-4  0.000     0.000   
+   Number of eigenstates included  :  80
+  - S/N 009422 -------------------------- v.04.04.00 r.00148 -
+
+ [07] Timing Overview
+ ====================
+
+ Routines: global (Only MASTER cpu here)
+                                    io_WF :     0.00s CPU (       130 calls,   0.435 millisec avg)
+                                  io_GROT :     0.00s CPU (         3 calls,   1.083 millisec avg)
+                                 io_QINDX :     0.00s CPU (         3 calls,   1.078 millisec avg)
+                               io_COL_CUT :     0.00s CPU
+                           io_Double_Grid :     0.00s CPU
+                                    io_HF :     0.00s CPU
+                               io_DIPOLES :     0.00s CPU (        86 calls,   2.013 millisec avg)
+                              io_KB_pwscf :     0.00s CPU (         2 calls,   0.008 millisec avg)
+                             io_KB_abinit :     0.00s CPU (        43 calls,   0.539 millisec avg)
+                                    io_BS :     0.00s CPU (       862 calls,   0.048 millisec avg)
+                          bz_samp_indexes :     0.00s CPU
+                                     io_X :     0.00s CPU (        86 calls,   2.318 millisec avg)
+                  IO_and_Messaging_switch :     0.00s CPU (         7 calls,   0.003 millisec avg)
+                                  Dipoles :     0.00s CPU (         2 calls, 286.079 millisec avg)
+                        DIPOLE_transverse :     0.00s CPU
+                             PP_uspp_init :     0.00s CPU (         3 calls,   0.025 millisec avg)
+                              WF_load_FFT :     0.00s CPU (         3 calls, 139.581 millisec avg)
+                              io_fragment :     0.00s CPU (       165 calls,   0.574 millisec avg)
+                                FFT_setup :    13.00s CPU (        44 calls,   0.316 sec avg)
+                           Xo (procedure) :    29.00s CPU (        41 calls,   0.721 sec avg)
+                               Xo (REDUX) :     0.00s CPU (        41 calls,   0.001 millisec avg)
+                            X (procedure) :     0.00s CPU (        41 calls,   2.461 millisec avg)
+  MATRIX transfer (X_G_all_q_X_redux_1_1) :     0.00s CPU (        41 calls,   0.018 millisec avg)
+                           LINEAR ALGEBRA :     0.00s CPU (        42 calls,   1.956 millisec avg)
+                        SERIAL_lin_system :     0.00s CPU (        41 calls,   1.944 millisec avg)
+                                X (REDUX) :     0.00s CPU (        41 calls,   0.019 millisec avg)
+  MATRIX transfer (X_G_all_q_X_redux_2_1) :     0.00s CPU (        41 calls,   0.015 millisec avg)
+                           eval_G_minus_G :     0.00s CPU
+                               T_space IP :     0.00s CPU
+                         X T_space Kernel :     1.00s CPU
+                         T_space EXX Osc. :     0.00s CPU (        41 calls,   0.515 millisec avg)
+                        T_space CORR Osc. :     1.00s CPU (       861 calls,   0.002 sec avg)
+                             Diago Solver :     0.00s CPU
+                             io_BSS_diago :     0.00s CPU (         2 calls,   2.563 millisec avg)
+         SERIAL_HERMITIAN_diagonalization :     0.00s CPU
+
+ [08] Memory Overview
+ ====================
+
+ Memory Usage: global (Only MASTER cpu here). [O] stands for group 'O'
+ Memory treshold are: 10.00000Mb (basic treshold)  100.0000Mb (SAVEs treshold)
+
+         TOTAL not deallocated :  5.703000Mb
+
+ MAX allocations:
+
+                           WF%c [%c] :  114.3014Gb ([04] Static Dielectric Matrix)
+
+         Max memory used   :  122.3810Mb
+
+ [09] Game Over & Game summary
+ =============================
+
+ 11/06/2019 at 14:15 YAMBO @ dufour [start]
+ 11/06/2019 at 14:16                [end]
+
+ Timing   [Min/Max/Average]: 46s/46s/46s
+             [Time-Profile]: 46s
+
+ .-ACKNOWLEDGMENT
+ |
+ | The users of YAMBO have little formal obligations with respect to
+ | the YAMBO group (those specified in the GNU General Public
+ | License, http://www.gnu.org/copyleft/gpl.txt). However, it is
+ | common practice in the scientific literature, to acknowledge the
+ | efforts of people that have made the research possible. In this
+ | spirit, please find below the reference we kindly ask you to use
+ | in order to acknowledge YAMBO:
+ |
+ | Yambo: An ab initio tool for excited state calculations
+ | A. Marini, C. Hogan, M. Gr\"uning, D. Varsano
+ | Computer Physics Communications  180, 1392 (2009).
+ |
+  
+ .-Input file : Outputs/00_bse_00_bse.in
+ | optics                         # [R OPT] Optics
+ | bse                            # [R BSE] Bethe Salpeter Equation.
+ | bsk                            # [R BSK] Bethe Salpeter Equation kernel
+ | bss                            # [R BSS] Bethe Salpeter Equation solver
+ | em1s                           # [R Xs] Static Inverse Dielectric Matrix
+ | BoseTemp= 0.000000     eV      # Bosonic Temperature
+ | X_Threads= 1                   # [OPENMP/X] Number of threads for response functions
+ | DIP_Threads= 1                 # [OPENMP/X] Number of threads for dipoles
+ | K_Threads= 1                   # [OPENMP/BSK] Number of threads for response functions
+ | Chimod= "HARTREE"              # [X] IP/Hartree/ALDA/LRC/PF/BSfxc
+ | BSEmod= "retarded"             # [BSE] resonant/retarded/coupling
+ | BSKmod= "SEX"                  # [BSE] IP/Hartree/HF/ALDA/SEX
+ | BSSmod= "d"                    # [BSS] (h)aydock/(d)iagonalization/(i)nversion/(t)ddft`
+ | BSENGexx=  4531        RL      # [BSK] Exchange components
+ | BSENGBlk= 111          RL      # [BSK] Screened interaction block size
+ | #WehCpl                        # [BSK] eh interaction included also in coupling
+ | % KfnQP_E
+ |  3.500000 | 1.000000 | 1.000000 |        # [EXTQP BSK BSS] E parameters  (c/v) eV|adim|adim
+ | %
+ | % BEnRange
+ |   0.00000 | 10.00000 | eV      # [BSS] Energy range
+ | %
+ | % BDmRange
+ |   0.10000 |  0.10000 | eV      # [BSS] Damping range
+ | %
+ | BEnSteps= 1000                 # [BSS] Energy steps
+ | % BLongDir
+ | 0.1000E-4 | 0.000    | 0.000    |        # [BSS] [cc] Electric Field
+ | %
+ | % BSEBands
+ |  1 | 2 |                       # [BSK] Bands range
+ | %
+ | WRbsWF                         # [BSS] Write to disk excitonic the WFs
+ | % QpntsRXs
+ |    1 |  41 |                   # [Xs] Transferred momenta
+ | %
+ | % BndsRnXs
+ |   1 | 20 |                     # [Xs] Polarization function bands
+ | %
+ | NGsBlkXs= 111          RL      # [Xs] Response block size
+ | % DmRngeXs
+ |   0.10000 |  0.10000 | eV      # [Xs] Damping range
+ | %
+ | % LongDrXs
+ | 0.1000E-4 | 0.000    | 0.000    |        # [Xs] [cc] Electric Field
+ | %

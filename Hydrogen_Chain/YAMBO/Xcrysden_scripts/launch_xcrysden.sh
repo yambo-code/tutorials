@@ -10,15 +10,17 @@ threeD=`echo $1 |grep '3d'`
 
 if test -n "$twoD"  ; then 
  cp $1 file.xsf
- xcrysden -s ../bin/2D.xcrysden
+ xcrysden -s ../Xcrysden_scripts/2D.xcrysden
+# mv print.png $1".png"
  rm -f file.xsf
- mv print.png $1".png"
 fi
 
 if test -n "$threeD"  ; then 
  cp $1 file.xsf
- xcrysden -s ../bin/3D.xcrysden
- rm -f file.xsf
- mv print.png $1".png"
+ xcrysden -s ../Xcrysden_scripts/3D.xcrysden
+# mv print.png $1".png"
+# xcrysden -s ../Xcrysden_scripts/geo.xcrysden
+# mv print.png $1"-geo.png"
+# rm -f file.xsf
 fi
 

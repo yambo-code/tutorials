@@ -1,0 +1,19 @@
+#                                                           
+#   __   __     _        __  __       ____      U  ___  u   
+#   \ \ / / U  /"\  U u |" \/ "| u U | __") u    \/"_ \/    
+#    \ V /   \/ _ \/   \| |\/| |/   \|  _ \/     | | | |    
+#   U_|"|_u  / ___ \    | |  | |     | |_) | .-,_| |_| |    
+#     |_|   /_/   \_\   |_|  |_|     |____/   \_)-\___/     
+# .-,//|(_   \\    >>  <<,-,,-.     _|| \\_        \\       
+#  \_) (__) (__)  (__)  (./  \.)   (__) (__)      (__)      
+#                                                           
+#                                                           
+# GPL Version 4.4.0 Revision 148. (Based on r.16920 h.961a8d
+#                  MPI+SLK+OpenMP Build                     
+#                http://www.yambo-code.org                  
+#
+electrons                      # [R] Electrons (and holes)
+density                        # [R] Density
+Format= "x"                    # Output format [(c)ube/(g)nuplot/(x)crysden]
+Direction= "12"                 # [rlu] [1/2/3] for 1d or [12/13/23] for 2d [123] for 3D
+FFTGvecs=  7659        RL      # [FFT] Plane-waves

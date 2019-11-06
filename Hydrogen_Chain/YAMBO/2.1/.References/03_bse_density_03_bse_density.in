@@ -1,0 +1,27 @@
+#                                                           
+#  __  __   ________   ___ __ __    _______   ______        
+# /_/\/_/\ /_______/\ /__//_//_/\ /_______/\ /_____/\       
+# \ \ \ \ \\::: _  \ \\::\| \| \ \\::: _  \ \\:::_ \ \      
+#  \:\_\ \ \\::(_)  \ \\:.      \ \\::(_)  \/_\:\ \ \ \     
+#   \::::_\/ \:: __  \ \\:.\-/\  \ \\::  _  \ \\:\ \ \ \    
+#     \::\ \  \:.\ \  \ \\. \  \  \ \\::(_)  \ \\:\_\ \ \   
+#      \__\/   \__\/\__\/ \__\/ \__\/ \_______\/ \_____\/   
+#                                                           
+#                                                           
+# GPL Version 4.4.0 Revision 148. (Based on r.16920 h.961a8d
+#                  MPI+SLK+OpenMP Build                     
+#                http://www.yambo-code.org                  
+#
+excitons                       # [R] Excitons
+wavefunction                   # [R] Wavefunction
+Format= "x"                    # Output format [(c)ube/(g)nuplot/(x)crysden]
+Direction= "123"                 # [rlu] [1/2/3] for 1d or [12/13/23] for 2d [123] for 3D
+FFTGvecs=  7659        RL      # [FFT] Plane-waves
+States= "1 - 1"                # Index of the BS state(s)
+Degen_Step=   0.0100   eV      # Maximum energy separation of two degenerate states
+% Cells
+ 16 | 1 | 1 |                             # Number of cell repetitions in each direction (odd or 1)
+%
+% Hole
+ 1.02500 | 12.50000 | 12.50000  |        # [cc] Hole position in unit cell
+%
