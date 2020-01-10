@@ -1,0 +1,29 @@
+ &control
+    calculation = 'scf'
+    restart_mode='from_scratch',
+    prefix='AlAs',
+    pseudo_dir = './',
+    outdir='./'
+    wf_collect=.true.
+ /
+ &system    
+    ibrav=  2 
+    celldm(1) = 10.6959 
+    nat=  2 
+    ntyp= 2
+    ecutwfc =40.0 
+ /
+ &electrons
+    mixing_mode = 'plain'
+    mixing_beta = 0.7 
+    conv_thr =  1.0d-8
+ /
+ATOMIC_SPECIES 
+ Al 1.0 Al.pz-vbc.UPF
+ As 1.0 As.pz-bhs.UPF  
+ATOMIC_POSITIONS crystal 
+Al  0.0  0.0  0.0
+As  0.25 0.25 0.25
+K_POINTS automatic
+10 10 10 1 1 1
+
