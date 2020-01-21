@@ -86,7 +86,6 @@ if ($list or $install) {
  foreach $dir (@tutorials) {
   $N++;
   $tgz=$dir.".tar.gz";
-print "$dir $tgz\n";
   if ($list) 
   {
    @dirs = ( "./$dir");
@@ -108,9 +107,9 @@ print "$dir $tgz\n";
    &DOWNLOAD_it;
   }
  }
+ if ($install and -d "tutorials") {system("rmdir -p tutorials")};
 }
 
-system("rmdir YAMBO_TUTORIALS");
 print "\nDone.\n";
  
 sub TUTORIALS_list
@@ -139,8 +138,8 @@ sub DOWNLOAD_it
   chdir("$pwd");
   system("gunzip ${DBs_tutorial_archive}");
   system("tar zxf ${DBs_tutorial_tar} ");
-  system("rsync -avzr YAMBO_TUTORIALS/$tutorial/ $tutorial/");
-  system("rm -fr ${DBs_tutorial_tar}  YAMBO_TUTORIALS/$tutorial ");
+  system("rsync -avzr tutorials/$tutorial/ $tutorial/");
+  system("rm -fr ${DBs_tutorial_tar}  tutorials/$tutorial ");
  }
  chdir("$pwd");
 }
