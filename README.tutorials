@@ -1,0 +1,31 @@
+Yambo 
+======
+Yambo doesn't stand for anything like "Yet Another Many-Body cOde", for instance. 
+Unless you really want it to. 
+
+Quick installation instructions for the impatient:
+   ./configure [options]
+   make all
+("make" alone prints a list of acceptable targets). Binaries go in bin/.
+For more information, see the general documentation on the web sites
+
+http://www.yambo-code.org/  (general informations)
+http://www.yambo-code.org/wiki/index.php?title=Main_Page (Yambo educational)
+
+Installing: http://www.yambo-code.org/wiki/index.php?title=Installation
+Getting started: http://www.yambo-code.org/wiki/index.php?title=First_steps:_a_walk_through_from_DFT_to_optical_properties
+
+All the material included in this distribution is free software;
+you can redistribute it and/or modify it under the terms of the GNU
+General Public License as published by the Free Software Foundation;
+either version 2 of the License, or (at your option) any later version.
+
+These programs are distributed in the hope that they will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License 
+for more details (see COPYING file).
+
+Yambo Tutorials 
+=================
+You can find all tutorials procedure online on the [yambo-educational wiki page](http://www.yambo-code.org/wiki)
+

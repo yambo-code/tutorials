@@ -1,3 +1,0 @@
-mkdir 04_bse_rim_0K
-cd 04_bse_rim_0K/ ; ln -s ../02_bse/ndb.BS_Q1 .; cd ..
-cd 04_bse_rim_0K/ ; ln -s ../RIM/ndb.E_RIM . ; cd ..
