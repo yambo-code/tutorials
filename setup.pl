@@ -29,8 +29,6 @@ use File::Spec;
 use File::Basename;
 use Cwd 'abs_path';
 #
-use autodie;
-#
 # pwd
 #
 $pwd=abs_path();
