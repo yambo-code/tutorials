@@ -23,13 +23,10 @@
 #
 use lib ".";
 #
-use List::MoreUtils 'true';
 use Getopt::Long;
 use File::Find;
 use File::Spec;
-use File::Copy;
 use File::Basename;
-use File::Compare;
 use Cwd 'abs_path';
 #
 use autodie;
