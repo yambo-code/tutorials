@@ -37,6 +37,7 @@ $pwd=abs_path();
 &GetOptions("help"           => \$help,
             "install"        => \$install,
             "clean"          => \$clean,
+            "more"           => \$more,
             "list"           => \$list) or die;
 sub usage {
 
@@ -49,6 +50,7 @@ sub usage {
                    -list                   List the available tutorials
                    -install                Download & install the core databases
                    -clean                  Clean the repository (remove all execution files)
+                   -more                   Download more tutorials (in addition to the basic ones)
 
 EndOfUsage
   ;
@@ -72,15 +74,11 @@ if ($clean) {
 if ($list or $install) {
  if ($list) {print "\nAvailable local tutorials:\n\n"};
  &TUTORIALS_list;
-# open(ML,"<","LIST");
-# @online = <ML>;
-# #print @online;
-# close(ML);
-# system("rm -f LIST");
-# $N=0;
  foreach $dir (@tutorials) {
+  undef $more_tut;
   $N++;
   $tgz=$dir.".tar.gz";
+  if (-f $dir."/.more") {$more_tut =1};
   if ($list) 
   {
    @dirs = ( "./$dir");
@@ -92,11 +90,13 @@ if ($list or $install) {
     $SAVE_dir =~ s/SAVE//g;
     if (-f $SAVE_dir."/.AUTOMATIC") {$auto =1};
    }
-   print " $N: $dir";
+   if (not $more_tut) {print " $N: $dir"};
+   if (    $more_tut) {print " $N: $dir (additional)"};
    print "\n";
   }
   elsif ($install) 
   {
+   if ($more_tut and not $more ) {next};
    $tutorial=$dir;
    &NAME_it;
    &DOWNLOAD_it;
