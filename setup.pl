@@ -119,22 +119,18 @@ foreach $dir (<*>) {
 #
 sub NAME_it{
 $DBs_tutorial_tar="${tutorial}_DBs.tar";
-$ALL_tutorial_tar="${tutorial}.tar";
 $DBs_tutorial_archive="${tutorial}_DBs.tar.gz";
-$ALL_tutorial_archive="${tutorial}.tar.gz";
 }
 #
 sub DOWNLOAD_it
 {
  chdir("./archive");
  system("wget -c www.yambo-code.org/${ONLINE_tutorials_files_location}/${DBs_tutorial_archive}");
- if (-f  ${DBs_tutorial_archive} ){
-  system("cp ${DBs_tutorial_archive} $pwd");
-  chdir("$pwd");
+ if (-f ${DBs_tutorial_archive} ){
   system("gunzip ${DBs_tutorial_archive}");
-  system("tar zxf ${DBs_tutorial_tar} ");
-  system("rsync -avzr tutorials/$tutorial/ $tutorial/");
-  system("rm -fr ${DBs_tutorial_tar}  tutorials/$tutorial ");
+  chdir("$pwd");
+  system("tar xf archive/${DBs_tutorial_tar} ");
+  system("gzip archive/${DBs_tutorial_tar}");
  }
  chdir("$pwd");
 }
