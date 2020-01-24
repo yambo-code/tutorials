@@ -1,0 +1,35 @@
+#                                                                     
+#  __  __   ________   ___ __ __    _______   ______                  
+# /_/\/_/\ /_______/\ /__//_//_/\ /_______/\ /_____/\                 
+# \ \ \ \ \\::: _  \ \\::\| \| \ \\::: _  \ \\:::_ \ \                
+#  \:\_\ \ \\::(_)  \ \\:.      \ \\::(_)  \/_\:\ \ \ \               
+#   \::::_\/ \:: __  \ \\:.\-/\  \ \\::  _  \ \\:\ \ \ \              
+#     \::\ \  \:.\ \  \ \\. \  \  \ \\::(_)  \ \\:\_\ \ \             
+#      \__\/   \__\/\__\/ \__\/ \__\/ \_______\/ \_____\/             
+#                                                                     
+#                                                                     
+# GPL Version 4.5.0 Revision 9122. (Based on r.17089 h.6b5c70e8d)     
+#                                                                     
+#                  MPI+SLK+OpenMP Build                               
+#                http://www.yambo-code.org                            
+#
+optics                         # [R OPT] Optics
+chi                            # [R CHI] Dyson equation for Chi.
+dipoles                        # [R   ] Compute the dipoles
+Chimod= "IP"                   # [X] IP/Hartree/ALDA/LRC/PF/BSfxc
+% QpntsRXd
+   1 |  1 |                   # [Xd] Transferred momenta
+%
+% BndsRnXd
+  3 | 6 |                     # [Xd] Polarization function bands
+%
+% EnRngeXd
+  0.00000 | 20.00000 | eV      # [Xd] Energy range
+%
+% DmRngeXd
+  0.10000 |  0.10000 | eV      # [Xd] Damping range
+%
+ETStpsXd= 2001                  # [Xd] Total Energy steps
+% LongDrXd
+ 0.000000 | 1.000000 | 0.000000 |        # [Xd] [cc] Electric Field
+%

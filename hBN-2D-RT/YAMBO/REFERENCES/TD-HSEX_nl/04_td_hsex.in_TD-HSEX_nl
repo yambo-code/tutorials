@@ -1,0 +1,34 @@
+nloptics                       # [R NL] Non-linear optics
+DIP_Threads=0                  # [OPENMP/X] Number of threads for dipoles
+NL_Threads=0                   # [OPENMP/NL] Number of threads for nl-optics
+% NLBands
+  4 |  5 |                     # [NL] Bands
+%
+NLverbosity= "low"             # [NL] Verbosity level (low | high)
+NLstep=   0.0100       fs      # [NL] Real Time step length
+NLtime= 20.00000       fs      # [NL] Simulation Time
+NLintegrator= "CRANKNIC"         # [NL] Integrator ("EULEREXP/RK2/RK4/RK2EXP/HEUN/INVINT/CRANKNIC")
+NLCorrelation= "SEX"           # [NL] Correlation ("IPA/HARTREE/TDDFT/LRC/LRW/JGM/SEX")
+NLLrcAlpha= 0.000000           # [NL] Long Range Correction
+% NLEnRange
+ 0.200000 | 8.000000 | eV      # [NL] Energy range
+%
+NLEnSteps= 1                   # [NL] Energy steps
+NLDamping=  0.10000    eV      # [NL] Damping
+#UseDipoles                    # [NL] Use Covariant Dipoles (just for test purpose)
+#FrSndOrd                      # [NL] Force second order in Covariant Dipoles
+#EvalCurrent                   # [NL] Evaluate the current
+HARRLvcs= 1000         mHa     # [HA] Hartree     RL components
+EXXRLvcs= 1000         mHa     # [XX] Exchange    RL components
+
+% ExtF_Dir
+ 0.000000 | 1.000000 | 0.000000 |        # [NL ExtF] Versor
+%
+ExtF_Int= 1000.        kWLm2   # [NL ExtF] Intensity
+ExtF_Width= 0.000000   fs      # [NL ExtF] Field Width
+ExtF_kind= "DELTA"             # [NL ExtF] Kind(SIN|SOFTSIN|RES|ANTIRES|GAUSS|DELTA|QSSIN)
+ExtF_Tstart=   0.0100  fs      # [NL ExtF] Initial Time
+% GfnQP_E
+ 3.000000 | 1.000000 | 1.000000 |        # [EXTQP G] E parameters  (c/v) eV|adim|adim
+%
+

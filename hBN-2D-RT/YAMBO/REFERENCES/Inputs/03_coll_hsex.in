@@ -1,0 +1,36 @@
+#                                                                     
+#  __  __   ________   ___ __ __    _______   ______                  
+# /_/\/_/\ /_______/\ /__//_//_/\ /_______/\ /_____/\                 
+# \ \ \ \ \\::: _  \ \\::\| \| \ \\::: _  \ \\:::_ \ \                
+#  \:\_\ \ \\::(_)  \ \\:.      \ \\::(_)  \/_\:\ \ \ \               
+#   \::::_\/ \:: __  \ \\:.\-/\  \ \\::  _  \ \\:\ \ \ \              
+#     \::\ \  \:.\ \  \ \\. \  \  \ \\::(_)  \ \\:\_\ \ \             
+#      \__\/   \__\/\__\/ \__\/ \__\/ \_______\/ \_____\/             
+#                                                                     
+#                                                                     
+# GPL Version 4.5.0 Revision 9122. (Based on r.17089 h.6b5c70e8d)     
+#                                                                     
+#                  MPI+SLK+OpenMP Build                               
+#                http://www.yambo-code.org                            
+#
+collisions                     # [R] Eval the extended Collisions
+em1s                           # [R Xs] Static Inverse Dielectric Matrix
+dipoles                        # [R   ] Compute the dipoles
+Chimod= "HARTREE"              # [X] IP/Hartree/ALDA/LRC/PF/BSfxc
+% BndsRnXs
+  1 | 20 |                     # [Xs] Polarization function bands
+%
+NGsBlkXs= 1000        mHa      # [Xs] Response block size
+% DmRngeXs
+  0.10000 |  0.10000 | eV      # [Xs] Damping range
+%
+% LongDrXs
+ 1.000000 | 0.000000 | 0.000000 |        # [Xs] [cc] Electric Field
+%
+% COLLBands
+  4 | 5 |                     # [COLL] Bands for the collisions
+%
+HXC_Potential= "HARTREE+SEX"   # [SC] SC HXC Potential
+HARRLvcs= 1000       mHa      # [HA] Hartree     RL components
+EXXRLvcs= 1000       mHa      # [XX] Exchange    RL components
+CORRLvcs= 1000       mHa      # [GW] Correlation RL components

@@ -1,0 +1,40 @@
+#                                                                     
+#  ____  ____     _       ____    ____  ______      ___               
+# |_  _||_  _|   / \     |_   \  /   _||_   _ \   ."   `.             
+#   \ \  / /    / _ \      |   \/   |    | |_) | /  .-.  \            
+#    \ \/ /    / ___ \     | |\  /| |    |  __". | |   | |            
+#    _|  |_  _/ /   \ \_  _| |_\/_| |_  _| |__) |\  `-"  /            
+#   |______||____| |____||_____||_____||_______/  `.___."             
+#                                                                     
+#                                                                     
+#                                                                     
+# GPL Version 4.5.0 Revision 9122. (Based on r.17089 h.6b5c70e8d)     
+#                                                                     
+#                   MPI+SLK+OpenMP Build                              
+#                http://www.yambo-code.org                            
+#
+nloptics                       # [R NL] Non-linear optics
+% NLBands
+  3 | 5 |                     # [NL] Bands
+%
+NLverbosity= "high"             # [NL] Verbosity level (low | high)
+NLtime= 55.000000       fs      # [NL] Simulation Time
+NLintegrator= "INVINT"         # [NL] Integrator ("EULEREXP/RK2/RK4/RK2EXP/HEUN/INVINT/CRANKNIC")
+NLCorrelation= "IPA"           # [NL] Correlation ("IPA/HARTREE/TDDFT/LRC/LRW/JGM/SEX")
+NLLrcAlpha= 0.000000           # [NL] Long Range Correction
+% NLEnRange
+ 0.200000 | 8.000000 | eV      # [NL] Energy range
+%
+NLEnSteps= 1                 # [NL] Energy steps
+NLDamping= 0.000000    eV      # [NL] Damping
+
+% ExtF_Dir
+ 0.000000 | 1.000000 | 0.000000 |        # [NL ExtF] Versor
+%
+ExtF_kind= "DELTA"           # [NL ExtF] Kind(SIN|SOFTSIN|RES|ANTIRES|GAUSS|DELTA|QSSIN)
+ExtF_Int= 1.E4   kWLm2   # [NL ExtF] Intensity
+
+% GfnQP_E
+ 3.000000 | 1.000000 | 1.000000 |       # [EXTQP G] E parameters  (c/v) eV|adim|adim
+%
+

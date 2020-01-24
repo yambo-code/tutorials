@@ -1,0 +1,99 @@
+
+
+  __ __  ____ ___ ___ ____   ___
+ |  |  |/    |   |   |    \ /   \
+ |  |  |  o  | _   _ |  o  )     |
+ |  ~  |     |  \_/  |     |  O  |
+ |___, |  _  |   |   |  O  |     |
+ |     |  |  |   |   |     |     |
+ |____/|__|__|___|___|_____|\___/
+
+
+ <---> [01] CPU structure, Files & I/O Directories
+ <---> [02] CORE Variables Setup
+ <---> [02.01] Unit cells
+ <---> [02.02] Symmetries
+ <---> [02.03] RL shells
+ <---> [02.04] K-grid lattice
+ <---> Grid dimensions               : 10  10
+ <---> [02.05] Energies [ev] & Occupations
+ <---> [03] Transferred momenta grid
+ <---> [MEMORY] Alloc bare_qpg( 15.87600Mb) TOTAL:  17.34500Mb (traced)  23.02400Mb (memstat)
+ <---> [04] Dipoles
+ <---> [DIP] Checking dipoles header
+ <---> [WARNING] DIPOLES database not correct or not present
+ <---> [x,Vnl] computed using 2 projectors
+ <---> Dipoles: P, V and iR (T): |                                        | [000%] --(E) --(X)
+ <---> Dipoles: P, V and iR (T): |########################################| [100%] --(E) --(X)
+ <---> [DIP] Writing dipoles header
+ <---> [MEMORY]TOTAL not deallocated :  17.36400Mb
+ <---> [05] HARTREE+GS_XC Real-Time Dynamics
+ <---> [05.01] Initialization
+ <---> [DIP] Checking dipoles header
+ <---> Integrator: EULER + RK2
+ <---> [05.02] Dephasing matrix setup
+ <---> [RT] External Scalar Dephasing applied
+ <---> [WARNING]Field starting time corrected to respect the I/O times.
+ <---> [05.03] Electronic Collisions loading and setup
+ <---> [WARNING] HXC collisions not found. Potential is computed on the fly.
+ <---> [05.04] Messaging
+ <---> [MEMORY] Alloc WF%c( 12.127000Mb) TOTAL:  29.909000Mb (traced)  35.540000Mb (memstat)
+ <---> [WF-RT] Performing Wave-Functions I/O from ./SAVE
+ <---> [FFT-RT] Mesh size:  12   12   49
+ <---> [05.05] Start and Restart
+ <01s> Output files definition ...
+ <01s> [05.06] Real-Time dynamics
+ <01s> [RT] Dynamics : |                                        | [000%] --(E) --(X)
+ <06s> [RT] Dynamics : |####                                    | [011%] 05s(E) 43s(X)
+ <11s> [RT] Dynamics : |#########                               | [022%] 10s(E) 43s(X)
+ <16s> [RT] Dynamics : |#############                           | [034%] 15s(E) 44s(X)
+ <21s> [RT] Dynamics : |##################                      | [045%] 20s(E) 44s(X)
+ <26s> [RT] Dynamics : |######################                  | [056%] 25s(E) 43s(X)
+ <31s> [RT] Dynamics : |###########################             | [067%] 30s(E) 45s(X)
+ <36s> [RT] Dynamics : |###############################         | [079%] 35s(E) 44s(X)
+ <41s> [RT] Dynamics : |####################################    | [090%] 40s(E) 44s(X)
+ <45s> [RT] Dynamics : |########################################| [100%] 44s(E) 44s(X)
+ <45s> [MEMORY]  Free WF%c( 12.12700Mb) TOTAL:  17.86500Mb (traced)  40.54000Mb (memstat)
+ <45s> [MEMORY]TOTAL not deallocated :  17.30600Mb
+ <45s> [06] Timing Overview
+ <45s> [TIMING]                                   io_WF :    0.1977 s CPU (     388 calls,    0.0005 s avg)
+ <45s> [TIMING]                                 io_GROT :    0.0049 s CPU (       3 calls,    0.0016 s avg)
+ <45s> [TIMING]                                io_QINDX :    0.0029 s CPU (       2 calls,    0.0015 s avg)
+ <45s> [TIMING]                              io_COL_CUT :    0.0000 s CPU
+ <45s> [TIMING]                          io_Double_Grid :    0.0000 s CPU
+ <45s> [TIMING]                                   io_HF :    0.0000 s CPU
+ <45s> [TIMING]                              io_DIPOLES :    0.2433 s CPU (     114 calls,    0.0021 s avg)
+ <45s> [TIMING]                             io_KB_pwscf :    0.0290 s CPU (      57 calls,    0.0005 s avg)
+ <45s> [TIMING]                            io_KB_abinit :    0.0000 s CPU
+ <45s> [TIMING]                        io_ATMPROJ_pwscf :    0.0000 s CPU
+ <45s> [TIMING]                                    io_X :    0.0001 s CPU (       4 calls,    0.0000 s avg)
+ <45s> [TIMING]                                   io_BS :    0.0000 s CPU
+ <45s> [TIMING]                        io_RT_components :    6.4074 s CPU (    2004 calls,    0.0032 s avg)
+ <45s> [TIMING]                           io_COLLISIONS :    0.0001 s CPU (       5 calls,    0.0000 s avg)
+ <45s> [TIMING]                                 Dipoles :    0.3479 s CPU
+ <45s> [TIMING]                 IO_and_Messaging_switch :    0.0340 s CPU (   12228 calls,    0.0000 s avg)
+ <45s> [TIMING]                       DIPOLE_transverse :    0.2123 s CPU
+ <45s> [TIMING]                             io_fragment :    0.1624 s CPU (     330 calls,    0.0005 s avg)
+ <45s> [TIMING]                            PP_uspp_init :    0.0016 s CPU (     111 calls,    0.0000 s avg)
+ <45s> [TIMING]                             WF_load_FFT :    0.1524 s CPU (     111 calls,    0.0014 s avg)
+ <45s> [TIMING]                         COLLISIONS_load :    0.0001 s CPU
+ <45s> [TIMING]                               FFT_setup :    0.2447 s CPU (      57 calls,    0.0043 s avg)
+ <45s> [TIMING]                       el_density_matrix :    7.6659 s CPU (    4002 calls,    0.0019 s avg)
+ <45s> [TIMING]                        Bare_Hamiltonian :    0.0138 s CPU
+ <45s> [TIMING]                               V_Hartree :    1.0329 s CPU (    4002 calls,    0.0003 s avg)
+ <45s> [TIMING]                               XCo_local :    0.0070 s CPU
+ <45s> [TIMING]                     XC_potential_driver :    4.7206 s CPU (    4002 calls,    0.0012 s avg)
+ <45s> [TIMING]                       V_real_space_to_H :   23.7590 s CPU (  220220 calls,    0.0001 s avg)
+ <45s> [TIMING]                         V_qp_basis_to_H :    0.0001 s CPU (      55 calls,    0.0000 s avg)
+ <45s> [TIMING]                        RT output (INIT) :    0.0001 s CPU
+ <45s> [TIMING]                          RT Hamiltonian :   37.3533 s CPU (    4001 calls,    0.0093 s avg)
+ <45s> [TIMING]                          RT Apply Field :    0.1386 s CPU (  220055 calls,    0.0000 s avg)
+ <45s> [TIMING]                          RT observables :    0.2248 s CPU (    1201 calls,    0.0002 s avg)
+ <45s> [TIMING]                           RT average Op :    0.2168 s CPU (    2402 calls,    0.0001 s avg)
+ <45s> [TIMING]                            RT avg redux :    0.0016 s CPU (    2402 calls,    0.0000 s avg)
+ <45s> [TIMING]                         RT databases IO :    6.4126 s CPU (    2001 calls,    0.0032 s avg)
+ <45s> [TIMING]                               RT output :    0.1084 s CPU (     802 calls,    0.0001 s avg)
+ <45s> [TIMING]                           RT integrator :    0.0757 s CPU (    4000 calls,    0.0000 s avg)
+ <45s> [07] Memory Overview
+ <45s> [08] Game Over & Game summary
+ <45s> [TIMING]            [Time-Profile]: 45s

@@ -1,0 +1,43 @@
+#                                                                     
+#  ____  ____     _       ____    ____  ______      ___               
+# |_  _||_  _|   / \     |_   \  /   _||_   _ \   ."   `.             
+#   \ \  / /    / _ \      |   \/   |    | |_) | /  .-.  \            
+#    \ \/ /    / ___ \     | |\  /| |    |  __". | |   | |            
+#    _|  |_  _/ /   \ \_  _| |_\/_| |_  _| |__) |\  `-"  /            
+#   |______||____| |____||_____||_____||_______/  `.___."             
+#                                                                     
+#                                                                     
+#                                                                     
+# GPL Version 4.5.0 Revision 9122. (Based on r.17089 h.6b5c70e8d)     
+#                                                                     
+#                   MPI+SLK+OpenMP Build                              
+#                http://www.yambo-code.org                            
+#
+negf                           # [R] Real-Time dynamics
+HXC_Potential= "HARTREE"       # [SC] SC HXC Potential
+HARRLvcs= 1.E3       mHa      # [HA] Hartree     RL components
+VXCRLvcs= 0.E5       mHa      # [HA] Hartree     RL components
+% RTBands
+  4 | 5 |                     # [RT] Bands
+%
+Integrator= "RK2"              # [RT] Integrator. Use keywords space separated  ( "EULER/EXPn/INV" "SIMPLE/RK2/RK4/HEUN" "RWA")
+PhLifeTime= 100.0000   fs      # [RT] Dephasing Time
+RTstep=10.000000       as      # [RT] Real Time step length
+NETime= 20.00000       fs      # [RT] Simulation Time
+% IOtime
+ 0.02     | 1.00     | 0.05     |  fs    # [RT] Time between to consecutive I/O (OBSERVABLEs,CARRIERs - GF - OUTPUT)
+%
+% Field1_Freq
+ 0.00     | 0.00     | eV      # [RT Field1] Frequency
+%
+Field1_Int= 1.E3   kWLm2   # [RT Field1] Intensity
+Field1_Width= 0.000000 fs      # [RT Field1] Width
+Field1_kind= "DELTA"            # [RT Field1] Kind(SIN|RES|ANTIRES|GAUSS|DELTA|QSSIN)
+Field1_pol= "linear"             # [RT Field1] Pol(linear|circular)
+% Field1_Dir
+ 0.000000 | 1.000000 | 0.000000 |        # [RT Field1] Versor
+%
+% Field1_Dir_circ
+ 0.000000 | 1.000000 | 0.000000 |        # [RT Field1] Versor_circ
+%
+Field1_Tstart= 0.000000fs      # [RT Field1] Initial Time

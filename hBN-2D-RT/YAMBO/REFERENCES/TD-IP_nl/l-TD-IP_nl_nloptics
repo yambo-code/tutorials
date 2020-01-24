@@ -1,0 +1,140 @@
+
+
+
+_|      _|   _|_|   _|      _|  _|_|_|     _|_|
+  _|  _|   _|    _| _|_|  _|_| _|    _| _|    _|
+    _|     _|_|_|_| _|  _|  _| _|_|_|   _|    _|
+    _|     _|    _| _|      _| _|    _| _|    _|
+    _|     _|    _| _|      _| _|_|_|     _|_|
+
+
+
+ <---> [01] CPU structure, Files & I/O Directories
+ <---> [02] CORE Variables Setup
+ <---> [02.01] Unit cells
+ <---> [02.02] Symmetries
+ <---> [02.03] RL shells
+ <---> [02.04] K-grid lattice
+ <---> Grid dimensions               : 10  10
+ <---> [02.05] Energies [ev] & Occupations
+ <---> [03] Transferred momenta grid
+ <---> [MEMORY] Alloc bare_qpg( 15.87600Mb) TOTAL:  17.34500Mb (traced)  23.02400Mb (memstat)
+ <---> [04] Dipoles
+ <---> [DIP] Checking dipoles header
+ <---> [DIP] Checking overlaps header
+ <---> [WARNING] DIPOLES database not correct or not present
+ <--->  Index g0 smallest positive vectors in each direction:  15 13  3
+ <--->  Index g0 smallest negative vectors in each direction:  10 12  2
+ <---> Number of k-point in each direction:   10  10   1
+ <---> [MEMORY] Alloc WF%c( 15.87600Mb) TOTAL:  33.55400Mb (traced)  38.90400Mb (memstat)
+ <---> [WF-Oscillators/G space] Performing Wave-Functions I/O from ./SAVE
+ <---> Overlaps: |                                        | [000%] --(E) --(X)
+ <---> Overlaps: |########################################| [100%] --(E) --(X)
+ <---> [WARNING] Covariant Dipoles not in 3d. Assuming non periodic system.
+ <---> Using forth order approximation for covariant dipoles
+ <---> Covariant Dipoles: |                                        | [000%] --(E) --(X)
+ <---> Covariant Dipoles: |########################################| [100%] --(E) --(X)
+ <---> [MEMORY]  Free WF%c( 15.87600Mb) TOTAL:  18.70600Mb (traced)  40.20000Mb (memstat)
+ <---> Dipoles in real space |                                        | [000%] --(E) --(X)
+ <---> Dipoles in real space |########################################| [100%] --(E) --(X)
+ <---> [x,Vnl] computed using 2 projectors
+ <---> Dipoles: P and v (T): |                                        | [000%] --(E) --(X)
+ <01s> Dipoles: P and v (T): |########################################| [100%] --(E) --(X)
+ <01s> [DIP] Writing dipoles header
+ <01s> [DIP] Writing Overlaps header
+ <01s> [MEMORY]TOTAL not deallocated :  17.62300Mb
+ <01s> [04.01] Initialization
+ <01s> [WARNING] Non-linear optics properties can be obtained with SOFTSIN/SIN fields only!
+ <01s>  Total simulation time read from input
+ <01s> Total simulation time   [fs]: 55.000000
+ <01s> [MEMORY]  Free bare_qpg( 15.876000Mb) TOTAL:  2.4200000Mb (traced)  25.348000Mb (memstat)
+ <01s> [04.02] Messaging
+ <01s> Frequencies steps          : 1
+ <01s> [WARNING]Allocation of IND_out%n_of_elements failed. Object was already allocated in [%n_of_elements]
+ <01s> [WARNING]Allocation of IND_out%element_1D failed. Object was already allocated in [%element_1D]
+ <01s> [WARNING]Allocation of IND_out%first_of_1D failed. Object was already allocated in [%first_of_1D]
+ <01s> [WARNING]Allocation of IND_out%n_of_elements failed. Object was already allocated in [%n_of_elements]
+ <01s> [WARNING]Allocation of IND_out%element_1D failed. Object was already allocated in [%element_1D]
+ <01s> [WARNING]Allocation of IND_out%n_of_elements failed. Object was already allocated in [%n_of_elements]
+ <01s> [WARNING]Allocation of IND_out%element_1D failed. Object was already allocated in [%element_1D]
+ <01s> [DIP] Checking dipoles header
+ <01s> [DIP] Checking overlaps header
+ <02s> [WARNING]Allocation attempt of rho_reference of zero size.
+ <02s> [WARNING]Allocation attempt of full_rho of zero size.
+ <02s> [WARNING]Allocation attempt of VAL_BANDS of zero size.
+ <02s> [NL] Frequencies : |                                        | [000%] --(E) --(X)
+ <12s> [NL] Frequencies : |#                                       | [002%] 10s(E) 06m-44s(X)
+ <22s> [NL] Frequencies : |##                                      | [005%] 20s(E) 06m-44s(X)
+ <32s> [NL] Frequencies : |###                                     | [007%] 30s(E) 06m-44s(X)
+ <42s> [NL] Frequencies : |####                                    | [010%] 40s(E) 06m-45s(X)
+ <52s> [NL] Frequencies : |#####                                   | [012%] 50s(E) 06m-46s(X)
+ <01m-03s> [NL] Frequencies : |######                                  | [015%] 01m-01s(E) 06m-48s(X)
+ <01m-13s> [NL] Frequencies : |#######                                 | [017%] 01m-11s(E) 06m-47s(X)
+ <01m-23s> [NL] Frequencies : |########                                | [020%] 01m-21s(E) 06m-48s(X)
+ <01m-34s> [NL] Frequencies : |#########                               | [022%] 01m-31s(E) 06m-48s(X)
+ <01m-44s> [NL] Frequencies : |##########                              | [025%] 01m-42s(E) 06m-48s(X)
+ <01m-54s> [NL] Frequencies : |###########                             | [027%] 01m-52s(E) 06m-48s(X)
+ <02m-04s> [NL] Frequencies : |############                            | [030%] 02m-02s(E) 06m-48s(X)
+ <02m-14s> [NL] Frequencies : |#############                           | [032%] 02m-12s(E) 06m-48s(X)
+ <02m-25s> [NL] Frequencies : |##############                          | [035%] 02m-22s(E) 06m-48s(X)
+ <02m-35s> [NL] Frequencies : |###############                         | [037%] 02m-33s(E) 06m-48s(X)
+ <02m-45s> [NL] Frequencies : |################                        | [040%] 02m-43s(E) 06m-48s(X)
+ <02m-55s> [NL] Frequencies : |#################                       | [042%] 02m-53s(E) 06m-48s(X)
+ <03m-05s> [NL] Frequencies : |##################                      | [045%] 03m-03s(E) 06m-48s(X)
+ <03m-16s> [NL] Frequencies : |###################                     | [047%] 03m-14s(E) 06m-48s(X)
+ <03m-26s> [NL] Frequencies : |####################                    | [050%] 03m-24s(E) 06m-48s(X)
+ <03m-36s> [NL] Frequencies : |#####################                   | [052%] 03m-34s(E) 06m-48s(X)
+ <03m-46s> [NL] Frequencies : |######################                  | [055%] 03m-44s(E) 06m-47s(X)
+ <03m-56s> [NL] Frequencies : |#######################                 | [057%] 03m-54s(E) 06m-47s(X)
+ <04m-06s> [NL] Frequencies : |########################                | [060%] 04m-04s(E) 06m-47s(X)
+ <04m-17s> [NL] Frequencies : |#########################               | [062%] 04m-14s(E) 06m-47s(X)
+ <04m-27s> [NL] Frequencies : |##########################              | [065%] 04m-25s(E) 06m-48s(X)
+ <04m-38s> [NL] Frequencies : |###########################             | [067%] 04m-35s(E) 06m-48s(X)
+ <04m-48s> [NL] Frequencies : |############################            | [070%] 04m-46s(E) 06m-49s(X)
+ <04m-59s> [NL] Frequencies : |#############################           | [072%] 04m-56s(E) 06m-49s(X)
+ <05m-09s> [NL] Frequencies : |##############################          | [075%] 05m-07s(E) 06m-49s(X)
+ <05m-20s> [NL] Frequencies : |###############################         | [077%] 05m-17s(E) 06m-50s(X)
+ <05m-30s> [NL] Frequencies : |################################        | [080%] 05m-28s(E) 06m-50s(X)
+ <05m-40s> [NL] Frequencies : |#################################       | [082%] 05m-38s(E) 06m-50s(X)
+ <05m-51s> [NL] Frequencies : |##################################      | [085%] 05m-49s(E) 06m-50s(X)
+ <06m-01s> [NL] Frequencies : |###################################     | [087%] 05m-59s(E) 06m-50s(X)
+ <06m-11s> [NL] Frequencies : |####################################    | [090%] 06m-09s(E) 06m-50s(X)
+ <06m-22s> [NL] Frequencies : |#####################################   | [092%] 06m-20s(E) 06m-50s(X)
+ <06m-32s> [NL] Frequencies : |######################################  | [095%] 06m-30s(E) 06m-51s(X)
+ <06m-43s> [NL] Frequencies : |####################################### | [097%] 06m-40s(E) 06m-51s(X)
+ <06m-53s> [NL] Frequencies : |########################################| [100%] 06m-51s(E) 06m-51s(X)
+ <06m-53s> [MEMORY]TOTAL not deallocated :  1.849000Mb
+ <06m-53s> [05] Timing Overview
+ <06m-53s> [TIMING]                                   io_WF :    0.1969 s CPU (     388 calls,    0.0005 s avg)
+ <06m-53s> [TIMING]                                 io_GROT :    0.0085 s CPU (       5 calls,    0.0017 s avg)
+ <06m-53s> [TIMING]                                io_QINDX :    0.0030 s CPU (       2 calls,    0.0015 s avg)
+ <06m-53s> [TIMING]                              io_COL_CUT :    0.0000 s CPU
+ <06m-53s> [TIMING]                          io_Double_Grid :    0.0000 s CPU
+ <06m-53s> [TIMING]                                   io_HF :    0.0000 s CPU
+ <06m-53s> [TIMING]                              io_DIPOLES :    0.2444 s CPU (     114 calls,    0.0021 s avg)
+ <06m-53s> [TIMING]                             io_KB_pwscf :    0.0296 s CPU (      57 calls,    0.0005 s avg)
+ <06m-53s> [TIMING]                            io_KB_abinit :    0.0000 s CPU
+ <06m-53s> [TIMING]                        io_ATMPROJ_pwscf :    0.0000 s CPU
+ <06m-53s> [TIMING]                                    io_X :    0.0001 s CPU (       4 calls,    0.0000 s avg)
+ <06m-53s> [TIMING]                                   io_BS :    0.0000 s CPU
+ <06m-53s> [TIMING]                        io_RT_components :    0.0000 s CPU (       2 calls,    0.0000 s avg)
+ <06m-53s> [TIMING]                           io_COLLISIONS :    0.0001 s CPU (       3 calls,    0.0000 s avg)
+ <06m-53s> [TIMING]                                 Dipoles :    1.5599 s CPU
+ <06m-53s> [TIMING]                             io_Overlaps :    0.3580 s CPU (     203 calls,    0.0018 s avg)
+ <06m-53s> [TIMING]                 IO_and_Messaging_switch :    0.0007 s CPU (     222 calls,    0.0000 s avg)
+ <06m-53s> [TIMING]                            PP_uspp_init :    0.0017 s CPU (     111 calls,    0.0000 s avg)
+ <06m-53s> [TIMING]                             WF_load_FFT :    0.1985 s CPU (     111 calls,    0.0018 s avg)
+ <06m-53s> [TIMING]                             io_fragment :    0.2544 s CPU (     531 calls,    0.0005 s avg)
+ <06m-53s> [TIMING]                          eval_G_minus_G :    0.0724 s CPU
+ <06m-53s> [TIMING]                          LINEAR ALGEBRA :    0.0947 s CPU (    1240 calls,    0.0001 s avg)
+ <06m-53s> [TIMING]                        SERIAL_inversion :  307.3369 s CPU ( 4402840 calls,    0.0001 s avg)
+ <06m-53s> [TIMING]                               FFT_setup :    0.2404 s CPU (      56 calls,    0.0043 s avg)
+ <06m-53s> [TIMING]                       DIPOLE_transverse :    0.4188 s CPU
+ <06m-53s> [TIMING]                        NL Berry Pol NEQ :  313.5414 s CPU (    5502 calls,    0.0570 s avg)
+ <06m-53s> [TIMING]                                   io_NL :    0.0093 s CPU (       3 calls,    0.0031 s avg)
+ <06m-53s> [TIMING]                          NL Hamiltonian :    8.4335 s CPU (   11002 calls,    0.0008 s avg)
+ <06m-53s> [TIMING]                           NL Integrator :   87.6024 s CPU (    5501 calls,    0.0159 s avg)
+ <06m-53s> [TIMING]                       SERIAL_lin_system :   85.9291 s CPU ( 1210220 calls,    0.0001 s avg)
+ <06m-53s> [06] Memory Overview
+ <06m-53s> [07] Game Over & Game summary
+ <06m-53s> [TIMING]            [Time-Profile]: 06m-53s
