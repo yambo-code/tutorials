@@ -35,7 +35,7 @@ $pwd=abs_path();
 #
 # Options list
 &GetOptions("help"           => \$help,
-            "install"        => \$install,
+            "install:s"      => \$install,
             "clean"          => \$clean,
             "more"           => \$more,
             "list"           => \$list) or die;
@@ -48,7 +48,8 @@ sub usage {
    where <ARGS> must include at least one of:
                    -h                      This help
                    -list                   List the available tutorials
-                   -install                Download & install the core databases
+                   -install [TUTORIAL]     Download & install the core databases. A specific [TUTORIAL] can be provided. 
+                                           If empty all tutorials are downloaded.
                    -clean                  Clean the repository (remove all execution files)
                    -more                   Download more tutorials (in addition to the basic ones)
 
@@ -56,6 +57,9 @@ EndOfUsage
   ;
   exit;
 }
+#
+my $len= length($install);
+if ($len eq 0) {$install="all"};
 #
 if($help or (not $install and not $list and not $clean)){ usage };
 #
@@ -99,14 +103,14 @@ if ($list or $install) {
    if ($more_tut and not $more ) {next};
    $tutorial=$dir;
    &NAME_it;
-   &DOWNLOAD_it;
+   if ("${install}_DBs.tar" =~ "$DBs_tutorial_tar" or "$install" =~ "all") { &DOWNLOAD_it };
   }
  }
  if ($install and -d "tutorials") {system("rmdir -p tutorials")};
 }
 
 print "\nDone.\n";
- 
+#
 sub TUTORIALS_list
 {
 @tutorials;
@@ -125,7 +129,8 @@ $DBs_tutorial_archive="${tutorial}_DBs.tar.gz";
 sub DOWNLOAD_it
 {
  chdir("./archive");
- system("wget -c www.yambo-code.org/${ONLINE_tutorials_files_location}/${DBs_tutorial_archive}");
+ system("rm -f ${DBs_tutorial_archive}");
+ system("wget www.yambo-code.org/${ONLINE_tutorials_files_location}/${DBs_tutorial_archive}");
  if (-f ${DBs_tutorial_archive} ){
   system("gunzip ${DBs_tutorial_archive}");
   chdir("$pwd");
