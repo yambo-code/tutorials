@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 #
 #        Copyright (C) 2000-2019 the YAMBO team
-#              http://www.yambo-code.org
+#              http://www.yambo-code.eu
 #
 # Authors (see AUTHORS file for details): AM
 #
@@ -130,7 +130,7 @@ sub DOWNLOAD_it
 {
  chdir("./archive");
  system("rm -f ${DBs_tutorial_archive}");
- system("wget www.yambo-code.org/${ONLINE_tutorials_files_location}/${DBs_tutorial_archive}");
+ system("wget media.yambo-code.eu/${ONLINE_tutorials_files_location}/${DBs_tutorial_archive}");
  if (-f ${DBs_tutorial_archive} ){
   system("gunzip ${DBs_tutorial_archive}");
   chdir("$pwd");

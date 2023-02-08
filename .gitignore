@@ -4,4 +4,9 @@
 *Vnl*
 archive
 *.swp
-Electron-Phonon/Section_*/SAVE/ndb.elph_gkkp*
+Silicon_Electron-Phonon/YAMBO/SAVE/ndb.elph_gkkp*
+Silicon_Electron-Phonon/YAMBO/SAVE/ndb.gops
+Silicon_Electron-Phonon/YAMBO/SAVE/ndb.kindx
+Silicon_Electron-Phonon/YAMBO/SAVE/ns.nlcc_pp_pwscf
+hBN/YAMBO/GW_QP_database/ndb.QP
+
