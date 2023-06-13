@@ -1,0 +1,57 @@
+ndtset 2
+
+iomode 3
+
+kptopt1  1            # Option for the automatic generation of k points,
+ngkpt1   8 8 8
+nshiftk1 4
+shiftk1  0.5 0.5 0.5
+        0.5 0.0 0.0
+        0.0 0.5 0.0
+        0.0 0.0 0.5
+toldfe1  1.0d-6
+prtden1  1         # Print out density
+
+# Definition of parameters for the calculation of the kss file
+iscf2    -2
+getden2  -1
+tolwfr2  1.0d-10
+nband2   15
+prtwf2   1
+prtkbff2 1
+
+istwfk2  *1
+kptopt2  1
+ngkpt2   8 8 8
+nshiftk2 1
+shiftk2  0. 0. 0.
+# Definition of the unit cell: fcc
+acell  3*10.6959
+rprim  -0.500000  0.000000  0.500000
+        0.000000  0.500000  0.500000
+       -0.500000  0.500000  0.000000
+# Definition of the atom types
+ntypat  2         # There is only one type of atom
+znucl 13 33          # The keyword "znucl" refers to the atomic number of the
+                  # possible type(s) of atom. The pseudopotential(s)
+                  # mentioned in the "files" file must correspond
+                  # to the type(s) of atom. Here, the only type is Silicon.
+
+# Definition of the atoms
+natom 2           # There are two atoms
+typat  1 2        # They both are of type 1, that is, Silicon.
+xred              # Reduced coordinate of atoms
+      0.0  0.0  0.0
+      0.25 0.25 0.25
+# Definition of the planewave basis set (at convergence 16 Rydberg 8 Hartree)
+ecut 20.0          # Maximal kinetic energy cut-off, in Hartree
+
+# Use only symmorphic operations
+symmorphi 0
+# Definition of the SCF procedure
+nstep   100        # Maximal number of SCF cycles
+diemac  12.0      # Although this is not mandatory, it is worth to
+                  # precondition the SCF cycle. The model dielectric
+                  # function used as the standard preconditioner
+                  # is described in the "dielng" input variable section.
+                  # Here, we follow the prescription for bulk silicon.
