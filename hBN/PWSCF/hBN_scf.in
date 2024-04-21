@@ -1,11 +1,11 @@
-&control 
+&control
     calculation='scf',
     prefix='hBN',
     restart_mode='from_scratch'
     pseudo_dir = './Pseudos'
     wf_collect=.true.
-    nstep = 200 
-    verbosity = 'high' 
+    nstep = 200
+    verbosity = 'high'
 /
 &system
     ibrav = 4,

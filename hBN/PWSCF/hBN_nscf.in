@@ -2,9 +2,9 @@
     calculation='nscf',
     prefix='hBN',
     pseudo_dir = './Pseudos'
+    wf_collect=.true.
     nstep = 200
     verbosity = 'high'
-    wf_collect=.true.
 /
 &system
     ibrav = 4,
@@ -33,4 +33,4 @@ N -0.6666667 -0.3333333  0.0000000
 B -0.6666667 -0.3333333  0.5000000
 N  0.6666667  0.3333333  0.5000000  
 K_POINTS {automatic}
-6  6  2 0 0 0 
+12  12  8 0 0 0 
